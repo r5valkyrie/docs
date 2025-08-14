@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Amos",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXF7UhNdmkPrpYewVxA4201blm5nNEh7TyIazc",
+        "description": "Big Man, Founder"
+    },
+    {
+        "name": "IcePixel",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXdlOPb4iNPAGK3tHBi9rMbaTvq8oYVfRWxE1y",
+        "description": "Former Developer"
+    },
+    {
+        "name": "Rexx",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXoRevpju35DFsyhL6erNRJQlziZu1HXvOAYEf",
+        "description": "Master Server, Developer"
+    },
+    {
+        "name": "Sal",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXOPEarJFwE3tZWKmAp51Ic8SikVbjg7MuHvBQ",
+        "description": "Master Server, Developer"
+    },
+    {
+        "name": "LorryLeKral",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVX3MsbsaBXYzTt1mDwRuyQ0xUZclNjOeJA6vKb",
+        "description": "Scripting, Maps, Models"
+    },
+    {
+        "name": "Zee",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXAFNO7IKPo0g4yqrvKkDc9Y2mJsH8j7AGtuVB",
+        "description": "Website, Scripting"
+    },
+    {
+        "name": "CafeFPS",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXWO0kSWRTONSckfsyWvoUtPrT87Ab6a0wXzxR",
+        "description": "Scripting, Flowstate"
+    },
+    {
+        "name": "mkos",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXXFesL2CaRZMyBjm7FHYGbpuQV8NofAD9hTt0",
+        "description": "Scripting, Flowstate"
+    },
+    {
+        "name": "Mostly Fireproof",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXnUUkraIwGeBvzjAOrM3RcEFiZYJ5pQTUHglV",
+        "description": "Scripting"
+    },
+    {
+        "name": "JustANormalUser",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXkqtg24ZHxWSK9QoZyuTqOJF3seXE4n1RPald",
+        "description": "Scripting"
+    },
+    {
+        "name": "Julefox",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXNBboxChLKsPXFiUvfa3VE08HYDzep9TWk1xy",
+        "description": "Scripting"
+    },
+    {
+        "name": "ReGlitched",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVX5nYFoyLe9jwZDvAcN7LKVoQGWaTMFlpgI3Su",
+        "description": "Scripting"
+    },
+    {
+        "name": "O Robotic",
+        "avatar": "https://utfs.io/f/YBTHYqEAQmVXRhegMSkgwSPdWHeGOVYrFxLlCpIv0fEcz2j7",
+        "description": "SDK"
+    }
+]
