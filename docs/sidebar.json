@@ -1,0 +1,11 @@
+[
+    {
+        "title": "Introduction",
+        "pages": [
+            {
+                "title": "Getting Started",
+                "slug": "getting-started"
+            }
+        ]
+    }
+]
