@@ -44,7 +44,7 @@ Example:
 
 ```json
 {
-  "EventId": ["weapon_pistol_fire"],
+  "EventId": "weapon_pistol_fire",
   "AudioSelectionStrategy": "random",
   "VolumeBase": 0.9,
   "VolumeMin": 0.05,
@@ -83,7 +83,7 @@ Global behavior can be tuned via convars. JSON can override these per-event if `
 - `wav_debug` (default 0): extra logs for override playback
 - `miles_debug` (default 0): general Miles logs
 
-When `VolumeUpdateRate` is set in JSON and `wav_force_convars == 0`, the system updates `wav_volume_update_rate` to that value.
+When `wav_volume_update_rate` is set in JSON and `wav_force_convars == 0`, the system updates `wav_volume_update_rate` to that value.
 
 ### Minimal examples
 
@@ -109,7 +109,7 @@ audio/footsteps/
   soft/step1.wav
 ```
 ```json
-{ "EventId": ["footsteps"], "AudioSelectionStrategy": "sequential" }
+{ "EventId": "footsteps", "AudioSelectionStrategy": "sequential" }
 ```
 
 ### Troubleshooting
