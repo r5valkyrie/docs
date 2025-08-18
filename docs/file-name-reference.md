@@ -2,7 +2,7 @@
 
 Use this reference when searching assets, scripts, rPaks, or overriding content.
 
-## Legends (rPaks)
+## Legends
 
 ```text
 Bangalore   → settings/player/mp/pilot_survival_firesupport.rpak

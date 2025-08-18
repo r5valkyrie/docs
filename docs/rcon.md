@@ -1,7 +1,3 @@
----
-description: Remote server management with RCON
----
-
 # RCON
 
 RCON lets you administer an R5Reloaded server via a remote console connection.
