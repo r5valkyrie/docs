@@ -10,11 +10,11 @@ Put your audio assets under the mod's `audio/` folder. Supported layouts:
   - `audio/<EventName>.wav`
 
 - Folder per event (all `.wav` inside are candidates)
-  - `audio/<EventName>/**/*.wav`
+  - `audio/<EventName>/*.wav`
 
 - JSON manifest + sibling samples folder (Northstar-style)
   - Manifest: `audio/<Name>.json`
-  - Samples: `audio/<Name>/**/*.wav` (folder base name must match the JSON file name)
+  - Samples: `audio/<Name>/*.wav` (folder base name must match the JSON file name)
 
 Notes:
 - The event name is the basename of the file/folder (e.g., `audio/weapon_pistol_fire.wav` → event `weapon_pistol_fire`).
