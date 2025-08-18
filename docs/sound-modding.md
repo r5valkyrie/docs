@@ -37,6 +37,8 @@ Optional per-override audio settings (used only if present and `wav_force_convar
 - `VolumeUpdateRate`: number (default 0.1)
 - `AllowSilence`: bool (default true)
 - `SilenceCutoff`: number (default 0.001)
+- `CancelOnReplay`: bool (default false)
+- `FadeOnDestroy`: bool (default false)
 
 If `EventId`/`EventIdRegex` are omitted, the system falls back to the JSON filename stem for the event id.
 
@@ -52,14 +54,16 @@ Example:
   "FalloffPower": 1.3,
   "VolumeUpdateRate": 0.05,
   "AllowSilence": true,
-  "SilenceCutoff": 0.0005
+  "SilenceCutoff": 0.0005,
+  "CancelOnReplay": true,
+  "FadeOnDestroy": true
 }
 ```
 
 ### Load timing and hot reload
 
 - Overrides are loaded once during Miles initialization (`CSOM_Initialize`).
-- If you hot-reload mods at runtime, also call `GetAudioOverrideManager()->LoadFromMods()` in your mod reload path to refresh overrides.
+- If you want to hot-reload audio mods at runtime, call the command `reload_audio_mods` in console to refresh overrides.
 
 ### Selection and priority
 
