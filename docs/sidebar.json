@@ -33,6 +33,19 @@
                 {
                     "title": "Console Commands",
                     "slug": "console-commands"
+                },
+                {
+                    "title": "File Name Reference",
+                    "slug": "file-name-reference"
+                }
+            ]
+        },
+        {
+            "title": "Hosting",
+            "pages": [
+                {
+                    "title": "RCON",
+                    "slug": "rcon"
                 }
             ]
         }
