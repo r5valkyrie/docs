@@ -31,8 +31,8 @@
             "title": "Helpful Stuff",
             "pages": [
                 {
-                    "title": "Console Reference",
-                    "slug": "console-reference"
+                    "title": "Console Commands",
+                    "slug": "console-commands"
                 }
             ]
         }
