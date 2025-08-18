@@ -18,6 +18,10 @@
             "title": "Modding",
             "pages": [
                 {
+                    "title": "Creating a mod",
+                    "slug": "creating-a-mod"
+                },
+                {
                     "title": "Sound Modding",
                     "slug": "sound-modding"
                 }
