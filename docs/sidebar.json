@@ -13,6 +13,15 @@
                     "slug": "getting-started"
                 }
             ]
+        },
+        {
+            "title": "Modding",
+            "pages": [
+                {
+                    "title": "Sound Modding",
+                    "slug": "sound-modding"
+                }
+            ]
         }
     ]
 }
