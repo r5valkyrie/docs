@@ -1,135 +1,110 @@
-## Custom Audio Override System
+## R5VALK FMOD Modding Guide
 
-A lightweight mod-side system to replace Miles audio events with user-provided WAV samples, with optional per-event JSON configuration.
+This explains how to author and package FMOD Studio content for R5Valk using the built‑in FMOD backend and mod system.
 
-### Folder layout (per mod)
+### What the FMOD backend does
 
-Put your audio assets under the mod's `audio/` folder. Supported layouts:
+- Auto‑loads FMOD Studio banks from the base game and enabled mods
+- If an FMOD event exists with the exact name the game requests, FMOD plays it instead of Miles
+- 3D positioning and global volume are handled automatically
 
-- Single file per event
-  - `audio/<EventName>.wav`
+### Requirements
 
-- Folder per event (all `.wav` inside are candidates)
-  - `audio/<EventName>/*.wav`
+- Use the shared FMOD Studio project provided with the game/mod SDK (located in the bin folder)
+  - Build your mod bank within this project (same FMOD Studio version)
 
-- JSON manifest + sibling samples folder (Northstar-style)
-  - Manifest: `audio/<Name>.json`
-  - Samples: `audio/<Name>/*.wav` (folder base name must match the JSON file name)
+### Critical rules (read first)
+
+- Do NOT place new events inside folders in FMOD. Keep events at the Events root.
+  - R5 resolves by exact path/name. A folder changes the path (e.g., `event:/MyFolder/MyEvent_1p`), which will not match the game’s request (e.g., `event:/MyEvent_1p`).
+- Do NOT rebuild or ship `Master.bank`.
+
+### Authoring steps
+
+1) Open the shared FMOD Studio project
+2) Create a new bank for your mod (e.g., `MyMod`)
+3) Right click on your new bank and mark it as a 'Master Bank'
+4) Create events at the Events root (no folders) and assign them to your mod bank
+5) Name events either to match existing game requests (to override) or use new names for new sounds
+   - For overrides (match existing names), common suffixes the game uses:
+     - First‑person: `*_1p`
+     - Third‑person: `*_3p` or `*_3p_enemy`
+   - Override example: `weapons_rifle_fire_1p`
+6) Build your bank
+   - FMOD outputs two files for your bank:
+     - `MyMod.bank`
+     - `MyMod.strings.bank`
+
+### Packaging (mods)
+
+Place the two output files in your mod:
+
+```
+<YourModRoot>/audio/fmod/
+  MyMod.bank
+  MyMod.strings.bank
+```
 
 Notes:
-- The event name is the basename of the file/folder (e.g., `audio/weapon_pistol_fire.wav` → event `weapon_pistol_fire`).
-- WAVs must be PCM (8 or 16-bit). Files are loaded into memory.
+- Do not include `Master.bank`
+- Do not include `Master.strings.bank`
 
-### JSON manifest schema
+### How overrides work
 
-Location: `audio/<Name>.json`
+- When the game asks to play a sound by name, the backend checks FMOD first
+- If an FMOD event with that exact name exists, the FMOD version plays and Miles is bypassed
 
-Fields:
-- `EventId`: string | string[] — exact event id(s) to override
-- `EventIdRegex`: string | string[] — regex(es) matching event names
-- `AudioSelectionStrategy`: "sequential" | "random" — choose next sample
+### Verifying in‑game
 
-Optional per-override audio settings (used only if present and `wav_force_convars == 0`):
-- `VolumeBase`: number (default 1.0)
-- `VolumeMin`: number (default 0.0)
-- `DistanceStart`: number (default 100.0)
-- `FalloffPower`: number (default 1.0)
-- `VolumeUpdateRate`: number (default 0.1)
-- `AllowSilence`: bool (default true)
-- `SilenceCutoff`: number (default 0.001)
-- `CancelOnReplay`: bool (default false)
-- `FadeOnDestroy`: bool (default false)
+Console commands:
 
-If `EventId`/`EventIdRegex` are omitted, the system falls back to the JSON filename stem for the event id.
+- List loaded banks
+  - `fmod_list_banks`
 
-Example:
+- Check an event exists in loaded FMOD banks
+  - `fmod_event_exists weapons_rifle_fire_1p`
 
-```json
-{
-  "EventId": "weapon_pistol_fire",
-  "AudioSelectionStrategy": "random",
-  "VolumeBase": 0.9,
-  "VolumeMin": 0.05,
-  "DistanceStart": 150.0,
-  "FalloffPower": 1.3,
-  "VolumeUpdateRate": 0.05,
-  "AllowSilence": true,
-  "SilenceCutoff": 0.0005,
-  "CancelOnReplay": true,
-  "FadeOnDestroy": true
-}
-```
+Debug output:
 
-### Load timing and hot reload
+- Enable FMOD/Miles logs as needed
+  - `fmod_debug 1`
+  - `miles_debug 1`
 
-- Overrides are loaded once during Miles initialization (`CSOM_Initialize`).
-- If you want to hot-reload audio mods at runtime, call the command `reload_audio_mods` in console to refresh overrides.
+### Best practices
 
-### Selection and priority
-
-- If multiple sources target the same event (e.g., both JSON and direct file), the last registered wins (mods are scanned in mod list order).
-- When multiple samples exist for an event:
-  - `sequential`: cycles through samples in order
-  - `random`: randomly picks a sample
-
-### ConVars
-
-Global behavior can be tuned via convars. JSON can override these per-event if `wav_force_convars == 0`.
-
-- `wav_force_convars` (default 0): when 1, ignore JSON per-override settings and use only convars below
-- `wav_volume_base` (default 1.0)
-- `wav_volume_min` (default 0.0)
-- `wav_distance_start` (default 100.0)
-- `wav_falloff_power` (default 1.0)
-- `wav_volume_update_rate` (default 0.1)
-- `wav_allow_silence` (default 1)
-- `wav_silence_cutoff` (default 0.001)
-- `wav_debug` (default 0): extra logs for override playback
-- `miles_debug` (default 0): general Miles logs
-
-When `wav_volume_update_rate` is set in JSON and `wav_force_convars == 0`, the system updates `wav_volume_update_rate` to that value.
-
-### Minimal examples
-
-Single file:
-```
-audio/weapon_pistol_fire.wav
-```
-
-Folder-based:
-```
-audio/weapon_pistol_fire/
-  shot1.wav
-  shot2.wav
-  shot3.wav
-```
-
-JSON + folder-based:
-```
-audio/footsteps.json
-audio/footsteps/
-  hard/step1.wav
-  hard/step2.wav
-  soft/step1.wav
-```
-```json
-{ "EventId": "footsteps", "AudioSelectionStrategy": "sequential" }
-```
+- Keep base game banks unchanged; put all your content in your own bank(s)
+- Avoid renaming or moving existing base events unless you are intentionally overriding with the exact same name
+- Prefer short one‑shot events; current stop‑by‑event support in the backend is limited
+- Keep event names unique across mods to reduce ambiguity
 
 ### Troubleshooting
 
-- Not replacing:
-  - Enable logs: `miles_debug 1`, `wav_debug 1`
-  - Check for "Loaded X audio overrides" at startup
-  - Verify the event name matches exactly
-  - Ensure JSON has a sibling samples folder with the same basename
-  - Validate your WAVs are PCM 8/16-bit
+Event not found:
+- Event name does not match the game’s requested name
+- Event placed inside a folder (path mismatch)
+- Event was not assigned to your bank
+- `MyMod.strings.bank` missing from your mod package
 
-- JSON settings ignored:
-  - Ensure `wav_force_convars` is `0`
-  - Confirm JSON value types (numbers vs strings)
+Nothing plays:
+- Bank files are not in `<YourModRoot>/audio/fmod/`
+- The FMOD event has no audio routing/content configured
 
-- Performance:
-  - Large/long WAVs are held in memory; prefer short, optimized samples.
+### Notes on 3D audio and listener
 
+- Listener position and 3D attributes are synchronized with the engine
+- You do not need to set 3D attributes manually; the backend applies them for event playback
 
+### Limitations (current backend)
+
+- No exposed API for runtime parameter control or querying instances
+- Raw PCM streaming is not supported by the FMOD backend
+- Stop‑by‑event is rudimentary
+
+### Quick checklist
+
+- [ ] Use the shared FMOD Studio project
+- [ ] Create/assign events at the Events root (no folders)
+- [ ] Match names exactly (e.g., `*_1p`, `*_3p`, `*_3p_enemy`)
+- [ ] Build your bank → get `MyMod.bank` and `MyMod.strings.bank`
+- [ ] Put both files in `<YourModRoot>/audio/fmod/`
+- [ ] Verify with `fmod_list_banks` and `fmod_event_exists`
