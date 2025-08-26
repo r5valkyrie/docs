@@ -4,7 +4,7 @@
 The **Console Dev Menu** in Valkyrie allows developers to create a customizable tabbed menu in the in-game console’s top bar.  
 It provides a quick-access UI for spawning weapons, switching maps, testing abilities, toggling debug tools, and more.
 
-The system works by registering "preset commands" that are displayed hierarchically as tabs and buttons. These presets can be added dynamically from mod config files (`MOD/cfg/autoload/configname.cfg`) or entered live through console commands.
+The system works by registering "preset commands" that are displayed hierarchically as tabs and buttons. These presets can be added dynamically from mod config files (`MODNAME/cfg/autoload/configname.cfg`) or entered live through console commands.
 
 ----------
 
@@ -49,7 +49,7 @@ This creates:
 
 `dev_menu_remove  "<Path/Button>"` 
 
-Removes a single entry from the dev menu, identified by its full path.
+Removes a single entry from the dev menu, identified by its full path.  
 Doing `dev_menu_remove "[ Give ]"`  will remove that path and all entries below it.
 
 **Example:**
@@ -62,7 +62,7 @@ Doing `dev_menu_remove "[ Give ]"`  will remove that path and all entries below 
 
 `dev_menu_clear` 
 
-Removes **all entries** from the dev menu, clearing the entire tab system.
+Removes **all entries** from the dev menu, clearing the entire tab system.  
 Not recommended in mod cfg as this may clear all commands added by other mods.
 
 ----------
