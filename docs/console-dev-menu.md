@@ -1,7 +1,7 @@
-﻿
-# Console Dev Menu System (Top Bar Presets)
 
-The **Console Dev Menu System** in Valkyrie allows developers to create a customizable tabbed menu in the in-game console’s top bar.  
+# Console Dev Menu (Top Bar Presets)
+
+The **Console Dev Menu** in Valkyrie allows developers to create a customizable tabbed menu in the in-game console’s top bar.  
 It provides a quick-access UI for spawning weapons, switching maps, testing abilities, toggling debug tools, and more.
 
 The system works by registering "preset commands" that are displayed hierarchically as tabs and buttons. These presets can be added dynamically from mod config files (`MOD/cfg/autoload/configname.cfg`) or entered live through console commands.
@@ -37,9 +37,9 @@ Adds a new entry to the dev menu.
 This creates:
 
 -   A top-level tab called `[ Give ]`
-    
+
 -   Inside it, a submenu `Weapon > Assault Rifle > Flatline`
-    
+
 -   A button labeled `Flatline` that runs `give mp_weapon_vinson`
     
 
@@ -54,7 +54,7 @@ Doing `dev_menu_remove "[ Give ]"`  will remove that path and all entries below 
 
 **Example:**
 
-`dev_menu_remove  "[ Give ]/Weapon/Assault Rifle/Flatline"` 
+- `dev_menu_remove  "[ Give ]/Weapon/Assault Rifle/Flatline"` 
 
 ----------
 
@@ -73,30 +73,30 @@ Here’s a structured example showing how the system can be used to organize com
 
 ### Weapons
 
-`dev_menu_add "[ Give ]/Weapon/Assault Rifle/Flatline"  "give mp_weapon_vinson"`
-`dev_menu_add "[ Give ]/Weapon/Assault Rifle/Hemlok"  "give mp_weapon_hemlok"`
-`dev_menu_add "[ Give ]/Weapon/Assault Rifle/R-301"  "give mp_weapon_rspn101"`
-`dev_menu_add "[ Give ]/Weapon/Assault Rifle/Havoc AR"  "give mp_weapon_energy_ar"`
+ - `dev_menu_add "[ Give ]/Weapon/Assault Rifle/Flatline"  "give mp_weapon_vinson"`
+ - `dev_menu_add "[ Give ]/Weapon/Assault Rifle/Hemlok"  "give mp_weapon_hemlok"`
+ - `dev_menu_add "[ Give ]/Weapon/Assault Rifle/R-301"  "give mp_weapon_rspn101"`
+ - `dev_menu_add "[ Give ]/Weapon/Assault Rifle/Havoc AR"  "give mp_weapon_energy_ar"`
 
 ### Abilities
 
-`dev_menu_add "[ Give ]/Ability/Wraith Tactical"  "give mp_ability_phase_walk"`
-`dev_menu_add "[ Give ]/Ability/Pathfinder Ultimate"  "give mp_weapon_zipline"` 
+ - `dev_menu_add "[ Give ]/Ability/Wraith Tactical"  "give mp_ability_phase_walk"`
+ - `dev_menu_add "[ Give ]/Ability/Pathfinder Ultimate"  "give mp_weapon_zipline"` 
 
 ### Legends
 
-`dev_menu_add "[ Legend ]/Wraith"  "loadouts_devset character_selection character_wraith"`
-`dev_menu_add "[ Legend ]/Valkyrie"  "loadouts_devset character_selection character_valkyrie"` 
+ - `dev_menu_add "[ Legend ]/Wraith"  "loadouts_devset character_selection character_wraith"`
+ - `dev_menu_add "[ Legend ]/Valkyrie"  "loadouts_devset character_selection character_valkyrie"` 
 
 ### UI Toggles
 
-`dev_menu_add "[ UI ]/Show FPS"  "cl_showfps 1"`
-`dev_menu_add "[ UI ]/Hide FPS"  "cl_showfps 0"` 
+- `dev_menu_add "[ UI ]/Show FPS"  "cl_showfps 1"`
+- `dev_menu_add "[ UI ]/Hide FPS"  "cl_showfps 0"` 
 
 ### Maps
 
-`dev_menu_add "[ Change Level ]/Worlds Edge S3"  "map mp_rr_desertlands_64k_x_64k"` 
-`dev_menu_add "[ Change Level ]/Olympus S7"  "map mp_rr_olympus"` 
+- `dev_menu_add "[ Change Level ]/Worlds Edge S3"  "map mp_rr_desertlands_64k_x_64k"` 
+- `dev_menu_add "[ Change Level ]/Olympus S7"  "map mp_rr_olympus"` 
 
 ----------
 
