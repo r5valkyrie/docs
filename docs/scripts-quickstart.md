@@ -1,4 +1,4 @@
-## VScripts Guide: Server, Client, UI
+## Scripting Quickstart
 
 A practical intro to how scripts in `vscripts/` are organized and how Server, Client, and UI VMs work together. Use this as a quick reference when adding new features.
 
