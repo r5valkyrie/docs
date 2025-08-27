@@ -151,22 +151,7 @@ void function OnPrimaryAttack( WeaponPrimaryAttackParams params )
 
 ### UI panels (UI VM) and in-world screens (CLIENT)
 
-- Menu/UI logic: `vscripts/ui/` and `client/rui/`
-- In-world panels: register in `scripts/vgui_screens.txt`, create `.res` in `scripts/screens/`
-
-Example registration (vgui_screens.txt):
-```text
-VGUI_Screens
-{
-  my_example_panel
-  {
-    type        vgui_screen_panel
-    pixelswide  512
-    pixelshigh  256
-    resfile     "scripts/screens/my_example_panel.res"
-  }
-}
-```
+- Menu/UI logic: `vscripts/ui/`
 
 ### Debugging basics
 
