@@ -15,6 +15,15 @@
             ]
         },
         {
+            "title": "Scripting",
+            "pages": [
+                {
+                    "title": "Quick Start",
+                    "slug": "scripts-quickstart"
+                }
+            ]
+        },
+        {
             "title": "Modding",
             "pages": [
                 {
