@@ -35,8 +35,8 @@
                     "slug": "console-commands"
                 },
                 {
-                    "title": "Preset Console Bar",
-                    "slug": "console-dev-menu"
+                    "title": "Dev Menu",
+                    "slug": "dev-menu"
                 },
                 {
                     "title": "File Name Reference",
