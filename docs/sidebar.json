@@ -18,8 +18,12 @@
             "title": "Scripting",
             "pages": [
                 {
-                    "title": "Quick Start",
+                    "title": "Scripts Quickstart",
                     "slug": "scripts-quickstart"
+                },
+                {
+                    "title": "Weapons Quickstart",
+                    "slug": "weapons-quickstart"
                 }
             ]
         },
