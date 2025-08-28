@@ -173,11 +173,6 @@ Add a weapon/ability
 - [ ] Add to the `SERVER || CLIENT` weapons block in `scripts.rson`
 - [ ] Separate server authority from client prediction/FX
 
-Add a UI panel
-- [ ] Create `.res` in `scripts/screens/`
-- [ ] Register in `scripts/vgui_screens.txt`
-- [ ] Drive content from CLIENT/UI scripts as appropriate
-
 ### Handy globals
 
 ```nut
@@ -187,5 +182,3 @@ void function printl( var text ) { return print(text + "\n") }
 string function UniqueString( string prefix = "" ) { /* see _vscript.gnut */ }
 function EntFire( target, action, value = null, delay = 0.0, activator = null ) { /* see _vscript.gnut */ }
 ```
-
-If you want, we can scaffold a minimal SERVER/CLIENT pair or a weapons template you can copy into `vscripts/weapons/`.
