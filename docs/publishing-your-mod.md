@@ -32,7 +32,7 @@ README.md
 - `<modfiles>`: your mod files.
 - `icon.png`: 256×256 icon for your mod.
 - `README.md`: your mod’s description page.
-- `manifest.json`: Thunderstore manifest (see their guide: https://thunderstore.io/c/northstar/create/docs/).
+- `manifest.json`: Thunderstore manifest.
 
 #### Uploading
 
