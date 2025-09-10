@@ -23,18 +23,16 @@ The recommended place to publish is [Thunderstore](https://thunderstore.io/) (fo
 Your zip should look like this:
 
 ```
-mods/<author>.<modname>/
+<modfiles>
 icon.png
 manifest.json
 README.md
 ```
 
-- `mods/<author>.<modname>/`: your mod files.
+- `<modfiles>`: your mod files.
 - `icon.png`: 256×256 icon for your mod.
 - `README.md`: your mod’s description page.
 - `manifest.json`: Thunderstore manifest (see their guide: https://thunderstore.io/c/northstar/create/docs/).
-
-You can include multiple mods under `mods/`, but only if necessary.
 
 #### Uploading
 
