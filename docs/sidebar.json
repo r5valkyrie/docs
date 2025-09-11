@@ -39,6 +39,10 @@
                     "slug": "sound-modding"
                 },
                 {
+                    "title": "Playlist System",
+                    "slug": "mod-playlist-system"
+                },
+                {
                     "title": "Publishing",
                     "slug": "publishing-your-mod"
                 }
