@@ -1,22 +1,22 @@
 [
     {
         "name": "zee_x64",
-        "avatar": "https://github.com/r5valkyrie/docs/blob/main/contributors/assets/zee_x64.gif?raw=true",
+        "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/zee_x64.gif",
         "description": "Founder"
     },
     {
         "name": "LorryLeKral",
-        "avatar": "https://github.com/r5valkyrie/docs/blob/main/contributors/assets/LorryLeKral.png?raw=true",
+        "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/LorryLeKral.png",
         "description": "Founder"
     },
     {
         "name": "CafeFPS",
-        "avatar": "https://github.com/r5valkyrie/docs/blob/main/contributors/assets/CafeFPS.png?raw=true",
+        "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/CafeFPS.png",
         "description": "Founder"
     },
     {
         "name": "ReGlitched",
-        "avatar": "https://github.com/r5valkyrie/docs/blob/main/contributors/assets/ReGlitched.gif?raw=true",
+        "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/ReGlitched.gif",
         "description": "Scripting"
     }
 ]
