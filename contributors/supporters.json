@@ -1,1 +1,18 @@
-
+[
+    {
+        "name": "Red Horizons Audio",
+        "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/red_horizons_audio.png",
+        "discord": "red_horizons_audio"
+    
+    },
+    {
+        "name": "Seal",
+        "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/seal.png",
+        "discord": "anywhatseal"
+    },
+    {
+        "name": "Darth Elmo",
+        "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/darth_elmo.png",
+        "discord": "darthelmo"
+    }
+]
