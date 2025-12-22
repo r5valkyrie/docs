@@ -26,7 +26,8 @@ Either install the [Latest release](https://github.com/r5valkyrie/launcher/relea
 yay -S r5valkyrie-launcher-bin
 ```
 2. Follow the on screen instructions to further install the AUR package.
-
+3. ???
+4. Profit
 
 #### Installing it manually:
 
