@@ -11,6 +11,10 @@
                 {
                     "title": "Getting Started",
                     "slug": "getting-started"
+                },
+                {
+                    "title": "Installing R5Valkyrie on Linux",
+                    "slug": "install-linux"
                 }
             ]
         },
