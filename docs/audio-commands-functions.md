@@ -90,13 +90,13 @@ EmitSoundOnEntityExceptToPlayer( entityname, playerentity, "audioeventname") - S
 
 EmitSoundOnEntity( entityname, "audioeventname" )  - general purpose
 
-EmitSoundAtPosition( WHICHTEAM, POSITIONVECTORCOORDS, "audioeventname", drone ) - general purpose, emitted at a specified position
+EmitSoundAtPosition( TEAM, POSITION_VECTOR_COORDS, "audioeventname", entityname ) - general purpose, emitted at a specified position, team arguments are TEAM_ANY, TEAM_UNASSIGNED, ent.GetTeam(), etc.
 
 EmitSoundAtPositionExceptToPlayer( WHICHTEAM, POSITIONVECTORCOORDS playerentity, "audioeventname" ) - emitted at a specified position to ALL except the player 
 
-EmitSoundOnEntityToTeam( entityname, "audioeventname", PLAYERTEAM ) - team-based 
+EmitSoundOnEntityToTeam( entityname, "audioeventname", PLAYERTEAM ) - team-based, team arguments are TEAM_ANY, TEAM_UNASSIGNED, ent.GetTeam(), etc.
 
-EmitSoundOnEntityToEnemies( entityname, "audioeventname", PLAYERTEAM) - team-based
+EmitSoundOnEntityToEnemies( entityname, "audioeventname", PLAYERTEAM) - team-based, team arguments are TEAM_ANY, TEAM_UNASSIGNED, ent.GetTeam(), etc.
 
 EmitSoundOnEntityAfterDelay( entity, "audioeventname", delayinseconds ) 
 
