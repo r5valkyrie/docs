@@ -33,7 +33,7 @@ $sequence "animseq/weapons/nemesis/ptpov_nemesis/reloadempty_late1_onehanded" {
 	node NODE_2
 }
 
-From: ptpov_nemesis.qc
+From: ptpov_nemesis.qc <- derived from the Nemesis viewmodel from its rmdl, rrig and rseqs, using Someoneatemylastsliceofpizza (SAMLSOP)'s R5-AnimInspector
 
 
 $sequence "animseq/creatures/flyer/r2_flyer/flyer_caged_aggro_01" {
@@ -62,7 +62,7 @@ $sequence "animseq/creatures/flyer/r2_flyer/flyer_caged_aggro_01" {
 	{ event AE_SV_VSCRIPT_CALLBACK 258 "worldsound:Flyer_Cage_Vocal_JawSnap_Light AUDIO_HEAD" } <- GLOBAL AUDIO EVENT!
 }
 
-From: flyer_kingscanyon_animated.qc
+From: flyer_kingscanyon_animated.qc <- derived from the Flyer model from its rmdl, rrig and rseqs, using Someoneatemylastsliceofpizza (SAMLSOP)'s R5-AnimInspector
 
 
 ---
