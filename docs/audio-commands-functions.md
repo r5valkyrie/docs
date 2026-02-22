@@ -85,7 +85,9 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 ### EmitSound
 
 - Signature: EmitSound()
+
 - Purpose: Emit a generic sound
+
 - Note: Base emit function
 
 
@@ -104,9 +106,9 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 - Parameters:
 
-- entity: Target entity to attach sound to
+	- entity: Target entity to attach sound to
 
-- soundAlias: String identifier of sound to play
+	- soundAlias: String identifier of sound to play
 
 
 
@@ -122,13 +124,13 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 - Parameters:
 
-- team: TEAM_ANY, TEAM_UNASSIGNED, or specific team
+	- team: TEAM_ANY, TEAM_UNASSIGNED, or specific team
 
-- origin: Vector position in world
+	- origin: Vector position in world
 
-- soundAlias: String sound identifier
+	- soundAlias: String sound identifier
 
-- entity: Source entity (optional reference)
+	- entity: Source entity (optional reference)
 
 
 ## EMIT SOUND-  VARIATIONS
@@ -144,11 +146,11 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 - Parameters:
 
-- entity: Target entity
+	- entity: Target entity
 
-- exceptionPlayer: Player who won't hear the sound
+	- exceptionPlayer: Player who won't hear the sound
 
-- soundAlias: Sound string
+	- soundAlias: Sound string
 
 
 ### EmitSoundOnEntityOnlyToPlayer
@@ -161,11 +163,11 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 - Parameters:
 
-- player: Target player who hears sound
+	- player: Target player who hears sound
 
-- entity: Entity where sound originates
+	- entity: Entity where sound originates
 
-- soundAlias: Sound string
+	- soundAlias: Sound string
 
 
 ### EmitSoundAtPositionExceptToPlayer
@@ -222,9 +224,9 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 - Parameters:
 
-- entity: Target entity
+	- entity: Target entity
 
-- soundAlias: Sound string to stop
+	- soundAlias: Sound string to stop
 
 
 ### StopSound
@@ -254,11 +256,11 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 - Parameters:
 
-- entity: Target entity
+	- entity: Target entity
 
-- soundAlias: Sound string
+	- soundAlias: Sound string
 
-- fadeTime: Time in seconds to fade
+	- fadeTime: Time in seconds to fade
 
 
 ### FadeOutSoundOnEntityByName
@@ -281,9 +283,9 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 - Parameters:
 
-- entity: Target entity
+	- entity: Target entity
 
-- soundAlias: Sound identifier
+	- soundAlias: Sound identifier
 
 
 ### GetSoundDuration
@@ -376,7 +378,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Signature: StopWeaponSound()
 
 - Purpose: Stop weapon sound
-- 
+
 
 ### StopWeaponSound_Script
 
@@ -520,7 +522,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Signature: Script_PlayTextToSpeech(text)
 
 - Purpose: Play text-to-speech audio
-- 
+
 
 ## PAUSE/RESUME
 
@@ -605,7 +607,7 @@ Pattern 3: Position-based sound
 Pattern 4: First-person only sound
 
 - EmitSoundOnEntityOnlyToPlayer( player, entity, soundAlias )
-- 
+
 
 Pattern 5: Fading out sound
 
