@@ -78,9 +78,9 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 ## Script Functions / Commands
 
 
-## ============================================
+
 ## EMIT SOUND - BASIC
-## ============================================
+
 
 EmitSound
   Signature: EmitSound()
@@ -108,9 +108,9 @@ EmitSoundAtPosition
     - soundAlias: String sound identifier
     - entity: Source entity (optional reference)
 
-## ============================================
+
 ## EMIT SOUND - VARIATIONS
-## ============================================
+
 
 EmitSoundOnEntityExceptToPlayer
   Signature: EmitSoundOnEntity(entity, exceptionPlayer, soundAlias)
@@ -152,9 +152,9 @@ EmitSoundOnEntityForLocalPlayer
   Signature: EmitSoundOnEntityForLocalPlayer(entity, soundAlias)
   Purpose: Play sound only for local player
 
-## ============================================
+
 ## STOP SOUNDS
-## ============================================
+
 
 StopSoundOnEntity
   Signature: StopSoundOnEntity(entity, soundAlias)
@@ -173,9 +173,9 @@ StopSoundAtPosition
   Signature: StopSoundAtPosition(position, soundAlias)
   Purpose: Stop sound at a world position
 
-## ============================================
+
 ## FADE OUT SOUNDS
-## ============================================
+
 
 FadeOutSoundOnEntity
   Signature: FadeOutSoundOnEntity(entity, soundAlias, fadeTime)
@@ -190,9 +190,9 @@ FadeOutSoundOnEntityByName
   Signature: FadeOutSoundOnEntityByName(entity, soundAlias)
   Purpose: Fade out sound by name
 
-## ============================================
+
 ## SOUND UTILITIES
-## ============================================
+
 
 SetSoundName
   Signature: SetSoundName(entity, soundAlias)
@@ -232,9 +232,9 @@ UnsetSoundCodeControllerValue
   Signature: UnsetSoundCodeControllerValue()
   Purpose: Unset sound code controller value
 
-## ============================================
+
 ## WEAPON SOUNDS
-## ============================================
+
 
 EmitWeaponSound
   Signature: EmitWeaponSound()
@@ -260,9 +260,9 @@ StopWeaponSound_Script
   Signature: StopWeaponSound_Script()
   Purpose: Stop weapon sound from script
 
-## ============================================
+
 ## WHIZBY/BULLET SOUNDS
-## ============================================
+
 
 EmitBulletWhizbyForLocalPlayer
   Signature: EmitBulletWhizbyForLocalPlayer()
@@ -273,9 +273,9 @@ EmitProjectileWhizbyForLocalPlayer
   Signature: EmitProjectileWhizbyForLocalPlayer()
   Purpose: Play projectile whizby sound only to local player
 
-## ============================================
+
 ## AI SOUNDS
-## ============================================
+
 
 EmitAISound
   Signature: EmitAISound()
@@ -293,9 +293,9 @@ EmitAISoundWithOwnerToTarget
   Signature: EmitAISoundWithOwnerToTarget()
   Purpose: Emit AI sound from owner to target
 
-## ============================================
+
 ## VEHICLE SOUNDS
-## ============================================
+
 
 VehiclePlaySoundOnEntityForOccupants
   Signature: VehiclePlaySoundOnEntityForOccupants(vehicle, entity, soundAlias)
@@ -309,9 +309,9 @@ VehiclePlaySoundOnEntityForNonOccupants
   Signature: VehiclePlaySoundOnEntityForNonOccupants()
   Purpose: Play sound for players not in vehicle
 
-## ============================================
+
 ## VOICE FUNCTIONS
-## ============================================
+
 
 GetVoicePackIndex
   Signature: GetVoicePackIndex()
@@ -348,9 +348,9 @@ Script_PlayTextToSpeech
   Signature: Script_PlayTextToSpeech(text)
   Purpose: Play text-to-speech audio
 
-## ============================================
+
 ## PAUSE/RESUME
-## ============================================
+
 
 PauseSoundOnEntity
   Signature: PauseSoundOnEntity(entity, soundAlias)
@@ -368,9 +368,9 @@ ResumeUISoundByName
   Signature: ResumeUISoundByName(soundAlias)
   Purpose: Resume UI sound
 
-## ============================================
+
 ## SOUNDSCAPE
-## ============================================
+
 
 trigger_soundscape
   Signature: trigger_soundscape()
@@ -384,9 +384,9 @@ stopsoundscape
   Signature: stopsoundscape()
   Purpose: Stop current soundscape
 
-## ============================================
+
 ## COMMON PATTERNS
-## ============================================
+
 
 Pattern 1: Playing a sound on entity
   EmitSoundOnEntity( entity, soundAlias )
