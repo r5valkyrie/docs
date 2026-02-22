@@ -16,14 +16,14 @@ $sequence "animseq/weapons/nemesis/ptpov_nemesis/reloadempty_late1_onehanded" {
 	fadeout 0.2
 	activity ACT_VM_ONEHANDED_RELOADEMPTY_LATE1 1
 	//ikrule 0
-	**{ event AE_CL_PLAYSOUND 21 "wpn_nemesis_reload_raise" }**
-	**{ event AE_CL_STOPSOUND 59 "wpn_nemesis_reload_raise" }**
-	**{ event AE_CL_PLAYSOUND 27 "wpn_nemesis_reload_magInsert" }**
-	**{ event AE_CL_STOPSOUND 59 "wpn_nemesis_reload_magInsert" }**
-	**{ event AE_CL_PLAYSOUND 29 "wpn_nemesis_reload_magSmack" }**
-	**{ event AE_CL_STOPSOUND 59 "wpn_nemesis_reload_magSmack" }**
-	**{ event AE_CL_PLAYSOUND 34 "wpn_nemesis_reload_magSpin" }**
-	**{ event AE_CL_STOPSOUND 59 "wpn_nemesis_reload_magSpin" }**
+	{ event AE_CL_PLAYSOUND 21 "wpn_nemesis_reload_raise" }
+	{ event AE_CL_STOPSOUND 59 "wpn_nemesis_reload_raise" }
+	{ event AE_CL_PLAYSOUND 27 "wpn_nemesis_reload_magInsert" }
+	{ event AE_CL_STOPSOUND 59 "wpn_nemesis_reload_magInsert" }
+	{ event AE_CL_PLAYSOUND 29 "wpn_nemesis_reload_magSmack" }
+	{ event AE_CL_STOPSOUND 59 "wpn_nemesis_reload_magSmack" }
+	{ event AE_CL_PLAYSOUND 34 "wpn_nemesis_reload_magSpin" }
+	{ event AE_CL_STOPSOUND 59 "wpn_nemesis_reload_magSpin" }
 	{ event AE_WPN_CLIPBODYGROUP_SHOW 5 "" }
 	{ event AE_WPN_RELOAD_MILESTONE_2 21 "" }
 	{ event AE_WPN_RUMBLE 21 "reload_pilot_large" }
