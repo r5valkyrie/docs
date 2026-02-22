@@ -65,7 +65,7 @@ $sequence "animseq/creatures/flyer/r2_flyer/flyer_caged_aggro_01" {
 From: flyer_kingscanyon_animated.qc <- derived from the Flyer model from its rmdl, rrig and rseqs, using Someoneatemylastsliceofpizza (SAMLSOP)'s R5-AnimInspector
 
 
----
+-
 
 As shown above, audio events can be associated with / assigned to an activity such as
 
@@ -73,7 +73,7 @@ activity ACT_VM_WEAPON_INSPECT 60
 
 by using Animation Events (prefixed with AE inside the .qc's). Animation Events can either be clientsided or trigger serversided callbacks, for global audio! (heard by all players in range)
 
----
+-
 
 ## Script Functions / Commands
 
@@ -92,43 +92,43 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### EmitSoundOnEntity
 
-  Signature: EmitSoundOnEntity(entity, soundAlias)
+- Signature: EmitSoundOnEntity(entity, soundAlias)
 
-  Purpose: Play a sound on a specified entity
+ -Purpose: Play a sound on a specified entity
 
-  Example: EmitSoundOnEntity( player, "Shadow_Legend_Shadow_Loop_1P" )
+ -Example: EmitSoundOnEntity( player, "Shadow_Legend_Shadow_Loop_1P" )
 
-  Example: EmitSoundOnEntity( door, "Door_Sliding_Metal_Close" )
+ -Example: EmitSoundOnEntity( door, "Door_Sliding_Metal_Close" )
 
-  Example: EmitSoundOnEntity( emitter, quipAlias )
+ -Example: EmitSoundOnEntity( emitter, quipAlias )
 
-  Parameters:
+ -Parameters:
 
-    - entity: Target entity to attach sound to
+ -entity: Target entity to attach sound to
 
-    - soundAlias: String identifier of sound to play
+ -soundAlias: String identifier of sound to play
 
 
 
 ### EmitSoundAtPosition
 
-  Signature: EmitSoundAtPosition(team, origin, soundAlias, entity)
+ -Signature: EmitSoundAtPosition(team, origin, soundAlias, entity)
 
-  Purpose: Play a sound at a world position (not attached to entity)
+ -Purpose: Play a sound at a world position (not attached to entity)
 
-  Example: EmitSoundAtPosition( TEAM_ANY, lootOrigin, "ShadowLegend_Shadow_DeathVanish", player )
+ -Example: EmitSoundAtPosition( TEAM_ANY, lootOrigin, "ShadowLegend_Shadow_DeathVanish", player )
 
-  Example: EmitSoundAtPosition( TEAM_UNASSIGNED, soundPosition, "Door_Single_Metal_Close_Start", door )
+ -Example: EmitSoundAtPosition( TEAM_UNASSIGNED, soundPosition, "Door_Single_Metal_Close_Start", door )
 
-  Parameters:
+ -Parameters:
 
-    - team: TEAM_ANY, TEAM_UNASSIGNED, or specific team
+ -team: TEAM_ANY, TEAM_UNASSIGNED, or specific team
 
-    - origin: Vector position in world
+ -origin: Vector position in world
 
-    - soundAlias: String sound identifier
+ -soundAlias: String sound identifier
 
-    - entity: Source entity (optional reference)
+ -entity: Source entity (optional reference)
 
 
 ## EMIT SOUND - VARIATIONS
@@ -136,75 +136,75 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### EmitSoundOnEntityExceptToPlayer
 
-  Signature: EmitSoundOnEntity(entity, exceptionPlayer, soundAlias)
+ -Signature: EmitSoundOnEntity(entity, exceptionPlayer, soundAlias)
 
-  Purpose: Play sound on entity except to specific player (heard by others)
+ -Purpose: Play sound on entity except to specific player (heard by others)
 
-  Example: EmitSoundOnEntityExceptToPlayer( emitter, exceptionPlayer, quipAlias )
+ -Example: EmitSoundOnEntityExceptToPlayer( emitter, exceptionPlayer, quipAlias )
 
-  Parameters:
+ -Parameters:
 
-    - entity: Target entity
+ -entity: Target entity
 
-    - exceptionPlayer: Player who won't hear the sound
+ -exceptionPlayer: Player who won't hear the sound
 
-    - soundAlias: Sound string
+ -soundAlias: Sound string
 
 
 ### EmitSoundOnEntityOnlyToPlayer
 
-  Signature: EmitSoundOnEntityOnlyToPlayer(player, entity, soundAlias)
+ -Signature: EmitSoundOnEntityOnlyToPlayer(player, entity, soundAlias)
 
-  Purpose: Play sound on entity only to specific player (first-person only)
+ -Purpose: Play sound on entity only to specific player (first-person only)
 
-  Example: EmitSoundOnEntityOnlyToPlayer( player, player, "ShadowLegend_Shadow_Spawn" )
+ -Example: EmitSoundOnEntityOnlyToPlayer( player, player, "ShadowLegend_Shadow_Spawn" )
 
-  Parameters:
+ -Parameters:
 
-    - player: Target player who hears sound
+ -player: Target player who hears sound
 
-    - entity: Entity where sound originates
+ -entity: Entity where sound originates
 
-    - soundAlias: Sound string
+ -soundAlias: Sound string
 
 
 ### EmitSoundAtPositionExceptToPlayer
 
-  Signature: EmitSoundAtPositionExceptToPlayer(team, position, soundAlias, exceptionPlayer)
+ -Signature: EmitSoundAtPositionExceptToPlayer(team, position, soundAlias, exceptionPlayer)
 
-  Purpose: Play sound at position except to specific player
+ -Purpose: Play sound at position except to specific player
 
-  Note: Heard by all except one player
+ -Note: Heard by all except one player
 
 
 ### EmitSoundAtPositionOnlyToPlaye
 
-  Signature: EmitSoundAtPositionOnlyToPlayer(player, position, soundAlias)
+ -Signature: EmitSoundAtPositionOnlyToPlayer(player, position, soundAlias)
 
-  Purpose: Play sound at position only to specific player
+ -Purpose: Play sound at position only to specific player
 
-  Note: First-person only audio
+ -Note: First-person only audio
 
 
 ### EmitSoundOnEntityToEnemies
 
-  Signature: EmitSoundOnEntityToEnemies(entity, soundAlias)
+ -Signature: EmitSoundOnEntityToEnemies(entity, soundAlias)
 
-  Purpose: Play sound on entity only to enemies
+ -Purpose: Play sound on entity only to enemies
 
 
 ### EmitSoundOnEntityToTeam
 
-  Signature: EmitSoundOnEntityToTeam(entity, soundAlias)
+ -Signature: EmitSoundOnEntityToTeam(entity, soundAlias)
 
-  Purpose: Play sound on entity only to teammates
+ -Purpose: Play sound on entity only to teammates
 
 
 ### EmitSoundOnEntityForLocalPlayer
 
-  Signature: EmitSoundOnEntityForLocalPlayer(entity, soundAlias)
+ -Signature: EmitSoundOnEntityForLocalPlayer(entity, soundAlias)
 
-  Purpose: Play sound only for local player
+ -Purpose: Play sound only for local player
 
 
 ## STOP SOUNDS
@@ -212,33 +212,33 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### StopSoundOnEntity
 
-  Signature: StopSoundOnEntity(entity, soundAlias)
+ -Signature: StopSoundOnEntity(entity, soundAlias)
 
-  Purpose: Stop a sound on specific entity
+ -Purpose: Stop a sound on specific entity
 
-  Example: StopSoundOnEntity( player, "Shadow_Legend_Shadow_Loop_1P" )
+ -Example: StopSoundOnEntity( player, "Shadow_Legend_Shadow_Loop_1P" )
 
-  Example: StopSoundOnEntity( vaultPanel, VAULT_ALARM_SOUND )
+ -Example: StopSoundOnEntity( vaultPanel, VAULT_ALARM_SOUND )
 
-  Parameters:
+ -Parameters:
 
-    - entity: Target entity
+ -entity: Target entity
 
-    - soundAlias: Sound string to stop
+ -soundAlias: Sound string to stop
 
 
 ### StopSound
 
-  Signature: StopSound()
+ -Signature: StopSound()
 
-  Purpose: Stop a generic sound
+ -Purpose: Stop a generic sound
 
 
 ### StopSoundAtPosition
 
-  Signature: StopSoundAtPosition(position, soundAlias)
+ -Signature: StopSoundAtPosition(position, soundAlias)
 
-  Purpose: Stop sound at a world position
+ -Purpose: Stop sound at a world position
 
 
 ## FADE OUT SOUNDS
@@ -246,26 +246,26 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### FadeOutSoundOnEntity
 
-  Signature: FadeOutSoundOnEntity(entity, soundAlias, fadeTime)
+ -Signature: FadeOutSoundOnEntity(entity, soundAlias, fadeTime)
 
-  Purpose: Fade out sound on entity over time
+ -Purpose: Fade out sound on entity over time
 
-  Example: FadeOutSoundOnEntity( ent, soundAlias, fadeTime )
+ -Example: FadeOutSoundOnEntity( ent, soundAlias, fadeTime )
 
-  Parameters:
+ -Parameters:
 
-    - entity: Target entity
+ -entity: Target entity
 
-    - soundAlias: Sound string
+ -soundAlias: Sound string
 
-    - fadeTime: Time in seconds to fade
+ -fadeTime: Time in seconds to fade
 
 
 ### FadeOutSoundOnEntityByName
 
-  Signature: FadeOutSoundOnEntityByName(entity, soundAlias)
+ -Signature: FadeOutSoundOnEntityByName(entity, soundAlias)
 
-  Purpose: Fade out sound by name
+ -Purpose: Fade out sound by name
 
 
 ## SOUND UTILITIES
@@ -273,71 +273,71 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### SetSoundName
 
-  Signature: SetSoundName(entity, soundAlias)
+ -Signature: SetSoundName(entity, soundAlias)
 
-  Purpose: Set the sound name for an entity
+ -Purpose: Set the sound name for an entity
 
-  Example: ambientGeneric.SetSoundName( file.ambientGeneric )
+ -Example: ambientGeneric.SetSoundName( file.ambientGeneric )
 
-  Parameters:
+ -Parameters:
 
-    - entity: Target entity
+ -entity: Target entity
 
-    - soundAlias: Sound identifier
+ -soundAlias: Sound identifier
 
 
 ### GetSoundDuration
 
-  Signature: GetSoundDuration(soundAlias)
+ -Signature: GetSoundDuration(soundAlias)
 
-  Purpose: Get duration of a sound in seconds
+ -Purpose: Get duration of a sound in seconds
 
-  Returns: Float (duration)
+ -Returns: Float (duration)
 
 
 ### IsSoundStillPlaying
 
-  Signature: IsSoundStillPlaying(soundAlias)
+ -Signature: IsSoundStillPlaying(soundAlias)
 
-  Purpose: Check if a sound is currently playing
+ -Purpose: Check if a sound is currently playing
 
-  Returns: Boolean
+ -Returns: Boolean
 
 
 
 ### SetSoundVolume
 
-  Signature: SetSoundVolume(soundAlias, volume)
+ -Signature: SetSoundVolume(soundAlias, volume)
 
-  Purpose: Set volume for a sound
+ -Purpose: Set volume for a sound
 
 
 ### GetSoundVolume
 
-  Signature: GetSoundVolume()
+ -Signature: GetSoundVolume()
 
-  Purpose: Get current sound volume
+ -Purpose: Get current sound volume
 
 
 ### SetSoundCodeControllerEntity
 
-  Signature: SetSoundCodeControllerEntity(entity)
+ -Signature: SetSoundCodeControllerEntity(entity)
 
-  Purpose: Set entity as sound code controller
+ -Purpose: Set entity as sound code controller
 
 
 ### SetSoundCodeControllerValue
 
-  Signature: SetSoundCodeControllerValue(value)
+ -Signature: SetSoundCodeControllerValue(value)
 
-  Purpose: Set sound code controller value
+ -Purpose: Set sound code controller value
 
 
 ### nsetSoundCodeControllerValue
 
-  Signature: UnsetSoundCodeControllerValue()
+ -Signature: UnsetSoundCodeControllerValue()
 
-  Purpose: Unset sound code controller value
+ -Purpose: Unset sound code controller value
 
 
 ## WEAPON SOUNDS
@@ -345,44 +345,44 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### EmitWeaponSound
 
-  Signature: EmitWeaponSound()
+ -Signature: EmitWeaponSound()
 
-  Purpose: Emit weapon firing sound
+ -Purpose: Emit weapon firing sound
 
 
 ### EmitWeaponSound_1p3p
 
-  Signature: EmitWeaponSound_1p3p()
+ -Signature: EmitWeaponSound_1p3p()
 
-  Purpose: Emit weapon sound with 1st and 3rd person variants
+ -Purpose: Emit weapon sound with 1st and 3rd person variants
 
 
 ### EmitWeaponSound_Script
 
-  Signature: EmitWeaponSound_Script()
+ -Signature: EmitWeaponSound_Script()
 
-  Purpose: Emit weapon sound from script
+ -Purpose: Emit weapon sound from script
 
 
 ### EmitWeaponNpcSound
 
-  Signature: EmitWeaponNpcSound()
+ -Signature: EmitWeaponNpcSound()
 
-  Purpose: Emit NPC weapon sound
+ -Purpose: Emit NPC weapon sound
 
 
 ### StopWeaponSound
 
-  Signature: StopWeaponSound()
+ -Signature: StopWeaponSound()
 
-  Purpose: Stop weapon sound
-  
+ -Purpose: Stop weapon sound
+ -
 
 ### StopWeaponSound_Script
 
-  Signature: StopWeaponSound_Script()
+ -Signature: StopWeaponSound_Script()
 
-  Purpose: Stop weapon sound from script
+ -Purpose: Stop weapon sound from script
 
 
 ## WHIZBY/BULLET SOUNDS
@@ -390,18 +390,18 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### EmitBulletWhizbyForLocalPlayer
 
-  Signature: EmitBulletWhizbyForLocalPlayer()
+ -Signature: EmitBulletWhizbyForLocalPlayer()
 
-  Purpose: Play bullet whizby sound only to local player
+ -Purpose: Play bullet whizby sound only to local player
 
-  Note: Plays when bullet passes near player
+ -Note: Plays when bullet passes near player
 
 
 ### EmitProjectileWhizbyForLocalPlayer
 
-  Signature: EmitProjectileWhizbyForLocalPlayer()
+ -Signature: EmitProjectileWhizbyForLocalPlayer()
 
-  Purpose: Play projectile whizby sound only to local player
+ -Purpose: Play projectile whizby sound only to local player
 
 
 ## AI SOUNDS
@@ -409,30 +409,30 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### EmitAISound
 
-  Signature: EmitAISound()
+ -Signature: EmitAISound()
 
-  Purpose: Emit NPC/AI sound
+ -Purpose: Emit NPC/AI sound
 
 
 ### EmitAISoundToTarget
 
-  Signature: EmitAISoundToTarget()
+ -Signature: EmitAISoundToTarget()
 
-  Purpose: Emit AI sound directed at target
+ -Purpose: Emit AI sound directed at target
 
 
 ### EmitAISoundWithOwner
 
-  Signature: EmitAISoundWithOwner()
+ -Signature: EmitAISoundWithOwner()
 
-  Purpose: Emit AI sound with owner reference
+ -Purpose: Emit AI sound with owner reference
 
 
 ### EmitAISoundWithOwnerToTarget
 
-  Signature: EmitAISoundWithOwnerToTarget()
+ -Signature: EmitAISoundWithOwnerToTarget()
 
-  Purpose: Emit AI sound from owner to target
+ -Purpose: Emit AI sound from owner to target
 
 
 ## VEHICLE SOUNDS
@@ -440,22 +440,22 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### VehiclePlaySoundOnEntityForOccupants
 
-  Signature: VehiclePlaySoundOnEntityForOccupants(vehicle, entity, soundAlias)
+ -Signature: VehiclePlaySoundOnEntityForOccupants(vehicle, entity, soundAlias)
 
-  Purpose: Play sound on vehicle for all occupants
+ -Purpose: Play sound on vehicle for all occupants
 
 ### VehiclePlayReliableSoundOnEntityForOccupants
 
-  Signature: VehiclePlayReliableSoundOnEntityForOccupants(vehicle, entity, soundAlias)
+ -Signature: VehiclePlayReliableSoundOnEntityForOccupants(vehicle, entity, soundAlias)
 
-  Purpose: Play reliable sound (guaranteed delivery) for vehicle occupants
+ -Purpose: Play reliable sound (guaranteed delivery) for vehicle occupants
 
 
 ### VehiclePlaySoundOnEntityForNonOccupants
 
-  Signature: VehiclePlaySoundOnEntityForNonOccupants()
+ -Signature: VehiclePlaySoundOnEntityForNonOccupants()
 
-  Purpose: Play sound for players not in vehicle
+ -Purpose: Play sound for players not in vehicle
 
 
 ## VOICE FUNCTIONS
@@ -463,97 +463,97 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### GetVoicePackIndex
 
-  Signature: GetVoicePackIndex()
+ -Signature: GetVoicePackIndex()
 
-  Purpose: Get current voice pack index
+ -Purpose: Get current voice pack index
 
-  Returns: Integer
+ -Returns: Integer
 
 
 ### SetVoicePackIndex
 
-  Signature: SetVoicePackIndex(index)
+ -Signature: SetVoicePackIndex(index)
 
-  Purpose: Set voice pack for player
+ -Purpose: Set voice pack for player
 
 
 ### IsVoiceMuted
-  Signature: IsVoiceMuted()
+ -Signature: IsVoiceMuted()
 
-  Purpose: Check if voice is muted
+ -Purpose: Check if voice is muted
 
-  Returns: Boolean
+ -Returns: Boolean
 
 
 ### IsPlayerVoiceMutedForUID
 
-  Signature: IsPlayerVoiceMutedForUID(playerUID)
+ -Signature: IsPlayerVoiceMutedForUID(playerUID)
 
-  Purpose: Check if specific player's voice is muted
+ -Purpose: Check if specific player's voice is muted
 
-  Returns: Boolean
+ -Returns: Boolean
 
 
 ### TogglePlayerVoiceMute
 
-  Signature: TogglePlayerVoiceMute()
+ -Signature: TogglePlayerVoiceMute()
 
-  Purpose: Toggle player voice mute state
+ -Purpose: Toggle player voice mute state
 
 
 ### TogglePlayerVoiceMutedForUID
 
-  Signature: TogglePlayerVoiceMutedForUID(playerUID)
+ -Signature: TogglePlayerVoiceMutedForUID(playerUID)
 
-  Purpose: Toggle voice mute for specific player UID
+ -Purpose: Toggle voice mute for specific player UID
 
 
 ### Script_IsVoiceMuted
 
-  Signature: Script_IsVoiceMuted()
+ -Signature: Script_IsVoiceMuted()
 
-  Purpose: Script version of IsVoiceMuted
+ -Purpose: Script version of IsVoiceMuted
 
 
 ### Script_PlayTextToSpeech
 
-  Signature: Script_PlayTextToSpeech(text)
+ -Signature: Script_PlayTextToSpeech(text)
 
-  Purpose: Play text-to-speech audio
-  
+ -Purpose: Play text-to-speech audio
+ -
 
 ## PAUSE/RESUME
 
 
 ### PauseSoundOnEntity
 
-  Signature: PauseSoundOnEntity(entity, soundAlias)
+ -Signature: PauseSoundOnEntity(entity, soundAlias)
 
-  Purpose: Pause sound on entity
+ -Purpose: Pause sound on entity
 
 
 
 ### ResumeSoundOnEntity
 
-  Signature: ResumeSoundOnEntity(entity, soundAlias)
+ -Signature: ResumeSoundOnEntity(entity, soundAlias)
 
-  Purpose: Resume paused sound on entity
+ -Purpose: Resume paused sound on entity
 
 
 
 ### PauseUISoundByName
 
-  Signature: PauseUISoundByName(soundAlias)
+ -Signature: PauseUISoundByName(soundAlias)
 
-  Purpose: Pause UI sound
+ -Purpose: Pause UI sound
 
 
 
 ### ResumeUISoundByName
 
-  Signature: ResumeUISoundByName(soundAlias)
+ -Signature: ResumeUISoundByName(soundAlias)
 
-  Purpose: Resume UI sound
+ -Purpose: Resume UI sound
 
 
 
@@ -562,25 +562,25 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### trigger_soundscape
 
-  Signature: trigger_soundscape()
+ -Signature: trigger_soundscape()
 
-  Purpose: Trigger soundscape entity
+ -Purpose: Trigger soundscape entity
 
 
 
 ### playsoundscape
 
-  Signature: playsoundscape(soundscape)
+ -Signature: playsoundscape(soundscape)
 
-  Purpose: Play soundscape
+ -Purpose: Play soundscape
 
 
 
 ### stopsoundscape
 
-  Signature: stopsoundscape()
+ -Signature: stopsoundscape()
 
-  Purpose: Stop current soundscape
+ -Purpose: Stop current soundscape
 
 
 
@@ -589,27 +589,27 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 Pattern 1: Playing a sound on entity
 
-  EmitSoundOnEntity( entity, soundAlias )
+ -EmitSoundOnEntity( entity, soundAlias )
 
 
 Pattern 2: Stopping a sound
 
-  StopSoundOnEntity( entity, soundAlias )
+ -StopSoundOnEntity( entity, soundAlias )
 
 
 Pattern 3: Position-based sound
 
-  EmitSoundAtPosition( team, origin, soundAlias, sourceEntity )
+ -EmitSoundAtPosition( team, origin, soundAlias, sourceEntity )
 
 
 Pattern 4: First-person only sound
 
-  EmitSoundOnEntityOnlyToPlayer( player, entity, soundAlias )
-  
+ -EmitSoundOnEntityOnlyToPlayer( player, entity, soundAlias )
+ -
 
 Pattern 5: Fading out sound
 
-  FadeOutSoundOnEntity( entity, soundAlias, fadeTime )
+ -FadeOutSoundOnEntity( entity, soundAlias, fadeTime )
 
 
 
