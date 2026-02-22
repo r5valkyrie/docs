@@ -84,11 +84,9 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### EmitSound
 
-  Signature: EmitSound()
-
-  Purpose: Emit a generic sound
-
-  Note: Base emit function
+Signature: EmitSound()
+Purpose: Emit a generic sound
+Note: Base emit function
 
 
 
@@ -180,7 +178,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 
 ### EmitSoundAtPositionOnlyToPlaye
-r
+
   Signature: EmitSoundAtPositionOnlyToPlayer(player, position, soundAlias)
 
   Purpose: Play sound at position only to specific player
@@ -304,6 +302,7 @@ r
   Purpose: Check if a sound is currently playing
 
   Returns: Boolean
+
 
 
 ### SetSoundVolume
