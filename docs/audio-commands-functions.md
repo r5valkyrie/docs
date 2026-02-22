@@ -84,9 +84,9 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 ### EmitSound
 
-Signature: EmitSound()
-Purpose: Emit a generic sound
-Note: Base emit function
+- Signature: EmitSound()
+- Purpose: Emit a generic sound
+- Note: Base emit function
 
 
 
