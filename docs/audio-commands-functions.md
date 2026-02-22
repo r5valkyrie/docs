@@ -82,7 +82,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 ## EMIT SOUND - BASIC
 
 
-EmitSound
+### EmitSound
 
   Signature: EmitSound()
 
@@ -92,7 +92,7 @@ EmitSound
 
 
 
-EmitSoundOnEntity
+### EmitSoundOnEntity
 
   Signature: EmitSoundOnEntity(entity, soundAlias)
 
@@ -112,7 +112,7 @@ EmitSoundOnEntity
 
 
 
-EmitSoundAtPosition
+### EmitSoundAtPosition
 
   Signature: EmitSoundAtPosition(team, origin, soundAlias, entity)
 
@@ -136,7 +136,7 @@ EmitSoundAtPosition
 ## EMIT SOUND - VARIATIONS
 
 
-EmitSoundOnEntityExceptToPlayer
+### EmitSoundOnEntityExceptToPlayer
 
   Signature: EmitSoundOnEntity(entity, exceptionPlayer, soundAlias)
 
@@ -153,7 +153,7 @@ EmitSoundOnEntityExceptToPlayer
     - soundAlias: Sound string
 
 
-EmitSoundOnEntityOnlyToPlayer
+### EmitSoundOnEntityOnlyToPlayer
 
   Signature: EmitSoundOnEntityOnlyToPlayer(player, entity, soundAlias)
 
@@ -170,7 +170,7 @@ EmitSoundOnEntityOnlyToPlayer
     - soundAlias: Sound string
 
 
-EmitSoundAtPositionExceptToPlayer
+### EmitSoundAtPositionExceptToPlayer
 
   Signature: EmitSoundAtPositionExceptToPlayer(team, position, soundAlias, exceptionPlayer)
 
@@ -179,7 +179,7 @@ EmitSoundAtPositionExceptToPlayer
   Note: Heard by all except one player
 
 
-EmitSoundAtPositionOnlyToPlaye
+### EmitSoundAtPositionOnlyToPlaye
 r
   Signature: EmitSoundAtPositionOnlyToPlayer(player, position, soundAlias)
 
@@ -188,21 +188,21 @@ r
   Note: First-person only audio
 
 
-EmitSoundOnEntityToEnemies
+### EmitSoundOnEntityToEnemies
 
   Signature: EmitSoundOnEntityToEnemies(entity, soundAlias)
 
   Purpose: Play sound on entity only to enemies
 
 
-EmitSoundOnEntityToTeam
+### EmitSoundOnEntityToTeam
 
   Signature: EmitSoundOnEntityToTeam(entity, soundAlias)
 
   Purpose: Play sound on entity only to teammates
 
 
-EmitSoundOnEntityForLocalPlayer
+### EmitSoundOnEntityForLocalPlayer
 
   Signature: EmitSoundOnEntityForLocalPlayer(entity, soundAlias)
 
@@ -212,7 +212,7 @@ EmitSoundOnEntityForLocalPlayer
 ## STOP SOUNDS
 
 
-StopSoundOnEntity
+### StopSoundOnEntity
 
   Signature: StopSoundOnEntity(entity, soundAlias)
 
@@ -229,14 +229,14 @@ StopSoundOnEntity
     - soundAlias: Sound string to stop
 
 
-StopSound
+### StopSound
 
   Signature: StopSound()
 
   Purpose: Stop a generic sound
 
 
-StopSoundAtPosition
+### StopSoundAtPosition
 
   Signature: StopSoundAtPosition(position, soundAlias)
 
@@ -246,7 +246,7 @@ StopSoundAtPosition
 ## FADE OUT SOUNDS
 
 
-FadeOutSoundOnEntity
+### FadeOutSoundOnEntity
 
   Signature: FadeOutSoundOnEntity(entity, soundAlias, fadeTime)
 
@@ -263,7 +263,7 @@ FadeOutSoundOnEntity
     - fadeTime: Time in seconds to fade
 
 
-FadeOutSoundOnEntityByName
+### FadeOutSoundOnEntityByName
 
   Signature: FadeOutSoundOnEntityByName(entity, soundAlias)
 
@@ -273,7 +273,7 @@ FadeOutSoundOnEntityByName
 ## SOUND UTILITIES
 
 
-SetSoundName
+### SetSoundName
 
   Signature: SetSoundName(entity, soundAlias)
 
@@ -288,7 +288,7 @@ SetSoundName
     - soundAlias: Sound identifier
 
 
-GetSoundDuration
+### GetSoundDuration
 
   Signature: GetSoundDuration(soundAlias)
 
@@ -297,7 +297,7 @@ GetSoundDuration
   Returns: Float (duration)
 
 
-IsSoundStillPlaying
+### IsSoundStillPlaying
 
   Signature: IsSoundStillPlaying(soundAlias)
 
@@ -306,35 +306,35 @@ IsSoundStillPlaying
   Returns: Boolean
 
 
-SetSoundVolume
+### SetSoundVolume
 
   Signature: SetSoundVolume(soundAlias, volume)
 
   Purpose: Set volume for a sound
 
 
-GetSoundVolume
+### GetSoundVolume
 
   Signature: GetSoundVolume()
 
   Purpose: Get current sound volume
 
 
-SetSoundCodeControllerEntity
+### SetSoundCodeControllerEntity
 
   Signature: SetSoundCodeControllerEntity(entity)
 
   Purpose: Set entity as sound code controller
 
 
-SetSoundCodeControllerValue
+### SetSoundCodeControllerValue
 
   Signature: SetSoundCodeControllerValue(value)
 
   Purpose: Set sound code controller value
 
 
-UnsetSoundCodeControllerValue
+### nsetSoundCodeControllerValue
 
   Signature: UnsetSoundCodeControllerValue()
 
@@ -344,42 +344,42 @@ UnsetSoundCodeControllerValue
 ## WEAPON SOUNDS
 
 
-EmitWeaponSound
+### EmitWeaponSound
 
   Signature: EmitWeaponSound()
 
   Purpose: Emit weapon firing sound
 
 
-EmitWeaponSound_1p3p
+### EmitWeaponSound_1p3p
 
   Signature: EmitWeaponSound_1p3p()
 
   Purpose: Emit weapon sound with 1st and 3rd person variants
 
 
-EmitWeaponSound_Script
+### EmitWeaponSound_Script
 
   Signature: EmitWeaponSound_Script()
 
   Purpose: Emit weapon sound from script
 
 
-EmitWeaponNpcSound
+### EmitWeaponNpcSound
 
   Signature: EmitWeaponNpcSound()
 
   Purpose: Emit NPC weapon sound
 
 
-StopWeaponSound
+### StopWeaponSound
 
   Signature: StopWeaponSound()
 
   Purpose: Stop weapon sound
   
 
-StopWeaponSound_Script
+### StopWeaponSound_Script
 
   Signature: StopWeaponSound_Script()
 
@@ -389,7 +389,7 @@ StopWeaponSound_Script
 ## WHIZBY/BULLET SOUNDS
 
 
-EmitBulletWhizbyForLocalPlayer
+### EmitBulletWhizbyForLocalPlayer
 
   Signature: EmitBulletWhizbyForLocalPlayer()
 
@@ -398,7 +398,7 @@ EmitBulletWhizbyForLocalPlayer
   Note: Plays when bullet passes near player
 
 
-EmitProjectileWhizbyForLocalPlayer
+### EmitProjectileWhizbyForLocalPlayer
 
   Signature: EmitProjectileWhizbyForLocalPlayer()
 
@@ -408,28 +408,28 @@ EmitProjectileWhizbyForLocalPlayer
 ## AI SOUNDS
 
 
-EmitAISound
+### EmitAISound
 
   Signature: EmitAISound()
 
   Purpose: Emit NPC/AI sound
 
 
-EmitAISoundToTarget
+### EmitAISoundToTarget
 
   Signature: EmitAISoundToTarget()
 
   Purpose: Emit AI sound directed at target
 
 
-EmitAISoundWithOwner
+### EmitAISoundWithOwner
 
   Signature: EmitAISoundWithOwner()
 
   Purpose: Emit AI sound with owner reference
 
 
-EmitAISoundWithOwnerToTarget
+### EmitAISoundWithOwnerToTarget
 
   Signature: EmitAISoundWithOwnerToTarget()
 
@@ -439,20 +439,20 @@ EmitAISoundWithOwnerToTarget
 ## VEHICLE SOUNDS
 
 
-VehiclePlaySoundOnEntityForOccupants
+### VehiclePlaySoundOnEntityForOccupants
 
   Signature: VehiclePlaySoundOnEntityForOccupants(vehicle, entity, soundAlias)
 
   Purpose: Play sound on vehicle for all occupants
 
-VehiclePlayReliableSoundOnEntityForOccupants
+### VehiclePlayReliableSoundOnEntityForOccupants
 
   Signature: VehiclePlayReliableSoundOnEntityForOccupants(vehicle, entity, soundAlias)
 
   Purpose: Play reliable sound (guaranteed delivery) for vehicle occupants
 
 
-VehiclePlaySoundOnEntityForNonOccupants
+### VehiclePlaySoundOnEntityForNonOccupants
 
   Signature: VehiclePlaySoundOnEntityForNonOccupants()
 
@@ -462,7 +462,7 @@ VehiclePlaySoundOnEntityForNonOccupants
 ## VOICE FUNCTIONS
 
 
-GetVoicePackIndex
+### GetVoicePackIndex
 
   Signature: GetVoicePackIndex()
 
@@ -471,14 +471,14 @@ GetVoicePackIndex
   Returns: Integer
 
 
-SetVoicePackIndex
+### SetVoicePackIndex
 
   Signature: SetVoicePackIndex(index)
 
   Purpose: Set voice pack for player
 
 
-IsVoiceMuted
+### IsVoiceMuted
   Signature: IsVoiceMuted()
 
   Purpose: Check if voice is muted
@@ -486,7 +486,7 @@ IsVoiceMuted
   Returns: Boolean
 
 
-IsPlayerVoiceMutedForUID
+### IsPlayerVoiceMutedForUID
 
   Signature: IsPlayerVoiceMutedForUID(playerUID)
 
@@ -495,28 +495,28 @@ IsPlayerVoiceMutedForUID
   Returns: Boolean
 
 
-TogglePlayerVoiceMute
+### TogglePlayerVoiceMute
 
   Signature: TogglePlayerVoiceMute()
 
   Purpose: Toggle player voice mute state
 
 
-TogglePlayerVoiceMutedForUID
+### TogglePlayerVoiceMutedForUID
 
   Signature: TogglePlayerVoiceMutedForUID(playerUID)
 
   Purpose: Toggle voice mute for specific player UID
 
 
-Script_IsVoiceMuted
+### Script_IsVoiceMuted
 
   Signature: Script_IsVoiceMuted()
 
   Purpose: Script version of IsVoiceMuted
 
 
-Script_PlayTextToSpeech
+### Script_PlayTextToSpeech
 
   Signature: Script_PlayTextToSpeech(text)
 
@@ -526,7 +526,7 @@ Script_PlayTextToSpeech
 ## PAUSE/RESUME
 
 
-PauseSoundOnEntity
+### PauseSoundOnEntity
 
   Signature: PauseSoundOnEntity(entity, soundAlias)
 
@@ -534,7 +534,7 @@ PauseSoundOnEntity
 
 
 
-ResumeSoundOnEntity
+### ResumeSoundOnEntity
 
   Signature: ResumeSoundOnEntity(entity, soundAlias)
 
@@ -542,7 +542,7 @@ ResumeSoundOnEntity
 
 
 
-PauseUISoundByName
+### PauseUISoundByName
 
   Signature: PauseUISoundByName(soundAlias)
 
@@ -550,7 +550,7 @@ PauseUISoundByName
 
 
 
-ResumeUISoundByName
+### ResumeUISoundByName
 
   Signature: ResumeUISoundByName(soundAlias)
 
@@ -561,7 +561,7 @@ ResumeUISoundByName
 ## SOUNDSCAPE
 
 
-trigger_soundscape
+### trigger_soundscape
 
   Signature: trigger_soundscape()
 
@@ -569,7 +569,7 @@ trigger_soundscape
 
 
 
-playsoundscape
+### playsoundscape
 
   Signature: playsoundscape(soundscape)
 
@@ -577,7 +577,7 @@ playsoundscape
 
 
 
-stopsoundscape
+### stopsoundscape
 
   Signature: stopsoundscape()
 
