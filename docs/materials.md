@@ -58,6 +58,7 @@ At their core, material files are binary files which store data such as:
 - The keys themselves point to the slot of the texture, which indicates the type of texture map each image represents. The keys MUST be identical to the keys in $textureTypes and those keys MUST correspond EXACTLY with the meanings set inside of the Apex Legends engine. For example, slot 0 can ONLY ever be assigned to albedo / diffuse maps, slot 1 can ONLY ever be assigned to normal maps, etc.
 ## Texture types
 - As stated in the previous subsection, these key-value pairs indicate the meaning and order of each texture map assigned to the material. These MUST match the EXACT slot numbers set in the engine.
+- Many slots for Titanfall 2 SKN materials are DIFFERENT from Apex Legends slots! ALWAYS check to see if they are set properly.
 - The meaning of each slot in the engine is represented in this list below:
 
 slot0: _col  (albedo / diffuse map - [Note: base colors](https://help.autodesk.com/view/3DSMAX/2017/ENU/?guid=GUID-69603DC2-F58C-4053-A955-EA19FDB8D084))  
