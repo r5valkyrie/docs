@@ -4,6 +4,26 @@ Naming conventions are useful in programming, especially across a very large cod
 
 Squirrel_re is the name used for Respawn's fork of the Squirrel scripting language. Squirrel was used by Respawn because it was the main language for VScripts (Valve Scripting) and Respawn used (and continue to use) Valve's Source Engine, with heavy modifications, forked from the Portal 2 branch.
 
+## File Names
+
+Server only scripts: underscore prefix
+
+```
+_entitystructs.gnut
+```
+
+Client only scripts: cl_ prefix
+
+```
+cl_entitystructs.gnut
+```
+
+Shared scripts: sh_ prefix
+
+```
+sh_init.gnut
+```
+
 ## Variables
 
 In general, variables should use lowerCamelCase
