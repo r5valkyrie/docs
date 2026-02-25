@@ -2,6 +2,8 @@
 
 Naming conventions are useful in programming, especially across a very large codebase, such as R5V's, so that multiple programmers can work together in harmony and so that code can be more easily read and understood. These sets of standards are meant to achieve a level of uniformity in code so as to increase efficiency and encourage open collaboration.
 
+Squirrel_re is the name used for Respawn's fork of the Squirrel scripting language. Squirrel was used by Respawn because it was the main language for VScripts (Valve Scripting) and Respawn used (and continue to use) Valve's Source Engine, with heavy modifications, forked from the Portal 2 branch.
+
 ## Variables
 
 In general, variables should use lowerCamelCase
