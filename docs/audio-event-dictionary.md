@@ -1,7 +1,7 @@
 
 # SOUNDS
 
-
+This article provides a dictionary of audio EVENT names, to be invoked from the console, scripts or from inside model .qc's.
 
 ## GEAR
 
