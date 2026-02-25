@@ -12,6 +12,7 @@ Example: PrecacheParticleSystem( $"P_loba_staff_menu_dlight" )
 Weapon entity methods, where "weapon" is the weapon entity:
 
 ### Playing a weapon-related particle effect
+
 ```
 weapon.PlayWeaponEffect( asset $"FirstPersonFXHandle", asset $"ThirdPersonFXHandle", string "WeaponModelAttachmentHandle" )  
 Example: weapon.PlayWeaponEffect( $"wpn_muzzleflash_arc_cannon_fp", $"wpn_muzzleflash_arc_cannon", "muzzle_flash" )
