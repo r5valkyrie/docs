@@ -22,6 +22,28 @@ Example: weapon.PlayWeaponEffectNoCull( $"wpn_arc_cannon_electricity_fp", $"wpn_
 weapon.StopWeaponEffect( asset $"FirstPersonFXHandle", asset $"ThirdPersonFXHandle" )  
 Example: weapon.StopWeaponEffect( $"wpn_arc_cannon_electricity_fp", $"wpn_arc_cannon_electricity" )
 ```
+
+## Non-method particle effect functions
+
+### Checking if a particle effect exists
+```
+EffectDoesExist("EffectHandle")
+```
+### Stopping a particle effect 
+```
+EffectStop("EffectHandle")
+```
+### Setting a particle effect's control point vector
+```
+EffectSetControlPointVector()
+```
+### Memory management functions
+```
+EffectSleep("EffectHandle")
+EffectWake("EffectHandle")
+```
+
+
 ## Particle Effects inside of QC's
 
 The following commands are used inside of model QC files, used by StudioMDL to compile models, to be used in-game. For a comprehensive list of QC commands, consult the Valve Developer Wiki: [QC Commands](https://developer.valvesoftware.com/wiki/Category:QC_commands), [QC Commands 2](https://developer.valvesoftware.com/wiki/QC_Commands)
