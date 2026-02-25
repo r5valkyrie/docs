@@ -85,9 +85,11 @@ weapon.GetWeaponType()
 
 ## Weapon Mod functions (Hop-ups, etc.)
 
-weapon.HasMod("modnamestring") - mods are defined inside a key-value pair table contained in the weapon / ability's .txt config file
+weapon.HasMod("modnamestring") - mods are defined inside a key-value pair table contained in the weapon / ability's .txt config file  
 
-Example (excerpt from mp_weapon_alternator.txt):
+IMPORTANT MENTION: A mod cannot be added to a weapon if has not been defined in the weapon's config file!  
+
+Example (excerpt from mp_weapon_alternator.txt):  
 
 ```
 Mods
@@ -159,17 +161,11 @@ Mods
 		}
 ```
 
-weapon.AddMod("ModName") <- adds one of the previously defined mods to the weapon INSTANCE (only the individual weapon entity!)
-
-IMPORTANT MENTION! A mod cannot be added to a weapon if has not been defined in the weapon's config file!
-
-weapon.RemoveMod("modnamestring") <- removes one of the currently equipped mods from the weapon INSTANCE (only the individual weapon entity!)
-
-weapon.SetWeaponMods() <- takes an array of mods as an argument
-
-weapon.GetMods() <- returns an array registered mods for this weapon
-
-GetWeaponMods( weapon ) 
+weapon.AddMod("ModName") <- adds one of the previously defined mods to the weapon INSTANCE (only the individual weapon entity!)  
+weapon.RemoveMod("modnamestring") <- removes one of the currently equipped mods from the weapon INSTANCE (only the individual weapon entity!)  
+weapon.SetWeaponMods() <- takes an array of mods as an argument  
+weapon.GetMods() <- returns an array registered mods for this weapon  
+GetWeaponMods( weapon )   
 
 ## Weapon Parameter Get / Set Functions
 
