@@ -286,6 +286,7 @@ Excerpt from mp_weapon_dmr.txt:
 ```	
 
 ## Weapon Parameter Get / Set Functions
+
 ```
 weapon.GetWeaponSettingInt() <- returns the value for a key which is assigned integer values, from the weapon's .txt config file  
 Example: weapon.GetWeaponSettingInt( eWeaponVar.ammo_per_shot )  
