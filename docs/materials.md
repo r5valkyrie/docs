@@ -24,7 +24,7 @@ At their core, material files are binary files which store data such as:
 	- Blend state mask flag - defines blend behavior for textures & materials 
 	- Blend flags - defines blend behavior for textures & materials (There is an abundance of educational resources on material blending. As an example, think of a dirt material brush blending with a mud material brush)
 	- Depth stencil flags - used for Direct3D depth / stencil buffers, which control which pixels are drawn / hidden for special effects, etc.
-		- For more information, consult [Microsoft's documention](https://learn.microsoft.com/en-us/windows/uwp/graphics-concepts/depth-and-stencil-buffers) directly
+		- For more information, consult [Microsoft's documentation](https://learn.microsoft.com/en-us/windows/uwp/graphics-concepts/depth-and-stencil-buffers) directly
 	- Rasterizer flags (see: Rasterization as a technique of drawing 3D models. [Article from NVIDIA](https://blogs.nvidia.com/blog/whats-difference-between-ray-tracing-rasterization/))
 	- Uber buffer flags (UberShaders are large, complex shaders)
 - If a flag's value is set to "0x0" (0x is a prefix denoting hexadecimal notation and 0 is a null value), this represents the "disabled" state.
