@@ -5,8 +5,6 @@
 
 The acronym "GUID" refers to "Globally Unique Identifier", which, in this case, represents a unique hexadecimal value that points to assets inside of RPAKs. Example: 0x1EBD063EA03180C7
 
----
-
 
 # Main section
 
