@@ -2,6 +2,8 @@
 
 This article documents various Audio functions and commands.
 
+Important mention: an audio EVENT is NOT the same as an audio FILE! Audio files are ASSIGNED to audio events. Audio events and audio files almost never have matching names.
+
 ## Animation Events (inside QCs, in $sequence):
 
 The following commands are used inside of model QC files, used by StudioMDL to compile models, to be used in-game. For a comprehensive list of QC commands, consult the Valve Developer Wiki: [QC Commands](https://developer.valvesoftware.com/wiki/Category:QC_commands), [QC Commands 2](https://developer.valvesoftware.com/wiki/QC_Commands)
