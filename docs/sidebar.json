@@ -25,6 +25,10 @@
                     "title": "Scripts Quickstart",
                     "slug": "scripts-quickstart"
                 },
+              {
+                    "title": "Squirrel_re Script Naming Conventions",
+                    "slug": "squirrel-script-naming-conventions"
+                },
                 {
                     "title": "Weapons Quickstart",
                     "slug": "weapons-quickstart"
@@ -48,7 +52,7 @@
                 {
                     "title": "Code enums list",
                     "slug": "code-enums"
-                }                              
+                }                 
             ]
         },
         {
