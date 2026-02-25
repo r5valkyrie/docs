@@ -85,9 +85,9 @@ global enum eActiveInventorySlots
 
 ## For-loop iterators
 
-"For-loop" iterators should be named "i", from "index"
+"For-loop" iterators should be named "i", from "index" / "iterator"
 
 ```
-for(int i = 0; i< max; i++)
+for(int i = 0; i < max; i++)
 ```
 
