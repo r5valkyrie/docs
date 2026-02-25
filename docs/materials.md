@@ -42,7 +42,7 @@ At their core, material files are binary files which store data such as:
 	- Character model, weapon viewmodels, other models which use more than one bone in their armature / rig, for animations, use the material types "SKNP" (SKiNned model, Packed vertex positions), SKNC and SKNU (Regular vertices)
 		- Important Note: Skinning, in this case, refers to skeletal meshes and animations, NOT textures! For more information on what skinning represents in this use case, refer to these articles:
 		- Pluralsight: [Understanding Skinning: A Vital Step for Any Rigging Project](https://www.pluralsight.com/resources/blog/software-development/understanding-skinning-vital-step-rigging-project)
-		- Anim Coding: [Animation Tech Intro Part 1: Skinning] (https://animcoding.com/post/animation-tech-intro-part-1-skinning/)
+		- Anim Coding: [Animation Tech Intro Part 1: Skinning](https://animcoding.com/post/animation-tech-intro-part-1-skinning/)
 	- Static props (such as set dressing / map environmental detail) and models that are only rigged with one bone in their armature / rig use RGDC / RGDP materials
 	- Ziplines, certain water bodies, etc. use RGDU materials
 	- World geometry brushes use WLDC (packed vertex positions) / WLDU (regular vertex positions) materials, WLD = World
