@@ -1,11 +1,13 @@
 # Materials
 
----
+
 ## Introductory note:
 
 The acronym "GUID" refers to "Globally Unique Identifier", which, in this case, represents a unique hexadecimal value that points to assets inside of RPAKs. Example: 0x1EBD063EA03180C7
 
 ---
+
+
 
 Materials in Apex Legends function similarly to how they function in most 3D Graphics pipelines: they represent containers for files and data that dictate how 3D objects should be displayed on the screen, by communicating with 3D Graphics APIs ( in Apex Legends' case, DirectX 11 (R5 Reloaded and R5 Valkyrie) or DirectX 12, in the retail version of the game). The 3D Graphics APIs interface with the engine (ReSource / Respawn Source) and the GPU.
 
