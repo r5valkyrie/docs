@@ -403,8 +403,114 @@ mp_ability_valk_cluster_missile // (Valkyrie tactical)
 mp_weapon_black_hole // (Horizon ultimate)
 ```
 
+## Weapon Firing Functions
 
 
+```
+weapon.FireWeaponBolt (weaponFireBoltParams )
+Takes an instance of the WeaponFireBoltParams global structure as its argument
+```
+
+```
+global struct WeaponFireBoltParams
+{
+	vector pos
+	vector dir
+	float speed
+	int scriptTouchDamageType
+	int scriptExplosionDamageType
+	bool clientPredicted
+	int additionalRandomSeed
+	bool dontApplySpread
+	int projectileIndex
+	bool deferred
+}
+```
+
+```
+weapon.FireWeaponGrenade (weaponFireGrenadeParams )
+Takes an instance of the WeaponFireGrenadeParams global structure as its argument
+```
+
+```
+global struct WeaponFireGrenadeParams
+{
+	vector pos
+	vector vel
+	vector angVel
+	float fuseTime
+	int scriptTouchDamageType
+	int scriptExplosionDamageType
+	bool clientPredicted
+	bool lagCompensated
+	bool useScriptOnDamage
+	bool isZiplineGrenade = false
+	int projectileIndex
+}
+```
+
+```
+weapon.FireWeaponMissile( weaponFireMissileParams )
+Takes an instance of the WeaponFireMissileParams global structure as its argument
+```
+
+```
+global struct WeaponFireMissileParams
+{
+	vector pos
+	vector dir
+	float speed
+	int scriptTouchDamageType
+	int scriptExplosionDamageType
+	bool doRandomVelocAndThinkVars
+	bool clientPredicted
+	int projectileIndex
+}
+```
+
+```
+global struct WeaponPrimaryAttackParams
+{
+	vector pos
+	vector dir
+	bool firstTimePredicted
+	int burstIndex
+	int barrelIndex
+}
+```
+
+```
+weapon.FireWeaponDefault(attackParams.pos, attackParams.dir, speedScale, patternScale, ignoreSpread )
+Takes attributes belonging to an instance of the WeaponPrimaryAttackParams structure as arguments
+```
+
+```
+weapon.FireWeaponBullet( attackParams.pos, attackParams.dir, bulletCount, damageType )
+Takes attributes belonging to an instance of the WeaponPrimaryAttackParams structure as arguments
+```
+
+
+```
+weapon.FireWeaponBulllet_Special( weaponFireBulletSpecialParams )
+Takes an instance of the WeaponFireBulletSpecialParams global structure as its argument
+```
+
+```
+global struct WeaponFireBulletSpecialParams
+{
+	vector pos
+	vector dir
+	int bulletCount
+	int scriptDamageType
+	bool skipAntiLag
+	bool dontApplySpread
+	bool doDryFire
+	bool noImpact
+	bool noTracer
+	bool activeShot
+	bool doTraceBrushOnly
+}
+```
 
 
 
