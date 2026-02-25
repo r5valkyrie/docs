@@ -275,27 +275,30 @@ Weapon magazines (incorrectly named "clips" by Respawn, even though Bangalore ha
 Excerpt from mp_weapon_dmr.txt:
 
 ```
-	// Bodygroup - Clip
-	"clip_bodygroup"                           "clip"
-	"clip_bodygroup_index_shown"               "0"
-	"clip_bodygroup_index_hidden"              "1"
-	"clip_bodygroup_show_for_milestone_0"      "1"
-	"clip_bodygroup_show_for_milestone_1"      "0"
-	"clip_bodygroup_show_for_milestone_2"      "1"
-	"clip_bodygroup_show_for_milestone_3"      "1"
-```	
+// Bodygroup - Clip
+"clip_bodygroup"                           "clip"
+"clip_bodygroup_index_shown"               "0"
+"clip_bodygroup_index_hidden"              "1"
+"clip_bodygroup_show_for_milestone_0"      "1"
+"clip_bodygroup_show_for_milestone_1"      "0"
+"clip_bodygroup_show_for_milestone_2"      "1"
+"clip_bodygroup_show_for_milestone_3"      "1"
+```
 
 ## Weapon Parameter Get / Set Functions
+
 
 ```
 weapon.GetWeaponSettingInt() <- returns the value for a key which is assigned integer values, from the weapon's .txt config file  
 Example: weapon.GetWeaponSettingInt( eWeaponVar.ammo_per_shot )  
 ```
 
+
 ```
 weapon.GetWeaponSettingFloat() <- returns the value for a key which is assigned floating point (decimal) values, from the weapon's .txt config file
 Example: weapon.GetWeaponSettingFloat( eWeaponVar.rechamber_time )
 ```
+
 
 ```
 weapon.GetWeaponSettingAsset() <- returns the value for a key which is assigned ASSET values (i.e.: "viewmodel" (key) "mdl/weapons/p2011/ptpov_p2011.rmdl" (value)), from the weapon's .txt config file  
@@ -303,6 +306,7 @@ weapon.GetWeaponSettingBool() <- returns the value for a key which is assigned b
 weapon.GetWeaponSettingString() <- returns the value for a key which is assigned a string value, from the weapon's .txt config file  
 weapon.GetWeaponSettingVector() <- returns the value for a key which is assigned a vector value, from the weapon's .txt config file  
 ```
+
 
 ```
 weapon.GetWeaponSettingEnum() <- returns the value for a weapon setting inside an Enumeration (Enum)  
