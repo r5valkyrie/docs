@@ -469,17 +469,6 @@ global struct WeaponFireMissileParams
 ```
 
 ```
-global struct WeaponPrimaryAttackParams
-{
-	vector pos
-	vector dir
-	bool firstTimePredicted
-	int burstIndex
-	int barrelIndex
-}
-```
-
-```
 weapon.FireWeaponDefault( attackParams.pos, attackParams.dir, speedScale, patternScale, ignoreSpread )
 Takes attributes belonging to an instance of the WeaponPrimaryAttackParams structure as arguments
 ```
@@ -489,6 +478,16 @@ weapon.FireWeaponBullet( attackParams.pos, attackParams.dir, bulletCount, damage
 Takes attributes belonging to an instance of the WeaponPrimaryAttackParams structure as arguments
 ```
 
+```
+global struct WeaponPrimaryAttackParams
+{
+	vector pos
+	vector dir
+	bool firstTimePredicted
+	int burstIndex
+	int barrelIndex
+}
+```
 
 ```
 weapon.FireWeaponBulllet_Special( weaponFireBulletSpecialParams )
