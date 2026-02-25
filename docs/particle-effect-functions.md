@@ -2,7 +2,7 @@
 
 This article documents various Particle System / Particle Effect functions and commands.
 
-Before any particle effect can be used in the engine, MANDATORY to precache it, using the function:
+Before any particle effect can be used in the engine, it is MANDATORY to precache it, using the function:
 
 PrecacheParticleSystem( $"particleassetname" )  
 Example: PrecacheParticleSystem( $"P_loba_staff_menu_dlight" )  
