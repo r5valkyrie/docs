@@ -3,17 +3,26 @@
 This article documents various Weapon functions and commands.
 
 Before any weapon can be used in the engine, it is MANDATORY to precache it, using the function:
-
+```
 PrecacheWeapon($"weapontxtconfigname")   
 Example: PrecacheWeapon($"mp_weapon_wingman")  
-
+```
 ## Weapon Get / Set Functions and Methods
 
-weapon.GetWeaponOwner() - returns an entity (usually the player entity)  
-weapon.GetWeaponViewmodel() - returns the viewmodel entity  
-viewmodel.FindBodygroup( "bodygroupnamestring" ) <- finds the index for a bodygroup according to its name  
-viewmodel.SetBodygroupModelByIndex( bodygroupid, 0 OR 1 ) - the second parameter of the function is a boolean - FALSE or TRUE, which determines whether the bodygroup is HIDDEN or VISIBLE  
-
+### Getting a weapon's owner entity (Player or NPC entity)
+```
+weapon.GetWeaponOwner() // returns an entity (usually the player entity)
+```
+### Getting a weapon's viewmodel entity
+```
+weapon.GetWeaponViewmodel() // returns the viewmodel entity  
+```
+### Getting / Setting a weapon's bodygroup
+```
+viewmodel.FindBodygroup( "bodygroupnamestring" ) // finds the index for a bodygroup according to its name  
+viewmodel.SetBodygroupModelByIndex( bodygroupid, 0 OR 1 ) // the second parameter of the function is a boolean - FALSE or TRUE, which determines whether the bodygroup is HIDDEN or VISIBLE  
+```
+### Getting a player's active weapon entity
 
 A very commonly used function to get the weapon currently held by the player, using a constant value from the eActiveInventorySlot enumeration:  
 player.GetActiveWeapon(eActiveInventorySlot.mainHand)   
@@ -27,6 +36,7 @@ global enum eActiveInventorySlot
 	utility = 2  
 }  
 ```
+### Getting one of the player's weapons
 
 player.GetNormalWeapon( weaponSlot )   
 SURVIVAL_GetWeaponBySlot( player, weaponSlot) <- this function is not a method of the player entity, but takes the player entity as an argument upon call 
@@ -50,10 +60,17 @@ global const int WEAPON_INVENTORY_SLOT_PRIMARY_2 = 2 // Melee (selected from mel
 global const int WEAPON_INVENTORY_SLOT_PRIMARY_3 = 3 // Melee (from direct use melee key, V by default)  
 ```
 
+### Getting a weapon's engine class name
 
-weapon.GetWeaponClassName() <- returns the weapon's engine class name, such as CWeaponX  
+weapon.GetWeaponClassName() // returns the weapon's engine class name, such as CWeaponX  
+
+### Getting / setting a weapon's name
+
+weapon.GetWeaponName() // returns the weapon's name, such as "mp_weapon_nemesis"  
 weapon.SetWeaponName()  
-weapon.GetWeaponName() <- returns the weapon's name, such as "mp_weapon_nemesis"  
+
+### Getting a weapon's ammo pool type
+
 weapon.GetWeaponAmmoPoolType() <- returns the weapon's ammo pool type   
 
 The ammo pool type is obtained from the following global enumeration:
@@ -68,20 +85,32 @@ global enum eAmmoPoolType
 	explosive = 5  
 }  
 ```
+### Getting / setting weapon parameters
+
+```
 weapon.SetClipCount() - this sets current MAGAZINE ammo, incorrectly labelled as "Clip" by Respawn  
 GetWeaponPrimaryAmmoCount( AMMOSOURCE_STOCKPILE )  
 weapon.SetWeaponSkin( skinIndex ) <- "Skin" here refers to the $skinfamilies (see the Valve Developer Wiki for QC Commands). It's not used in the same sense as "Legendary Skins", etc - it is a material swap   
+```
 
+```
 weapon.SetWeaponPrimaryClipCount() <- Magazine ammo capacity, incorrectly labelled as "clip" by Respawn  
 weapon.GetWeaponPrimaryClipCount() <- Magazine ammo capacity, incorrectly labelled as "clip" by Respawn  
+```
 
+```
 weapon.GetWeaponPrimaryClipCountMax() 
 weapon.SetWeaponPrimaryClipCountMax()  
+```
 
+```
 weapon.SetWeaponChargeFraction() <- used by weapons and abilities, highly dependent on the weapon / ability and its implementation  
 weapon.SetWeaponChargeFractionForced()  
-weapon.GetWeaponType()  
+```
 
+```
+weapon.GetWeaponType()  
+```
 
 ## Weapon Mod functions (Hop-ups, etc.)
 
@@ -160,38 +189,44 @@ Mods
 			"bodygroup1_set"			"1"
 		}
 ```
-
+```
 weapon.AddMod("ModName") <- adds one of the previously defined mods to the weapon INSTANCE (only the individual weapon entity!)  
 weapon.RemoveMod("modnamestring") <- removes one of the currently equipped mods from the weapon INSTANCE (only the individual weapon entity!)  
 weapon.SetWeaponMods() <- takes an array of mods as an argument  
 weapon.GetMods() <- returns an array registered mods for this weapon  
 GetWeaponMods( weapon )   
+```
 
 ## Weapon Parameter Get / Set Functions
-
+```
 weapon.GetWeaponSettingInt() <- returns the value for a key which is assigned integer values, from the weapon's .txt config file  
 Example: weapon.GetWeaponSettingInt( eWeaponVar.ammo_per_shot )  
+```
 
-
+```
 weapon.GetWeaponSettingFloat() <- returns the value for a key which is assigned floating point (decimal) values, from the weapon's .txt config file
 Example: weapon.GetWeaponSettingFloat( eWeaponVar.rechamber_time )
+```
 
-
+```
 weapon.GetWeaponSettingAsset() <- returns the value for a key which is assigned ASSET values (i.e.: "viewmodel" (key) "mdl/weapons/p2011/ptpov_p2011.rmdl" (value)), from the weapon's .txt config file  
 weapon.GetWeaponSettingBool() <- returns the value for a key which is assigned boolean values, from the weapon's .txt config file  
 weapon.GetWeaponSettingString() <- returns the value for a key which is assigned a string value, from the weapon's .txt config file  
 weapon.GetWeaponSettingVector() <- returns the value for a key which is assigned a vector value, from the weapon's .txt config file  
+```
 
-
+```
 weapon.GetWeaponSettingEnum() <- returns the value for a weapon setting inside an Enumeration (Enum)  
 Examples:     
 weapon.GetWeaponSettingEnum( eWeaponVar.cooldown_type, eWeaponCooldownType )  
 weapon.GetWeaponSettingEnum( eWeaponVar.fire_mode, eWeaponFireMode )  
+```
 
 ## Alternate functions for getting weapon settings
 
 Note: these functions are not methods of the CWeaponX entity class (the generic weapon class)
 
+```
 GetWeaponInfoFileKeyField_Global() and its variations, depending on the return type of the function  
 
 Examples:  
@@ -200,7 +235,7 @@ GetWeaponInfoFileKeyField_GlobalString( data.baseWeapon, "printName" )
 GetWeaponInfoFileKeyField_GlobalInt( weapon, "ammo_clip_size")  
 GetWeaponInfoFileKeyField_GlobalFloat( weaponRef, "burst_fire_delay" )  
 GetWeaponInfoFileKeyFieldAsset_Global( weaponName, "playermodel")  
-
+```
 
 
 
