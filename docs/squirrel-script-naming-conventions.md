@@ -4,6 +4,8 @@ Naming conventions are useful in programming, especially across a very large cod
 
 Squirrel_re is the name used for Respawn's fork of the Squirrel scripting language. Squirrel was used by Respawn because it was the main language for VScripts (Valve Scripting) and Respawn used (and continue to use) Valve's Source Engine, with heavy modifications, forked from the Portal 2 branch.
 
+The file extensions for Squirrel contain "nut", because Squirrels like nuts.
+
 ## File Names
 
 Server only scripts: underscore prefix
@@ -22,6 +24,20 @@ Shared scripts: sh_ prefix
 
 ```
 sh_init.gnut
+```
+
+## Extensions
+
+Files that contain systems and global helper functions: .gnut
+
+```
+_entitystructs.gnut
+```
+
+Weapon-level, etc. files: .nut
+
+```
+mp_weapon_nemesis.nut
 ```
 
 ## Variables
