@@ -28,11 +28,11 @@ At their core, material files are binary files which store data such as:
 	- Rasterizer flags (see: Rasterization as a technique of drawing 3D models. [Article from NVIDIA](https://blogs.nvidia.com/blog/whats-difference-between-ray-tracing-rasterization/))
 	- Uber buffer flags (UberShaders are large, complex shaders)
 - If a flag's value is set to "0x0" (0x is a prefix denoting hexadecimal notation and 0 is a null value), this represents the "disabled" state.
-# Features
+## Features
 - Sets other features which are to be used in rendering
-# Samplers
+## Samplers
 - Very likely refers to the notion of "Texture Samplers", which can be read about in depth [in this section of "A Trip through the Graphics Pipeline"](https://alaingalvan.gitbook.io/a-trip-through-the-graphics-pipeline/chapter4-texture-samplers), courtesy of Alain Galvan
-# Surface properties
+## Surface properties
 - Similarly to [Valve's material files (VMT's)](https://animcoding.com/post/animation-tech-intro-part-1-skinning/), which were the precursors to Respawn's own material files (and were used in their 2014 title, Titanfall), Apex Legends materials include key information about surface properties, which influence behavior in the virtual world
 - Examples: "default" (generic), "plastic", "flesh", etc.
 - Apex Legends material files include two keys for surface properties (surfaceProp and surfaceProp2)
