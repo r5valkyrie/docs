@@ -1,14 +1,21 @@
 # Audio Commands / Functions
 
+This article documents various Audio functions and commands.
 
 ## Animation Events (inside QCs, in $sequence):
+
+The following commands are used inside of model QC files, used by StudioMDL to compile models, to be used in-game. For a comprehensive list of QC commands, consult the Valve Developer Wiki: [QC Commands](https://developer.valvesoftware.com/wiki/Category:QC_commands), [QC Commands 2](https://developer.valvesoftware.com/wiki/QC_Commands)
 
 { event AE_CL_PLAYSOUND framenumber "EVENT NAME" }
 
 { event AE_CL_STOPSOUND framenumber "EVENT NAME" }
 
+These QC commands are contained inside $sequence(s) and are usually tied to activities. For more information on Activities, consult the Valve Developer Wiki: [Activity](https://developer.valvesoftware.com/wiki/Activity)
+
+
 Examples: 
 
+```
 $sequence "animseq/weapons/nemesis/ptpov_nemesis/reloadempty_late1_onehanded" {
 	"animseq_ptpov_nemesis_reload_empty_onehanded04_dmx__41_100_DD9685A2"
 
@@ -32,10 +39,11 @@ $sequence "animseq/weapons/nemesis/ptpov_nemesis/reloadempty_late1_onehanded" {
 	{ event AE_WPN_READYTOFIRE 46 "" }
 	node NODE_2
 }
+```
 
 From: ptpov_nemesis.qc <- derived from the Nemesis viewmodel from its rmdl, rrig and rseqs, using Someoneatemylastsliceofpizza (SAMLSOP)'s R5-AnimInspector
 
-
+```
 $sequence "animseq/creatures/flyer/r2_flyer/flyer_caged_aggro_01" {
 	"animseq_flyer_caged_aggro_01_dmx__rm_FE2D498"
 	"animseq_flyer_caged_pain_01_dmx__rm_2BCBEED9"
@@ -61,11 +69,10 @@ $sequence "animseq/creatures/flyer/r2_flyer/flyer_caged_aggro_01" {
 	{ event AE_SV_VSCRIPT_CALLBACK 240 "worldsound:Flyer_Cage_Vocal_MediumScream AUDIO_HEAD" } <- GLOBAL AUDIO EVENT!
 	{ event AE_SV_VSCRIPT_CALLBACK 258 "worldsound:Flyer_Cage_Vocal_JawSnap_Light AUDIO_HEAD" } <- GLOBAL AUDIO EVENT!
 }
+```
 
 From: flyer_kingscanyon_animated.qc <- derived from the Flyer model from its rmdl, rrig and rseqs, using Someoneatemylastsliceofpizza (SAMLSOP)'s R5-AnimInspector
 
-
--
 
 As shown above, audio events can be associated with / assigned to an activity such as
 
@@ -73,13 +80,13 @@ activity ACT_VM_WEAPON_INSPECT 60
 
 by using Animation Events (prefixed with AE inside the .qc's). Animation Events can either be clientsided or trigger serversided callbacks, for global audio! (heard by all players in range)
 
--
-
-## Script Functions / Commands
 
 
+# Script Functions / Commands
 
-## EMIT SOUND-  BASIC
+
+
+## Emit Sound - Basic Functions
 
 
 ### EmitSound
@@ -133,7 +140,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 	- entity: Source entity (optional reference)
 
 
-## EMIT SOUND-  VARIATIONS
+## Emit Sound - Variations
 
 
 ### EmitSoundOnEntityExceptToPlayer
@@ -209,8 +216,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Play sound only for local player
 
 
-## STOP SOUNDS
-
+## Stop Sounds
 
 ### StopSoundOnEntity
 
@@ -243,7 +249,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Stop sound at a world position
 
 
-## FADE OUT SOUNDS
+## Fade out sounds
 
 
 ### FadeOutSoundOnEntity
@@ -270,7 +276,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Fade out sound by name
 
 
-## SOUND UTILITIES
+## Sound Utilities
 
 
 ### SetSoundName
@@ -387,7 +393,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Stop weapon sound from script
 
 
-## WHIZBY/BULLET SOUNDS
+## Whizby / Bullet Sounds
 
 
 ### EmitBulletWhizbyForLocalPlayer
@@ -406,7 +412,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Play projectile whizby sound only to local player
 
 
-## AI SOUNDS
+## AI Sounds
 
 
 ### EmitAISound
@@ -437,7 +443,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Emit AI sound from owner to target
 
 
-## VEHICLE SOUNDS
+## Vehicle Sounds
 
 
 ### VehiclePlaySoundOnEntityForOccupants
@@ -460,7 +466,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Play sound for players not in vehicle
 
 
-## VOICE FUNCTIONS
+## Voice Functions
 
 
 ### GetVoicePackIndex
@@ -524,7 +530,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Play text-to-speech audio
 
 
-## PAUSE/RESUME
+## Pause / Resume sounds
 
 
 ### PauseSoundOnEntity
@@ -559,7 +565,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 
 
-## SOUNDSCAPE
+## Soundscape functions
 
 
 ### trigger_soundscape
@@ -586,30 +592,30 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 
 
-## COMMON PATTERNS
+## Common use cases
 
 
-Pattern 1: Playing a sound on entity
+Case 1: Playing a sound on entity
 
 - EmitSoundOnEntity( entity, soundAlias )
 
 
-Pattern 2: Stopping a sound
+Case 2: Stopping a sound
 
 - StopSoundOnEntity( entity, soundAlias )
 
 
-Pattern 3: Position-based sound
+Case 3: Position-based sound
 
 - EmitSoundAtPosition( team, origin, soundAlias, sourceEntity )
 
 
-Pattern 4: First-person only sound
+Case 4: First-person only sound
 
 - EmitSoundOnEntityOnlyToPlayer( player, entity, soundAlias )
 
 
-Pattern 5: Fading out sound
+Case 5: Fading out sound
 
 - FadeOutSoundOnEntity( entity, soundAlias, fadeTime )
 
