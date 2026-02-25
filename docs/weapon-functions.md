@@ -2,15 +2,86 @@
 
 This article documents various Weapon functions and commands.
 
-Before any weapon can be used in the engine, MANDATORY to precache it, using the function:
+Before any weapon can be used in the engine, it is MANDATORY to precache it, using the function:
 
 PrecacheWeapon($"weapontxtconfigname")   
 Example: PrecacheWeapon($"mp_weapon_wingman")  
+
+## Weapon Get / Set Functions and Methods
 
 weapon.GetWeaponOwner() - returns an entity (usually the player entity)  
 weapon.GetWeaponViewmodel() - returns the viewmodel entity  
 viewmodel.FindBodygroup( "bodygroupnamestring" ) <- finds the index for a bodygroup according to its name  
 viewmodel.SetBodygroupModelByIndex( bodygroupid, 0 OR 1 ) - the second parameter of the function is a boolean - FALSE or TRUE, which determines whether the bodygroup is HIDDEN or VISIBLE  
+
+
+A very commonly used function to get the weapon currently held by the player, using a constant value from the eActiveInventorySlot enumeration:  
+player.GetActiveWeapon(eActiveInventorySlot.mainHand)   
+
+The active inventory slot is obtained from this global enum:
+```
+global enum eActiveInventorySlot  
+{  
+	mainHand = 0  
+	altHand = 1  
+	utility = 2  
+}  
+```
+
+player.GetNormalWeapon( weaponSlot )   
+SURVIVAL_GetWeaponBySlot( player, weaponSlot) <- this function is not a method of the player entity, but takes the player entity as an argument upon call 
+
+The two above-mentioned functions get weapon inventory slots from these constants:
+```
+global const int WEAPON_INVENTORY_SLOT_ANTI_TITAN = 4 // Anti-Titan weapon slot, still exists in Apex Legends  
+global const int WEAPON_INVENTORY_SLOT_ANY = -2 // Any  
+
+global const int WEAPON_INVENTORY_SLOT_DUALPRIMARY_0 = 5 // Used for leftover dev akimbo function  
+global const int WEAPON_INVENTORY_SLOT_DUALPRIMARY_1 = 6 // Used for leftover dev akimbo function  
+global const int WEAPON_INVENTORY_SLOT_DUALPRIMARY_2 = 7 // Used for leftover dev akimbo function  
+global const int WEAPON_INVENTORY_SLOT_DUALPRIMARY_3 = 8 // Used for leftover dev akimbo function  
+
+global const int WEAPON_INVENTORY_SLOT_INVALID = -1 // Invalid  
+
+global const int WEAPON_INVENTORY_SLOT_PRIMARY_0 = 0 // Primary  
+global const int WEAPON_INVENTORY_SLOT_PRIMARY_1 = 1 // Secondary  
+
+global const int WEAPON_INVENTORY_SLOT_PRIMARY_2 = 2 // Melee (selected from melee select key, 3 by default)  
+global const int WEAPON_INVENTORY_SLOT_PRIMARY_3 = 3 // Melee (from direct use melee key, V by default)  
+```
+
+
+weapon.GetWeaponClassName() <- returns the weapon's engine class name, such as CWeaponX  
+weapon.SetWeaponName()  
+weapon.GetWeaponName() <- returns the weapon's name, such as "mp_weapon_nemesis"  
+weapon.GetWeaponAmmoPoolType() <- returns the weapon's ammo pool type   
+
+The ammo pool type is obtained from the following global enumeration:
+```
+global enum eAmmoPoolType  
+{  
+	bullet = 0  
+	special = 1  
+	highcal = 2  
+	shotgun = 3  
+	sniper = 4  
+	explosive = 5  
+}  
+```
+weapon.SetClipCount() - this sets current MAGAZINE ammo, incorrectly labelled as "Clip" by Respawn  
+GetWeaponPrimaryAmmoCount( AMMOSOURCE_STOCKPILE )  
+weapon.SetWeaponSkin( skinIndex ) <- "Skin" here refers to the $skinfamilies (see the Valve Developer Wiki for QC Commands). It's not used in the same sense as "Legendary Skins", etc - it is a material swap   
+
+weapon.SetWeaponPrimaryClipCount() <- Magazine ammo capacity, incorrectly labelled as "clip" by Respawn  
+weapon.GetWeaponPrimaryClipCount() <- Magazine ammo capacity, incorrectly labelled as "clip" by Respawn  
+
+weapon.GetWeaponPrimaryClipCountMax() 
+weapon.SetWeaponPrimaryClipCountMax()  
+
+weapon.SetWeaponChargeFraction() <- used by weapons and abilities, highly dependent on the weapon / ability and its implementation  
+weapon.SetWeaponChargeFractionForced()  
+weapon.GetWeaponType()  
+
 
 ## Weapon Mod functions (Hop-ups, etc.)
 
@@ -177,7 +248,7 @@ Mods
 ```
 
 
-weapon.AddMod("modnamestring") <- adds one of the previously defined mods to the weapon INSTANCE (only the individual weapon entity!)
+weapon.AddMod("ModName") <- adds one of the previously defined mods to the weapon INSTANCE (only the individual weapon entity!)
 
 IMPORTANT MENTION! A mod cannot be added to a weapon if has not been defined in the weapon's config file!
 
@@ -185,9 +256,9 @@ weapon.RemoveMod("modnamestring") <- removes one of the currently equipped mods 
 
 weapon.SetWeaponMods() <- takes an array of mods as an argument
 
-weapon.GetMods() <- returns an array of mods applied to the weapon
+weapon.GetMods() <- returns an array registered mods for this weapon
 
-GetWeaponMods( weapon ) <- returns an array of mods applied to the weapon, this function is not a method of the CWeaponX entity class, but effectively accomplishes the same function as the above-mentioned method
+GetWeaponMods( weapon ) 
 
 ## Weapon Parameter Get / Set Functions
 
@@ -223,63 +294,6 @@ GetWeaponInfoFileKeyField_GlobalInt( weapon, "ammo_clip_size")
 GetWeaponInfoFileKeyField_GlobalFloat( weaponRef, "burst_fire_delay" )  
 GetWeaponInfoFileKeyFieldAsset_Global( weaponName, "playermodel")  
 
-## Other weapon functions and methods
-
-
-A very commonly used function to get the weapon currently held by the player, using a constant value from the eActiveInventorySlot enumeration  
-player.GetActiveWeapon(eActiveInventorySlot.mainHand)   
-
-global enum eActiveInventorySlot  
-{  
-	mainHand = 0  
-	altHand = 1  
-	utility = 2  
-}  
-
-
-player.GetNormalWeapon( weaponSlot )   
-SURVIVAL_GetWeaponBySlot( player, weaponSlot)  
-
-Weapon Inventory Slots  
-global const int WEAPON_INVENTORY_SLOT_ANTI_TITAN = 4 // Anti-Titan weapon slot, still exists in Apex Legends  
-global const int WEAPON_INVENTORY_SLOT_ANY = -2 // Any  
-global const int WEAPON_INVENTORY_SLOT_DUALPRIMARY_0 = 5 // Used for leftover dev akimbo function  
-global const int WEAPON_INVENTORY_SLOT_DUALPRIMARY_1 = 6 // Used for leftover dev akimbo function  
-global const int WEAPON_INVENTORY_SLOT_DUALPRIMARY_2 = 7 // Used for leftover dev akimbo function  
-global const int WEAPON_INVENTORY_SLOT_DUALPRIMARY_3 = 8 // Used for leftover dev akimbo function  
-global const int WEAPON_INVENTORY_SLOT_INVALID = -1 // Invalid  
-global const int WEAPON_INVENTORY_SLOT_PRIMARY_0 = 0 // Primary  
-global const int WEAPON_INVENTORY_SLOT_PRIMARY_1 = 1 // Secondary  
-global const int WEAPON_INVENTORY_SLOT_PRIMARY_2 = 2 // Melee (selected from melee select key, 3 by default)  
-global const int WEAPON_INVENTORY_SLOT_PRIMARY_3 = 3 // Melee (from direct use melee key, V by default)  
-
-
-
-weapon.GetWeaponClassName() <- returns the weapon's engine class name, such as CWeaponX  
-weapon.SetWeaponName()  
-weapon.GetWeaponName() <- returns the weapon's name, such as "mp_weapon_nemesis"  
-weapon.GetWeaponAmmoPoolType() <- returns the weapon's ammo pool type   
-
-global enum eAmmoPoolType  
-{  
-	bullet = 0  
-	special = 1  
-	highcal = 2  
-	shotgun = 3  
-	sniper = 4  
-	explosive = 5  
-}  
-
-weapon.SetClipCount() - this sets current MAGAZINE ammo, incorrectly labelled as "Clip" by Respawn  
-GetWeaponPrimaryAmmoCount( AMMOSOURCE_STOCKPILE )  
-weapon.SetWeaponSkin( skinIndex ) <- "Skin" here refers to the $skinfamilies (see the Valve Developer Wiki for QC Commands). It's not used in the same sense as "Legendary Skins", etc - it is a material swap   
-weapon.SetWeaponPrimaryClipCount() <- this sets MAGAZINE ammo capacity, incorrectly labelled as "Clip" by Respawn  
-weapon.GetWeaponPrimaryClipCount() <- this gets MAGAZINE ammo capacity, incorrectly labelled as "Clip" by Respawn  
-weapon.GetWeaponPrimaryClipCountMax() <- this gets max MAGAZINE ammo capacity, incorrectly labelled as "Clip" by Respawn  
-weapon.SetWeaponPrimaryClipCountMax() <- this sets max MAGAZINE ammo capacity, incorrectly labelled as "Clip" by Respawn  
-weapon.SetWeaponChargeFraction() - used by weapons and abilities, highly dependent on the weapon / ability and its implementation  
-weapon.SetWeaponChargeFractionForced()  
-weapon.GetWeaponType()  
 
 
 
