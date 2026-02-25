@@ -6,7 +6,7 @@ This explains how to author and package FMOD Studio content for R5Valk using the
 
 - Auto‑loads FMOD Studio banks from the base game and enabled mods
 - If an FMOD event exists with the exact name the game requests, FMOD plays it instead of Miles
-- 3D spatialization, sound occlusion and attenuation are handled ONLY if the FMOD Spatializer effect is added to the audio event!
+- 3D spatialization, sound occlusion and attenuation are handled ONLY if the FMOD Spatializer effect is added to the audio event(s)!
 
 ### Requirements
 
