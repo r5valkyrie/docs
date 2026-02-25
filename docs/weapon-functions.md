@@ -407,7 +407,7 @@ mp_weapon_black_hole // (Horizon ultimate)
 
 
 ```
-weapon.FireWeaponBolt (weaponFireBoltParams )
+weapon.FireWeaponBolt ( weaponFireBoltParams )
 Takes an instance of the WeaponFireBoltParams global structure as its argument
 ```
 
@@ -428,7 +428,7 @@ global struct WeaponFireBoltParams
 ```
 
 ```
-weapon.FireWeaponGrenade (weaponFireGrenadeParams )
+weapon.FireWeaponGrenade ( weaponFireGrenadeParams )
 Takes an instance of the WeaponFireGrenadeParams global structure as its argument
 ```
 
@@ -480,7 +480,7 @@ global struct WeaponPrimaryAttackParams
 ```
 
 ```
-weapon.FireWeaponDefault(attackParams.pos, attackParams.dir, speedScale, patternScale, ignoreSpread )
+weapon.FireWeaponDefault( attackParams.pos, attackParams.dir, speedScale, patternScale, ignoreSpread )
 Takes attributes belonging to an instance of the WeaponPrimaryAttackParams structure as arguments
 ```
 
