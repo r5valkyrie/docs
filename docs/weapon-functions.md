@@ -332,7 +332,7 @@ GetWeaponInfoFileKeyFieldAsset_Global( weaponName, "playermodel")
 
 ## Weapon Callback Functions
 
-Respawn set up a framework for defining callback functions for when certain events happen, inside the native code (inside the binary of the game, r5apex.exe). These callback events are located inside the weapons' .txt config files. They can be found in this list :
+Respawn set up a framework for defining callback functions for when certain events happen, inside the native code (inside the binary of the game, r5apex.exe). These callback events are located inside the weapons' .txt config files. They can be found in this list:
 
 ```
 "OnWeaponActivate"
