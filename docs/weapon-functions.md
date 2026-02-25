@@ -58,13 +58,13 @@ global const int WEAPON_INVENTORY_SLOT_PRIMARY_2 = 2 // Melee (selected from mel
 global const int WEAPON_INVENTORY_SLOT_PRIMARY_3 = 3 // Melee (from direct use melee key, V by default)  
 ```
 
-### Getting a weapon's engine class name
+### Getting a weapon's class name
 ```
-weapon.GetWeaponClassName() // returns the weapon's engine class name, such as CWeaponX  
+weapon.GetWeaponClassName() // returns the weapon's name, such as "mp_weapon_nemesis"
 ```
 ### Getting / setting a weapon's name
 ```
-weapon.GetWeaponName() // returns the weapon's name, such as "mp_weapon_nemesis"  
+weapon.GetWeaponName()
 weapon.SetWeaponName()  
 ```
 ### Getting a weapon's ammo pool type
