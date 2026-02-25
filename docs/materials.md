@@ -73,7 +73,7 @@ slot4: _ilm (emissive / self-illumination map - [Note: texture map for making th
 
 slot5: _ao (ambient occlusion map - [Note: article on ambient occlusion maps, by Paul H. Paulino](https://www.paulhpaulino.com/the-vfx-map-baking-guide-ambient-occlusion))  
 
-slot6: _cav/cvt (cavity map - [Note: article on cavity maps, by Paul H. Paulino] (https://www.paulhpaulino.com/improve-your-organic-textures-with-a-cavity-map))  
+slot6: _cav/cvt (cavity map - [Note: article on cavity maps, by Paul H. Paulino](https://www.paulhpaulino.com/improve-your-organic-textures-with-a-cavity-map))  
 
 slot7: _opa (opacity map - Note: controls opacity / transparency)  
 
