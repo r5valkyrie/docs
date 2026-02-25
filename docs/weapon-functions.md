@@ -19,6 +19,7 @@ weapon.GetWeaponViewmodel() // returns the viewmodel entity
 ```
 ### Getting / Setting a weapon's bodygroup
 ```
+viewmodel = the weapon's viewmodel entity, acquired with weapon.GetWeaponViewmodel()
 viewmodel.FindBodygroup( "bodygroupnamestring" ) // finds the index for a bodygroup according to its name  
 viewmodel.SetBodygroupModelByIndex( bodygroupid, 0 OR 1 ) // the second parameter of the function is a boolean - FALSE or TRUE, which determines whether the bodygroup is HIDDEN or VISIBLE  
 ```
