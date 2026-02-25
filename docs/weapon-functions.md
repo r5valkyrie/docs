@@ -18,6 +18,7 @@ weapon.HasMod("modnamestring") - mods are defined inside a key-value pair table 
 
 Example (from mp_weapon_alternator.txt):
 
+```
 Mods
 	{
 		barrel_synchronizer
@@ -85,12 +86,10 @@ Mods
 		{
 			"bodygroup1_set"			"1"
 		}
+```
+[continued]
 
-.
-.
-.
-
-
+```
 		optic_cq_threat // Note: Optics are enabled or disabled through mods - a hacky implementation because this key-value pair needs to be attached to something
 		{
 			"bodygroup1_set"			"1"
@@ -105,12 +104,11 @@ Mods
 		{
 			"ammo_clip_size"   						"24"
 		}
+```
 
-.
-.
-.
+[continued]
 
-
+```
         bullets_mag_l4 // Note: Attachments are enabled or disabled through mods - a hacky implementation because this key-value pair needs to be attached to something
         {
             "ammo_clip_size"   						"29"
@@ -126,12 +124,12 @@ Mods
 			// "fx_muzzle_flash_world"							""
 			// "fx_muzzle_flash_attach"						""
 		// }
+```
 
-.
-.
-.
+[continued]
 
 
+```
 		// barrel_stabilizer_l4_flash_hider
 		// {
 			// "viewkick_pitch_base" 				"*0.8"
@@ -164,12 +162,10 @@ Mods
 			"spread_kick_on_fire_air_hip" "*0.90"
 			"bodygroup32_set" "1"
 		}
+```
+[continued]
 
-.
-.
-.
-
-		
+```		
 		infinite_ammo // Infinite ammo mod
 		{
 			"ammo_min_to_fire"                      "0"
@@ -178,7 +174,7 @@ Mods
 			"low_ammo_fraction"                     "0.0"
 		}
 	}
-
+```
 
 
 weapon.AddMod("modnamestring") <- adds one of the previously defined mods to the weapon INSTANCE (only the individual weapon entity!)
