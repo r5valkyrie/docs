@@ -1,5 +1,7 @@
 # Squirrel_re Script Naming Conventions
 
+Naming conventions are useful in programming, especially across a very large codebase, such as R5V's, so that multiple programmers can work together in harmony and so that code can be more easily read and understood. These sets of standards are meant to achieve a level of uniformity in code so as to increase efficiency and encourage open collaboration.
+
 ## Variables
 
 In general, variables should use lowerCamelCase
@@ -39,7 +41,7 @@ Enums should start with lowercase e and use lowerCamelCase
 ```
 global enum eActiveInventorySlots
 {
-    
+
 }
 ```
 
