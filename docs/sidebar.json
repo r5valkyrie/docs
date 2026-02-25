@@ -28,7 +28,27 @@
                 {
                     "title": "Weapons Quickstart",
                     "slug": "weapons-quickstart"
-                }
+                },
+                {
+                    "title": "Weapon functions and commands",
+                    "slug": "weapon-functions"
+                },               
+                {
+                    "title": "Audio functions and commands",
+                    "slug": "audio-commands-functions"
+                },
+                {
+                    "title": "Particle system functions and commands",
+                    "slug": "particle-effect-functions"
+                },
+                {
+                    "title": "Realms",
+                    "slug": "realms"
+                },
+                {
+                    "title": "Code enums list",
+                    "slug": "code-enums"
+                }                              
             ]
         },
         {
@@ -42,6 +62,14 @@
                     "title": "Sound Modding",
                     "slug": "sound-modding"
                 },
+               {
+                    "title": "Audio event dictionary",
+                    "slug": "audio-event-dictionary"
+                },
+               {
+                    "title": "Materials",
+                    "slug": "materials"
+                },                
                 {
                     "title": "Playlist System",
                     "slug": "mod-playlist-system"
