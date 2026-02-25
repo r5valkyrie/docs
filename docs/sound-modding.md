@@ -6,7 +6,7 @@ This explains how to author and package FMOD Studio content for R5Valk using the
 
 - Auto‑loads FMOD Studio banks from the base game and enabled mods
 - If an FMOD event exists with the exact name the game requests, FMOD plays it instead of Miles
-- 3D positioning and global volume are handled automatically
+- 3D spatialization, sound occlusion and attenuation are handled ONLY if the FMOD Spatializer effect is added to the audio event!
 
 ### Requirements
 
@@ -92,13 +92,18 @@ Nothing plays:
 ### Notes on 3D audio and listener
 
 - Listener position and 3D attributes are synchronized with the engine
-- You do not need to set 3D attributes manually; the backend applies them for event playback
 
 ### Limitations (current backend)
 
 - No exposed API for runtime parameter control or querying instances
 - Raw PCM streaming is not supported by the FMOD backend
-- Stop‑by‑event is rudimentary
+- Stop‑by‑event is rudimentary. The audio modding system now properly handles STOP events called by Miles, however custom implementations are lacking.
+- It is not possible to work with Miles Sound System directly
+- FMOD spatialization and attenuation are very primitive compared to Wwise's
+- Complex, compound event systems are much more difficult to implement, if at all possible, compared to Wwise
+- FMOD does not support adding pre- or post- delays to audio events
+- It is not possible to categorize audio events using folders. Categorization can only be done by loading multiple banks
+- Each mod requires its own bank, leading to a high amount of banks necessary to be loaded into memory if using multiple audio mods or mods that feature audio changes
 
 ### Quick checklist
 
