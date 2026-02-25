@@ -10,6 +10,7 @@ This is the reason why, in Retail Apex Legends, players sometimes see effects, s
 
 # Entity class realm methods
 
+```
 entity.AddToRealm(realm)
 
 entity.AddToOtherEntitysRealms( entity )
@@ -23,10 +24,10 @@ entity.IsInRealm( realm )
 player.GetRealms()
 
 entity.AddToAllRealms()
-
+```
 
 # Other realm related functions
-
+```
 ClearActiveProjectilesForRealm( int realm)
 
 Survival_GetPlayerRealm( entity player )
@@ -34,7 +35,9 @@ Survival_GetPlayerRealm( entity player )
 CopyRealmsFromTo( entity source, entity target ) 
 
 SetRealms( entity, [ newRealm ] ) <- the second argument is an array containing the realm ids
+```
 
+```
 AddToUltimateRealm( entity, entity )
 
 Examples:
@@ -42,3 +45,4 @@ Examples:
 AddToUltimateRealm( weapon.GetWeaponOwner(), missile )
 AddToUltimateRealm( weapon.GetWeaponOwner(), shake )
 AddToUltimateRealm( weaponOwner, targetEffect )
+```
