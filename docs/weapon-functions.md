@@ -25,7 +25,9 @@ viewmodel.SetBodygroupModelByIndex( bodygroupid, 0 OR 1 ) // the second paramete
 ### Getting a player's active weapon entity
 
 A very commonly used function to get the weapon currently held by the player, using a constant value from the eActiveInventorySlot enumeration:  
+```
 player.GetActiveWeapon(eActiveInventorySlot.mainHand)   
+```
 
 The active inventory slot is obtained from this global enum:
 ```
@@ -37,10 +39,10 @@ global enum eActiveInventorySlot
 }  
 ```
 ### Getting one of the player's weapons
-
+```
 player.GetNormalWeapon( weaponSlot )   
 SURVIVAL_GetWeaponBySlot( player, weaponSlot) <- this function is not a method of the player entity, but takes the player entity as an argument upon call 
-
+```
 The two above-mentioned functions get weapon inventory slots from these constants:
 ```
 global const int WEAPON_INVENTORY_SLOT_ANTI_TITAN = 4 // Anti-Titan weapon slot, still exists in Apex Legends  
@@ -61,18 +63,18 @@ global const int WEAPON_INVENTORY_SLOT_PRIMARY_3 = 3 // Melee (from direct use m
 ```
 
 ### Getting a weapon's engine class name
-
+```
 weapon.GetWeaponClassName() // returns the weapon's engine class name, such as CWeaponX  
-
+```
 ### Getting / setting a weapon's name
-
+```
 weapon.GetWeaponName() // returns the weapon's name, such as "mp_weapon_nemesis"  
 weapon.SetWeaponName()  
-
+```
 ### Getting a weapon's ammo pool type
-
+```
 weapon.GetWeaponAmmoPoolType() <- returns the weapon's ammo pool type   
-
+```
 The ammo pool type is obtained from the following global enumeration:
 ```
 global enum eAmmoPoolType  
