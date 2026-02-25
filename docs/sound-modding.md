@@ -1,6 +1,6 @@
-## R5VALK FMOD Modding Guide
+## R5Valkyrie FMOD Audio Modding
 
-This explains how to author and package FMOD Studio content for R5Valk using the built‑in FMOD backend and mod system.
+This article explains how to author and package FMOD Studio content for R5Valk using the built‑in FMOD backend and mod system.
 
 ### What the FMOD backend does
 
