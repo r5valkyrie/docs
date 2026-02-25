@@ -87,7 +87,6 @@ References courtesy of Autodesk, Unity Technologies, Epic Games and Paul H. Paul
  - In this last section of the material files, it is possible to point the material to other materials it should inherit, such as Depth Shadow materials, Depth Prepass materials (game dev is an iterative process with multiple passes), VSM (virtual shadow map) materials, Colpass (color pass) materials, Texture Animation materials
  - The values are GUIDs that reference other material assets. A value of "0x0" indicates that there is no map assigned to the key.
 
----
 
 # Examples
 
