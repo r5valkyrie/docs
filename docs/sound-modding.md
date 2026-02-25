@@ -97,7 +97,7 @@ Nothing plays:
 
 - No exposed API for runtime parameter control or querying instances
 - Raw PCM streaming is not supported by the FMOD backend
-- Stop‑by‑event is rudimentary. The audio modding system now properly handles STOP events called by Miles, however custom implementations are lacking.
+- Stop‑by‑event is rudimentary. The audio modding system now properly handles STOP events called by Miles, however custom implementations are lacking and often require squirrel_re scripting.
 - It is not possible to work with Miles Sound System directly
 - FMOD spatialization and attenuation are very primitive compared to Wwise's
 - Complex, compound event systems are much more difficult to implement, if at all possible, compared to Wwise
