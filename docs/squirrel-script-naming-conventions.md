@@ -28,6 +28,8 @@ sh_init.gnut
 
 ## Extensions
 
+IMPORTANT MENTION: THIS IS ONLY A CONVENTION! THE FILE EXTENSION WON'T AFFECT SCRIPT COMPILATION!
+
 Files that contain systems and global helper functions: .gnut
 
 ```
