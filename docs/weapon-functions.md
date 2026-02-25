@@ -217,6 +217,23 @@ Bodygroups are also used for different game mechanics such as energizing (the Ra
 
 Bodygroups MUST be defined in the weapon model's .qc file, PRE-compile!
 
+Excerpt from ptpov_peacekeeper.qc:
+
+```
+$bodygroup "sight_holo_mag"
+{
+	blank
+	studio "ptpov_peacekeeper_sight_holo_mag_1_lod0.smd"
+}
+$bodygroup "suppressor_round_large"
+{
+	blank
+	studio "ptpov_peacekeeper_suppressor_round_large_1_lod0.smd"
+}
+
+```
+Functions for getting / setting bodygroups:
+
 ```
 viewmodel = the weapon's viewmodel entity, acquired with weapon.GetWeaponViewmodel()
 viewmodel.FindBodygroup( "bodygroupnamestring" ) // finds the index for a bodygroup according to its name  
