@@ -37,7 +37,10 @@ const asset NEMESIS_FX_IDLE_MAGNET_FP = $"P_wpn_nem_idle_magnet_FP"
 Enums should start with lowercase e and use lowerCamelCase
 
 ```
-eActiveInventorySlots
+global enum eActiveInventorySlots
+{
+    
+}
 ```
 
 ## For-loop iterators
