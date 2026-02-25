@@ -87,7 +87,7 @@ weapon.GetWeaponType()
 
 weapon.HasMod("modnamestring") - mods are defined inside a key-value pair table contained in the weapon / ability's .txt config file
 
-Example (from mp_weapon_alternator.txt):
+Example (excerpt from mp_weapon_alternator.txt):
 
 ```
 Mods
