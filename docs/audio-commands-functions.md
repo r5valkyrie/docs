@@ -5,11 +5,11 @@ This article documents various Audio functions and commands.
 ## Animation Events (inside QCs, in $sequence):
 
 The following commands are used inside of model QC files, used by StudioMDL to compile models, to be used in-game. For a comprehensive list of QC commands, consult the Valve Developer Wiki: [QC Commands](https://developer.valvesoftware.com/wiki/Category:QC_commands), [QC Commands 2](https://developer.valvesoftware.com/wiki/QC_Commands)
-
+```
 { event AE_CL_PLAYSOUND framenumber "EVENT NAME" }
 
 { event AE_CL_STOPSOUND framenumber "EVENT NAME" }
-
+```
 These QC commands are contained inside $sequence(s) and are usually tied to activities. For more information on Activities, consult the Valve Developer Wiki: [Activity](https://developer.valvesoftware.com/wiki/Activity)
 
 
