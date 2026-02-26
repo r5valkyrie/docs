@@ -11,10 +11,10 @@
 ### 7. Weapon Firing Functions
 ### 8. Explaining Firing Modes
 ### 9. Additional Weapon Networked Script Variables
-### 11. Weapon Ballistic Methods / Functions
-### 12. Explaining VM-Gating And Selective Compilation (SERVER, CLIENT, UI, SHARED)
-### 13. The Weapon-Specific Structures (weapon.w, weapon.s)
-### 14. Global Weapon Structures (Server-side, Client-side)
+### 10. Weapon Ballistic Methods / Functions
+### 11. Explaining VM-Gating And Selective Compilation (SERVER, CLIENT, UI, SHARED)
+### 12. The Weapon-Specific Structures (weapon.w, weapon.s)
+### 13. Global Weapon Structures (Server-side, Client-side)
 
 ===========================================================================================
 
@@ -833,6 +833,7 @@ Some weapons, like the Nemesis, have a networked weapon variable called script0.
 In the Nemesis' case, this value sets the frame of the animation of the magazine latches on the front of the weapon, by interpolating between the first frame (completely closed) and the last frame (completely open). This is interpolation between two bone poses.
 This variable is networked (synced between SERVER and CLIENT and predicted on the CLIENT) and can be used for many other purposes, such as Respawn's implementation of the Deadeye's Tempo and Shattercaps Hop-ups.
 
+```
 weapon.GetScriptPoseParam0() // this value is within the interval [a,b], where a and b are defined in the weapon .qc with $poseparam   
 weapon.SetScriptPoseParam0(float value) // this value is within the interval [a,b], where a and b are defined in the weapon .qc $poseparam   
 ```
@@ -869,11 +870,8 @@ As explained in the weapon quickstart guide, weapons require both client and ser
 
 Some functions and methods are exclusive to ONLY ONE type of VM and can only be called from other VMs using remote functions.
 
-## 12. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
+## 12. The Weapon-Specific Structures (weapon.w, weapon.s)
 
-TODO
-
-## 13. The Weapon-Specific Structures (weapon.w, weapon.s)
 ```
 struct ServerWeaponStruct (contained in _entitystructs.gnut) is hooked to entity.w in the engine (native) code
 This structure is only accessible inside of and by the SERVER VM. This accesses the weapon entity subclass written in C++ in the engine code and is similar to CWeaponX::, with the scope resolution operator, in C++.
@@ -888,20 +886,22 @@ This structure is only accessible inside of and by the CLIENT VM. This accesses 
 #if CLIENT
 weapon.w // something, something, code goes here
 #endif
+```
 
+```
 weapon.s is also used for controlling weapon instance specific variables in the codebase. New slots can be added to and removed from this table dynamically.
 
 from mp_weapon_rocket_launcher.nut:
 
-```
-	if ( !( "initialized" in weapon.s ) )
-	{
-		weapon.s.missileThinkThread <- MissileThink
-		weapon.s.initialized <- true
+
+if ( !( "initialized" in weapon.s ) )
+    {
+    weapon.s.missileThinkThread <- MissileThink
+	weapon.s.initialized <- true
 	}
 ```
 
-## 14. Global Weapon Structures (Server-side, Client-side)
+## 13. Global Weapon Structures (Server-side, Client-side)
 
 TODO
 
