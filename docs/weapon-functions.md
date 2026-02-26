@@ -12,7 +12,7 @@
 ### 8. Explaining Firing Modes
 ### 9. Additional Weapon Networked Script Variables
 ### 11. Weapon Ballistic Methods / Functions
-### 12. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
+### 12. Explaining VM-Gating And Selective Compilation (SERVER, CLIENT, UI, SHARED)
 ### 13. The Weapon-Specific Structures (weapon.w, weapon.s)
 ### 14. Global Weapon Structures (Server-side, Client-side)
 
