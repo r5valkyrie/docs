@@ -40,7 +40,11 @@
                 {
                     "title": "Weapon Functions and Commands",
                     "slug": "weapon-functions"
-                },               
+                }, 
+                {
+                    "title": "Entities And Spawning Entities",
+                    "slug": "entities-spawning-objects"
+                },              
                 {
                     "title": "Audio Functions and Commands",
                     "slug": "audio-commands-functions"
