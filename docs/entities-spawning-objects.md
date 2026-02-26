@@ -1,16 +1,14 @@
-# Entities and Entity Spawning
+# Entities, Entity Spawning, Entity Keyvalues and Flags
 
+Entities are created with CreateEntity( string entityType) , but can only be spawned in the world with DispatchSpawn( entity entityName )
 
-Entities can only be spawned in by using 
-
-DispatchSpawn(entity entityToBeSpawned)
-
-The entity class is defined in the engine code and it has multiple subclasses (CPlayer, CWeaponX, etc.)
+The entity class (CBaseEntity) is defined in the engine code and it has multiple subclasses (CPlayer, CWeaponX, etc.)
 
 All models belong to an entity type. Triggers are entities as well
 
 Entity types:
 ```
+- point_viewcontrol
 - prop_dynamic
 - prop_static
 - prop_script
@@ -21,6 +19,11 @@ Entity types:
 - npc
 ```
 The entity class has many keyvalue attributes, which are accessed with entity.kv
+
+## Keyvalue Methods and Functions
+
+entity.HasKey( string keyName )
+entity.GetValueForKey( string keyName )
 
 ## Size Keyvalues
 ```
@@ -103,13 +106,18 @@ entity.kv.ease_to_node
 entity.kv.use_local_rotation
 entity.kv.PositionInterpolator
 ```
+
+
 ## Flag Keyvalues
 ```
+
+The flags are BIT FLAGS (Bitwise Flags) and can either be used with integer values or their corresponding hexadecimal values (i.e.: 0x0)
+
 entity.kv.damageSourceId
-entity.kv.contents
-entity.kv.VisibilityFlags
-entity.kv.spawnflags
-entity.kv.script_flag
+entity.kv.contents // see: Content flags
+entity.kv.VisibilityFlags // see: Visibility flags
+entity.kv.spawnflags // see: Spawn flags
+entity.kv.script_flag // see: Script flags
 entity.kv.WaitFlag
 entity.kv.SetFlag
 entity.kv.flag_clear_resets
@@ -118,33 +126,100 @@ entity.kv.scr_flag_hack_started
 entity.kv.scr_flagToggle
 entity.kv.scr_flagRequired
 entity.kv.toggleFlagWhenHacked
-entity.kv.damagePilots
-entity.kv.damageTitans
+entity.kv.damagePilots // determines whether the entity can damage Pilots or Legends
+entity.kv.damageTitans // determines whether the entity can damage Titans
 ```
 
+## Flag Methods and Functions
+
 ```
-Visibility flags:
+// flag = string flagName or macro 
+
+FlagInit( flag )
+Flag( flag ) // returns value is whether the flag exists osr not
+FlagSet( flag )
+FlagClear( flag )
+FlagWaitClear( flag )
+FlagWait( flag )
+FlagWait( "EntitiesDidLoad" )
+FlagEnd( flag )
+
+bool function IsBitFlagSet()
+
+DamageInfo_GetDamageFlags( damageInfo )
+DamageInfo_GetCustomDamageType( damageInfo )
+TEMP_GetDamageFlagsFromString( damageFlagsString )
+
+weapon.GetWeaponDamageFlags()
+weapon.GetWeaponType( weaponTypeFlag )
+
+player.IsDisabledFor( weaponTypeFlag )
+
+AddCinematicFlag( entity player, flag )
+RemoveCinematicFlag( entity player, flag )
+
+npc.SetNPCFlag( flags )
+npc.DisableNPCFlag( flags )
+npc.SetNPCMoveFlag( flags )
+
+```
+
+## Visibility flags:
+
+```
+// These flags are BIT FLAGS (Bitwise Flags) set with entity.kv.VisibilityFlags =
+// Bitwise operators are required to set multiple bitflags, i.e.: ent.kv.VisibilityFlags = (ENTITY_VISIBLE_TO_OWNER | ENTITY_VISIBLE_TO_FRIENDLY)
+
+ENTITY_VISIBLE_TO_OWNER
 ENTITY_VISIBLE_TO_FRIENDLY
 ENTITY_VISIBLE_TO_ENEMY
-ENTITY_VISIBLE_TO_OWNER
-ENTITY_VISIBLE_TO_NOBODY
 ENTITY_VISIBLE_TO_EVERYONE
+ENTITY_VISIBLE_TO_NOBODY
+```
 
-Script flags:
+## Spawn flags:
+```
+// These flags are BIT FLAGS (Bitwise Flags) set with entity.kv.spawnflags =
+// Bitwise operators are required to set multiple bitflags, i.e.: npc.kv.spawnflags = (SF_NPC_ALLOW_SPAWN_SOLID | SF_NPC_NO_PLAYER_PUSHAWAY)
+
+
+SF_PHYSPROP_DEBRIS
+
+SF_INFOTARGET_ALWAYS_TRANSMIT_TO_CLIENT
+
+SF_WEAPON_START_CONSTRAINED
+SF_BLOCK_OWNER_WEAPON
+
+SF_ABSORB_CYLINDER
+SF_ABSORB_BULLETS
+
+SF_ENVEXPLOSION_NO_DAMAGEOWNER
+SF_ENVEXPLOSIO_NO_NPC_SOUND_EVENT
+SF_ENVEXPLOSION_NOSAOUND_FOR_ALLIES
+SF_ENVEXPLOSION_MASK_BRUSHONLY
+SF_ENVEXPLOSION_UPWARD_FORCE
+SF_ENVEXPLOSION_INCLUDE_ENTITIES
+
+SF_SHAKE_RUMBLE_ONLY // Rumble, no camera shake
+SF_SHAKE_NO_RUMBLE // Camera shake, no rumble
+SF_SHAKE_INAIR // Camera shake in air
+
+SF_NPC_ALLOW_SPAWN_SOLID
 SF_NPC_ALLOW_SPAWN_SOLID
 SF_NPC_NO_PLAYER_PUSHAWAY
-SF_ABSORB_BUILLETS
-SF_PHYSPROP_DEBRIS
-SF_INFOTARGET_ALWAYS_TRANSMIT_TO_CLIENT
-SF_BLOCK_OWNER_WEAPON
-SF_BLOCK_NPC_WEAPON_LOF
-SF_ABSORB_CYLINDER
+SF_BLOCK_NPC_WEAPON_LOF // LOF = Line of Fire = Line of Sight = LOS
+```
 
-Physics flags:
+## Physics flags:
+
+```
 SOLID_HITBOXES
 SOLID_OBB
+```
 
-Content flags:
+## Content flags:
+
+```
 CONTENTS_SOLID
 CONTENTS_BLOCKLOS
 CONTENTS_PLAYERCLIP
@@ -153,7 +228,122 @@ CONTENTS_MONSTER
 CONTENTS_BULLETCLIP
 CONTENTS_HITBOX
 ```
+
+## Damage flags:
+
+```
+// These flags are BIT FLAGS (Bitwise Flags) set with entity.kv.spawnflags =
+// Bitwise operators are required to set multiple bitflags, i.e.: npc.kv.spawnflags = (SF_NPC_ALLOW_SPAWN_SOLID | SF_NPC_NO_PLAYER_PUSHAWAY)
+// Damage flags can be obtained from the damageInfo dump using DamageInfo_GetDamageFlags( src ) or from the weapon's .txt config with weapon.GetWeaponDamageFlags()
+
+
+DF_GIB											// 1
+DF_DISSOLVE										// 2
+DF_INSTANT										// 3
+DF_NO_SELF_DAMAGE								// 4
+DF_IMPACT										// 5
+DF_BYPASS_SHIELD								// 6, bypasses shield damage, damages health directly 
+DF_RAGDOLL										// 7
+DF_SHIELD_BREAK 								// 8
+DF_RADIUS_DAMAGE 		CODE_DF_RADIUS_DAMAGE	// 9
+DF_ELECTRICAL 									// 10
+DF_BULLET 										// 11
+DF_EXPLOSION			CODE_DF_EXPLOSION		// 12
+DF_MELEE				CODE_DF_MELEE			// 13
+DF_NO_INDICATOR									// 14
+DF_KNOCK_BACK			CODE_DF_KNOCK_BACK		// 15
+DF_STOPS_TITAN_REGEN							// 16
+DF_DISMEMBERMENT								// 17
+DF_MAX_RANGE									// 18
+DF_SHIELD_DAMAGE								// 19
+DF_CRITICAL										// 20
+DF_SNIPER										// 21
+DF_HEADSHOT										// 22
+DF_VORTEX_REFIRE								// 23
+DF_OVERSHIELD									// 24
+DF_KNOCKDOWN								    // 25
+DF_KILLSHOT										// 26
+DF_SHOTGUN										// 27
+DF_SKIPS_DOOMED_STATE							// 28
+DF_DOOMED_HEALTH_LOSS							// 29
+DF_SHADOW_DAMAGE								// 30
+DF_DOOM_FATALITY								// 31
+DF_NO_HITBEEP			                        // 32 current max
+
+
+global const int DAMAGEFLAG_NOPAIN = 16
+global const int DAMAGEFLAG_VICTIM_ARMORED = 1
+global const int DAMAGEFLAG_VICTIM_HAS_VORTEX = 4
+global const int DAMAGEFLAG_VICTIM_INVINCIBLE = 2
+```
+
+## ollision Group Flags
+```
+TRACE_COLLISION_GROUP_DEBRIS
+```
+
+## Weapon Flags
+```
+// can be seen in codeconsts_client.txt and codeconsts_server.txt
+
+global const int WPF_DEPLOYABLE = 4
+global const int WPF_DYNAMIC_UPDATE = 8
+global const int WPF_IN_RANGE = 32
+global const int WPF_IS_VISIBLE = 16
+global const int WPF_NONE = 0
+global const int WPF_VISBILITY_LOS = 1
+global const int WPF_VISIBILITY_SONAR = 2
+```
+
+## Weapon Type Flags
+```
+// can be seen in codeconsts_client.txt and codeconsts_server.txt
+
+global const int WPT_CONSUMABLE = 16
+global const int WPT_GRENADE = 64
+global const int WPT_INCAP_SHIELD = 32
+global const int WPT_MELEE = 2
+global const int WPT_OTHER = 128
+global const int WPT_PRIMARY = 1
+global const int WPT_TACTICAL = 4
+global const int WPT_ULTIMATE = 8
+global const int WT_ANTITITAN = 2
+global const int WT_DEFAULT = 0
+global const int WT_DEFENSE = 6
+global const int WT_INVENTORY = 8
+global const int WT_MELEE = 3
+global const int WT_SHOULDER = 4
+global const int WT_SIDEARM = 1
+global const int WT_TACTICAL = 7
+global const int WT_TITANCORE = 5
+```
+
+## Cinematic Flags
+```
+CE_FLAG_HIDE_MAIN_HUD_INSTANT
+CE_FLAG_HIDE_PERMANENT_HUD 
+CE_FLAG_EXECUTION
+```
+
+## NPC Flags
+```
+NPC_ALLOW_FLEE
+NPC_ALLOW_HAND_SIGNALS
+```
+## 
+NPC Move Flags
+```
+NPCMF_DISABLE_ARRIVALS
+```
+## Pass Through Flags
+```
+PTF_ADDS_MODS
+PTF_NO_DMG_ON_PASS_tHROUGH
+```
+
+
 ## Zipline Keyvalues
+
 ```
 entity.kv.Zipline
 entity.kv.ZiplineAutoDetachDistance
