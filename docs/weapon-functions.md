@@ -688,18 +688,18 @@ The toggle mechanisms are largely Script (Squirrel_re VScripts) and DataTable (C
 The Hop-up mods and "altfire" mods are declared and mostly defined in the weapons' .txt config files.
 
 As R5V is based on Season 3 Apex, it currently only supports the following "altfire" toggle modes:
-
+```
 altfire
-
+```
 Used by:
 - R-301 (mp_weapon_rspn101) // Automatic -> Semi-automatic (single-shot), the weapon's name is a leftover from the development of Titanfall 1, which had the R(spn)-101C
 - Flatline (mp_weapon_vinson) // Automatic -> Semi-automatic (single-shot), the weapon's name is a leftover from the development of Titanfall 2 and references ex-Respawn developer Rayme Vinson
 - Hemlok (mp_weapon_hemlok) // Burst-Fire -> Semi-automatic (single-shot)
 
 
-
+```
 altfire_highcal
-
+```
 Can only be activated if the mod "hopup_highcal_rounds" (Anvil Receiver) is supported by the weapon and active. This is how Respawn decided if the weapon can toggle to the Anvil Receiver semi-automatic firing mode.
 
 Respawn's dev comments from mp_weapon_rspn101.txt:
@@ -722,9 +722,9 @@ Respawn's dev comments from mp_weapon_rspn101.txt:
 Used by:
 - R-301 (mp_weapon_rspn101) // Automatic -> Semi-automatic Anvil Receiver 
 - Flatline (mp_weapon_vinson) // Automatic -> Semi-automatic Anvil Receiver
-
+```
 altfire_selectfire
-
+```
 Can only be activated if the mod "hopup_selectfire" (Selectfire Receiver) is supported by the weapon and active. This is how Respawn decided if the weapon can toggle to the Anvil Receiver semi-automatic firing mode.
 
 Respawn's dev comments from mp_weapon_pdw.txt:
@@ -748,9 +748,9 @@ Used by:
 - Prowler (mp_weapon_pdw) // Burst -> Automatic
 - Havoc (mp_weapon_energy_ar) // Automatic -> Semi-automatic Beam
 - Charge Rifle (mp_weapon_defender) // Semi-automatic -> Automatic, the weapon's name is a leftover from the development of Titanfall 1
-
+```
 altfire_double_tap
-
+```
 Can only be activated if the mod "hopup_double_tap" (Double Tap) is supported by the weapon and active. This is how Respawn decided if the weapon can toggle to the Anvil Receiver semi-automatic firing mode.
 
 Respawn's dev comments from mp_weapon_shotgun.txt:
@@ -771,9 +771,9 @@ Respawn's dev comments from mp_weapon_shotgun.txt:
 Used by:
 - G7 Scout (mp_weapon_g2) // Semi-automatic -> Burst
 - EVA-8 (mp_weapon_shotgun) // Automatic -> Burst
-
+```
 choke
-
+```
 It seems that at one point there was an altfire mode called "choke", which was only activated if the hop-up "hopup_energy_choke" (Precision Choke) was supported by the weapon and active. However, this appears to no longer be the case.
 
 Used by:
