@@ -145,7 +145,7 @@ Entity subclasses inherit the base entity class' attributes (associated key-valu
 - trigger_soundscape
 ```
 
-### Use triggers?
+### Use triggers(?)
 ```
 - trigger_once
 - trigger_multiple
@@ -153,8 +153,10 @@ Entity subclasses inherit the base entity class' attributes (associated key-valu
 ```
 
 ### Player Triggers 
+```
 - trigger_skydive
 - trigger_weaponless
+```
 
 ### Environment Triggers
 ```
