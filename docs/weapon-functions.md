@@ -822,9 +822,11 @@ weapon.GetCurrentAltFireIndex()
 
 ## 9. Additional Weapon Networked Script Variables
 ```
-float scriptFloat0
-float scriptTime1
-int scriptInt1
+float scriptFloat0 // networked floating point value exposed to the script VM
+int scriptInt0 // networked integer value exposed to the script VM
+int scriptInt1 // networked integer value exposed to the script VM
+float scriptTime1 // networked floating point value (representing a timestamp) exposed to the script VM
+```
 
 
 Some weapons, like the Nemesis, have a networked weapon variable called script0.
@@ -837,10 +839,10 @@ weapon.SetScriptPoseParam0(float value) // this value is within the interval [a,
 ### Get / Set Methods
 
 ```
-weapon.GetScriptInt0() // networked integer exposed to the script VM
+weapon.GetScriptInt0() // networked integer value exposed to the script VM
 weapon.SetScriptInt0()
 
-weapon.GetScriptInt1() // networked integer exposed to the script VM
+weapon.GetScriptInt1() // networked integer value exposed to the script VM
 weapon.SetScriptInt1()
 
 weapon.GetScriptFloat0() // networked floating point value exposed to the script VM
