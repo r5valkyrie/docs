@@ -1,6 +1,6 @@
 # Entities, Entity Spawning, Entity Keyvalues and Flags
 
-===========================================================
+==============================================================
 ## Table of Contents
 ### Introduction
 ### Entity Types
@@ -8,7 +8,7 @@
 ### Flags & Associated Methods and Functions
 ### Script example for spawning an entity (dome shield)
 
-===========================================================
+==============================================================
 
 # Introduction
 
