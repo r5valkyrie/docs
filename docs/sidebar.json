@@ -44,7 +44,11 @@
                 {
                     "title": "Entities, Spawning Entities, Entity Keyvalues and Flags",
                     "slug": "entities-spawning-objects"
-                },              
+                },
+                {
+                    "title": "NPC / AI Methods, Functions, Keyvalues, Flags",
+                    "slug": "ai-npc"
+                },               
                 {
                     "title": "Audio Functions and Commands",
                     "slug": "audio-commands-functions"
