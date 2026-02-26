@@ -93,8 +93,8 @@ Entity subclasses inherit the base entity class' attributes (associated key-valu
 - trigger_proximity
 - trigger_brush
 - trigger_capture_point // capture location
-- trigger_door
 - trigger_hardpoint // hardpoint location
+- trigger_door
 - trigger_indoor_area
 - trigger_location // location-specific trigger
 - trigger_location_sp // single-player location specific trigger
