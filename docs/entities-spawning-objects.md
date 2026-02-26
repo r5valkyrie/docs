@@ -744,29 +744,31 @@ From _bubble_shield.gnut
 
 # 7. Entity Spawn Methods / Functions
 
-## Spawn NPCs
+TODO TODO TODO TODO
 
+## Spawn NPCs
+```
 entity function SpawnNPC( int npcType, vector spawnOrigin, vector spawnAngles, int rank = 0 )
 entity function SpawnNPCDetailed( NpcSpawnInfo infoRaw )
-
+```
 ### Spawn Stalkers
-
+```
 DEV_SpawnStalkerAtCrosshair( int team = 99 )
 SpawnFromStalkerRack()
-
+```
 
 ## Spawn Loot
-
+```
 SpawnGenericLoot( lootRef, lootOrigin, lootAngles, 500 )
 SpawnLoot( lootref, lootOrigin, lootAngles, 500)
-
+```
 ## Spawn Environment Loot Givers
-
+```
 SpawnLootTick()
 SpawnLootTickAtCrosshair()
 SpawnLootRoller_Parented() // the loot rollers, not the drones!
 SpawnLootRoller_DispatchSpawn() // the loot rollers, not the drones!
 SpawnLootRoller_NoDispatchSpawn() // the loot rollers, not the drones!
 SpawnLootDrones() // the loot drones (cargo bots), not rollers
-
+```
 
