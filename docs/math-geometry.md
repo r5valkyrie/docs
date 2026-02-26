@@ -17,7 +17,9 @@ Vectors are declared with the "vector" keyword:
 
 ```
 vector origin
-vector point = <x,y,z> // vector quantities (magnitude / length, direction) in simulated 3D space, derived from x, y, z coordinates that represent offsets on each axis from the origin. These are Position Vectors, also known as Point Vectors. Read more about Position Vectors on Wikipedia
+vector point = <x,y,z> // vector quantities (magnitude / length, direction) in simulated 3D space
+// which are derived from x, y, z coordinates that represent offsets on each axis from the origin. 
+// These are Position Vectors, also known as Point Vectors. Read more about Position Vectors on Wikipedia
 
 Hence, vectors are also used to store 3D coordinates and 3D rotation angles (pitch, yaw, roll).
 
