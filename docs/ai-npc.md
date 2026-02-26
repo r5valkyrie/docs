@@ -22,11 +22,11 @@ IsTitan( entity npc )
 ## NPC Entity Methods
 
 ### General Keyvalue Check Methods
-
+```
 npc.HasKey( string keyName )
 npc.GetValueForKey( string keyName )
 npc.Dev_GetAISettingByKeyField( string keyName )
-
+```
 ### Visual Methods
 ```
 npc.EnableRenderAlways()
