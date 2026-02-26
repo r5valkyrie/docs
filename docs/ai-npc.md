@@ -168,19 +168,19 @@ npc.EnableBehavior( string behaviorName ) // behaviorName = "Follow", "Assault",
 npc.DisableBehavior( entity behaviorName ) // behaviorName = "Follow", "Assault", etc.
 ```
 ### Assault Behavior Methods
-
+```
 npc.AssaultSetGoalRadius( int radius )
 npc.AssaultSetGoalHeight( int height )
 npc.AssaultSetAngles( angles, bool )
 npc.AssaultSetFightRadius( int fightRadius )
 npc.AssaultPoint( vector assaultPoint )
 npc.AssaultPointClamped( vector pointClamped )
-
+```
 ### Potential Threat Methods
-
+```
 npc.SetPotentialThreatPos ( vector positionVector )
 npc.ClearPotentialThreatPos()
-
+```
 
 
 ### Grapple Methods
@@ -240,19 +240,19 @@ npc.SetCanBeGroundExecuted( bool )
 ```
 
 ### NPC Death / Destruction Methods
-
+```
 npc.Die( damageAttacker, npc, { force = force, scriptType = DF_GIB, damageSourceId = eDamageSourceId.suicideSpectreAoE } )
 npc.Die() // doesn't require all those arguments
 npc.Dissolve( ENTITY_DISSOLVE_CORE, <0,0,0>, 500 )
 npc.Destroy()
 npc.Gib( vector gibVector ) // npc.Gib( <0, 0, 100> ) , etc.
 npc.SetDeathNotifications( bool )
-
+```
 
 ### NPC Boss Methods
-
+```
 npc.GetBossPlayer() // gets the player that "owns" an NPC, for example after hacking (internally named "leeching") an NPC with the Data Knife
-
+```
 
 ## NPC Keyvalues
 ```
