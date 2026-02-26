@@ -13,17 +13,13 @@
 
 # 1. Introduction
 
-In the Source Engine, entities are objects meant to be interactable for players or interacted with by other entities via [the I/O system.](https://developer.valvesoftware.com/wiki/Inputs_and_Outputs)
-
-Entities are created with CreateEntity( string entityType), but can only be spawned in the world with DispatchSpawn( entity entityName )
-
-The entity class (CBaseEntity) is defined in the engine code and it has multiple subclasses (CPlayer, CWeaponX, etc.)
-
-All models belong to an entity type. Models cannot be spawned "on their own", without being attached to an entity.
-
-Many entities are inherited from Valve's Source Engine.
-
-Entity subclasses inherit the base entity class' attributes (associated key-value pairs) and methods (associated functions).
+In the Source Engine, entities are objects meant to be interactable for players or interacted with by other entities via [the I/O system.](https://developer.valvesoftware.com/wiki/Inputs_and_Outputs)  
+Entities are created with CreateEntity( string entityType), but can only be spawned in the world with DispatchSpawn( entity entityName )  
+The entity class (CBaseEntity) is defined in the engine code and it has multiple subclasses (CPlayer, CWeaponX, etc.)  
+All models belong to an entity type. Models cannot be spawned "on their own", without being attached to an entity.  
+Many entities are inherited from Valve's Source Engine.  
+Entity subclasses inherit the base entity class' attributes (associated key-value pairs) and methods (associated functions).  
+The entity class has many keyvalue attributes, which are accessed with entity.kv  
 
 # 2. Entity types:
 
@@ -165,7 +161,6 @@ Entity subclasses inherit the base entity class' attributes (associated key-valu
 - env_sprite
 - env_beam
 ```
-The entity class has many keyvalue attributes, which are accessed with entity.kv
 
 # 3. Entity Methods & Functions
 
