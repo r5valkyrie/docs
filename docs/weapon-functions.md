@@ -1,5 +1,27 @@
 # Weapon Functions and Commands
 
+============================================================================================
+
+# TABLE OF CONTENTS
+## 1. Introduction
+## 2. Weapon Get / Set Functions And Methods
+## 3. Weapon Mod Functions (Hop-ups, etc.)
+## 4. Weapon Parameter Get / Set Functions
+## 5. Alternate Functions For Getting Weapon Settings
+## 6. Weapon Callback Functions
+## 7. Weapon Firing Functions
+## 8. Explaining Firing Modes
+## 9. Additional Weapon Networked Script Variables
+## 11. Weapon Ballistic Methods / Functions
+## 12. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
+## 13. The Weapon-Specific Structures (weapon.w, weapon.s)
+## 14. Global Weapon Structures (Server-side, Client-side)
+
+===========================================================================================
+
+
+## 1. Introduction
+
 This article documents various Weapon functions and commands.
 
 Before any weapon can be used in the engine, it is MANDATORY to precache it, using the function:
@@ -7,12 +29,36 @@ Before any weapon can be used in the engine, it is MANDATORY to precache it, usi
 PrecacheWeapon($"weapontxtconfigname")   
 Example: PrecacheWeapon($"mp_weapon_wingman")  
 ```
-## Weapon Get / Set Functions and Methods
+## 2. Weapon Get / Set Functions And Methods
 
 ### Getting a weapon's owner entity (Player or NPC entity)
 ```
 weapon.GetWeaponOwner() // returns an entity (usually the player entity)
+This can be used alongside GetLocalViewPlayer() to check if the weapon's owner is the local player
+weapon.GetWeaponOwner() = GetLocalViewPlayer() ? CodeIfConditionIsTrue : CodeIfConditionIsFalse
+if (weapon.GetWeapon() != GetLocalViewPlayer() )
+{
+	// code
+} 
 ```
+### Getting a weapon's owner entity (Player or NPC entity)
+
+```
+weapon.GetOwner() // returns an entity (usually the player entity)
+This can be used alongside GetLocalClientPlayer() to check if the weapon's owner is the local player
+weapon.GetWeaponOwner() = GetLocalClientPlayer() ? CodeIfConditionIsTrue : CodeIfConditionIsFalse
+if (weapon.GetWeapon() != GetLocalClientPlayer() )
+{
+	// code
+} 
+```
+
+### Getting a weapon's parent entity (Player or NPC entity)
+
+```
+weapon.GetParent()
+```
+
 ### Getting a weapon's viewmodel entity
 ```
 weapon.GetWeaponViewmodel() // returns the viewmodel entity  
@@ -88,6 +134,9 @@ global enum eAmmoPoolType
 ```
 weapon.SetClipCount() - this sets current MAGAZINE ammo, incorrectly labelled as "Clip" by Respawn  
 GetWeaponPrimaryAmmoCount( AMMOSOURCE_STOCKPILE )  
+```
+
+```
 weapon.SetWeaponSkin( skinIndex ) <- "Skin" here refers to the $skinfamilies (see the Valve Developer Wiki for QC Commands). It's not used in the same sense as "Legendary Skins", etc - it is a material swap   
 ```
 
@@ -102,15 +151,107 @@ weapon.SetWeaponPrimaryClipCountMax()
 ```
 
 ```
+weapon.GetAmmoPerShot()
+```
+
+```
+weapon.GetProjectilesPerShot()
+```
+
+```
+weapon.GetWeaponBurstFireCount()
+```
+
+```
+weapon.IsChargeWeapon()
+```
+
+```
+weapon.GetWeaponChargeLevelMax()
+weapon.SetWeaponChargeLevelMax()
+```
+
+```
+weapon.GetWeaponChargeLevel()
+weapon.SetWeaponChargeLevel()
+```
+
+```
 weapon.SetWeaponChargeFraction() <- used by weapons and abilities, highly dependent on the weapon / ability and its implementation  
 weapon.SetWeaponChargeFractionForced()  
+```
+
+```
+weapon.GetWeaponChargeTime()
+```
+
+```
+weapon.GetWeaponChargeTimeRemaining()
+```
+
+```
+weapon.GetWeaponCurrentEnergyCost() 
 ```
 
 ```
 weapon.GetWeaponType()  
 ```
 
-## Weapon Mod functions (Hop-ups, etc.)
+```
+weapon.GetWeaponAmmoPoolType()  
+Used with:
+AmmoType_GetRefFromIndex( weapon.GetWeaponAmmoPoolType() )
+player.AmmoPool_GetCount( ammoPoolType ) // ammoPoolType = weapon.GetWeaponAmmoPoolType()
+```
+
+### Weapon Attack Methods
+
+```
+weapon.GetAttackDirection()
+
+weapon.GetAttackPosition()
+
+weapon.GetAttackSpreadAngle()
+```
+
+### Weapon Energized State Methods
+
+```
+weapon.GetEnergizeState()
+weapon.GetEnergizeFrac()
+```
+
+### Weapon Bit Flag Methods
+
+```
+weapon.GetScriptFlags0()
+weapon.GetWeaponDamageFlags()
+```
+
+### Weapon Utility Entity Methods
+
+```
+weapon.GetWeaponUtilityEntity()
+Weapon utility entities can be used for gun shields, knockdown shields, etc.
+```
+
+### Weapon Reload Milestone Methods
+```
+int milestone = weapon.GetReloadMilestoneIndex()
+
+Note: This is very likely used for the segmented reload implementation in Apex.
+```
+
+### Inherited Methods From The Entity Class
+
+The weapon entity is a special kind of entity (a subclass). Since it is also an entity, it inherits entity methods (while having its own weapon-specific methods).
+
+```
+weapon.GetOrigin()
+```
+, etc.
+
+## 3. Weapon Mod functions (Hop-ups, etc.)
 
 Weapon mods are defined inside a key-value pair table contained in the weapon / ability's .txt config file  
 
@@ -204,7 +345,18 @@ weapon.HasMod("ModNameString") // returns true or false
 weapon.SetWeaponMods(array<string> modsArray) // takes an array of mods as an argument 
 
 weapon.GetMods() // returns an array of registered mods for this weapon (the mods that the weapon supports, from the weapon's .txt file)
-GetWeaponMods( weapon ) // where weapon = the weapon entity  
+```
+
+### Non-Method Mod Functions 
+
+```
+array<string> function GetWeaponMods( weapon ) // where weapon = the weapon entity  
+
+bool function DoesModExist( entity weapon, string modName ) // checks if a certain mod is registered in the weapon config, so that it can be applied later on
+
+bool function IsModAltfireMod( string modName ) // checks if the mod can toggle an alternate firing (altfire) mode 
+
+bool function IsModActive( entity weapon, string modName ) // checks to see if a mod has been applied to a weapon entity subclass instance (weapons are entities)
 ```
 
 ### Getting / Setting a weapon's bodygroup
@@ -285,7 +437,7 @@ Excerpt from mp_weapon_dmr.txt:
 "clip_bodygroup_show_for_milestone_3"      "1"
 ```
 
-## Weapon Parameter Get / Set Functions
+## 4. Weapon Parameter Get / Set Functions
 
 
 ```
@@ -315,7 +467,7 @@ weapon.GetWeaponSettingEnum( eWeaponVar.cooldown_type, eWeaponCooldownType )
 weapon.GetWeaponSettingEnum( eWeaponVar.fire_mode, eWeaponFireMode )  
 ```
 
-## Alternate functions for getting weapon settings
+## 5. Alternate functions for getting weapon settings
 
 Note: these functions are not methods of the CWeaponX entity class (the generic weapon class)
 
@@ -330,7 +482,7 @@ GetWeaponInfoFileKeyField_GlobalFloat( weaponRef, "burst_fire_delay" )
 GetWeaponInfoFileKeyFieldAsset_Global( weaponName, "playermodel")  
 ```
 
-## Weapon Callback Functions
+## 6. Weapon Callback Functions
 
 Respawn set up a framework for defining callback functions for when certain events happen, inside the native code (inside the binary of the game, r5apex.exe). These callback events are located inside the weapons' .txt config files. They can be found in this list:
 
@@ -403,8 +555,9 @@ mp_ability_valk_cluster_missile // (Valkyrie tactical)
 mp_weapon_black_hole // (Horizon ultimate)
 ```
 
-## Weapon Firing Functions
+## 7. Weapon Firing Functions
 
+### Generic Bolt-Actuated Weapon
 
 ```
 weapon.FireWeaponBolt ( weaponFireBoltParams )
@@ -426,6 +579,7 @@ global struct WeaponFireBoltParams
 	bool deferred
 }
 ```
+### Generic Grenade / Ordnance
 
 ```
 weapon.FireWeaponGrenade ( weaponFireGrenadeParams )
@@ -448,6 +602,7 @@ global struct WeaponFireGrenadeParams
 	int projectileIndex
 }
 ```
+### Generic Missile
 
 ```
 weapon.FireWeaponMissile( weaponFireMissileParams )
@@ -467,11 +622,13 @@ global struct WeaponFireMissileParams
 	int projectileIndex
 }
 ```
+### Default Weapon Firing 
 
 ```
 weapon.FireWeaponDefault( attackParams.pos, attackParams.dir, speedScale, patternScale, ignoreSpread )
 Takes attributes belonging to an instance of the WeaponPrimaryAttackParams structure as arguments
 ```
+### Generic Bullet Firing
 
 ```
 weapon.FireWeaponBullet( attackParams.pos, attackParams.dir, bulletCount, damageType )
@@ -488,7 +645,7 @@ global struct WeaponPrimaryAttackParams
 	int barrelIndex
 }
 ```
-
+### Smart Ammunition (i.e. The Smart Pistol, Tone's Tracking Missiles, etc.)
 ```
 weapon.FireWeaponBulllet_Special( weaponFireBulletSpecialParams )
 Takes an instance of the WeaponFireBulletSpecialParams global structure as its argument
@@ -511,14 +668,196 @@ global struct WeaponFireBulletSpecialParams
 }
 ```
 
+### Arc Weapon (from _arc_cannon.nut)
+
+```
+FireArcNoTargets( weapon, attackParams, muzzleOrigin )
+
+FireArcWithTargets( weapon, firstTargetInfo, attackParams, muzzleOrigin )
+```
+
+
+## 8. Explaining Firing Modes
+
+Weapons which can toggle between different firing modes generally use the Mod System explained above in order to switch mods on / off, depending on the firing mode
+
+The toggle mechanisms are largely Script (Squirrel_re VScripts) and DataTable (CSV files) driven, however, the weapon firing logic is almost exclusively native code found inside r5apex.exe
+
+### The weapon .txt configs
+
+The Hop-up mods and "altfire" mods are declared and mostly defined in the weapons' .txt config files.
+
+As R5V is based on Season 3 Apex, it currently only supports the following "altfire" toggle modes:
+
+altfire
+
+Used by:
+- R-301 (mp_weapon_rspn101) // Automatic -> Semi-automatic (single-shot), the weapon's name is a leftover from the development of Titanfall 1, which had the R(spn)-101C
+- Flatline (mp_weapon_vinson) // Automatic -> Semi-automatic (single-shot), the weapon's name is a leftover from the development of Titanfall 2 and references ex-Respawn developer Rayme Vinson
+- Hemlok (mp_weapon_hemlok) // Burst-Fire -> Semi-automatic (single-shot)
 
 
 
+altfire_highcal
+
+Can only be activated if the mod "hopup_highcal_rounds" (Anvil Receiver) is supported by the weapon and active. This is how Respawn decided if the weapon can toggle to the Anvil Receiver semi-automatic firing mode.
+
+Respawn's dev comments from mp_weapon_rspn101.txt:
+
+```
+        hopup_highcal_rounds
+        {
+        	// This mod is only used to indicate that the hop-up is active
+        	// When player changes fire modes, we activate "altfire_empowered" // R5V NOTE: altfire_empowered was renamed to altfire_highcal, which is what is actually being used
+        }
+
+        // single shot empowered
+        altfire_highcal
+        {
+      
+        }
+// end HAS_HIGHCAL_ROUNDS 
+```
+
+Used by:
+- R-301 (mp_weapon_rspn101) // Automatic -> Semi-automatic Anvil Receiver 
+- Flatline (mp_weapon_vinson) // Automatic -> Semi-automatic Anvil Receiver
+
+altfire_selectfire
+
+Can only be activated if the mod "hopup_selectfire" (Selectfire Receiver) is supported by the weapon and active. This is how Respawn decided if the weapon can toggle to the Anvil Receiver semi-automatic firing mode.
+
+Respawn's dev comments from mp_weapon_pdw.txt:
+
+```
+        hopup_selectfire
+        {
+        // This mod is only used to indicate that the hop-up is active
+        // When player changes fire modes, we activate "altfire_selectfire"
+        }
+
+       // autofire
+       altfire_selectfire
+       {
+            "mod_activity_modifier"							"fire_select"		
+       // R5V NOTE: Other stats for this altfire mod (such as fire_rate) are contained in this key-value table, but they have been ommitted for the sake of brevity
+	   }
+```
+
+Used by:
+- Prowler (mp_weapon_pdw) // Burst -> Automatic
+- Havoc (mp_weapon_energy_ar) // Automatic -> Semi-automatic Beam
+- Charge Rifle (mp_weapon_defender) // Semi-automatic -> Automatic, the weapon's name is a leftover from the development of Titanfall 1
+
+altfire_double_tap
+
+Can only be activated if the mod "hopup_double_tap" (Double Tap) is supported by the weapon and active. This is how Respawn decided if the weapon can toggle to the Anvil Receiver semi-automatic firing mode.
+
+Respawn's dev comments from mp_weapon_shotgun.txt:
+
+```
+        hopup_double_tap
+        {
+            //exists to allow altfire_double_tap toggle mod
+        }
+
+        altfire_double_tap
+        {
+            "mod_activity_modifier"							"fire_select"
+		// R5V NOTE: Other stats for this altfire mod (such as fire_rate) are contained in this key-value table, but they have been ommitted for the sake of brevity	
+		}
+```
+
+Used by:
+- G7 Scout (mp_weapon_g2) // Semi-automatic -> Burst
+- EVA-8 (mp_weapon_shotgun) // Automatic -> Burst
+
+choke
+
+It seems that at one point there was an altfire mode called "choke", which was only activated if the hop-up "hopup_energy_choke" (Precision Choke) was supported by the weapon and active. However, this appears to no longer be the case.
+
+Used by:
+- Peacekeeper (mp_weapon_energy_shotgun)
+- Triple Take (mp_weapon_doubletake)
+
+### The DataTables
+
+DataTables, in CSV (comma separate values) format, are used for many purposes in Apex Legends (loot tables, dialogue voiceline tables, etc.), but when it comes to firing modes, they determine the following:
+
+- Which weapons support which hop-ups
+- For the hop-ups which support an alternate firing mode, what the name of the altfire mod is (so that it can be toggle on / off)
+- Bit flags for certain firing modes 
+- Toggle modes for optics with variable zoom (such as the 4x - 8x)
+
+### Script Functions
+
+Certain functions are declared and defined in scripts, while some methods of the weapon entity class are not declared nor defined in the scripts, but are exposed to the script VM for use.
+
+```
+bool function WeaponIsUsingAltFireMode( entity weapon )
+
+void function PrimaryWeapon_UpdateFireSelectionHUD( entity weapon )
+
+bool function WeaponIsUsingAltFireMode( entity weapon )
+
+bool function IsWeaponInSingleShotMode( entity weapon )
+
+bool function IsWeaponInBurstMode( entity weapon )
+
+bool function IsWeaponInAutomaticMode( entity weapon )
+
+SetWeaponToggleHud( asset RUIHandle, string toggleText (R5V NOTE: usually a localized string!), bool setVisible, bool isAltFire )
+
+function WeaponModCommand_Toggle(string altfireName) // i.e.: "altfire", "altfire_double_tap", "altfire_highcal", "altfire_selectfire"
+
+bool function WeaponHasFireModeSelect( entity weapon )
+
+bool function TryActionFireMode( entity player, InputHint inputHint)
+
+int fireMode = expect int(GetWeaponInfoFileKeyField_Global( weaponName, "fire_mode" ))
+```
+### Weapon Methods Exposed To The Script VM
+```
+weapon.GetCurrentAltFireIndex()
+```
+
+## 9. Additional Weapon Networked Script Variables
+```
+float scriptFloat0
+float scriptTime1
+int scriptInt1
+
+ScriptPoseParam0
+```
+### Get / Set Methods
+
+```
+weapon.GetScriptInt0()
+weapon.SetScriptInt0()
+```
+
+## 10. Weapon Ballistic Methods / Functions
+
+```
+ArcSolution as = SolveBallisticArc( weapon.GetAttackPosition(), float launchSpeed, crosshairData.airburstTarget, GetConVarFloat( "sv_gravity" ) )
+```
+
+```
+entity function FireBallisticRoundWithDrop( entity weapon, vector pos, vector dir, vector targetOrigin, float gravity, bool lowAngle = true)
+```
 
 
+## 11. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
 
+As explained in the weapon quickstart guide, weapons require both client and serverside logic 
 
+Some functions and methods are exclusive to ONLY ONE type of VM and can only be called from other VMs using remote functions.
 
+## 12. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
+
+## 13. The Weapon-Specific Structures (weapon.w, weapon.s)
+
+## 14. Global Weapon Structures (Server-side, Client-side)
 
 
 
