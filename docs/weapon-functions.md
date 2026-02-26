@@ -100,7 +100,7 @@ global const int WEAPON_INVENTORY_SLOT_PRIMARY_0 = 0 // Primary
 global const int WEAPON_INVENTORY_SLOT_PRIMARY_1 = 1 // Secondary  
 
 global const int WEAPON_INVENTORY_SLOT_PRIMARY_2 = 2 // Melee (selected from melee select key, 3 by default)  
-global const int WEAPON_INVENTORY_SLOT_PRIMARY_3 = 3 // Melee (from direct use melee key, V by default)  
+global const int WEAPON_INVENTORY_SLOT_PRIMARY_3 = 3 // Melee (from direct use / quick melee key, V by default)  
 ```
 
 ### Getting a weapon's class name
