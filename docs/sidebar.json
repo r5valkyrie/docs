@@ -42,7 +42,7 @@
                     "slug": "weapon-functions"
                 }, 
                 {
-                    "title": "Entities And Spawning Entities",
+                    "title": "Entities, Spawning Entities, Entity Keyvalues and Flags",
                     "slug": "entities-spawning-objects"
                 },              
                 {
