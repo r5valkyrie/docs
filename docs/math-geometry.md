@@ -1,6 +1,6 @@
 # Mathematical methods and functions
 
-================================
+====================================
 
 ## Table of Contents
 ### 1. Vectors
@@ -8,7 +8,7 @@
 ### 3. Graphing / Interpolation
 ### 4. Minimum / Maximum values
 
-================================
+====================================
 
 ## 1. Vectors
 
