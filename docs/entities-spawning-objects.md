@@ -755,11 +755,6 @@ DEV_SpawnStalkerAtCrosshair( int team = 99 )
 SpawnFromStalkerRack()
 
 
-
-
-
-
-
 ## Spawn Loot
 
 SpawnGenericLoot( lootRef, lootOrigin, lootAngles, 500 )
