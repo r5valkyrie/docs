@@ -21,10 +21,10 @@ Entity types:
 The entity class has many keyvalue attributes, which are accessed with entity.kv
 
 ## Keyvalue Methods and Functions
-
+```
 entity.HasKey( string keyName )
 entity.GetValueForKey( string keyName )
-
+```
 ## Size Keyvalues
 ```
 entity.kv.Width
