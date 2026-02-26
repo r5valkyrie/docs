@@ -371,3 +371,9 @@ npc.Minimap_AlwaysShow( TEAM, null) // TEAM = TEAM_IMC, TEAM_MIL, etc.
 ```
 SetTeam( entity npcEntity, TEAM) // TEAM = TEAM_IMC, TEAM_MIL, etc. - an NPC can be on multiple teams, i.e. TEAM_IMC | TEAM_MILITIA
 ```
+
+
+## Leech Mechanic
+
+
+TODO
