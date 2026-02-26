@@ -8,17 +8,23 @@
 ### 4. Keyvalues & Associated Methods and Functions
 ### 5. Flags & Associated Methods and Functions
 ### 6. Script example for spawning an entity (dome shield)
-
+### 7. Entity Spawn Methods / Functions
 ===================================================================
 
 # 1. Introduction
 
 In the Source Engine, entities are objects meant to be interactable for players or interacted with by other entities via [the I/O system.](https://developer.valvesoftware.com/wiki/Inputs_and_Outputs)  
-Entities are created with CreateEntity( string entityType), but can only be spawned in the world with DispatchSpawn( entity entityName )  
+
+Entities are created with CreateEntity( string entityType), but can only be spawned in the world with DispatchSpawn( entity entityName ) or tailor-made spawn functions.
+
 The entity class (CBaseEntity) is defined in the engine code and it has multiple subclasses (CPlayer, CWeaponX, etc.)  
-All models belong to an entity type. Models cannot be spawned "on their own", without being attached to an entity.  
+
+All models belong to an entity type. Models cannot be spawned "on their own", without being attached to an entity.
+
 Many entities are inherited from Valve's Source Engine.  
-Entity subclasses inherit the base entity class' attributes (associated key-value pairs) and methods (associated functions).  
+
+Entity subclasses inherit the base entity class' attributes (associated key-value pairs) and methods (associated functions).
+
 The entity class has many keyvalue attributes, which are accessed with entity.kv  
 
 # 2. Entity types:
@@ -736,6 +742,36 @@ From _bubble_shield.gnut
 	bubbleShield.Hide()
 ```
 
+# 7. Entity Spawn Methods / Functions
 
+## Spawn NPCs
+
+entity function SpawnNPC( int npcType, vector spawnOrigin, vector spawnAngles, int rank = 0 )
+entity function SpawnNPCDetailed( NpcSpawnInfo infoRaw )
+
+### Spawn Stalkers
+
+DEV_SpawnStalkerAtCrosshair( int team = 99 )
+SpawnFromStalkerRack()
+
+
+
+
+
+
+
+## Spawn Loot
+
+SpawnGenericLoot( lootRef, lootOrigin, lootAngles, 500 )
+SpawnLoot( lootref, lootOrigin, lootAngles, 500)
+
+## Spawn Environment Loot Givers
+
+SpawnLootTick()
+SpawnLootTickAtCrosshair()
+SpawnLootRoller_Parented() // the loot rollers, not the drones!
+SpawnLootRoller_DispatchSpawn() // the loot rollers, not the drones!
+SpawnLootRoller_NoDispatchSpawn() // the loot rollers, not the drones!
+SpawnLootDrones() // the loot drones (cargo bots), not rollers
 
 
