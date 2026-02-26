@@ -70,7 +70,7 @@ The entity class has many keyvalue attributes, which are accessed with entity.kv
 - trigger_activate
 - trigger_cylinder
 - trigger_cylinder_heavy
-- vortex_sphere
+- vortex_sphere // there is no trigger_sphere, so this is often used as a substitute for that (with a custom script setup!)
 - trigger_proximity
 ```
 ### Gravity Triggers 
