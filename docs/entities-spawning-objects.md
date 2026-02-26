@@ -277,7 +277,7 @@ global const int DAMAGEFLAG_VICTIM_HAS_VORTEX = 4
 global const int DAMAGEFLAG_VICTIM_INVINCIBLE = 2
 ```
 
-## ollision Group Flags
+## Collision Group Flags
 ```
 TRACE_COLLISION_GROUP_DEBRIS
 ```
