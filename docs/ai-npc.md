@@ -355,9 +355,55 @@ npc.SetGrade( npcRank ) // rank inside the squad, i.e. squad leader?
 PlayCrawlingAnim( npc, "ACT_RUN" )
 ```
 
-## AI Schedules (Respawn version of Valve's ACTBUSY system)
+## AI Schedules (Respawn's use of Valve's framework)
+
+Respawn's implementation of AI logic is based on Valve's Schedule and Actbusy systems.   
+
+Read up on the [Schedule system here](https://developer.valvesoftware.com/wiki/Schedule) (Valve Developer Wiki)  
+Read up on the [Actbusy system here](https://developer.valvesoftware.com/wiki/Actbusy) (Valve Developer Wiki)  
+
 ```
-npc.SetDefaultSchedule( string scheduleName ) // scheduleName = "SCHED_PATROL_PATH", etc.
+Conversations between player characters or between NPCs are scripted in the following squirrel_re script files:
+sh_dialogue_schedule.gnut (shared script, platform/scripts/vscripts )
+cl_conversation_schedule.gnut (CLIENT script, platform/scripts/vscripts )
+_conversation_schedule.gnut (SERVER script, platform/scripts/vscripts )
+
+Schedules are found in the following text file:
+common_schedules.txt (platform/scripts/aibehavior)
+
+The default schedule for an NPC is set using the following method:
+
+npc.SetDefaultSchedule( string scheduleName ) // scheduleName = "SCHED_PATROL_PATH", etc. - these are found in common_schedules.txt
+
+AI behavior logic blocks are found in platform/scripts/aibehavior:
+
+behaviors.txt
+behavior_drone.txt
+behavior_dropship.txt
+behavior_dummie_combat.txt
+behavior_frag_drone.txt
+behavior_gunship.txt
+behavior_infected.txt
+behavior_marvin.txt
+behavior_mp_auto_titan.txt
+behavior_mp_auto_titan_enhanced.txt
+behavior_mp_auto_titan_enhanced_guard.txt
+behavior_pilot_elite.txt
+behavior_prowler.txt
+behavior_soldier.txt
+behavior_sp_soldier.txt
+behavior_spectre.txt
+behavior_spider.txt
+behavior_spider_jungle.txt
+behavior_stalker.txt
+behavior_stalker_crawling.txt
+behavior_super_spectre.txt // Reaper
+behavior_titan.txt
+behavior_titan_buddy.txt // BT
+behavior_training_dummy.txt
+behavior_treasure_tick.txt
+behavior_turret_sentry.txt
+
 ```
 
 ## Minimap Functions
