@@ -4,9 +4,10 @@
 ## Table of Contents
 ### 1. Introduction
 ### 2. Entity Types
-### 3. Keyvalues & Associated Methods and Functions
-### 4. Flags & Associated Methods and Functions
-### 5. Script example for spawning an entity (dome shield)
+### 3. Entity Methods & Functions
+### 4. Keyvalues & Associated Methods and Functions
+### 5. Flags & Associated Methods and Functions
+### 6. Script example for spawning an entity (dome shield)
 
 ==============================================================
 
@@ -166,7 +167,23 @@ Entity subclasses inherit the base entity class' attributes (associated key-valu
 ```
 The entity class has many keyvalue attributes, which are accessed with entity.kv
 
-# 3. Keyvalues & Associated Methods and Functions
+# 3. Entity Methods & Functions
+
+## Visibility Methods
+
+```
+entity.Show()
+entity.Hide()
+```
+
+## Position Methods
+
+```
+entity.GetOrigin()
+entity.GetAngles()
+```
+
+# 4. Keyvalues & Associated Methods and Functions
 
 ## Keyvalue Methods and Functions
 ```
@@ -432,7 +449,7 @@ entity.kv.in_skybox
 entity.SetBlocksRadiusDamage()
 ```
 
-# 4. Flags & Associated Methods and Functions
+# 5. Flags & Associated Methods and Functions
 
 ## Flag Keyvalues
 ```
@@ -703,7 +720,7 @@ PTF_NO_DMG_ON_PASS_tHROUGH
 ```
 
 
-# 5. Script example for spawning an entity (dome shield)
+# 6. Script example for spawning an entity (dome shield)
 
 From _bubble_shield.gnut
 
