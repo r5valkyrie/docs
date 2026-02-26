@@ -93,6 +93,8 @@ and their _NOROTATE variants
 
 However, the complete list of flags is much larger:
 
+// From codeconsts_client.txt and codeconsts_server.txt
+
 global const int FX_PATTACH_ABSORIGIN = 0
 global const int FX_PATTACH_ABSORIGIN_FOLLOW = 1 // absolute origin follow
 global const int FX_PATTACH_ABSORIGIN_FOLLOW_NOROTATE = 2
@@ -149,4 +151,34 @@ global const int FX_PATTACH_WEAPON_REMAINING_AMMO_FRACTION = 30
 global const int FX_PATTACH_WEAPON_SMART_AMMO_LOCK_FRACTION = 24
 global const int FX_PATTACH_WEAPON_STOCKPILE_REGEN_FRAC = 35
 global const int FX_PATTACH_WORLDORIGIN = 11
+```
+
+## FX Attachment Point References
+```
+These are defined inside models' .qc files pre-compile and often correspond to the model's armature / skeleton bone names, however, this is a list of commonly used attachment points:
+
+"CHESTFOCUS" // default
+"muzzle_flash" // for weapons
+"PROPGUN" // bone that is present in all 1st person arm models and weapon viewmodels to aid Respawn developers in syncing first person gun / arm animations (the same rrig is applied to both the weapon viewmodel and the 1st person arm model and then the same animation is played on both models, using that same rrig)
+"PROPARMS" // same as PROPGUN, just the arm version
+"CAMERA"
+"REF"
+"ORIGIN"
+"HEADSHOT" // head
+"HEADFOCUS"
+"foot_L_sole" // yummy
+"foot_R_sole" // yummy
+"EYE_L"
+"EYE_R"
+"L_FOREARM" // all 1st person arm models have this, but an example of this being used is in Wraith's Phase Walk
+"R_FOREARM" // all 1st person arm models have this, but an example of this being used is in Wraith's Phase Tunnel
+"L_HAND"
+"R_HAND"
+"HIJACK" // Titan rodeo
+"FASTBALL_R" // Titan fastball
+"L_FOREARM_SHIELD // For Gibraltar's shield
+"EYEGLOW"
+"BACK"
+"MENU_ROTATE" // used for menu props in the skin locker
+"VDU" // Visual Display Unit, a screen that displays certain information
 ```
