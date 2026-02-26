@@ -85,6 +85,28 @@ global enum eActiveInventorySlots
 }
 ```
 
+## Structs
+
+Structures should use CamelCase
+
+```
+global struct ServerWeaponStruct
+{
+
+}
+```
+
+Instances of the structure can inherit the structure's name, but in that case, they must use lowerCamelCase to distinguish them from the structs.
+
+```
+struct, instance
+
+InputHint inputHint
+
+WeaponPrimaryAttackParams weaponPrimaryAttackParams
+```
+
+
 ## For-loop iterators
 
 "For-loop" iterators should be named "i", from "index" / "iterator"
