@@ -146,7 +146,7 @@ Entity subclasses inherit the base entity class' attributes (associated key-valu
 - trigger_soundscape
 ```
 
-### Use triggers(?)
+### Use(?) triggers
 ```
 - trigger_once
 - trigger_multiple
