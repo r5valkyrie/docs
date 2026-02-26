@@ -1,68 +1,168 @@
 # Entities, Entity Spawning, Entity Keyvalues and Flags
 
-Entities are created with CreateEntity( string entityType) , but can only be spawned in the world with DispatchSpawn( entity entityName )
+===========================================================
+## Table of Contents
+### Introduction
+### Entity Types
+### Keyvalues & Associated Methods and Functions
+### Flags & Associated Methods and Functions
+### Script example for spawning an entity (dome shield)
+
+===========================================================
+
+# Introduction
+
+In the Source Engine, entities are objects meant to be interactable for players or interacted with by other entities via [the I/O system.](https://developer.valvesoftware.com/wiki/Inputs_and_Outputs)
+
+Entities are created with CreateEntity( string entityType), but can only be spawned in the world with DispatchSpawn( entity entityName )
 
 The entity class (CBaseEntity) is defined in the engine code and it has multiple subclasses (CPlayer, CWeaponX, etc.)
 
-All models belong to an entity type. Triggers are entities as well
+All models belong to an entity type. Models cannot be spawned "on their own", without being attached to an entity.
 
-Entity types:
+Many entities are inherited from Valve's Source Engine.
+
+Entity subclasses inherit the base entity class' attributes (associated key-value pairs) and methods (associated functions).
+
+# Entity types:
+
 ```
+- player // has player-specific global structures accessible with player.p
+- weapon // has weapon-specific global structures accessible with weapon.w and can also use a global table per-instance with weapon.s
 - point_viewcontrol
+```
+
+## Prop Entities
+```
 - prop_dynamic
-- prop_static
-- prop_script
+- prop_static // Environment objects on maps, once maps are compiled, they are no longer considered individual entities
+- prop_script // Scripted props (they have a script attached)
+```
+
+## NPC Entities
+```
+- npc_pilot
+- npc_marvin
+```
+
+
+## Func Entities
+```
+- func_breakable
+- func_brush
+```
+
+
+## Info Entities
+```
+- info_player_start
+- info_target
+```
+
+
+## Logic Entities
+```
+- logic_choerographed_scene
+- logic_proximity
+```
+
+## Trigger Entities
+
+### Shape Triggers and vortex sphere
+```
 - trigger_activate
-- trigger_auto_crouch
-- trigger_brush
 - trigger_cylinder
 - trigger_cylinder_heavy
-- trigger_door
+- vortex_sphere
+- trigger_proximity
+```
+### Gravity Triggers 
+```
 - trigger_point_gravity
 - trigger_gravity
-- trigger_proximity
-- trigger_capture_point
-- trigger_hardpoint
-- trigger_indoor_area
-- trigger_location
-- trigger_location_sp
-- trigger_mp_spawn_zone
-- trigger_out_of_bounds
-- trigger_player_flashlight_on
-- trigger_player_flashlight_off
-- trigger_player_flashlight_zone
-- trigger_playermovement
-- trigger_look
-- trigger_impact
-- trigger_ignoresolids
-- trigger_hurt
-- trigger_death_fall
-- trigger_fastball
-- trigger_flag_Clear
-- trigger_flag_set
+```
+###  Mover Triggers
+```
 - trigger_push
 - trigger_updraft
 - trigger_slip
+- trigger_auto_crouch
+```
+### Location / Geo / Entity triggers 
+```
+- trigger_proximity
+- trigger_brush
+- trigger_capture_point // capture location
+- trigger_door
+- trigger_hardpoint // hardpoint location
+- trigger_indoor_area
+- trigger_location // location-specific trigger
+- trigger_location_sp // single-player location specific trigger
+- trigger_mp_spawn_zone // defines a multiplayer spawn area
+- trigger_startpoint
+- trigger_spawn
+- trigger_out_of_bounds // defines an area as out-of-bounds (OOB)
+- trigger_warp_gate // phase-drivers / teleporters
+- trigger_teleport
+- trigger_pve_zone // PvE areas like the areas surrounding Prowler Dens, Spider Nests, etc.
+- trigger_no_grapple // makes an area ungrapple-able
+- trigger_no_zipline // makes an area unzipline-able
+- trigger_wind
+```
+
+### Flashlight Triggers 
+```
+- trigger_player_flashlight_on
+- trigger_player_flashlight_off
+- trigger_player_flashlight_zone
+```
+### Action Triggers
+- trigger_playermovement
+- trigger_look
+
+### Physics Triggers 
+- trigger_impact
+- trigger_ignoresolids
+
+### Damage Triggers
+```
+- trigger_hurt
+- trigger_death_fall
+```
+### Scripted Sequence Triggers
+```
+- trigger_fastball
+```
+### Flag Triggers
+```
+- trigger_flag_clear
+- trigger_flag_set
+```
+### Sound Triggers
+```
 - trigger_soundscape
+```
+
+### Use triggers?
+```
 - trigger_once
 - trigger_multiple
 - trigger_multiple_clientside
-- trigger_no_grapple
-- trigger_no_zipline
-- trigger_warp_gate
-- trigger_pve_zone
+```
+
+### Player Triggers 
 - trigger_skydive
-- trigger_startpoint
-- trigger_spawn
-- trigger_teleport
 - trigger_weaponless
-- trigger_wind
-- vortex_sphere
-- player
-- weapon
-- npc
+
+### Environment Triggers
+```
+- env_fog_controller
+- env_sprite
+- env_beam
 ```
 The entity class has many keyvalue attributes, which are accessed with entity.kv
+
+# Keyvalues & Associated Methods and Functions
 
 ## Keyvalue Methods and Functions
 ```
@@ -109,6 +209,137 @@ entity.SetValueForModelKey()
 entity.kv.origin
 entity.kv.angles
 ```
+
+## Zipline Keyvalues
+
+```
+entity.kv.Zipline
+entity.kv.ZiplineAutoDetachDistance
+entity.kv.ZiplineSagEnable
+entity.kv.ZiplineSagHeight
+entity.kv.ZiplineVertical
+entity.kv._zipline_rest_point_0
+entity.kv._zipline_rest_point_1
+entity.kv.ZiplinePreserveVelocity
+entity.kv.ZiplinePushOffInDirectionX
+entity.kv.Slack
+```
+## Interactables Keyvalues
+```
+entity.kv.singleUse
+entity.kv.usable
+entity.kv.toggleSwitch
+entity.kv.motionActivated
+entity.kv.allowshoot
+entity.kv.shootable
+entity.kv.startOpen
+entity.kv.multiUseDelay
+```
+## Team Keyvalues
+```
+entity.kv.squadname
+entity.kv.teamnumber
+entity.kv.TeamNum
+entity.kv.team
+```
+## Inventory Keyvalues
+```
+entity.kv.disable_offhand_ordnance
+entity.kv.disable_offhand_defense
+entity.kv.disable_offhand_tactical
+entity.kv.disable_offhand_core
+entity.kv.grenadeWeaponName
+entity.kv.secondaryWeaponName
+entity.kv.additionalequipment
+```
+## Movement Keyvalues
+```
+entity.kv.airSpeed
+entity.kv.airAcceleration
+entity.kv.gravity
+entity.kv.zero_g_movement
+```
+## UI Keyvalues
+```
+entity.kv.hintString_hold
+entity.kv.hintString_press
+entity.kv.disabledHintString
+```
+## Script Keyvalues
+```
+entity.kv.script_start_moving
+entity.kv.script_player_ignore
+entity.kv.script_pitch_limit
+entity.kv.script_gravityscale
+entity.kv.script_fight_radius
+entity.kv.script_radius
+entity.kv.script_height
+entity.kv.script_hotdrop
+entity.kv.script_sound
+entity.kv.script_noteworthy
+entity.kv.deathScriptFuncName
+entity.kv.scriptDamageType
+entity.SetScriptName()
+```
+## Text Keyvalues
+```
+entity.kv.message
+entity.kv.radius
+entity.kv.color
+entity.kv.color2
+entity.kv.fadein
+entity.kv.fadeout
+entity.kv.holdtime
+entity.kv.fxtime
+entity.kv.text
+```
+## Signal Keyvalues
+```
+entity.kv.WaitSignal
+entity.kv.SendSignal
+```
+## Sound Keyvalues
+```
+entity.kv.fan_loop_sound
+entity.kv.shutoff_sound
+entity.kv.sound_start_move
+```
+## NPC / Creature Keyvalues
+```
+entity.kv.health
+entity.kv.max_health
+entity.kv.FieldOfView
+entity.kv.FieldOfViewAlert
+entity.kv.AccuracyMultiplier
+entity.kv.WeaponProficiency
+entity.kv.disengageEnemyDist
+entity.kv.drop_battery
+entity.kv.alwaysAlert
+entity.kv.TitanType
+entity.kv.carrying_battery
+entity.kv.targetname
+entity.kv.noSoul
+entity.kv.job
+entity.kv.LinkedJobsOnly
+entity.kv.follow_mode
+entity.kv.leveled_titan_settings
+entity.kv.level_aisettings
+```
+## Player Keyvalues
+```
+entity.kv.startDisconnected
+```
+## Animation Keyvalues
+```
+entity.kv.DisableBoneFollowers
+entity.kv.framerate
+entity.kv.leveled_animation
+```
+## Lighting Keyvalues
+```
+entity.kv.disableshadows
+```
+
 ## Physics Keyvalues
 ```
 entity.kv.solid = solidType // 0 = no collision, 2 = bounding box, 6 = use vPhysics, 8 = hitboxes only
@@ -156,6 +387,48 @@ entity.kv.use_local_rotation
 entity.kv.PositionInterpolator
 ```
 
+## Other Keyvalues
+```
+entity.kv.right
+entity.kv.AccuracyMultiplier
+entity.kv.fadedist
+entity.kv.Subdiv
+entity.kv.Type
+entity.kv.NextKey
+entity.kv.change_navmesh
+entity.kv.start_delay
+entity.kv.leveledplaced
+entity.kv.parent_linked_ents
+entity.kv[key]
+entity.kv["breakLinksToAttachedSpawner"]
+entity.kv.editorclass
+entity.kv.inertiaScale
+entity.kv.minangle
+entity.kv.zone_name
+entity.kv.instance_name
+entity.kv.minhealthdmg
+entity.kv.nodamageforces
+entity.kv.bullet_fov
+entity.kv.teleport
+entity.kv.body
+entity.kv.lifetime
+entity.kv.enabled
+entity.kv.defenseActive
+entity.kv.disable_vdu
+entity.kv.crashOnDeath
+entity.kv.skip_runto
+entity.kv.face_angles
+entity.kv.unlink
+entity.kv.clear_potential_threat_pos
+entity.kv.disable_assault_on_goal
+entity.kv.TurretRange
+entity.kv.num_smooth_points
+entity.kv.hotspot
+entity.kv.in_skybox
+entity.SetBlocksRadiusDamage()
+```
+
+# Flags & Associated Methods and Functions
 
 ## Flag Keyvalues
 ```
@@ -410,8 +683,7 @@ NPC_USE_SHOOTING_COVER
 NPC_NO_WEAPON_DROP
 NPC_NO_MOVING_PLATFORM_DEATH
 ```
-## 
-NPC Move Flags
+## NPC Move Flags
 ```
 NPCMF_DISABLE_ARRIVALS
 NPCMF_IGNORE_CLUSTER_DANGER_TIME
@@ -426,177 +698,8 @@ PTF_ADDS_MODS
 PTF_NO_DMG_ON_PASS_tHROUGH
 ```
 
-## Zipline Keyvalues
 
-```
-entity.kv.Zipline
-entity.kv.ZiplineAutoDetachDistance
-entity.kv.ZiplineSagEnable
-entity.kv.ZiplineSagHeight
-entity.kv.ZiplineVertical
-entity.kv._zipline_rest_point_0
-entity.kv._zipline_rest_point_1
-entity.kv.ZiplinePreserveVelocity
-entity.kv.ZiplinePushOffInDirectionX
-entity.kv.Slack
-```
-## Interactables Keyvalues
-```
-entity.kv.singleUse
-entity.kv.usable
-entity.kv.toggleSwitch
-entity.kv.motionActivated
-entity.kv.allowshoot
-entity.kv.shootable
-entity.kv.startOpen
-entity.kv.multiUseDelay
-```
-## Team Keyvalues
-```
-entity.kv.squadname
-entity.kv.teamnumber
-entity.kv.TeamNum
-entity.kv.team
-```
-## Inventory Keyvalues
-```
-entity.kv.disable_offhand_ordnance
-entity.kv.disable_offhand_defense
-entity.kv.disable_offhand_tactical
-entity.kv.disable_offhand_core
-entity.kv.grenadeWeaponName
-entity.kv.secondaryWeaponName
-entity.kv.additionalequipment
-```
-## Movement Keyvalues
-```
-entity.kv.airSpeed
-entity.kv.airAcceleration
-entity.kv.gravity
-entity.kv.zero_g_movement
-```
-## UI Keyvalues
-```
-entity.kv.hintString_hold
-entity.kv.hintString_press
-entity.kv.disabledHintString
-```
-## Script Keyvalues
-```
-entity.kv.script_start_moving
-entity.kv.script_player_ignore
-entity.kv.script_pitch_limit
-entity.kv.script_gravityscale
-entity.kv.script_fight_radius
-entity.kv.script_radius
-entity.kv.script_height
-entity.kv.script_hotdrop
-entity.kv.script_sound
-entity.kv.script_noteworthy
-entity.kv.deathScriptFuncName
-entity.kv.scriptDamageType
-entity.SetScriptName()
-```
-## Text Keyvalues
-```
-entity.kv.message
-entity.kv.radius
-entity.kv.color
-entity.kv.color2
-entity.kv.fadein
-entity.kv.fadeout
-entity.kv.holdtime
-entity.kv.fxtime
-entity.kv.text
-```
-## Signal Keyvalues
-```
-entity.kv.WaitSignal
-entity.kv.SendSignal
-```
-## Sound Keyvalues
-```
-entity.kv.fan_loop_sound
-entity.kv.shutoff_sound
-entity.kv.sound_start_move
-```
-## NPC / Creature Keyvalues
-```
-entity.kv.health
-entity.kv.max_health
-entity.kv.FieldOfView
-entity.kv.FieldOfViewAlert
-entity.kv.AccuracyMultiplier
-entity.kv.WeaponProficiency
-entity.kv.disengageEnemyDist
-entity.kv.drop_battery
-entity.kv.alwaysAlert
-entity.kv.TitanType
-entity.kv.carrying_battery
-entity.kv.targetname
-entity.kv.noSoul
-entity.kv.job
-entity.kv.LinkedJobsOnly
-entity.kv.follow_mode
-entity.kv.leveled_titan_settings
-entity.kv.level_aisettings
-```
-## Player Keyvalues
-```
-entity.kv.startDisconnected
-```
-## Animation Keyvalues
-```
-entity.kv.DisableBoneFollowers
-entity.kv.framerate
-entity.kv.leveled_animation
-```
-## Lighting Keyvalues
-```
-entity.kv.disableshadows
-```
-## Other Keyvalues
-```
-entity.kv.right
-entity.kv.AccuracyMultiplier
-entity.kv.fadedist
-entity.kv.Subdiv
-entity.kv.Type
-entity.kv.NextKey
-entity.kv.change_navmesh
-entity.kv.start_delay
-entity.kv.leveledplaced
-entity.kv.parent_linked_ents
-entity.kv[key]
-entity.kv["breakLinksToAttachedSpawner"]
-entity.kv.editorclass
-entity.kv.inertiaScale
-entity.kv.minangle
-entity.kv.zone_name
-entity.kv.instance_name
-entity.kv.minhealthdmg
-entity.kv.nodamageforces
-entity.kv.bullet_fov
-entity.kv.teleport
-entity.kv.body
-entity.kv.lifetime
-entity.kv.enabled
-entity.kv.defenseActive
-entity.kv.disable_vdu
-entity.kv.crashOnDeath
-entity.kv.skip_runto
-entity.kv.face_angles
-entity.kv.unlink
-entity.kv.clear_potential_threat_pos
-entity.kv.disable_assault_on_goal
-entity.kv.TurretRange
-entity.kv.num_smooth_points
-entity.kv.hotspot
-entity.kv.in_skybox
-entity.SetBlocksRadiusDamage()
-```
-
-## Script Example For Spawning a Dome Shield
+# Script example for spawning an entity (dome shield)
 
 From _bubble_shield.gnut
 
