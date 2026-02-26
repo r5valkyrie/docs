@@ -1,10 +1,14 @@
 # Mathematical methods and functions
 
+================================
+
 ## Table of Contents
-## 1. Vectors
-## 2. Trigonometric Functions
-## 3. Graphing / Interpolation
-## 4. Minimum / Maximum values
+### 1. Vectors
+### 2. Trigonometric Functions
+### 3. Graphing / Interpolation
+### 4. Minimum / Maximum values
+
+================================
 
 ## 1. Vectors
 
