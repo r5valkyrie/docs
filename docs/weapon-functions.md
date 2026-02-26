@@ -2,20 +2,20 @@
 
 ============================================================================================
 
-# TABLE OF CONTENTS
-## 1. Introduction
-## 2. Weapon Get / Set Functions And Methods
-## 3. Weapon Mod Functions (Hop-ups, etc.)
-## 4. Weapon Parameter Get / Set Functions
-## 5. Alternate Functions For Getting Weapon Settings
-## 6. Weapon Callback Functions
-## 7. Weapon Firing Functions
-## 8. Explaining Firing Modes
-## 9. Additional Weapon Networked Script Variables
-## 11. Weapon Ballistic Methods / Functions
-## 12. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
-## 13. The Weapon-Specific Structures (weapon.w, weapon.s)
-## 14. Global Weapon Structures (Server-side, Client-side)
+## TABLE OF CONTENTS
+### 1. Introduction
+### 2. Weapon Get / Set Functions And Methods
+### 3. Weapon Mod Functions (Hop-ups, etc.)
+### 4. Weapon Parameter Get / Set Functions
+### 5. Alternate Functions For Getting Weapon Settings
+### 6. Weapon Callback Functions
+### 7. Weapon Firing Functions
+### 8. Explaining Firing Modes
+### 9. Additional Weapon Networked Script Variables
+### 11. Weapon Ballistic Methods / Functions
+### 12. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
+### 13. The Weapon-Specific Structures (weapon.w, weapon.s)
+## #14. Global Weapon Structures (Server-side, Client-side)
 
 ===========================================================================================
 
