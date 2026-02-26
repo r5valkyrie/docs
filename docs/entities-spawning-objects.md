@@ -48,6 +48,11 @@ entity.kv.height
 entity.kv.scale
 entity.kv.halfheight
 entity.kv.halfwidth
+
+Size Methods and functions:
+
+entityModel.SetModelScale( float scale )
+
 ```
 ## Material Keyvalues
 ```
@@ -55,7 +60,7 @@ entity.kv.rendercolor // emissive map color
 entity.kv.rendermode
 entity.kv.renderamt
 entity.kv.TextureScale
-entity.kv.RopeMaterial
+entity.kv.RopeMaterial // ziplines only
 entity.kv.modelskin
 entity.kv.amplitude
 entity.kv.duration
@@ -392,7 +397,6 @@ NPC_FOLLOW_SAFE_PATHS
 PTF_ADDS_MODS
 PTF_NO_DMG_ON_PASS_tHROUGH
 ```
-
 
 ## Zipline Keyvalues
 
