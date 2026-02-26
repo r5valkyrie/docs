@@ -14,7 +14,7 @@
 ### 11. Weapon Ballistic Methods / Functions
 ### 12. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
 ### 13. The Weapon-Specific Structures (weapon.w, weapon.s)
-## #14. Global Weapon Structures (Server-side, Client-side)
+### 14. Global Weapon Structures (Server-side, Client-side)
 
 ===========================================================================================
 
