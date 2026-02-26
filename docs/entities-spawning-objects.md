@@ -117,13 +117,15 @@ Entity subclasses inherit the base entity class' attributes (associated key-valu
 - trigger_player_flashlight_zone
 ```
 ### Action Triggers
+```
 - trigger_playermovement
 - trigger_look
-
+```
 ### Physics Triggers 
+```
 - trigger_impact
 - trigger_ignoresolids
-
+```
 ### Damage Triggers
 ```
 - trigger_hurt
