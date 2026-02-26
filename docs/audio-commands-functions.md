@@ -188,7 +188,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Note: Heard by all except one player
 
 
-### EmitSoundAtPositionOnlyToPlaye
+### EmitSoundAtPositionOnlyToPlayer
 
 - Signature: EmitSoundAtPositionOnlyToPlayer(player, position, soundAlias)
 
