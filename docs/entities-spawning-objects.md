@@ -2,15 +2,15 @@
 
 ==============================================================
 ## Table of Contents
-### Introduction
-### Entity Types
-### Keyvalues & Associated Methods and Functions
-### Flags & Associated Methods and Functions
-### Script example for spawning an entity (dome shield)
+### 1. Introduction
+### 2. Entity Types
+### 3. Keyvalues & Associated Methods and Functions
+### 4. Flags & Associated Methods and Functions
+### 5. Script example for spawning an entity (dome shield)
 
 ==============================================================
 
-# Introduction
+# 1. Introduction
 
 In the Source Engine, entities are objects meant to be interactable for players or interacted with by other entities via [the I/O system.](https://developer.valvesoftware.com/wiki/Inputs_and_Outputs)
 
@@ -24,7 +24,7 @@ Many entities are inherited from Valve's Source Engine.
 
 Entity subclasses inherit the base entity class' attributes (associated key-value pairs) and methods (associated functions).
 
-# Entity types:
+# 2. Entity types:
 
 ```
 - player // has player-specific global structures accessible with player.p
@@ -162,7 +162,7 @@ Entity subclasses inherit the base entity class' attributes (associated key-valu
 ```
 The entity class has many keyvalue attributes, which are accessed with entity.kv
 
-# Keyvalues & Associated Methods and Functions
+# 3. Keyvalues & Associated Methods and Functions
 
 ## Keyvalue Methods and Functions
 ```
@@ -428,7 +428,7 @@ entity.kv.in_skybox
 entity.SetBlocksRadiusDamage()
 ```
 
-# Flags & Associated Methods and Functions
+# 4. Flags & Associated Methods and Functions
 
 ## Flag Keyvalues
 ```
@@ -699,7 +699,7 @@ PTF_NO_DMG_ON_PASS_tHROUGH
 ```
 
 
-# Script example for spawning an entity (dome shield)
+# 5. Script example for spawning an entity (dome shield)
 
 From _bubble_shield.gnut
 
