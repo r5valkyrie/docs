@@ -25,24 +25,28 @@
                     "title": "Scripts Quickstart",
                     "slug": "scripts-quickstart"
                 },
-              {
+                {
                     "title": "Squirrel_re Script Naming Conventions",
                     "slug": "squirrel-script-naming-conventions"
+                },
+                {
+                    "title": "Mathematical Algebraic, Trigonometric and Vectorial Functions and Methods",
+                    "slug": "math-geometry"
                 },
                 {
                     "title": "Weapons Quickstart",
                     "slug": "weapons-quickstart"
                 },
                 {
-                    "title": "Weapon functions and commands",
+                    "title": "Weapon Functions and Commands",
                     "slug": "weapon-functions"
                 },               
                 {
-                    "title": "Audio functions and commands",
+                    "title": "Audio Functions and Commands",
                     "slug": "audio-commands-functions"
                 },
                 {
-                    "title": "Particle system functions and commands",
+                    "title": "Particle System Functions and Commands",
                     "slug": "particle-effect-functions"
                 },
                 {
@@ -50,7 +54,7 @@
                     "slug": "realms"
                 },
                 {
-                    "title": "Code enums list",
+                    "title": "Code Enums List",
                     "slug": "code-enums"
                 }                 
             ]
@@ -67,7 +71,7 @@
                     "slug": "sound-modding"
                 },
                {
-                    "title": "Audio event dictionary",
+                    "title": "Audio Event Dictionary",
                     "slug": "audio-event-dictionary"
                 },
                {
