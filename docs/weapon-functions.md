@@ -1,7 +1,6 @@
 # Weapon Functions and Commands
 
 ============================================================================================
-
 ## TABLE OF CONTENTS
 ### 1. Introduction
 ### 2. Weapon Get / Set Functions And Methods

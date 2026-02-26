@@ -1,7 +1,6 @@
 # Mathematical methods and functions
 
 ====================================
-
 ## Table of Contents
 ### 1. Vectors
 ### 2. Trigonometric Functions
