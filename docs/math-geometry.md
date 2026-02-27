@@ -206,9 +206,9 @@ These functions are passed the coordinates of two points A(Xa, Ya), B(Xb, Yb), i
 Graph(V,A,B,C,D) 
 // where V = x, the current value passed to the function to be linearly interpolated / graphed, 
 // A = Xa (carthesian coordinate of point A on the oX axis),
-// B = Xb (carthesian coordinate of point), 
-// C = Ya,
-// D = Yb
+// B = Xb (carthesian coordinate of point B on the oX axis), 
+// C = Ya (carthesian coordinate of point A on the oY axis),
+// D = Yb (carthesian coordinate of point B on the oY axis)
 ```
 
 The result of the function is f(x), successfully interpolating / extrapolating point C(Xc, Yc) using the linear equation extracted from the coordinates of the two other points given (point A(Xa, Yb) and point B(Xb, Yb)).  
