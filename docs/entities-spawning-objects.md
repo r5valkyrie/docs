@@ -21,7 +21,7 @@ The entity class (CBaseEntity) is defined in the engine code and it has multiple
 
 All models belong to an entity type. Models cannot be spawned "on their own", without being attached to an entity.
 
-Many entities are inherited from Valve's Source Engine.  
+Many entities are inherited from Valve's Source Engine, as ReSource (Respawn Source Engine) is a fork of the Portal 2 Branch of the Source Engine.
 
 Entity subclasses inherit the base entity class' attributes (associated key-value pairs) and methods (associated functions).
 
