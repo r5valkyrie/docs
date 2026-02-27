@@ -67,7 +67,7 @@ npc.SetAngles()
 npc.EyeAngles() // gets an NPC's line of sight angles
 npc.EyeAngles().x
 npc.EyeAngles().y
-npc.EyeAngles(.z)
+npc.EyeAngles().z
 
 npc.SnapToAbsOrigin( vector positionVector )
 ```
