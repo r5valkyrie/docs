@@ -351,7 +351,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 - Purpose: Set sound code controller value
 
 
-### nsetSoundCodeControllerValue
+### UnsetSoundCodeControllerValue
 
 - Signature: UnsetSoundCodeControllerValue()
 
