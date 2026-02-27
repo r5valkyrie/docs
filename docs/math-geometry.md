@@ -243,12 +243,12 @@ TODO: Spline functions?
 ## 4. Minimum, Maximum Values
 
 ```
-abs() // gets the absolute value of a number (no sign)
+abs(x) // gets the absolute value of x (no sign)
 
-absmin()
-absmax()
+absmin(x, y)
+absmax(x, y)
 
-min()
-max()
+min(x, y)
+max(x, y)
 ```
 
