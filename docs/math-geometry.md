@@ -27,6 +27,8 @@ For a more visual explanation of Position / Point Vectors, refer to this article
 
 https://docs.godotengine.org/en/stable/tutorials/math/vector_math.html
 
+Note that vectors in Apex Legends are 3-dimensional, not 2-dimensional (they have a 3rd axis, oZ or the Z axis).
+
 vector someVector = <0, 2, 5> 
 vector angleOffset = <0,0,0>
 vector ornull clampedPos // vector declarations can use the ornull keyword
