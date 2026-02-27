@@ -575,6 +575,7 @@ CONTENTS_MONSTERCLIP
 CONTENTS_MONSTER
 CONTENTS_BULLETCLIP
 CONTENTS_HITBOX
+CONENTS_NOGRAPPLE // Makes an entity non-grapple-able
 ```
 
 ## Damage flags:
@@ -628,6 +629,7 @@ global const int DAMAGEFLAG_VICTIM_INVINCIBLE = 2
 ## Collision Group Flags
 ```
 TRACE_COLLISION_GROUP_DEBRIS
+TRACE_COLLISION_GROUP_BLOCK_WEAPONS // Makes an entity block weapon projectiles 
 ```
 
 ## Weapon Flags
