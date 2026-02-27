@@ -870,6 +870,8 @@ As explained in the weapon quickstart guide, weapons require both client and ser
 
 Some functions and methods are exclusive to ONLY ONE type of VM and can only be called from other VMs using remote functions.
 
+TODO
+
 ## 12. The Weapon-Specific Structures (weapon.w, weapon.s)
 
 ```
