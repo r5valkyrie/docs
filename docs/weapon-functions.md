@@ -864,7 +864,7 @@ entity function FireBallisticRoundWithDrop( entity weapon, vector pos, vector di
 ```
 
 
-## 11. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, SHARED)
+## 11. Explaining VM-Gating And Selective Comnpilation (SERVER, CLIENT, UI, Shared)
 
 As explained in the weapon quickstart guide, weapons require both client and serverside logic 
 
