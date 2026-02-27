@@ -23,7 +23,7 @@ Respawn Entertainment acquired and used the Portal 2 (2011) branch of Source 1, 
 
 The developers at Respawn started with .MDL version 49 (v49) as the base for their models. For Titanfall (2014), they upgraded Valve's format to their own version, v52. Versions 50 and 51 are in-dev versions that were not shipped.
 
-Titanfall 2 used .MDL version 53 (v53). With Apex Legends, Respawn finally transitioned to their own proprietary model format (based on Valve's), called "RMDL" (Respawn Model File). RMDL is known as .NDL subversion 54, a.k.a. MDL V54.
+Titanfall 2 used .MDL version 53 (v53). With Apex Legends, Respawn finally transitioned to their own proprietary model format (based on Valve's), called "RMDL" (Respawn Model File). RMDL is known as .MDL subversion 54, a.k.a. MDL V54.
 
 Respawn Entertainment's proprietary tech stack is known as "RTech" (Respawn Tech). It includes:
 
