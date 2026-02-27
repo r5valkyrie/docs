@@ -197,7 +197,7 @@ Linear interpolation / Linear function graphing
 a = mx + b, where   
 
 a = f(x), the image of x,   
-m = the slope,  
+m = the slope of the function,  
 b = a constant      
 
 These functions are passed the coordinates of two points A(Xa, Ya), B(Xb, Yb), in order to be able to draw the graph of the function and extract the first degree equation of the linear function (solving m, b).    
