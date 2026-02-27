@@ -1,6 +1,6 @@
 # Weapon Functions and Commands
 
-============================================================================================
+============================================================================================================
 ## TABLE OF CONTENTS
 ### 1. Introduction
 ### 2. Weapon Get / Set Functions And Methods
@@ -13,10 +13,10 @@
 ### 9. Additional Weapon Networked Script Variables
 ### 10. Weapon Ballistic Methods / Functions
 ### 11. Explaining VM-Gating And Selective Compilation (SERVER, CLIENT, UI, SHARED)
-### 12. The Weapon-Specific Structures (weapon.w, weapon.s)
+### 12. The Weapon-Specific Structures (weapon.w) and the Entity Instance-Specific Tables (weapon.s)
 ### 13. Global Weapon Structures (Server-side, Client-side)
 
-===========================================================================================
+===========================================================================================================
 
 
 ## 1. Introduction
@@ -872,7 +872,7 @@ Some functions and methods are exclusive to ONLY ONE type of VM and can only be 
 
 TODO
 
-## 12. The Weapon-Specific Structures (weapon.w, weapon.s)
+## 12. The Weapon-Specific Structures (weapon.w) and the Entity Instance-Specific Tables (weapon.s)
 
 ```
 struct ServerWeaponStruct (contained in _entitystructs.gnut) is hooked to entity.w in the engine (native) code
