@@ -2,29 +2,29 @@
 
 ==========================================================================================
 ## Table of Contents
-### What are animations?
-### What is a rig?
-### A Brief Historical Recap of Respawn's Animation Implementation
-### Animations in R5 Valkyrie and Retail Apex Legends
-### Animation Activities and Animation Activity Modifiers
-### Animation Activity Methods
-### Animation Events (inside .QCs)
-### Script-based Animation Events
-### Animation Event Functions
-### Global Animation Event Structures
-### Animation Event Entity Keyvalues
-### Script Callback Functions For Animation Events Inside .txt Config Files
-### Animation Methods and Functions
-### How Animations Work With Multiple Entities
-### Animation .QC Commands
-### Animation Pose Parameter Methods
+### 1. What are animations?
+### 2. What is a rig?
+### 3. A Brief Historical Recap of Respawn's Animation Implementation
+### 4. Animations in R5 Valkyrie and Retail Apex Legends
+### 5. Animation Activities and Animation Activity Modifiers
+### 6. Animation Activity Methods
+### 7. Animation Events (inside .QCs)
+### 8. Script-based Animation Events
+### 9. Animation Event Functions
+### 10. Global Animation Event Structures
+### 11. Animation Event Entity Keyvalues
+### 12. Script Callback Functions For Animation Events Inside .txt Config Files
+### 13. Animation Methods and Functions
+### 14. How Animations Work With Multiple Entities
+### 15. Animation .QC Commands
+### 16. Animation Pose Parameter Methods
 ==========================================================================================
 
-## What are animations?
+## 1. What are animations?
 ```
 Animations are sequences of frames (snapshots) in which the model is posed in various ways. Titanfall and Apex Legends animations were created at 30 FPS (frames per second). Hence, animations are collections of key frames and frame transitions spread across time. 
 ```
-## What is a rig?
+## 2. What is a rig?
 ```
 A rig / skeleton / armature is a collection of "bones" mapped onto vertex groups contained within the model's mesh (collection of triangles / polygons), in order to be able to move it and control its movements
 
@@ -49,7 +49,7 @@ Delta layering does not completely override bone positions to the delta, but, in
 Delta animations are used to combine / blend between different animations / animation states such as firing with aiming down sights, etc.
 ```
 
-## A brief historical recap of Respawn's animation implementation
+## 3. A brief historical recap of Respawn's animation implementation
 ```
 Respawn's first title, Titanfall (2014), essentially used Valve's entire Source Engine tech stack, with modifications, meaning:
 
@@ -76,7 +76,7 @@ It took until Apex Legend's release in 2019 for Respawn to mostly implement RTEC
 - The build that R5V uses, Season 3 Apex Legends, supports both VPKs and VMT materials.
 - Animation sequences were separated from the MDL files into RSEQ's (Respawn Animation Sequence files). Rigs were also separated into RRIG's (Respawn Rig Files)
 ```
-## Animations in R5 Valkyrie and retail Apex Legends
+## 4. Animations in R5 Valkyrie and retail Apex Legends
 ```
 This leaves us at the present moment, where the current formats are used by Season 3 Apex Legends, which are part of the Respawn's Respawn proprietary tech stack RTECH, whose engineering was spearheaded by former Respawn employee Earl Hammon, after which the in-universe Hammond Corporation was named:
 
@@ -103,7 +103,7 @@ Models have rigs and animation seqeuences associated as dependencies (defined in
 Rigs have animation sequences associated as dependencies (defined inside RePak / RSX exported assets inside seqs: [], contained within RSON plaintext files)
 ```
 
-## Animation Activities and Animation Activity Modifiers
+## 5. Animation Activities and Animation Activity Modifiers
 ```
 Animation Activities represent indirected names for a collection of related animations (group aliases). They can be thought of as sets of related animations which are grouped under a common alias, such as first person reload animations being grouped under the "ACT_VM_RELOAD" viewmodel activity (VM, in this context, refers to viewmodel, not virtual machine).
 
@@ -1185,13 +1185,13 @@ activitymodifier_dump
 
 ```
 
-## Animation Activity Methods
+## 6. Animation Activity Methods
 ```
 weapon.StartCustomActivity(string activityName, 0)
 weapon.StopCustomActivity()
 ```
 
-## Animation Events
+## 7. Animation Events
 
 ```
 Animation Events represent flags inside of the animations that convey that an event has happened to the engine. They can be included inside $sequence commands inside model or animation-only .qc files, in which case they are named in ALL-CAPS, use underscores, use the "AE_" prefix, the "event" keyword, mention the frame number that the Animation Event is signalled at in the animation, have one context dependent parameter, and are contained between two curly brackets { }
@@ -1271,7 +1271,7 @@ c) The particle effect attachment point on the model
 
 ```
 
-## Script-based Animation Events 
+## 8. Script-based Animation Events 
 ```
 There is an alternative to .qc Animation Events, which is the use of script-based Animation Events.
 
@@ -1342,7 +1342,7 @@ GlobalAnimEvent_headstab_death( entity npc )
 GlobalAnimEvent_attach_p2011( entity npc )
 ```
 
-## Animation Event Functions
+## 9. Animation Event Functions
 
 ```
 CodeCallback_OnServerAnimEvent( entity ent, string eventName )
@@ -1353,13 +1353,13 @@ RunAnimEventCallbacks( entity ent, string eventName )
 PlayDialogueForAnimEvent( entity ent, string token)
 ```
 
-## Global Animation Event Structures
+## 10. Global Animation Event Structures
 ```
 global struct AnimEventData
 global struct TokenizedAnimEventData
 ```
 
-## Animation Event Entity Keyvalues
+## 11. Animation Event Entity Keyvalues
 ```
 entity.e.tokenizedAnimEventDataForEntity[ eventName ] <- animEventData // animEventData is an instance of the AnimEventData structure, this is a newslotting command, which creates a new slot in the Anim Event Data Table
 
@@ -1368,14 +1368,14 @@ delete entity.e.tokenizedAnimEventDataForEntity[ eventName ] // this is a slot d
 entity.e.animEventDataForEntity[ eventName ]
 ```
 
-## Script Callback Functions For Animation Events Inside .txt Config Files
+## 12. Script Callback Functions For Animation Events Inside .txt Config Files
 ```
 "OnClientAnimEvent"                 "OnClientAnimEvent_weapon_Car" // example callback from mp_weapon_car.txt
 "OnWeaponTossReleaseAnimEvent"      "Grenade_OnWeaponTossReleaseAnimEvent" // example callback
 "OnWeaponPrimaryAttackAnimEvent"
 ```
 
-## Animation Methods and Functions
+## 13. Animation Methods and Functions
 
 It is important to keep in mind that animations are mostly a CLIENT-SIDED cosmetic feature; if you are calling an animation-related function from the SERVER VM and it doesn't work, it is almost certainly a CLIENT VM exclusive function.
 
@@ -1462,7 +1462,7 @@ entity_Anim_PlayWithRefPoint( animation, origin, angles, blendTime ) // requires
 ```
 
 
-## How Animations Work With Multiple Entities
+## 14. How Animations Work With Multiple Entities
 ```
 For first person animations:
 
@@ -1476,7 +1476,7 @@ Third person animations work analogously, with worldmodels instead of viewmodels
 
 ```
 
-## Animation .QC Commands
+## 15. Animation .QC Commands
 
 It is crucial to know what .QC Commands there are in order to work with animations.
 
@@ -1562,7 +1562,7 @@ fps (float framesPerSecond)
 Overrides the framerate of the animation. If not mentioned explicitly, assumed to be 30, by default.
 
 ```
-## Animation Pose Parameter Methods
+## 16. Animation Pose Parameter Methods
 ```
 weapon.GetScriptPoseParam0() // the integer returned will be a number between the minimum and maximum frame boundaries established with the .QC command $poseparameter
 weapon.SetScriptPoseParam0( int blend ) // this integer must be a number between the minimum and maximum frame boundaries established with the .QC command $poseparameter
