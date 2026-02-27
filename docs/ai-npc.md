@@ -2,7 +2,22 @@
 
 This article contains various types of information on AI / NPC entities and systems.
 
-## Check Functions (Bool Returns)
+=================================================================
+## Table of Contents
+### 1. Check Functions (Bool Returns)
+### 2. NPC Entity Methods
+### 3. NPC Keyvalues
+### 4. Squad Functions
+### 5. Animation Functions
+### 6. AI Schedules (Respawn's use of Valve's framework)
+### 7. Minimap Functions
+### 8. Team Functions
+### 9. Leech Mechanic (TODO)
+### 11. Types of NPCs (TODO)
+### 12. Spawning an NPC (TODO)
+=================================================================
+
+## 1. Check Functions (Bool Returns)
 ```
 IsNPC( entity npc )
 IsSpectre( entity npc )
@@ -19,7 +34,7 @@ IsSpider( entity npc )
 IsTitan( entity npc )
 ```
 
-## NPC Entity Methods
+## 2. NPC Entity Methods
 
 ### General Keyvalue Check Methods
 ```
@@ -158,9 +173,6 @@ npc.EnableNPCMoveFlag( flag )
 npc.DisableNPCMoveFlag( flag ) 
 ```
 
-
-
-
 ### Behavior Methods
 ```
 npc.InitFollowBehavior( entity entityToBeFollowed, followBehavior )
@@ -254,7 +266,7 @@ npc.SetDeathNotifications( bool )
 npc.GetBossPlayer() // gets the player that "owns" an NPC, for example after hacking (internally named "leeching") an NPC with the Data Knife
 ```
 
-## NPC Keyvalues
+## 3. NPC Keyvalues
 ```
 npc.kv.solid // 0, 2, 4, 6, 8
 npc.kv.unlink // indicates whether the entity is ready / meant to be unlinked from another entity at a certain point, works like a script flag, essentially
@@ -291,7 +303,7 @@ npc.kv.drop_battery
 
 ```
 
-## NPC Flags
+## 4. NPC Flags
 
 ```
 // can be seen in codeconsts_server.txt
@@ -346,7 +358,7 @@ Rifle Grunt = TEAM_IMC_GRUNT_MODEL_RIFLE
 AIC_TITAN_BUDDY // BT, Buddy Titan
 ```
 
-## Squad Functions
+## 5. Squad Functions
 ```
 Remnants from Titanfall, where NPCs could be organized in squads and take on coordinated squad behavior
 
@@ -354,12 +366,12 @@ SetNPCSquadMode( npc.kv.squadname, squadMode ) // SQUAD_MODE_MULTIPRONGED_ATTACK
 npc.SetGrade( npcRank ) // rank inside the squad, i.e. squad leader?
 ```
 
-## Animation Functions
+## 6. Animation Functions
 ```
 PlayCrawlingAnim( npc, "ACT_RUN" )
 ```
 
-## AI Schedules (Respawn's use of Valve's framework)
+## 7. AI Schedules (Respawn's use of Valve's framework)
 
 Respawn's implementation of AI logic is based on Valve's Schedule and Actbusy systems.   
 
@@ -410,20 +422,27 @@ behavior_turret_sentry.txt
 
 ```
 
-## Minimap Functions
+## 8. Minimap Functions
 
 ```
 npc.Minimap_Hide( TEAM, null ) // TEAM = TEAM_IMC, TEAM_MIL, etc.
 npc.Minimap_AlwaysShow( TEAM, null) // TEAM = TEAM_IMC, TEAM_MIL, etc.
 ```
 
-## Team Functions
+## 9. Team Functions
 ```
 SetTeam( entity npcEntity, TEAM) // TEAM = TEAM_IMC, TEAM_MIL, etc. - an NPC can be on multiple teams, i.e. TEAM_IMC | TEAM_MILITIA
 ```
 
 
-## Leech Mechanic
+## 10. Leech Mechanic
 
+TODO
+
+## 11. Types of NPCs
+
+TODO
+
+## 12. Spawning an NPC
 
 TODO
