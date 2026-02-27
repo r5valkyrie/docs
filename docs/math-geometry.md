@@ -213,6 +213,7 @@ Graph(V,A,B,C,D)
 
 The result of the function is f(x), successfully interpolating / extrapolating point C(Xc, Yc) using the linear equation extracted from the coordinates of the two other points given (point A(Xa, Yb) and point B(Xb, Yb)).  
 IMPORTANTLY, the point C(Xc, Yc) is NOT clamped between points A and B, meaning it can be ANYWHERE on the graph of the linear equation!  
+Hence, the mention of extrapolation, when the resulting point's coordinates are outside of the bounds determined by point A and B.  
 
 ```
 GraphCapped(V,A,B,C, D) 
