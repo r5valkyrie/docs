@@ -1,6 +1,6 @@
 # Weapon Functions and Commands
 
-============================================================================================================
+=======================================================================================================
 ## TABLE OF CONTENTS
 ### 1. Introduction
 ### 2. Weapon Get / Set Functions And Methods
@@ -16,7 +16,7 @@
 ### 12. The Weapon-Specific Structures (weapon.w) and the Entity Instance-Specific Tables (weapon.s)
 ### 13. Global Weapon Structures (Server-side, Client-side)
 
-===========================================================================================================
+======================================================================================================
 
 
 ## 1. Introduction
