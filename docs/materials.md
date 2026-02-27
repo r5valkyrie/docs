@@ -91,6 +91,7 @@ References courtesy of Autodesk, Unity Technologies, Epic Games and Paul H. Paul
 
 An example of a .json manifest (used for packing assets into RPAKs using RePak) for a SKNP material, used by the Kraber:
 
+```
 {
 
 "name": "art/mshop/weapons/class/sniper/kraber/base/kraber_base_main",
@@ -190,3 +191,5 @@ An example of a .json manifest (used for packing assets into RPAKs using RePak) 
 "$textureAnimation": "0x0"
 
 }
+
+```
