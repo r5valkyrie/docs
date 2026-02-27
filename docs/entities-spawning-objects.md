@@ -19,7 +19,7 @@ Entities are created with CreateEntity( string entityType), but can only be spaw
 
 The entity class (CBaseEntity) is defined in the engine code and it has multiple subclasses (CPlayer, CWeaponX, etc.)  
 
-All models belong to an entity type. Models cannot be spawned "on their own", without being attached to an entity.
+All models NECESSARILY belong to an instance of an entity type. Models cannot be spawned "on their own", without being attached / assigned to an entity.
 
 Many entities are inherited from Valve's Source Engine, as ReSource (Respawn Source Engine) is a fork of the Portal 2 Branch of the Source Engine.
 
