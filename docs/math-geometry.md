@@ -191,17 +191,30 @@ float arcLen = GetArcLengthDeg( intersectionAnglesDeg[ 0 ], intersectionAnglesDe
 
 
 ## 3. Graphing / Interpolation 
+
+Linear interpolation / Linear function graphing, a = mx + b, where a = f(x), the image of x, m = the slope, b = a constant  
+These functions are passed the coordinates of two points A(Xa, Ya), B(Xb, Yb), in order to be able to draw the graph of the function and extract the first degree equation of the linear function (solving m, b).  
+
 ```
-Linear interpolation / Linear function graphing, a = mx + b, where a = f(x), the image of x, m = the slope, b = a constant
-These functions are passed the coordinates of two points A(Xa, Ya), B(Xb, Yb), in order to be able to draw the graph of the function and extract the first degree equation of the linear function (solving m, b).
-Graph(V,A,B,C,D) // where V = x, the current value passed to the function to be linearly interpolated / graphed, A = Xa (carthesian coordinate of point A on the oX axis), B = Xb (carthesian coordinate of point), C = Ya D = Yb
-
-The result of the function is f(x), successfully interpolating / extrapolating point C(Xc, Yc) using the linear equation extracted from the coordinates of the two other points given (point A(Xa, Yb) and point B(Xb, Yb)).
-IMPORTANTLY, the point C(Xc, Yc) is NOT clamped between points A and B, meaning it can be ANYWHERE on the graph of the linear equation!
-
-GraphCapped(V,A,B,C, D) // same as Graph(), except the values are clamped to A and C, meaning f(x) is clamped between Ya and Yb, hence point C(Xc, Yb) will be clamped between point A(Xa, Ya) and point B(Xb, Yb) on the graph derived from the linear equation
+Graph(V,A,B,C,D) 
+// where V = x, the current value passed to the function to be linearly interpolated / graphed, 
+// A = Xa (carthesian coordinate of point A on the oX axis),
+// B = Xb (carthesian coordinate of point), 
+// C = Ya,
+// D = Yb
 ```
 
+The result of the function is f(x), successfully interpolating / extrapolating point C(Xc, Yc) using the linear equation extracted from the coordinates of the two other points given (point A(Xa, Yb) and point B(Xb, Yb)).  
+IMPORTANTLY, the point C(Xc, Yc) is NOT clamped between points A and B, meaning it can be ANYWHERE on the graph of the linear equation!  
+
+```
+GraphCapped(V,A,B,C, D) 
+// same as Graph(), except the values are clamped to A and C, 
+// meaning f(x) is clamped between Ya and Yb, 
+// hence point C(Xc, Yb) will be clamped between point A(Xa, Ya) 
+// and point B(Xb, Yb) on the graph derived from the linear equation
+
+```
 
 ### Bezier Curves
 
