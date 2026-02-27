@@ -661,7 +661,7 @@ global const int TRACE_COLLISION_GROUP_WEAPON = 13
 ```
 // From the code constants (codeconsts_client.txt and codeconsts_server.txt):
 
-global const int TRACE_MASK_BLOCKLOS = 540801 // all of these are Bitwise flags
+global const int TRACE_MASK_BLOCKLOS = 540801
 global const int TRACE_MASK_BLOCKLOS_AND_NPCS = 34095233
 global const int TRACE_MASK_GRENADE = 1178615819
 global const int TRACE_MASK_NPCFLUID = 33701891
