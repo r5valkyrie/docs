@@ -43,6 +43,14 @@ Naturally, vector coordinates can also be negative
 
 Squirrel_re has a macro for the zero vector: ZERO_VECTOR // (<0,0,0>)
 
+Unit vectors (magnitude of 1 while maintaining direction) are obtained with:
+
+Normalize( vector vectorToNormalize )
+
+or simply
+
+Normalize( <x, y, z> )
+
 ```
 
 ```
