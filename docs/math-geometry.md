@@ -23,6 +23,10 @@ vector point = <x,y,z> // vector quantities (magnitude / length, direction) in s
 
 Hence, vectors are also used to store 3D coordinates and 3D rotation angles (pitch, yaw, roll).
 
+For a more visual explanation of Position / Point Vectors, refer to this article from the Godot Engine's documentation:
+
+https://docs.godotengine.org/en/stable/tutorials/math/vector_math.html
+
 vector someVector = <0, 2, 5> 
 vector angleOffset = <0,0,0>
 vector ornull clampedPos // vector declarations can use the ornull keyword
