@@ -21,11 +21,11 @@
 ==========================================================================================
 
 ## 1. What are animations?
-```
+
 Animations are sequences of frames (snapshots) in which the model is posed in various ways. Titanfall and Apex Legends animations were created at 30 FPS (frames per second). Hence, animations are collections of key frames and frame transitions spread across time. 
-```
+
 ## 2. What is a rig?
-```
+
 A rig / skeleton / armature is a collection of "bones" mapped onto vertex groups contained within the model's mesh (collection of triangles / polygons), in order to be able to move it and control its movements
 
 Animation has two prerequisite steps: skinning and rigging
@@ -47,12 +47,12 @@ Changes in position of bones between frames are known as "deltas" (differences /
 Delta layering does not completely override bone positions to the delta, but, instead, compounds the core animations with the delta animations.
 
 Delta animations are used to combine / blend between different animations / animation states such as firing with aiming down sights, etc.
-```
+
 
 ## 3. A brief historical recap of Respawn's animation implementation
-```
-Respawn's first title, Titanfall (2014), essentially used Valve's entire Source Engine tech stack, with modifications, meaning:
 
+Respawn's first title, Titanfall (2014), essentially used Valve's entire Source Engine tech stack, with modifications, meaning:  
+```
 - VPK (Valve Pack archive, replacing GCF's, Gazelle Cache Files, which were named after Steam's old internal name, Gazelle)
 - SMD (Studiomodel Data)
 - VTX (Valve's proprietary mesh strip format)
@@ -66,20 +66,21 @@ Respawn's first title, Titanfall (2014), essentially used Valve's entire Source 
 - VBSP (Valve Binary Space Partitioning Map Files)
 - .txt configs with key-value pairs
 - Valve's entity system
-
-Even by Titanfall 2's release in 2016, Respawn had not yet finished developing their own proprietary tech stack (known as RTECH, Respawn Tech) and fully implementing it, resorting to using their proprietary tech alongside modified Valve tech, such as RUI (Respawn UI) alongside VGUI (i.e.: for the Archer Rocket Launcher). Titanfall 2 still used .MDL's.
-
-It took until Apex Legend's release in 2019 for Respawn to mostly implement RTECH and later on in Apex Legend's life until RTECH had been FULLY implemented.
-
-- At launch, models were separated into MDL, VTX, VVD and PHY. Later on, they were packed into RMDL's and separate .VG physics data.
-- For the first years of Apex Legends' life, the engine still relied on VPK's, which were eventually phased out completely for RPAK's.
-- The build that R5V uses, Season 3 Apex Legends, supports both VPKs and VMT materials.
-- Animation sequences were separated from the MDL files into RSEQ's (Respawn Animation Sequence files). Rigs were also separated into RRIG's (Respawn Rig Files)
 ```
+Even by Titanfall 2's release in 2016, Respawn had not yet finished developing their own proprietary tech stack (known as RTECH, Respawn Tech) and fully implementing it, resorting to using their proprietary tech alongside modified Valve tech, such as RUI (Respawn UI) alongside VGUI (i.e.: for the Archer Rocket Launcher). Titanfall 2 still used .MDL's.  
+
+It took until Apex Legend's release in 2019 for Respawn to mostly implement RTECH and later on in Apex Legend's life until RTECH had been FULLY implemented.  
+
+- At launch, models were separated into MDL, VTX, VVD and PHY. Later on, they were packed into RMDL's and separate .VG physics data.  
+- For the first years of Apex Legends' life, the engine still relied on VPK's, which were eventually phased out completely for RPAK's.  
+- The build that R5V uses, Season 3 Apex Legends, supports both VPKs and VMT materials.  
+- Animation sequences were separated from the MDL files into RSEQ's (Respawn Animation Sequence files). Rigs were also separated into RRIG's (Respawn Rig Files)  
+
 ## 4. Animations in R5 Valkyrie and retail Apex Legends
-```
+
 This leaves us at the present moment, where the current formats are used by Season 3 Apex Legends, which are part of the Respawn's Respawn proprietary tech stack RTECH, whose engineering was spearheaded by former Respawn employee Earl Hammon, after which the in-universe Hammond Corporation was named:
 
+```
 Proprietary animation sequence format: RSEQ, 
 
 Proprietary skeletal mesh / rig / armature format: RRIG,
@@ -93,18 +94,17 @@ Proprietary Particle System format: EFCT,
 Proprietary asset archive format: RPAK,
 
 Proprietary DirectX Shader format (unnamed, but known as "MSW" / Multi-Shader Wrapper, created by R5 Reloaded creator and software engineer Kawe Mazidjatari / Amos)
-
-All are binary files, meaning they cannot be opened as plaintext; they require hexadecimal editing or reverse engineering of their headers and structures for proper inspection, modification and repacking.
-
-However, in Season 3, these are used in tandem with VPKs (maps, certain models, etc.), VMTs (some world materials, particle effect materials, etc.) and, still, VGUI and BSP.
-
-Models have rigs and animation seqeuences associated as dependencies (defined inside RePak / RSX exported assets inside rigs: [], seqs: [], contained within RSON plaintext files)
-
-Rigs have animation sequences associated as dependencies (defined inside RePak / RSX exported assets inside seqs: [], contained within RSON plaintext files)
 ```
+
+All are binary files, meaning they cannot be opened as plaintext; they require hexadecimal editing or reverse engineering of their headers and structures for proper inspection, modification and repacking.  
+However, in Season 3, these are used in tandem with VPKs (maps, certain models, etc.), VMTs (some world materials, particle effect materials, etc.) and, still, VGUI and BSP.  
+
+Models have rigs and animation seqeuences associated as dependencies (defined inside RePak / RSX exported assets inside rigs: [], seqs: [], contained within RSON plaintext files)  
+Rigs have animation sequences associated as dependencies (defined inside RePak / RSX exported assets inside seqs: [], contained within RSON plaintext files)  
+
 
 ## 5. Animation Activities and Animation Activity Modifiers
-```
+
 Animation Activities represent indirected names for a collection of related animations (group aliases). They can be thought of as sets of related animations which are grouped under a common alias, such as first person reload animations being grouped under the "ACT_VM_RELOAD" viewmodel activity (VM, in this context, refers to viewmodel, not virtual machine).
 
 Activities in the Source engine are defined inside activitylist.h and which activities are used for which animations is defined models' .qc files, pre-compile.
@@ -114,7 +114,7 @@ Activities also have associated weights which can be arbitrarily defined (1, 100
 Animation Activity Modifiers act similarly to code flags, signalling that specific animations are supposed to play for an activity, depending on in-game contexts (such as Legend-specific animations, like Rampart's LMG animations). Essentially, they "modify activities" (offering additional context to the engine), as the name implies.
 
 Activities are listed in (and in the future will be registered in) platform/script/activity_types.txt and in the R5SDK in shared_activities.h / ai_activity.h (traditionally in Source Engine games):
-
+```
 // custom activity (inspect being one of them)
 
   	ACT_VM_CHARGE = 472,
@@ -1172,18 +1172,18 @@ Activity Modifiers are listed in (and in the future will be registered in) platf
     speed_boost
     sprinting
     updraft
-
-
-R5V is developing a solution for registering custom activities and activity modifiers in the engine.
-
-Commands exist for dumping all activities and activity modifiers to the console:
-
-activity_dump
-
-activitymodifier_dump
-
-
 ```
+
+R5V is developing a solution for registering custom activities and activity modifiers in the engine.  
+
+Commands exist for dumping all activities and activity modifiers to the console:  
+
+activity_dump  
+
+activitymodifier_dump  
+
+
+
 
 ## 6. Animation Activity Methods
 ```
@@ -1193,11 +1193,10 @@ weapon.StopCustomActivity()
 
 ## 7. Animation Events
 
-```
 Animation Events represent flags inside of the animations that convey that an event has happened to the engine. They can be included inside $sequence commands inside model or animation-only .qc files, in which case they are named in ALL-CAPS, use underscores, use the "AE_" prefix, the "event" keyword, mention the frame number that the Animation Event is signalled at in the animation, have one context dependent parameter, and are contained between two curly brackets { }
 
 This is the Animation Event structure inside $sequence containers, in .qc files:
-
+```
 $sequence "sequencename" {
 // sequence commands    
 { event AE_ANIMATION_EVENT framenumber context_dependent_param }
@@ -1211,7 +1210,7 @@ Examples:
 
 ```
 
-List of Animation Events used in R5V / Apex Legends:
+List of Animation Events used in R5V / Apex Legends:  
 
 ### Weapon Animation Events
 ```
@@ -1272,9 +1271,9 @@ c) The particle effect attachment point on the model
 ```
 
 ## 8. Script-based Animation Events 
-```
-There is an alternative to .qc Animation Events, which is the use of script-based Animation Events.
 
+There is an alternative to .qc Animation Events, which is the use of script-based Animation Events.
+```
 Examples:
 
 AddGlobalAnimEvent("cloak_on", AnimEvent_Cloak_On)
@@ -1377,13 +1376,13 @@ entity.e.animEventDataForEntity[ eventName ]
 
 ## 13. Animation Methods and Functions
 
-It is important to keep in mind that animations are mostly a CLIENT-SIDED cosmetic feature; if you are calling an animation-related function from the SERVER VM and it doesn't work, it is almost certainly a CLIENT VM exclusive function.
+It is important to keep in mind that animations are mostly a CLIENT-SIDED cosmetic feature; if you are calling an animation-related function from the SERVER VM and it doesn't work, it is almost certainly a CLIENT VM exclusive function.  
 
 ### Animation Callback Functions
 
-```
 All of these functions are global and shared between the SERVER and CLIENT VM's.
 
+```
 ClientCodeCallback_AnimWindowStart( ScriptAnimWindow window )
 ClientCodeCallback_AnimWindowTransition( ScriptAnimWindow window )
 ClientCodeCallback_AnimWindowStop( ScriptAnimWindow window )
@@ -1463,48 +1462,48 @@ entity_Anim_PlayWithRefPoint( animation, origin, angles, blendTime ) // requires
 
 
 ## 14. How Animations Work With Multiple Entities
-```
+
 For first person animations:
 
-Firstly, the same rig / skeleton is applied to the weapon viewmodel and the first person arms model. Where associated vertex groups are found in the model's 3D mesh (collection of triangles / polygons), the bone names must be identical to the vertex group names in order to control that part of the model. The models can't and don't need to have the same vertex groups (a first person arms model won't have a weapon model, for example) and this, by design, won't result in errors. The vertex groups that do not exist on one model are simply skipped and not animated. Different rigs are NOT compatible and CANNOT be used simultaneously.
+Firstly, the same rig / skeleton is applied to the weapon viewmodel and the first person arms model. Where associated vertex groups are found in the model's 3D mesh (collection of triangles / polygons), the bone names must be identical to the vertex group names in order to control that part of the model. The models can't and don't need to have the same vertex groups (a first person arms model won't have a weapon model, for example) and this, by design, won't result in errors. The vertex groups that do not exist on one model are simply skipped and not animated. Different rigs are NOT compatible and CANNOT be used simultaneously.  
 
-Vertex groups and attachment points can be seen either in the model's .qc / .SMD's (usually multiple .SMDs because multiple LoD's / Levels of Detail depending on distance, the farther away from the camera, the less detailed, the lower the poly count, and vice-versa for close distances) or by opening the .MDL / .RMDL with the appropriate Binary Template, inside a hexadecimal editor like 010 Editor. The same goes for bones, joints, and pose parameters, with .RRIG files.
+Vertex groups and attachment points can be seen either in the model's .qc / .SMD's (usually multiple .SMDs because multiple LoD's / Levels of Detail depending on distance, the farther away from the camera, the less detailed, the lower the poly count, and vice-versa for close distances) or by opening the .MDL / .RMDL with the appropriate Binary Template, inside a hexadecimal editor like 010 Editor. The same goes for bones, joints, and pose parameters, with .RRIG files.  
 
-Secondly, the same animation is played on the identical rig applied to both models, synchronizing them.
+Secondly, the same animation is played on the identical rig applied to both models, synchronizing them.  
 
-Third person animations work analogously, with worldmodels instead of viewmodels.
+Third person animations work analogously, with worldmodels instead of viewmodels.  
 
-```
 
 ## 15. Animation .QC Commands
 
-It is crucial to know what .QC Commands there are in order to work with animations.
+It is crucial to know what .QC Commands there are in order to work with animations.  
 
-An exhausitve list of QC Commands can be found on the Valve Developer Wiki [here](https://developer.valvesoftware.com/wiki/Category:QC_commands) and [here](https://developer.valvesoftware.com/wiki/QC_Commands).
+An exhausitve list of QC Commands can be found on the Valve Developer Wiki [here](https://developer.valvesoftware.com/wiki/Category:QC_commands) and [here](https://developer.valvesoftware.com/wiki/QC_Commands).  
 
-However, the most commonly used animation-related .QC Commands in R5V / Apex Legends are (optional parameters are placed in between square brackets; parameters in between round brackets are MANDATORY):
+However, the most commonly used animation-related .QC Commands in R5V / Apex Legends are (optional parameters are placed in between square brackets; parameters in between round brackets are MANDATORY):  
+
+
+$animation (name) (file) [optional params]  
+Defines an animation alongside with an alias to be used in the .QC file. The framerate can be included as an optional parameter, otherwise it is assumed to be 30 FPS.  
+Animations MUST be defined prior to being used in $sequence containers, in the $sequence mode that is used in R5V / Apex Legends (the second mode)!  
+
+$poseparameter (name) (minBoundary) (maxBoundary) ["loop" (number)] ["wrap"]  
+Used to define a pose parameter; boundaries are explicitly mentioned and arbitray, i.e.: 0 1 (blending between 2 stages), -180 180, etc.  
+Loops are used for animations that loop back in on themselves, such as wheels or propellers turning 360 degrees and looping back in on their start position.  
+Used to achieve smooth interpolation between different frames / states for bones on a model.  
+
+A comprehensive tutorial on PoseParameters can be seen here on YouTube, courtesy of Mr Funreal: https://youtu.be/1fMJHD2-n24  
+
+$blend  
+Create smooth interpolation between different frames for bones on a model, generally used together with a pose parameter.  
+Example: blend POSEPARAM_3 0 1 // This interpolates between the boundary frames, mapped between the values 0 and 1, where 0 is the first frame and 1 is the last frame. Hence, 0.5 would be the frame located halfway in the animation.  
+Used to achieve smooth interpolation between different frames / states for bones on a model.  
+
+$sequence   
+Defines an animation sequence, which contains multiple animations and can contain many additional parameters, such as blending parameters, layered animations, animation activities, animation events, etc.  
+Has two modes:  
 
 ```
-$animation (name) (file) [optional params]
-Defines an animation alongside with an alias to be used in the .QC file. The framerate can be included as an optional parameter, otherwise it is assumed to be 30 FPS.
-Animations MUST be defined prior to being used in $sequence containers, in the $sequence mode that is used in R5V / Apex Legends (the second mode)!
-
-$poseparameter (name) (minBoundary) (maxBoundary) ["loop" (number)] ["wrap"]
-Used to define a pose parameter; boundaries are explicitly mentioned and arbitray, i.e.: 0 1 (blending between 2 stages), -180 180, etc.
-Loops are used for animations that loop back in on themselves, such as wheels or propellers turning 360 degrees and looping back in on their start position.
-Used to achieve smooth interpolation between different frames / states for bones on a model.
-
-A comprehensive tutorial on PoseParameters can be seen here on YouTube, courtesy of Mr Funreal: https://youtu.be/1fMJHD2-n24
-
-$blend
-Create smooth interpolation between different frames for bones on a model, generally used together with a pose parameter.
-Example: blend POSEPARAM_3 0 1 // This interpolates between the boundary frames, mapped between the values 0 and 1, where 0 is the first frame and 1 is the last frame. Hence, 0.5 would be the frame located halfway in the animation.
-Used to achieve smooth interpolation between different frames / states for bones on a model.
-
-$sequence 
-Defines an animation sequence, which contains multiple animations and can contain many additional parameters, such as blending parameters, layered animations, animation activities, animation events, etc.
-Has two modes
-
 Mode 1:
 $sequence (name) (skeletal animation SMD / DMX) (simple options) {
     (advanced options)
@@ -1523,45 +1522,46 @@ $sequence (name) (simple options) {
 
     // Note: the order must be respected
 }
-
-This latter $sequence mode is the one used in R5V / Apex Legends.
-
-An article detailing the many aspects of the $sequence command can be found on the Valve Developer Wiki: https://developer.valvesoftware.com/wiki/$sequence
-
-Commonly used sequence commands (non-exhaustive list, for an exhaustive list, consult the Valve Developer Wiki Article):
-
-delta
-Communicates to the engine that the $animations referenced in the current sequence have been subtracted. The $sequence will play on top of the currently playing $sequences and NOT override them.
-
-subtract (string animation) (int frameNumber)
-"This [command] subtracts the specified frame of the specified animation from all the frames of the current animation and creates an animation that is the differences between the two, effectively converting the animation to just be the changes from a reference frame of another animation." (from the Valve Developer Wiki).
-
-addlayer (string otherSequenceName)
-Adds a layered animation sequence on top of a core animation sequence.
-Usually used to layer delta animations on top of the core animation sequence.
-The animation sequences begin and end together. If the two animations don't have the same individual run time (frames * FPS), framerates will be adjusted for the added layers.
-
-blendlayer (string sequence) (int startFrame) (int peakFrame) (int tailFrame) (int endFrame) [spline] [crossfade]
-Similar to addlayer, composits the layered animation only over the specified frames. 
-The optional spline parameter converts the linear fade in (startFrame -> peakFrame) and the linear fade out (tailFrame -> endFrame) to a spline curve.
-
-blend (string name) (float minBoundary) (float maxBoundary)
-
-blendwidth (int width)
-
-activity (string name) (float weight)
-Defines an Animation Activity for the $sequence.
-
-activitymodifier (string modifier)
-Defines one or more Animation Activity Modifiers for the $sequence.
-
-{ event AE_ANIMATION_EVENT_NAME framenumber context_dependent_parameter }
-Defines an Animation Event inside the $sequence
-
-fps (float framesPerSecond)
-Overrides the framerate of the animation. If not mentioned explicitly, assumed to be 30, by default.
-
 ```
+
+This latter $sequence mode is the one used in R5V / Apex Legends.  
+
+An article detailing the many aspects of the $sequence command can be found on the Valve Developer Wiki: https://developer.valvesoftware.com/wiki/$sequence  
+
+Commonly used sequence commands (non-exhaustive list, for an exhaustive list, consult the Valve Developer Wiki Article):  
+
+delta  
+Communicates to the engine that the $animations referenced in the current sequence have been subtracted. The $sequence will play on top of the currently playing $sequences and NOT override them.  
+
+subtract (string animation) (int frameNumber)  
+"This [command] subtracts the specified frame of the specified animation from all the frames of the current animation and creates an animation that is the differences between the two, effectively converting the animation to just be the changes from a reference frame of another animation." (from the Valve Developer Wiki).  
+
+addlayer (string otherSequenceName)  
+Adds a layered animation sequence on top of a core animation sequence.  
+Usually used to layer delta animations on top of the core animation sequence.  
+The animation sequences begin and end together. If the two animations don't have the same individual run time (frames * FPS), framerates will be adjusted for the added layers.  
+
+blendlayer (string sequence) (int startFrame) (int peakFrame) (int tailFrame) (int endFrame) [spline] [crossfade]  
+Similar to addlayer, composits the layered animation only over the specified frames.   
+The optional spline parameter converts the linear fade in (startFrame -> peakFrame) and the linear fade out (tailFrame -> endFrame) to a spline curve.  
+
+blend (string name) (float minBoundary) (float maxBoundary)  
+
+blendwidth (int width)  
+
+activity (string name) (float weight)  
+Defines an Animation Activity for the $sequence.  
+
+activitymodifier (string modifier)  
+Defines one or more Animation Activity Modifiers for the $sequence.  
+
+{ event AE_ANIMATION_EVENT_NAME framenumber context_dependent_parameter }  
+Defines an Animation Event inside the $sequence  
+
+fps (float framesPerSecond)  
+Overrides the framerate of the animation. If not mentioned explicitly, assumed to be 30, by default.  
+
+
 ## 16. Animation Pose Parameter Methods
 ```
 weapon.GetScriptPoseParam0() // the integer returned will be a number between the minimum and maximum frame boundaries established with the .QC command $poseparameter
