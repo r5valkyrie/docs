@@ -1397,9 +1397,9 @@ CodeCallback_AnimationInterrupted( entity ent )
 ```
 PlayAnimTeleport( entity, animation_name, reference = null, optionalTag = null, initialTime = -1.0, smooth = false )
 
-PlayFPSAnimTeleport
+PlayFPSAnimTeleport()
 
-PlayFPSAnimTeleportShowProxy
+PlayFPSAnimTeleportShowProxy()
 
 HasAnim( entity ent, string animationName ) // returns a bool // cl_anim.gnut
 
@@ -1425,7 +1425,7 @@ entity.Anim_Play("PathToRSEQ") or entity.AnimPlay("animation_name)
 
 entity.AnimStop() (stops all animation sequences)
 
-entity.Anim_SetInitialTime
+entity.Anim_SetInitialTime()
 
 entity.Anim_EnableUseAnimatedRefAttachmentInsteadOfRootMotion()
 
