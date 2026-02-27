@@ -236,6 +236,8 @@ GetBezierOfPathLoop( array<vector> path, int numSegments)
 GetBezierNodeTangent(vector nodePos, vector predecessorPos, vector successorPos)
 ```
 
+TODO: Exponential functions? Parabolic graphs?
+
 TODO: Spline functions?
 
 ## 4. Minimum, Maximum Values
