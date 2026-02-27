@@ -9,10 +9,10 @@ Important mention: an audio EVENT is NOT the same as an audio FILE! Audio files 
 ### 1. Animation Events (inside .QC's, in $sequence)
 ### 2. Script Functions / Commands
 ### 3. Common Use Cases
-
+==========================================================
 
 ## 1. Animation Events (inside .QC's, in $sequence):
-==========================================================
+
 
 The following commands are used inside of model QC files, used by StudioMDL to compile models, to be used in-game. For a comprehensive list of QC commands, consult the Valve Developer Wiki: [QC Commands](https://developer.valvesoftware.com/wiki/Category:QC_commands), [QC Commands 2](https://developer.valvesoftware.com/wiki/QC_Commands)
 ```
