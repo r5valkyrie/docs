@@ -17,7 +17,7 @@ The extension .QC comes from QuakeC, referring to the fact that the format is de
 The history of the Source Engine can be traced all the way back to Id Software and Quake.
 
 
-## Respawn's history with MDL
+# Respawn's History With MDL
 
 Respawn Entertainment acquired and used the Portal 2 (2011) branch of Source 1, from Valve, as its foundation for ReSource (Respawn Source Engine).
 
@@ -38,3 +38,8 @@ TODO TODO TODO TODO
 
 THIS ARTICLE IS VERY UNFINISHED
 
+# .QC Files
+
+.QC files support a combination of forward and backslashes for file paths.
+
+Shared .QC files that are meant to be included in / inherited by other .QC files are designated as .QCI. 
