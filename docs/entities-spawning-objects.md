@@ -569,13 +569,21 @@ SOLID_OBB
 
 ```
 CONTENTS_SOLID
-CONTENTS_BLOCKLOS
-CONTENTS_PLAYERCLIP
-CONTENTS_MONSTERCLIP
+CONTENTS_NOCLIMB // Makes an entity unable to be climbed / mantled
+CONTENTS_NOGRAPPLE // Makes an entity unable to be grappled
+CONTENTS_OPAQUE // Makes an entity opaque (non-transparent), probably blocks from pinging through it
+CONTENTS_WINDOW // Designates an entity as a window, probably allows pinging through it
+CONTENTS_WATER // Designates an entity as a body of water
+CONTENTS_PLAYERCLIP // Makes an entity be clipped off to players (players cannot pass through it)
+CONTENTS_TITANCLIP // Makes an entity be clipped off to Titan souls (Titans cannot pass through it, souls are what the player entity is transferred to when embarking in a Titan; players are transferred back to the player entity upon disembarking)
+CONTENTS_MONSTERCLIP // Makes an entity be clipped off to creatures (creatures cannot pass through it)
 CONTENTS_MONSTER
-CONTENTS_BULLETCLIP
-CONTENTS_HITBOX
-CONENTS_NOGRAPPLE // Makes an entity non-grapple-able
+CONTENTS_BULLETCLIP // Bullets collide with and stop on impact with the entity instead of passing through
+CONTENTS_HITBOX // Attaches a hitbox to an entity
+CONTENTS_BLOCK_PING // Makes an entity unable to be pinged
+CONTENTS_BLOCKLOS // Makes an entity block LOS
+CONTENTS_PHYSICSCLIP
+
 ```
 
 ## Damage flags:
@@ -628,9 +636,53 @@ global const int DAMAGEFLAG_VICTIM_INVINCIBLE = 2
 
 ## Collision Group Flags
 ```
-TRACE_COLLISION_GROUP_DEBRIS
-TRACE_COLLISION_GROUP_BLOCK_WEAPONS // Makes an entity block weapon projectiles 
+TRACE_COLLISION_GROUP_PLAYER // Player collision group
+TRACE_COLLISION_GROUP_DEBRIS // Debris collision group
+TRACE_COLLISION_GROUP_PROJECTILE // Projectile collision group
+TRACE_COLLISION_GROUP_BLOCK_WEAPONS // Designates an entity as belonging to the collision group that blocks weapon projectiles 
+TRACE_COLLISION_GROUP_NONE // No collision
+
+// From the code constants (codeconsts_client.txt and codeconsts_server.txt):
+
+global const int TRACE_COLLISION_GROUP_BLOCK_WEAPONS = 19
+global const int TRACE_COLLISION_GROUP_BLOCK_WEAPONS_AND_PHYSICS = 20
+global const int TRACE_COLLISION_GROUP_BREAKABLE_GLASS = 7
+global const int TRACE_COLLISION_GROUP_DEBRIS = 1
+global const int TRACE_COLLISION_GROUP_DEBRIS_TRIGGER = 2
+global const int TRACE_COLLISION_GROUP_NONE = 0
+global const int TRACE_COLLISION_GROUP_NPC = 9
+global const int TRACE_COLLISION_GROUP_PLAYER = 6
+global const int TRACE_COLLISION_GROUP_PROJECTILE = 15
+global const int TRACE_COLLISION_GROUP_WEAPON = 13
 ```
+
+## Trace Mask Flags
+
+```
+// From the code constants (codeconsts_client.txt and codeconsts_server.txt):
+
+global const int TRACE_MASK_BLOCKLOS = 540801
+global const int TRACE_MASK_BLOCKLOS_AND_NPCS = 34095233
+global const int TRACE_MASK_GRENADE = 1178615819
+global const int TRACE_MASK_NPCFLUID = 33701891
+global const int TRACE_MASK_NPCSOLID = 33701899
+global const int TRACE_MASK_NPCSOLID_BRUSHONLY = 147467
+global const int TRACE_MASK_NPCWORLDSTATIC = 131083
+global const int TRACE_MASK_OPAQUE = 16513
+global const int TRACE_MASK_OPAQUE_AND_NPCS = 33570945
+global const int TRACE_MASK_PLAYERSOLID = 33636363
+global const int TRACE_MASK_PLAYERSOLID_BRUSHONLY = 81931
+global const int TRACE_MASK_SHOT = 1178615859
+global const int TRACE_MASK_SHOT_BRUSHONLY = 71319603
+global const int TRACE_MASK_SHOT_HULL = 104873995
+global const int TRACE_MASK_SOLID = 33571339
+global const int TRACE_MASK_SOLID_BRUSHONLY = 16907
+global const int TRACE_MASK_TITANSOLID = 35667979
+global const int TRACE_MASK_VISIBLE = 24705
+global const int TRACE_MASK_VISIBLE_AND_NPCS = 33579137
+global const int TRACE_MASK_WATER = 48
+```
+
 
 ## Weapon Flags
 ```
