@@ -13,6 +13,9 @@ StudioMDL is the model compiler used in Source 1 games. It is a command line too
 
 Seemingly paradoxically, animation-only .MDL files can exist; they are usually used for shared animations, so that they can easily be accessed by other models.
 
+The extension .QC comes from QuakeC, referring to the fact that the format is dervied from the version of C used for Quake. The GoldSrc engine (Half-Life 1) was based on the IdTech engine. The Source Engine was based on and is the successor of GoldSrc.
+The history of the Source Engine can be traced all the way back to Id Software and Quake.
+
 
 ## Respawn's history with MDL
 
