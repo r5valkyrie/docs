@@ -7,7 +7,18 @@ Before any particle effect can be used in the engine, it is MANDATORY to precach
 PrecacheParticleSystem( $"particleassetname" )  
 Example: PrecacheParticleSystem( $"P_loba_staff_menu_dlight" )  
 ```
-## Weapon entity methods
+
+==============================================================
+## Table of Contents
+### 1. Weapon Entity Methods
+### 2. Non-method Particle Effect Functions
+### 3. Particle Effects Inside of QC's (Inside $sequence)
+### 4. Playing First Person Player Screen Particle FX
+### 5. FX Particle / Point (?) Attachment Behavior Flags
+### 6. FX Attachment Point References
+==============================================================
+
+## 1. Weapon Entity Methods
 
 Weapon entity methods, where "weapon" is the weapon entity:
 
@@ -28,7 +39,7 @@ weapon.StopWeaponEffect( asset $"FirstPersonFXHandle", asset $"ThirdPersonFXHand
 Example: weapon.StopWeaponEffect( $"wpn_arc_cannon_electricity_fp", $"wpn_arc_cannon_electricity" )
 ```
 
-## Non-method particle effect functions
+## 2. Non-method Particle Effect Functions
 
 ### Checking if a particle effect exists
 ```
@@ -49,7 +60,7 @@ EffectWake("EffectHandle")
 ```
 
 
-## Particle Effects inside of QC's
+## 3. Particle Effects Inside of QC's (Inside $sequence)
 
 The following commands are used inside of model QC files, used by StudioMDL to compile models, to be used in-game. For a comprehensive list of QC commands, consult the Valve Developer Wiki: [QC Commands](https://developer.valvesoftware.com/wiki/Category:QC_commands), [QC Commands 2](https://developer.valvesoftware.com/wiki/QC_Commands)
 
@@ -64,7 +75,7 @@ These QC commands are contained inside $sequence(s) and are usually tied to acti
 ```
 activity ACT_VM_WEAPON_INSPECT 60
 ```
-## Playing first person player screen particle FX
+## 4. Playing First Person Player Screen Particle FX
 ```
 entity FX = StartParticleEffectOnEntityWithPos_ReturnEntity( entityname, ParticleEffectHandle or GetParticleSystemIndex($"ParticleEffectAssetName"), FX_PATTACH_ABSORIGIN_FOLLOW, ATTACHMENTID, <x, y, z>, ZERO_VECTOR )
 ```
@@ -77,7 +88,7 @@ file.cockpitFxHandle = StartParticleEffectOnEntity( cockpit, GetParticleSystemIn
 EffectStop( file.cockpitFxHandle, false, true )
 ```
 
-## FX Particle / Point (?) Attachment Behavior Flags
+## 5. FX Particle / Point (?) Attachment Behavior Flags
 ```
 3rd argument of StartParticleEffectOnEntity()
 
@@ -153,7 +164,7 @@ global const int FX_PATTACH_WEAPON_STOCKPILE_REGEN_FRAC = 35
 global const int FX_PATTACH_WORLDORIGIN = 11
 ```
 
-## FX Attachment Point References
+## 6. FX Attachment Point References
 ```
 These are defined inside models' .qc files pre-compile and often correspond to the model's armature / skeleton bone names, however, this is a list of commonly used attachment points:
 
