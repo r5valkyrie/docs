@@ -34,7 +34,7 @@ Skinning, in this context, does not refer to texturing or retexturing a model, b
 
 Rigging encompasses weight painting and the manipulation of bones with bone controllers, inverse kinematics, etc.
 
-The armature of a model can be seen by exporting the RMDL with RSX as SMDs (Studiomodel Data Files) and then importing them into [Blender](https://www.blender.org/), using [Blender Source Tools] (https://developer.valvesoftware.com/wiki/Blender_Source_Tools) on .qc / .smd import mode.
+The armature of a model can be seen by exporting the RMDL with RSX as SMDs (Studiomodel Data Files) and then importing them into [Blender](https://www.blender.org/), using [Blender Source Tools](https://developer.valvesoftware.com/wiki/Blender_Source_Tools) on .qc / .smd import mode.
 
 R1 (Titanfall 2014) and R2 (Titanfall 2, 2016) require extracting the .MDL files from the VPK archives (before RPAK archives existed) and then decompiling them with Studiomdl.exe, to obtain a .qc and .SMD files. They can be imported into Blender, afterwards, using the Blender Source Tools.
 
