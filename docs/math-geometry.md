@@ -226,7 +226,7 @@ GraphCapped(V,A,B,C, D)
 
 ### Bezier Curves
 
-Apex Legends' codebase has a lot of functions for splines / Bezier curves
+Apex Legends' codebase has a lot of functions for Bezier curves
 
 ```
 GetAllPointsOnBezier( array<vector> points, int numSegments, float debugDrawTime = 0.0)
@@ -235,6 +235,8 @@ GetBezierOfPath( array<vector> path, int numSegments, float debugTime = 0.0)
 GetBezierOfPathLoop( array<vector> path, int numSegments)
 GetBezierNodeTangent(vector nodePos, vector predecessorPos, vector successorPos)
 ```
+
+TODO: Spline functions?
 
 ## 4. Minimum, Maximum Values
 
