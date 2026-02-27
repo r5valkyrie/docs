@@ -145,7 +145,7 @@ npc.GetClassName()
 ### Team Methods
 ```
 npc.GetTeam()
-npc.SetAutoSquad()
+npc.SetAutoSquad() // remnant from Titanfall, where NPCs could be organized in squads and take on coordinated squad behavior
 ```
 
 ### Flag Methods
@@ -300,7 +300,7 @@ NPC_ALLOW_PATROL
 NPC_ALLOW_INVESTIGATE
 NPC_ALLOW_FLEE
 NPC_ALLOW_HAND_SIGNALS
-NPC_STAY_CLOSE_TO_SQUAD
+NPC_STAY_CLOSE_TO_SQUAD // // remnant from Titanfall, where NPCs could be organized in squads and take on coordinated squad behavior
 NPC_DISABLE
 NPC_ANIM_FOV
 NPC_ANIM_ADVANCE_CYCLE_EVERY_FRAME
@@ -327,6 +327,8 @@ NPC_NO_MOVING_PLATFORM_DEATH
 
 ### NPC Names
 ```
+These are leftover Soldier NPCs from Titanfall 
+
 Militia (Titanfall faction)
 Rocket Grunt = TEAM_MIL_GRUNT_MODEL_ROCKET
 Shotgun Grunt = TEAM_MIL_GRUNT_MODEL_SHOTGUN
@@ -346,6 +348,8 @@ AIC_TITAN_BUDDY // BT, Buddy Titan
 
 ## Squad Functions
 ```
+Remnants from Titanfall, where NPCs could be organized in squads and take on coordinated squad behavior
+
 SetNPCSquadMode( npc.kv.squadname, squadMode ) // SQUAD_MODE_MULTIPRONGED_ATTACK
 npc.SetGrade( npcRank ) // rank inside the squad, i.e. squad leader?
 ```
