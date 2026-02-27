@@ -1,10 +1,18 @@
 # Audio Commands / Functions
 
-This article documents various Audio functions and commands.
+This article documents various Audio functions and commands.  
 
-Important mention: an audio EVENT is NOT the same as an audio FILE! Audio files are ASSIGNED to audio events. Audio events and audio files almost never have matching names.
+Important mention: an audio EVENT is NOT the same as an audio FILE! Audio files are ASSIGNED to audio events. Audio events and audio files almost never have matching names. Sound are played by triggering a PLAY event for the audio EVENT they were assigned to.  
 
-## Animation Events (inside QCs, in $sequence):
+==========================================================
+## Table of Contents
+### 1. Animation Events (inside .QC's, in $sequence)
+### 2. Script Functions / Commands
+### 3. Common Use Cases
+
+
+## 1. Animation Events (inside .QC's, in $sequence):
+==========================================================
 
 The following commands are used inside of model QC files, used by StudioMDL to compile models, to be used in-game. For a comprehensive list of QC commands, consult the Valve Developer Wiki: [QC Commands](https://developer.valvesoftware.com/wiki/Category:QC_commands), [QC Commands 2](https://developer.valvesoftware.com/wiki/QC_Commands)
 ```
@@ -84,7 +92,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 
 
-# Script Functions / Commands
+# 2. Script Functions / Commands
 
 
 
@@ -594,7 +602,7 @@ by using Animation Events (prefixed with AE inside the .qc's). Animation Events 
 
 
 
-## Common use cases
+## 3. Common use cases
 
 
 Case 1: Playing a sound on entity
