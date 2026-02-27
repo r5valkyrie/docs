@@ -2,7 +2,7 @@
 
 This article contains various types of information on AI / NPC entities and systems.
 
-=================================================================
+===============================================================
 ## Table of Contents
 ### 1. Check Functions (Bool Returns)
 ### 2. NPC Entity Methods
@@ -15,7 +15,7 @@ This article contains various types of information on AI / NPC entities and syst
 ### 9. Leech Mechanic (TODO)
 ### 11. Types of NPCs (TODO)
 ### 12. Spawning an NPC (TODO)
-=================================================================
+===============================================================
 
 ## 1. Check Functions (Bool Returns)
 ```
