@@ -85,7 +85,11 @@
                {
                     "title": "Materials",
                     "slug": "materials"
-                },    
+                },
+                {
+                    "title": "Valve Studiomdl.exe",
+                    "slug": "studiomdl"
+                },      
                 {
                     "title": "Animations, Animation Sequences and Rigs",
                     "slug": "animation-sequences-rigs"
@@ -100,8 +104,73 @@
                 }
             ]
         },
+         {
+            "title": "Modding Toolset",
+            "pages": [
+                {
+                    "title": "RePak",
+                    "slug": "repak"
+                },
+                {
+                    "title": "JSONCompiler",
+                    "slug": "jsoncompiler"
+                },
+                {
+                    "title": "010 Editor & ReSource Binary Templates",
+                    "slug": "010-resource-templates"
+                },
+                {
+                    "title": "RSX (ReSource eXtractor)",
+                    "slug": "rsx"
+                },
+               {
+                    "title": "Crowbar / Studiomdl.exe",
+                    "slug": "crowbar-studiomdl"
+                },
+               {
+                    "title": "rmdlconv",
+                    "slug": "rmdlconv"
+                },    
+                {
+                    "title": "R5-AnimConv",
+                    "slug": "r5-animconv"
+                },            
+                {
+                    "title": "R5-AnimInspector",
+                    "slug": "r5-animinspector"
+                },
+                {
+                    "title": "Paint.net / GIMP / Image editor app",
+                    "slug": "image-editor"
+                },
+                {
+                    "title": "ReMDL (Crowbar + rmdlconv + R5-AnimConv + R5-AnimInspector)",
+                    "slug": "remdl"
+                },
+                {
+                    "title": "Legion+",
+                    "slug": "legionplus"
+                },
+                {
+                    "title": "MRVN-Radiant",
+                    "slug": "mrvn-radiant"
+                },
+                {
+                    "title": "DepotDownloader",
+                    "slug": "depotdownloader"
+                },
+                {
+                    "title": "Repak Atlas Creator",
+                    "slug": "repak-atlas-creator"
+                },
+                {
+                    "title": "ReVPK / ReVPKEdit (GUI for ReVPK with some modernizations)",
+                    "slug": "revpk-revpkedit"
+                }
+            ]
+        },
         {
-            "title": "Helpful Stuff",
+            "title": "Additional Helpful Material",
             "pages": [
                 {
                     "title": "Console Commands",
