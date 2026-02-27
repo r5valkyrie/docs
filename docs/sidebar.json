@@ -85,7 +85,11 @@
                {
                     "title": "Materials",
                     "slug": "materials"
-                },                
+                },    
+                {
+                    "title": "Animations, Animation Sequences and Rigs",
+                    "slug": "animation-sequences-rigs"
+                },            
                 {
                     "title": "Playlist System",
                     "slug": "mod-playlist-system"
