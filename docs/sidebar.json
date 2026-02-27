@@ -19,6 +19,23 @@
             ]
         },
         {
+            "title": "General Modding Info",
+            "pages": [
+                {
+                    "title": "Creating a mod",
+                    "slug": "creating-a-mod"
+                },          
+                {
+                    "title": "Playlist System",
+                    "slug": "mod-playlist-system"
+                },
+                {
+                    "title": "Publishing",
+                    "slug": "publishing-your-mod"
+                }
+            ]
+        },
+        {
             "title": "Scripting",
             "pages": [
                 {
@@ -65,23 +82,6 @@
                     "title": "Code Enums List",
                     "slug": "code-enums"
                 }                 
-            ]
-        },
-        {
-            "title": "General Modding Info",
-            "pages": [
-                {
-                    "title": "Creating a mod",
-                    "slug": "creating-a-mod"
-                },          
-                {
-                    "title": "Playlist System",
-                    "slug": "mod-playlist-system"
-                },
-                {
-                    "title": "Publishing",
-                    "slug": "publishing-your-mod"
-                }
             ]
         },
        {
