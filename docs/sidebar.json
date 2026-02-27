@@ -68,12 +68,25 @@
             ]
         },
         {
-            "title": "Modding",
+            "title": "General Modding Info",
             "pages": [
                 {
                     "title": "Creating a mod",
                     "slug": "creating-a-mod"
+                },          
+                {
+                    "title": "Playlist System",
+                    "slug": "mod-playlist-system"
                 },
+                {
+                    "title": "Publishing",
+                    "slug": "publishing-your-mod"
+                }
+            ]
+        },
+       {
+            "title": "Asset Modding",
+            "pages": [
                 {
                     "title": "Sound Modding",
                     "slug": "sound-modding"
@@ -93,17 +106,10 @@
                 {
                     "title": "Animations, Animation Sequences and Rigs",
                     "slug": "animation-sequencesrigs"
-                },            
-                {
-                    "title": "Playlist System",
-                    "slug": "mod-playlist-system"
-                },
-                {
-                    "title": "Publishing",
-                    "slug": "publishing-your-mod"
-                }
+                }            
             ]
         },
+
          {
             "title": "Modding Toolset",
             "pages": [
