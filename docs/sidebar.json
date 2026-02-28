@@ -194,11 +194,11 @@
                     "slug": "r5-animinspector"
                 },
                 {
-                    "title": "Paint.net / GIMP / Image editor app",
+                    "title": "Paint.net / GIMP / Image editor app (TODO)",
                     "slug": "image-editor"
                 },
                 {
-                    "title": "ReMDL (Crowbar + rmdlconv + R5-AnimConv + R5-AnimInspector)",
+                    "title": "ReMDL (Crowbar + rmdlconv + R5-AnimConv + R5-AnimInspector) (TODO)",
                     "slug": "remdl"
                 },
                 {
