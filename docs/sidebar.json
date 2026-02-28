@@ -79,30 +79,78 @@
                     "slug": "realms"
                 },
                 {
-                    "title": "Code Enums List",
-                    "slug": "code-enums"
-                }                 
+                    "title": "Abilities (TODO)",
+                    "slug": "abilities"
+                },      
+                {
+                    "title": "Callback Functions (TODO)",
+                    "slug": "callbacks"
+                },   
+                {
+                    "title": "Client Commands (TODO)",
+                    "slug": "clientcommands"
+                },  
+                {
+                    "title": "Collision Hulls (TODO)",
+                    "slug": "collision-hulls"
+                },   
+                {
+                    "title": "The Crosshair (TODO)",
+                    "slug": "crosshair"
+                },   
+                {
+                    "title": "File Formats (TODO)",
+                    "slug": "file-formats"
+                },   
+                {
+                    "title": "Threads (pseudo-coroutines) & Signals (TODO)",
+                    "slug": "threads-signals"
+                },   
+                {
+                    "title": "Variadic Functions (indefinite parameters) (TODO)",
+                    "slug": "variadic-functions"
+                }              
             ]
         },
        {
             "title": "Asset Modding",
             "pages": [
                 {
+                    "title": "File Formats (TODO)",
+                    "slug": "file-formats"
+                },  
+                {
                     "title": "Sound Modding",
                     "slug": "sound-modding"
                 },
-               {
+                {
                     "title": "Audio Event Dictionary",
                     "slug": "audio-event-dictionary"
                 },
-               {
+                {
                     "title": "Materials",
                     "slug": "materials"
                 },
                 {
                     "title": "Valve Studiomdl",
                     "slug": "studiomdl"
-                },      
+                },
+                {
+                    "title": "Models (TODO)",
+                    "slug": "models"
+                },
+                {
+                    "title": "Data Tables (TODO)",
+                    "slug": "datatables"
+                },
+                {
+                    "title": "The Minimap (TODO)",
+                    "slug": "minimap"
+                },
+                {
+                    "title": "The User Interface (RUI & VGUI) (TODO)",
+                    "slug": "user-interface"
+                },               
                 {
                     "title": "Animations, Animation Sequences and Rigs",
                     "slug": "animations"
@@ -114,35 +162,35 @@
             "title": "Modding Toolset",
             "pages": [
                 {
-                    "title": "RePak",
+                    "title": "RePak (TODO)",
                     "slug": "repak"
                 },
                 {
-                    "title": "JSONCompiler",
+                    "title": "JSONCompiler (TODO)",
                     "slug": "jsoncompiler"
                 },
                 {
-                    "title": "010 Editor & ReSource Binary Templates",
+                    "title": "010 Editor & ReSource Binary Templates (TODO)",
                     "slug": "010-resource-templates"
                 },
                 {
-                    "title": "RSX (ReSource eXtractor)",
+                    "title": "RSX (TODO)",
                     "slug": "rsx"
                 },
                {
-                    "title": "Crowbar / Studiomdl.exe",
+                    "title": "Crowbar / Studiomdl (TODO)",
                     "slug": "crowbar-studiomdl"
                 },
                {
-                    "title": "rmdlconv",
+                    "title": "rmdlconv (TODO)",
                     "slug": "rmdlconv"
                 },    
                 {
-                    "title": "R5-AnimConv",
+                    "title": "R5-AnimConv (TODO)",
                     "slug": "r5-animconv"
                 },            
                 {
-                    "title": "R5-AnimInspector",
+                    "title": "R5-AnimInspector (TODO)",
                     "slug": "r5-animinspector"
                 },
                 {
@@ -154,23 +202,23 @@
                     "slug": "remdl"
                 },
                 {
-                    "title": "Legion+",
+                    "title": "Legion+ (TODO)",
                     "slug": "legionplus"
                 },
                 {
-                    "title": "MRVN-Radiant",
+                    "title": "MRVN-Radiant (TODO)",
                     "slug": "mrvn-radiant"
                 },
                 {
-                    "title": "DepotDownloader",
+                    "title": "DepotDownloader (TODO)",
                     "slug": "depotdownloader"
                 },
                 {
-                    "title": "Repak Atlas Creator",
+                    "title": "Repak Atlas Creator (TODO)",
                     "slug": "repak-atlas-creator"
                 },
                 {
-                    "title": "ReVPK / ReVPKEdit (GUI for ReVPK with some modernizations)",
+                    "title": "ReVPK / ReVPKEdit (TODO)",
                     "slug": "revpk-revpkedit"
                 }
             ]
