@@ -1,0 +1,3 @@
+
+
+PrecacheImpactEffectTable( string impactEffectTableName )
