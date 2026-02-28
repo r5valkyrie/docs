@@ -7,7 +7,7 @@
 ### 3. Entity Methods & Functions
 ### 4. Keyvalues & Associated Methods and Functions
 ### 5. Flags & Associated Methods and Functions
-### 6. Script example for spawning an entity (dome shield)
+### 6. Script Example For Spawning an Entity (Dome Shield)
 ### 7. Entity Spawn Methods / Functions
 ===================================================================
 
@@ -775,7 +775,7 @@ PTF_NO_DMG_ON_PASS_tHROUGH
 ```
 
 
-# 6. Script example for spawning an entity (dome shield)
+# 6. Script Example For Spawning an Entity (Dome Shield)
 
 From _bubble_shield.gnut
 
