@@ -107,7 +107,7 @@
                     "slug": "threads-signals"
                 },   
                 {
-                    "title": "Variadic Functions (indefinite parameters) (TODO)",
+                    "title": "Variadic Functions (variable arguments and argument number) (TODO)",
                     "slug": "variadic-functions"
                 }              
             ]
