@@ -40,12 +40,59 @@ The entity class has many keyvalue attributes, which are accessed with entity.kv
 - prop_dynamic
 - prop_static // Environment objects on maps, once maps are compiled, they are no longer considered individual entities
 - prop_script // Scripted props (they have a script attached)
+- prop_active_gib_limit
+- prop_active_gib_max_fade_time
+- prop_break_disable_float
+- prop_combine_ball
+- prop_control_panel
+- prop_data
+- prop_death_box
+- prop_debug
+- prop_door
+- prop_droppod
+- prop_dynamic_clientside
+- prop_dynamic_lightweight
+- prop_dynamic_override
+- prop_exfil_panel
+- prop_lightweightPropsSkipAnimData
+- prop_physics
+- prop_physics_override
+- prop_refuel_pump
+- prop_shield
+- prop_survival
+- prop_survivalSkipsAnimData
+- prop_weapon_rack
 ```
 
 ## NPC Entities
 ```
+- npc_saito
+- npc_sarah
+- npc_stalker
+- npc_super_spectre // Reaper
+- npc_support
+- npc_soldier
+- npc_spectre
+- npc_spider
+- npc_prowler
 - npc_pilot
+- npc_pilot_elite
 - npc_marvin
+- npc_operator
+- npc_flyer
+- npc_frag_drone // Explosive Tick
+- npc_goliath
+- npc_gunship
+- npc_gunship_scripted
+- npc_drone
+- npc_drone_cloak
+- npc_drone_worker
+- npc_dropship
+- npc_dummie
+- npc_bish
+- npc_turret_mega
+- npc_turret_sentry
+- npc_titan
 ```
 
 
