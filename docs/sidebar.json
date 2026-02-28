@@ -156,6 +156,10 @@
                     "slug": "models"
                 },
                 {
+                    "title": "Animations, Animation Sequences and Rigs",
+                    "slug": "animations"
+                },     
+                {
                     "title": "Data Tables (TODO)",
                     "slug": "datatables"
                 },
@@ -166,11 +170,7 @@
                 {
                     "title": "The User Interface (RUI & VGUI) (TODO)",
                     "slug": "user-interface"
-                },               
-                {
-                    "title": "Animations, Animation Sequences and Rigs",
-                    "slug": "animations"
-                }            
+                }                     
             ]
         },
 
