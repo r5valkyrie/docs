@@ -109,7 +109,11 @@
                 {
                     "title": "Threads (pseudo-coroutines) & Signals (TODO)",
                     "slug": "threads-signals"
-                },   
+                },
+                {
+                    "title": "Localization (TODO)",
+                    "slug": "threads-signals"
+                },      
                 {
                     "title": "Variadic Functions (variable arguments and argument number) (TODO)",
                     "slug": "variadic-functions"
