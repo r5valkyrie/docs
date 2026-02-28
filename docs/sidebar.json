@@ -91,6 +91,10 @@
                     "slug": "clientcommands"
                 },  
                 {
+                    "title": "Remote Functions (TODO)",
+                    "slug": "remote-functions"
+                },  
+                {
                     "title": "Collision Hulls (TODO)",
                     "slug": "collision-hulls"
                 },   
