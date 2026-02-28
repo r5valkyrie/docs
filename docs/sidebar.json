@@ -136,6 +136,14 @@
                     "slug": "audio-event-dictionary"
                 },
                 {
+                    "title": "RPAKs & RePak (TODO)",
+                    "slug": "rpaks"
+                },
+                {
+                    "title": "VPKs (TODO)",
+                    "slug": "vpks"
+                },
+                {
                     "title": "Materials",
                     "slug": "materials"
                 },
