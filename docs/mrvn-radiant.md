@@ -258,7 +258,6 @@ A list of Environment Entities:
 - env_soundscape_triggerable
 ```
 
-
 # Chapter 2: Brushes
 
 ## What Are Brushes?
@@ -352,9 +351,11 @@ A list of Trigger brushes:
 
 These brushes are invisible in normal gameplay and influence which entities can pass or cannot pass through them. 
 
-In common use,Player Clip Brushes, which define areas that the player cannot access, got shortened to "Clipbrushes", hence the name.
+In common use, Player Clip Brushes, which define areas that the player cannot access / physically pass through, got shortened to "Clipbrushes", hence the name.
 
 Clipbrushes are also used to smoothen map navigation, such as overlapping smooth ramps over stair steps.
+
+Creature clipbrushes are also known as "Monsterclips", which is where former high-profile Respawn developer Jason McCord's name comes from.
 
 # Chapter 3: Materials
 
