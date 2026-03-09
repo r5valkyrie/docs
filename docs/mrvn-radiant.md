@@ -216,7 +216,7 @@ A list of Info Entities:
 
 ### Logical Entities
 
-Logic entities influence game logic, as their name implies. They are not physical objects and they are not considered Point Entities because their position in the map does not affect their functionality.
+Logical entities influence game logic, as their name implies. They are not physical objects and they are not considered Point Entities because their position in the map does not affect their functionality.
 
 A list of Logic Entities:
 
