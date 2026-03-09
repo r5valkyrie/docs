@@ -64,7 +64,7 @@ Since an entity is an abstraction representing an interactable object, there can
 
 ## Model Entities
 
-These entities have a 3D model attached to them.
+These entities have a 3D model attached to them. There are multiple sub-categories of Model Entities:
 
 ### Prop Entities
 
