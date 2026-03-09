@@ -144,6 +144,8 @@ NPC / AI Entities
 
 ## Point Entities
 
+These entities are distinguished by the fact that they usually do not have an associated 3D model, their position in the world influences their functionality and they are NOT Brush Entities.
+
 ### Info Entities
 
 These entities provide additional information to the engine, such as where the player should spawn in a level, i.e.: info_player_start. All of these entities are Point Entities.
