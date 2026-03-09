@@ -1,13 +1,12 @@
 # MRVN-Radiant Guide
------------------------------
+=============================
 # Table of Contents
 ## Introduction
 ## Chapter 1: Entities
 ## Chapter 2: Brushes
 ## Chapter 3: Materials
 ## Chapter 4: Decals
------------------------------
-
+=============================
 
 # Introduction
 
@@ -122,3 +121,5 @@ Materials represent packages of data that affect the look and often the sounds a
 ## What Are Decals?
 
 ## How To Apply Decals To World Geometry
+
+
