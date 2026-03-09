@@ -1,12 +1,12 @@
 # MRVN-Radiant Guide
-=============================
+=======================================
 # Table of Contents
 ## Introduction
 ## Chapter 1: Entities
 ## Chapter 2: Brushes
 ## Chapter 3: Materials
 ## Chapter 4: Decals
-=============================
+=======================================
 
 # Introduction
 
