@@ -106,12 +106,77 @@ These entities provide additional information to the engine, such as where the p
 
 A list of Info Entities:
 ```
+- info_null
 - info_player_start
+- info_player_teamspawn
+- info_player_deathmatch
 - info_target
+- info_target_clientside
+- info_particle_system
+- info_hardpoint
+- info_hardpoint_frontier
+- info_landmark
+- info_gravity
+- info_spawnpoint_marvin_barrel
+- info_spawnpoint_control_panel
+- info_spawnpoint_start
+- info_spawnpoint
+- info_spawnpoint_droppod_start
+- info_spawnpoint_droppod
+- info_spawnpoint_human_classname
+- info_spawnpoint_human_start
+- info_spawnpoint_human
+- info_spawnpoint_turret
+- info_spawnpoint_mega_turret
+- info_spawnpoint_titan_classname
+- info_spawnpoint_titan_start
+- info_spawnpoint_titan
+- info_spawnpoint_dropship_start
+- info_spawnpoint_dropship
+- info_spawnpoint_spectre
+- info_spawnpoint_marvin
+- info_spawnpoint_prowler
+- info_vehicle_groundspawn
+- info_replacement_titan_spawn
+- info_spawnpoint_flag
+- info_teleport_destination
+
+// Likely additional data for AI behavior
+- info_node 
+- info_node_hint 
+- info_node_air
+- info_node_air_hint 
+- info_node_link 
+- info_node_link_controller 
+- info_radial_link_controller 
+- info_node_sniper 
+- info_node_climb 
+- info_node_safe_hint 
+- info_frontline
+- info_node_cover
+- info_node_cover_left
+- info_node_cover_right
+- info_node_cover_stand
+- info_node_cover_crouch
+- info_node_cover_vantage
+///////////////////////////////////////////
+
+- info_intermission
+- info_camera_link
+- info_lightprobe
+- info_hint
+- info_placement_helper
 ```
 ### Logic Entities
 
-Logic entities influence game logic, as their name implies.
+Logic entities influence game logic, as their name implies. They are not physical objects.
+
+A list of Logic Entities:
+
+```
+- logic_choerographed_scene
+- logic_proximity
+```
 
 ### Environment Entities
 
@@ -139,9 +204,40 @@ A list of Environment Entities:
 - env_soundscape_proxy
 - env_soundscape_triggerable
 ```
-### Sound Entities
 
 ### NPC Entities
+
+NPC / AI Entities
+
+```
+- npc_saito
+- npc_sarah
+- npc_stalker
+- npc_super_spectre // Reaper
+- npc_support
+- npc_soldier
+- npc_spectre
+- npc_spider
+- npc_prowler
+- npc_pilot
+- npc_pilot_elite
+- npc_marvin
+- npc_operator
+- npc_flyer
+- npc_frag_drone // Explosive Tick
+- npc_goliath
+- npc_gunship
+- npc_gunship_scripted
+- npc_drone
+- npc_drone_cloak
+- npc_drone_worker
+- npc_dropship
+- npc_dummie
+- npc_bish
+- npc_turret_mega
+- npc_turret_sentry
+- npc_titan
+```
 
 # Chapter 2: Brushes
 
