@@ -12,6 +12,10 @@
 
 # Introduction
 
+The R5V Fork of MRVN-Radiant is a fork of NetRadiant-custom, which is a fork of NetRadiant, which is a fork of GtkRadiant 1.5. NetRadiant was conceived as free, open-source software for map creation for Quake / idTech-based games. MRVN-Radiant built on that, with map creation capabilities for Titanfall Online, Titanfall 2 and Apex Legends. The R5V Fork of MRVN-Radiant 
+
+Since the roots of MRVN-Radiant tie back to Quake and Apex Legends uses a heavily modified version of the Portal 2 Source Engine (whose roots can also be traced to the idTech Engine) engine branch, which stems from IdTech, there are many similarities between MRVN-Radiant and Valve's Source Engine map editor, Hammer (also known as WorldCraft / The Forge).
+
 Your toolkit:
 
 - Transform Gizmos: standard rotate, scale, resize, translate, transform
