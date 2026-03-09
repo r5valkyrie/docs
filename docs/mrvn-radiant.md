@@ -6,6 +6,8 @@
 ## Chapter 2: Brushes
 ## Chapter 3: Materials
 ## Chapter 4: Decals
+## Chapter 5: The Brush Tool
+## Chapter 6: The Terrain Tool
 =======================================
 
 # Introduction
@@ -54,18 +56,24 @@ Many entities are inherited from Valve's Source Engine, as ReSource (Respawn Sou
 
 Entities are separated into INTERNAL Entities and NON-INTERNAL Entities. INTERNAL Entities are entities which are processed by VBSP, then deleted or merged into another entity. These entities do NOT exist at map run-time, therefore they do NOT count towards the Entity limit. Non-internal entities exist at map run-time and are standalone.
 
+Some entitities are known as "Point Entities" - these entities are distinguished by the fact that they usually do not have an associated 3D model, their position in the world affects / is relevant to their functionality and they are NOT Brush Entities.
+
 ## What Types of Entities Are There?
 
 Since an entity is an abstraction representing an interactable object, there can be many types of entities.
+
+## Model Entities
+
+These entities have a 3D model attached to them.
 
 ### Prop Entities
 
 These entities represent objects that exist on the map. They usually have a model attached to them.
 Among props, there are, in large (non-exhaustive list), four main categories:
-- prop_static: objects used to decorate the level's environment; they're deemed "static" because the player is not meant to perform any specific actions on them, unlike prop_dynamic and prop_script; once the .map file is compiled into a .BSP (binary space partition) file, these props are no longer considered standalone entities are transferred from the map's entity lump to a special chunk, hence they cannot be controlled from squirrel_re scripts! Mapmakers coming over from other Source games may be wondering if prop_detail is used in Apex Legends and the answer is no.
+- prop_static: objects used to decorate the level's environment; they're deemed "static" because the player is not meant to perform any specific actions on them, unlike prop_dynamic and prop_script; once the .map file is compiled into a .BSP (binary space partition) file, these props are no longer considered standalone entities and are merged into the BSP inside an entity lump, hence they cannot be controlled from squirrel_re scripts! Mapmakers coming over from other Source games may be wondering if prop_detail is used in Apex Legends and the answer is no.
 - prop_dynamic: objects that the players / NPCs are meant to interact with; there is an immense variety to what these can represent, ranging from respawn beacons to supply bins to dome shields; these can be spawned from squirrel_re scripts to populate the world
-- prop_script: props that have scripts attached to them; these can be spawned from squirrel_re scripts to populate the world
-- prop_physics: props with interactive simulated physics, such as bouncing balls, loot rollers, dropped loot items (in certain conditions); these can be spawned from squirrel_re scripts to populate the world
+- prop_script: props that have scripts attached to them; these can be spawned from squirrel_re scripts to populate the world - these props are in the map's .ent file
+- prop_physics: props with interactive simulated physics, such as bouncing balls, loot rollers, dropped loot items (in certain conditions); these can be spawned from squirrel_re scripts to populate the world - these props are in the map's .ent file
 
 The complete list of Prop Entities used by Apex Legends is this:
 ```
@@ -100,17 +108,53 @@ This entity subclass (CWeaponX in the engine) manages weapons and weapon mechani
 
 The player entity (CPlayer) controls players.
 
+### NPC Entities
+
+NPC / AI Entities
+
+```
+- npc_saito
+- npc_sarah
+- npc_stalker
+- npc_super_spectre // Reaper
+- npc_support
+- npc_soldier
+- npc_spectre
+- npc_spider
+- npc_prowler
+- npc_pilot
+- npc_pilot_elite
+- npc_marvin
+- npc_operator
+- npc_flyer
+- npc_frag_drone // Explosive Tick
+- npc_goliath
+- npc_gunship
+- npc_gunship_scripted
+- npc_drone
+- npc_drone_cloak
+- npc_drone_worker
+- npc_dropship
+- npc_dummie
+- npc_bish
+- npc_turret_mega
+- npc_turret_sentry
+- npc_titan
+```
+
+## Point Entities
+
 ### Info Entities
 
-These entities provide additional information to the engine, such as where the player should spawn in a level, i.e.: info_player_start
+These entities provide additional information to the engine, such as where the player should spawn in a level, i.e.: info_player_start. All of these entities are Point Entities.
 
 A list of Info Entities:
 ```
 - info_null
-- info_player_start
+- info_player_start // Point entity
 - info_player_teamspawn
 - info_player_deathmatch
-- info_target
+- info_target // Point entity
 - info_target_clientside
 - info_particle_system
 - info_hardpoint
@@ -167,9 +211,12 @@ A list of Info Entities:
 - info_hint
 - info_placement_helper
 ```
-### Logic Entities
 
-Logic entities influence game logic, as their name implies. They are not physical objects.
+## Other Types of Entities
+
+### Logical Entities
+
+Logic entities influence game logic, as their name implies. They are not physical objects and they are not considered Point Entities because their position in the map does not affect their functionality.
 
 A list of Logic Entities:
 
@@ -180,7 +227,7 @@ A list of Logic Entities:
 
 ### Environment Entities
 
-These are entities related to the world environment.
+These are entities related to the world environment. Some of these, like env_fog_controller are considered Logical Entities but have been grouped here for convenience.
 
 A list of Environment Entities:
 ```
@@ -205,41 +252,28 @@ A list of Environment Entities:
 - env_soundscape_triggerable
 ```
 
-### NPC Entities
 
-NPC / AI Entities
-
-```
-- npc_saito
-- npc_sarah
-- npc_stalker
-- npc_super_spectre // Reaper
-- npc_support
-- npc_soldier
-- npc_spectre
-- npc_spider
-- npc_prowler
-- npc_pilot
-- npc_pilot_elite
-- npc_marvin
-- npc_operator
-- npc_flyer
-- npc_frag_drone // Explosive Tick
-- npc_goliath
-- npc_gunship
-- npc_gunship_scripted
-- npc_drone
-- npc_drone_cloak
-- npc_drone_worker
-- npc_dropship
-- npc_dummie
-- npc_bish
-- npc_turret_mega
-- npc_turret_sentry
-- npc_titan
-```
 
 # Chapter 2: Brushes
+
+## What Are Brushes?
+
+From the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Brush): 
+
+```
+Brushes are convex 3D shapes, used by map makers / level designers to define the shape of the world and to create brush entities. 
+
+When a map is compiled VBSP converts brush faces that touch a visleaf to groups of polygons. The resulting 'brush models' are stored within the BSP file and can be claimed by entities (e.g. the world, or your brush entity). The original brushes are retained in the BSP, though the benefits of this are not clear.
+
+In comparison to models, brushes are:
+
+- Unique every time
+- Low-detail and cheap
+- Lit with pre-computed lightmaps
+- Rigid (cannot deform)
+```
+
+## Brush Entity Types
 
 # Chapter 3: Materials
 
@@ -255,4 +289,13 @@ Materials represent packages of data that affect the look and often the sounds a
 
 ## How To Apply Decals To World Geometry
 
+
+# Chapter 5: The Brush Tool
+
+# Chapter 6: The Terrain Tool
+
+
+The Terrain Tool uses Source Engine displacements to create terrain meshes.
+
+Displacements are a complex topic. It is recommended to read [this article from the Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Displacement) for more information on this subject.
 
