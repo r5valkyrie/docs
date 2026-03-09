@@ -64,7 +64,7 @@ Among props, there are, in large (non-exhaustive list), four main categories:
 - prop_static: objects used to decorate the level's environment; they're deemed "static" because the player is not meant to perform any specific actions on them, unlike prop_dynamic and prop_script; once the .map file is compiled into a .BSP (binary space partition) file, these props are no longer considered standalone entities are transferred from the map's entity lump to a special chunk, hence they cannot be controlled from squirrel_re scripts! Mapmakers coming over from other Source games may be wondering if prop_detail is used in Apex Legends and the answer is no.
 - prop_dynamic: objects that the players / NPCs are meant to interact with; there is an immense variety to what these can represent, ranging from respawn beacons to supply bins to dome shields; these can be spawned from squirrel_re scripts to populate the world
 - prop_script: props that have scripts attached to them; these can be spawned from squirrel_re scripts to populate the world
-- prop_physics: props with interactive simulated physics, such as bouncing balls, loot rollers, deathboxes (in certain conditions), dropped loot items (in certain conditions); these can be spawned from squirrel_re scripts to populate the world
+- prop_physics: props with interactive simulated physics, such as bouncing balls, loot rollers, dropped loot items (in certain conditions); these can be spawned from squirrel_re scripts to populate the world
 
 The complete list of Prop Entities used by Apex Legends is this:
 
