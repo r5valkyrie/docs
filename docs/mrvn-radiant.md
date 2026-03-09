@@ -259,7 +259,6 @@ A list of Environment Entities:
 ```
 
 
-
 # Chapter 2: Brushes
 
 ## What Are Brushes?
@@ -280,6 +279,82 @@ In comparison to models, brushes are:
 
 
 ## Brush Entity Types
+
+### Trigger Brush Entities
+
+These brushes are invisible in normal gameplay and fire signals / outputs or have a certain effect on entities when other entities touch it.
+
+A list of Trigger brushes:
+
+```
+- trigger_activate
+- trigger_cylinder
+- trigger_cylinder_heavy
+- vortex_sphere // there is no trigger_sphere, so this is often used as a substitute for that (with a custom script setup!)
+- trigger_proximity
+
+- trigger_point_gravity
+- trigger_gravity
+
+- trigger_push
+- trigger_updraft
+- trigger_slip
+- trigger_auto_crouch
+
+- trigger_proximity
+- trigger_brush
+- trigger_capture_point // capture location
+- trigger_hardpoint // hardpoint location
+- trigger_door
+- trigger_indoor_area
+- trigger_location // location-specific trigger
+- trigger_location_sp // single-player location specific trigger
+- trigger_mp_spawn_zone // defines a multiplayer spawn area
+- trigger_startpoint
+- trigger_spawn
+- trigger_out_of_bounds // defines an area as out-of-bounds (OOB)
+- trigger_warp_gate // phase-drivers / teleporters
+- trigger_teleport
+- trigger_pve_zone // PvE areas like the areas surrounding Prowler Dens, Spider Nests, etc.
+- trigger_no_grapple // makes an area ungrapple-able
+- trigger_no_zipline // makes an area unzipline-able
+- trigger_wind
+
+- trigger_player_flashlight_on
+- trigger_player_flashlight_off
+- trigger_player_flashlight_zone
+
+- trigger_playermovement
+- trigger_look
+
+- trigger_impact
+- trigger_ignoresolids
+
+- trigger_hurt
+- trigger_death_fall
+
+- trigger_fastball
+
+- trigger_flag_clear
+- trigger_flag_set
+
+- trigger_soundscape
+
+- trigger_once
+- trigger_multiple
+- trigger_multiple_clientside
+
+- trigger_skydive
+- trigger_weaponless
+```
+
+### Clip Brush Entities (Clipbrushes)
+
+These brushes are invisible in normal gameplay and influence which entities can pass or cannot pass through them. 
+
+In common use,Player Clip Brushes, which define areas that the player cannot access, got shortened to "Clipbrushes", hence the name.
+
+Clipbrushes are also used to smoothen map navigation, such as overlapping smooth ramps over stair steps.
 
 # Chapter 3: Materials
 
