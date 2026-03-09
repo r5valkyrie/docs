@@ -39,6 +39,7 @@ Shaders: [engine path]/platform/shaders
 
 
 # Chapter 1: Entities
+
 ## What Is An Entity? 
 
 From the R5V Documentation article about Entities:
@@ -67,7 +68,7 @@ Among props, there are, in large (non-exhaustive list), four main categories:
 - prop_physics: props with interactive simulated physics, such as bouncing balls, loot rollers, dropped loot items (in certain conditions); these can be spawned from squirrel_re scripts to populate the world
 
 The complete list of Prop Entities used by Apex Legends is this:
-
+```
 - prop_combine_ball 
 - prop_control_panel 
 - prop_data 
@@ -90,18 +91,54 @@ The complete list of Prop Entities used by Apex Legends is this:
 - prop_survival 
 - prop_survivalSkipsAnimData 
 - prop_weapon_rack
-
+```
 ### The Weapon Entity
+
+This entity subclass (CWeaponX in the engine) manages weapons and weapon mechanics.
 
 ### The Player Entity
 
-The player entity (CPlayer) controls the player.
+The player entity (CPlayer) controls players.
+
 ### Info Entities
 
+These entities provide additional information to the engine, such as where the player should spawn in a level, i.e.: info_player_start
+
+A list of Info Entities:
+```
+- info_player_start
+- info_target
+```
 ### Logic Entities
+
+Logic entities influence game logic, as their name implies.
 
 ### Environment Entities
 
+These are entities related to the world environment.
+
+A list of Environment Entities:
+```
+- env_cubemap
+- env_fog_controller
+- env_cascade_light
+- env_exposure
+- env_sprite_clientside // Client-side only sprite
+- env_sprite
+- env_sprite_oriented // Likely for billboards that orient themselves in the direction the player is facing
+- env_beam
+- env_laser
+- env_wind
+- env_entity_dissolver // dissolves entities on contact 
+- env_shake
+- env_explosion // Server only entity: Environment explosion. Deals radial linear falloff damage.
+- env_physexplosion
+- env_physimpact
+- env_dropzone
+- env_soundscape // Soundscape for ambient sounds
+- env_soundscape_proxy
+- env_soundscape_triggerable
+```
 ### Sound Entities
 
 ### NPC Entities
