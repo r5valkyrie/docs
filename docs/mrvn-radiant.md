@@ -51,7 +51,7 @@ Since the roots of MRVN-Radiant tie back to Quake and Apex Legends uses a heavil
 
 Your toolkit in MRVN-Radiant comprises:
 
-- Transform Gizmos: standard rotate, scale, resize, translate, transform
+- Gizmos: standard rotate, scale, resize, translate, transform
 
 - Brush Tool: the go-to tool for adding map geometry and brushes with special roles (i.e.: clipbrushes, etc.)
 
