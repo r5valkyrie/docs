@@ -52,7 +52,7 @@ For additional useful information, it is recommended to take a look at the View 
 
 CTRL + Z serves as Undo while CTRL + Y serves as Do.  
 
-The toolbar can be dragged from the dot cluster symbol to be expanded and / or docked vertically. This will reveal many additional functionalities.  
+The toolbar can be dragged from the dot cluster symbol to be expanded and / or docked verticallym, to the side. This will reveal many additional functionalities.  
 
 
 # Chapter 1: Entities
