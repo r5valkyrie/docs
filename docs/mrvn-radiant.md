@@ -466,7 +466,7 @@ The Gizmos currently available are:
 
 Tip: Try holding the SHIFT key with everything to see what it does! In many cases it acts as a modifier for different behaviors  
 
-The "Translate" tool (default keybind: W) will be your best friend. It can double as a resize tool, when used in tandem with Vertices (V) mode, Edges (E) mode or Faces (F) mode.  
+The "Translate" tool (default keybind: W) will be your best friend. It can double as a resize tool, when used in tandem with Vertices (V) mode, Edges (E) mode or Faces (F) mode. Other than using the arrows, it is also possible to drag the green dot handles.
 
 The Rotate tool (default keybind: R) snaps to certain increments when holding SHIFT AFTER pressing a rotation circle (it must be after; TODO: fix this). This is very useful for fast 45 - 90 - 180 degree rotations.  
 
