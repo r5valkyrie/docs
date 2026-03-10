@@ -139,7 +139,7 @@ NOTE: As a reminder from the first chapter, you can right click in the 2D Viewpo
 
 Since an entity is an abstraction representing an interactable object, there can be many types of entities.
 
-IMPORTANT NOTE: ONLY A FEW OF THE LISTED ENTITIES HAVE BEEN IMPLEMENTED IN MRVN-RADIANT. SOME ENTITIES ARE LISTED IN MRVN-RADIANT'S ENTITY DROPDOWN BUT ARE NOT FULLY FUNCTIONAL OR FUNCTIONAL AT ALL. MRVN-RADIANT IS AN ONGOING, OPEN-SOURCE PROJECT DEVELOPED AND MAINTAINED BY VOLUNTEERS.
+IMPORTANT NOTE: Only A FEW of the listed entities have been IMPLEMENTED in MRVN-Radiant. Some entities are listed in MRVN-Radiant's Entity dropdown, but are NOT fully functional or functional AT ALL. MRVN-Radiant is an ongoing, open-source project developed and maintained by volunteers. 
 
 ## Model Entities
 
