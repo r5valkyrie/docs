@@ -428,4 +428,5 @@ In order to be able to actually load the map in R5V, there are three mandatory a
 To create a basic map:
 - Insert a brush that will act as a ground surface, so that you do not fall down into the Void.         
 - Insert an info_player_start Entity. This Point Entity dictates the starting spawn location of the Player on the map.        
-- It is now possible to Build [the map] and Launch the Game by pressing the green "Play" button in the Toolbar (Build comes from building / compiling, because the .map must be compiled into a BSP / Binary Space Partitioning file to be used by the game).       
+- It is now possible to Build [the map] and Launch the Game by pressing the green "Play" button in the Toolbar (Build comes from building / compiling, because the .map must be compiled into a BSP / Binary Space Partitioning file to be used by the game).
+- After you are done testing, it is possible to exit the game by typing "quit" in the Developer Console (~).       
