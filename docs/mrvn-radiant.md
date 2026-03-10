@@ -9,9 +9,8 @@
 ## Chapter 4: Materials
 ## Chapter 5: Decals
 ## Chapter 6: Gizmos
-## Chapter 7: The Brush Tool
-## Chapter 8: The Terrain Tool
-## Chapter 9: Getting Started On Your First Map
+## Chapter 7 The Terrain Tool
+## Chapter 8: Getting Started On Your First Map
 =======================================================================
 
 # How To Compile MRVN-Radiant (Windows)
@@ -474,15 +473,13 @@ Holding SHIFT and right click dragging in the 3D viewport creates a marquee sele
 
 Holding SHIFT and clicking multiple Entities creates a multi-selection.  
 
-# Chapter 7: The Brush Tool
-
-# Chapter 8: The Terrain Tool
+# Chapter 7: The Terrain Tool
 
 The Terrain Tool uses Source Engine displacements to create terrain meshes.
 
 Displacements are a complex topic. It is recommended to read [this article from the Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Displacement) for more information on this subject.
 
-# Chapter 9: Getting Started On Your First Map
+# Chapter 8: Getting Started On Your First Map
 
 In order to be able to playtest your map and iterate on its design, you must first name and save your map.   
 
