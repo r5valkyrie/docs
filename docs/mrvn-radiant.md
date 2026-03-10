@@ -1,5 +1,5 @@
 # MRVN-Radiant Guide
-====================================================================
+========================================================================
 # Table of Contents
 ## Introduction
 ## Chapter 1: The Viewports
@@ -11,7 +11,7 @@
 ## Chapter 7: The Brush Tool
 ## Chapter 8: The Terrain Tool
 ## Chapter 9: Getting Started On Your First Map
-====================================================================
+========================================================================
 
 # Introduction
 
