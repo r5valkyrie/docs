@@ -466,6 +466,10 @@ Holding SHIFT and right click dragging in the 3D viewport creates a marquee sele
 
 Holding SHIFT and clicking multiple Entities creates a multi-selection.  
 
+In the 3D Viewport, the Resize tool (default keybind: Q) currently requires dragging the red dotted lines to resize. 
+
+Plane helper lines are useful for aligning map geometry as parallel / perpendicular, etc.  
+
 # Chapter 5: Materials
 
 ## What Are Materials?
