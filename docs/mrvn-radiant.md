@@ -285,7 +285,7 @@ From the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Brush):
 
 Brushes are convex 3D shapes, used by map makers / level designers to define the shape of the world and to create brush entities.   
 
-When a map is compiled VBSP converts brush faces that touch a [visleaf](https://developer.valvesoftware.com/wiki/Visleaf) to groups of polygons. The resulting 'brush models' are stored within the BSP file and can be claimed by entities (e.g. the world, or your brush entity). The original brushes are retained in the BSP, though the benefits of this are not clear.  
+When a map is compiled VBSP converts brush faces that touch a [visleaf](https://developer.valvesoftware.com/wiki/Visleaf) to groups of polygons. The resulting 'brush models' are stored within the BSP file and can be claimed by entities (e.g. the world, or your brush entity). The original brushes are retained in the BSP.
 
 In comparison to models, brushes are:  
 
