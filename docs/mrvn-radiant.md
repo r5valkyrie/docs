@@ -1,5 +1,5 @@
 # MRVN-Radiant Guide
-===========================================
+==========================================================
 # Table of Contents
 ## Introduction
 ## Chapter 1: Entities
@@ -10,7 +10,7 @@
 ## Chapter 6: The Brush Tool
 ## Chapter 7: The Terrain Tool
 ## Chapter 8: Getting Started On Your First Map
-===========================================
+==========================================================
 
 # Introduction
 
