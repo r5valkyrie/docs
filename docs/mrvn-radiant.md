@@ -35,8 +35,8 @@ Your toolkit:
 - Entity List: lists all entities in the map
 
 
-Currently, the asset resource paths for MRVN-Radiant are the following:
-
+Currently, the asset resource paths for MRVN-Radiant are the following:  
+```
 Engine path = the path to the directory which contains r5apex.exe
 
 Models: [engine path]/platform/models
@@ -44,6 +44,15 @@ Models: [engine path]/platform/models
 Textures: [engine path]/platform/textures
 
 Shaders: [engine path]/platform/shaders
+```
+
+In order to familiarize yourself with the keybinds available at your disposal, go to View -> Shortcuts. Many, but not all, action keybinds can be remapped.  
+
+For additional useful information, it is recommended to take a look at the View -> Show dropdown.  
+
+CTRL + Z serves as Undo while CTRL + Y serves as Do.  
+
+The toolbar can be dragged from the dot cluster symbol to be expanded and / or docked vertically. This will reveal many additional functionalities.  
 
 
 # Chapter 1: Entities
@@ -374,6 +383,8 @@ Materials represent packages of data that affect the look and often the sounds a
 
 ## How To Apply Materials To World Geometry
 
+In order to apply materials to world geometry, select the geo brush, browse inside your Texture 
+
 # Chapter 4:  Decals
 
 ## What Are Decals?
@@ -409,7 +420,6 @@ Holding SHIFT and clicking multiple Entities creates a multi-selection.
 # Chapter 6: The Brush Tool
 
 # Chapter 7: The Terrain Tool
-
 
 The Terrain Tool uses Source Engine displacements to create terrain meshes.
 
