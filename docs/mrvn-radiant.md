@@ -299,7 +299,7 @@ In comparison to models, brushes are:
 
 ### Trigger Brush Entities
 
-These brushes are invisible in normal gameplay and fire signals / outputs or have a certain effect on entities when other entities touch it.
+These brushes are invisible in normal gameplay and fire signals / outputs or have a certain on other entities that touch them.
 
 A list of Trigger brushes:
 
