@@ -2,14 +2,15 @@
 ====================================================================
 # Table of Contents
 ## Introduction
-## Chapter 1: Entities
-## Chapter 2: Brushes
-## Chapter 3: Materials
-## Chapter 4: Decals
-## Chapter 5: Gizmos
-## Chapter 6: The Brush Tool
-## Chapter 7: The Terrain Tool
-## Chapter 8: Getting Started On Your First Map
+## Chapter 1: The Viewports
+## Chapter 2: Entities
+## Chapter 3: Brushes
+## Chapter 4: Materials
+## Chapter 5: Decals
+## Chapter 6: Gizmos
+## Chapter 7: The Brush Tool
+## Chapter 8: The Terrain Tool
+## Chapter 9: Getting Started On Your First Map
 ====================================================================
 
 # Introduction
@@ -57,6 +58,41 @@ The toolbar can be dragged from the dot cluster symbol to be expanded and / or d
 For more settings, go to Edit -> Preferences.    
 
 R5V can be launched directly from MRVN-Radiant; the launch settings are in Edit -> Preferences -> Settings category -> Launch.  
+
+# Chapter 1: Viewports
+
+For a good overview of the tools available in MRVN-Radiant, it is recommended to select the second layout from Edit -> Preferences -> Interface category -> Layout.  
+
+This will show the following:  
+```
+- The 2D Viewport
+- The 3D Viewport
+- The Texture Inspector (bottom right)
+- Logs (bottom left)
+```
+
+The two axes displayed on the 2D Viewport are shown in the top left corner of the 2D Viewport. These axes can be quickly changed by pressing the Change Views button (Default: CTRL+ TAB).    
+
+Basic navigation in the 2D Viewport work in the following ways:  
+- Right click drag will pan the view around  
+- Scroll down will Zoom Out  
+- Scroll up will Zoom In AT THE CURSOR POSITION  
+- Left click dragging will insert a brush with the dimensions of the selection  
+- Left clicking outside the newly inserted brush will de-select the brush  
+- Left clicking the brush will select it  
+- While the brush is selected, the area it covers can be dragged to reposition the brush in the world  
+- Dragging the edges of the brush will NOT resize the brush  
+- Resizing the brush can be done by activating the Resize tool (Default: Q) and dragging the red lines  
+
+
+Basic navigation in the 3D Viewport work in the following ways:  
+- Right click unlocks the camera for free navigation in 3 dimensions (WASD + mouse movement for camera angle)  
+- Right clicking again will lock the camera  
+- Right click drag pans the camera around  
+- Scroll Up and Scroll Down function as Zoom In / Zoom Out and can be combined with free camera navigation  
+- Left click drag inserts a brush, by default  
+- Holding left click drag will allow resizing the brush in one plane  
+- Holding SHIFT and right click drag create a marquee selection (rectangular selection)  
 
 
 # Chapter 1: Entities
