@@ -129,7 +129,7 @@ All models NECESSARILY belong to an instance of an entity type. Models cannot be
 
 Many entities are inherited from Valve's Source Engine, as ReSource (Respawn Source Engine) is a fork of the Portal 2 Branch of the Source Engine. An example would be "info_player_start".
 
-Entities are separated into INTERNAL Entities and NON-INTERNAL Entities. INTERNAL Entities are entities which are processed by VBSP, then deleted or merged into another entity. These entities do NOT exist at map run-time, therefore they do NOT count towards the Entity limit. Non-internal entities exist at map run-time and are standalone.
+Entities are separated into INTERNAL Entities and NON-INTERNAL Entities. INTERNAL Entities are entities which are processed by VBSP (Valve BSP Tool, read more information [here](https://developer.valvesoftware.com/wiki/VBSP)) or, in MRVN-Radiant's case, ReMap, then deleted or merged into another entity. These entities do NOT exist at map run-time, therefore they do NOT count towards the Entity limit. Non-internal entities exist at map run-time and are standalone.
 
 Some entitities are known as "Point Entities" - these entities are distinguished by the fact that they usually do not have an associated 3D model, their position in the world affects / is relevant to their functionality and they are NOT Brush Entities.
 
