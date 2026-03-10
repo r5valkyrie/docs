@@ -6,8 +6,10 @@
 ## Chapter 2: Brushes
 ## Chapter 3: Materials
 ## Chapter 4: Decals
-## Chapter 5: The Brush Tool
-## Chapter 6: The Terrain Tool
+## Chapter 5: Gizmos
+## Chapter 6: The Brush Tool
+## Chapter 7: The Terrain Tool
+## Chapter 8: Getting Started On Your First Map
 ===========================================
 
 # Introduction
@@ -372,12 +374,50 @@ Materials represent packages of data that affect the look and often the sounds a
 ## How To Apply Decals To World Geometry
 
 
-# Chapter 5: The Brush Tool
+# Chapter 5: Gizmos
 
-# Chapter 6: The Terrain Tool
+Gizmos are used to control the position, orientation, rotation and size of entities inside MRVN-Radiant.  
+
+The Gizmos currently available are:  
+```
+- Translate (Default: W)
+- Rotate (Default: R)
+- Scale
+- Transform (Default: Q)
+- Resize (Default: ...also Q; TODO: FIX THIS)
+- Clipper (Default: X)
+- UV Tool (Default: G)
+```
+
+Tip: Try holding the SHIFT key with everything to see what it does! In many cases it acts as a modifier for different behaviors  
+
+The "Translate" tool (default keybind: W) will be your best friend. It can double as a resize tool, when used in tandem with Vertices (V) mode, Edges (E) mode or Faces (F) mode.  
+
+The Rotate tool (default keybind: R) snaps to certain increments when holding SHIFT AFTER pressing a rotation circle (it must be after; TODO: fix this). This is very useful for fast 45 - 90 - 180 degree rotations.  
+
+Holding SHIFT and right click dragging in the 3D viewport creates a marquee selection (rectangular selection).  
+
+Holding SHIFT and clicking multiple Entities creates a multi-selection.  
+
+# Chapter 6: The Brush Tool
+
+# Chapter 7: The Terrain Tool
 
 
 The Terrain Tool uses Source Engine displacements to create terrain meshes.
 
 Displacements are a complex topic. It is recommended to read [this article from the Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Displacement) for more information on this subject.
 
+# Chapter 8: Getting Started On Your First Map
+
+In order to be able to playtest your map and iterate on its design, you must first name and save your map.   
+
+In order to be able to actually load the map in R5V, there are three mandatory aspects that need to be addressed:  
+
+- The map's name MUST start with "mp_"; it is recommended that you name your map with the prefix "mp_rr_"  
+- The map MUST have an associated VPK archive, even if it's empty! If you only plan to host the map on a listen server, you only need an englishclient_mp_rr_MAPNAME.bsp.pak000_dir.vpk, with a client_mp_rr_MAPNAME.bsp.pak000_000.vpk; if the map is to be hosted on DEDICATED servers, it MUST have an associated Server VPK as well.  
+- The map MUST, for all intents and purposes, have an associated RPAK (.rpak, .starpak, opt.starpak) with the SAME NAME AS THE MAP, either in the main R5V Win64 paks directory or inside the Win64 paks directory of the mod it comes with; if the map is to be hosted on DEDICATED servers, it MUST have an associated RPAK in Win64_Server as well.  
+
+To create a basic map, insert a brush that will act as a ground surface, so that you do not fall down into the Void.     
+Next up, insert an info_player_start Entity. This Point Entity dictates the starting spawn location of the Player on the map.    
+Now it is possible to Build [the map, it must be compiled into a Binary Space Partitioning file] and Launch the Game by pressing the green "Play" button in the Toolbar.    
