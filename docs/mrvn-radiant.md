@@ -76,7 +76,7 @@ For more settings, go to Edit -> Preferences.
 
 R5V can be launched directly from MRVN-Radiant; the launch settings are in Edit -> Preferences -> Settings category -> Launch.  
 
-# Chapter 1: Viewports
+# Chapter 1: The Viewports
 
 For a good overview of the tools available in MRVN-Radiant, it is recommended to select the second layout from Edit -> Preferences -> Interface category -> Layout.  
 
@@ -112,7 +112,7 @@ Basic navigation in the 3D Viewport work in the following ways:
 - Holding SHIFT and right click drag create a marquee selection (rectangular selection)  
 
 
-# Chapter 1: Entities
+# Chapter 2: Entities
 
 ## What Is An Entity? 
 
@@ -333,7 +333,7 @@ A list of Environment Entities:
 - env_soundscape_triggerable
 ```
 
-# Chapter 2: Brushes
+# Chapter 3: Brushes
 
 ## What Are Brushes?
 
@@ -432,7 +432,7 @@ Clipbrushes are also used to smoothen map navigation, such as overlapping smooth
 
 Creature clipbrushes are also known as "Monsterclips", which is where former high-profile Respawn developer Jason McCord's name comes from.
 
-# Chapter 3: Materials
+# Chapter 4: Materials
 
 ## What Are Materials?
 
@@ -442,14 +442,14 @@ Materials represent packages of data that affect the look and often the sounds a
 
 In order to apply materials to world geometry, select the geo brush, browse inside your Texture Inspector for the Material / Texture you want to apply (open folders and sub-folders with double left click), select the geometry brush and then double-click the Material in the Texture Inspector window. Note: the previews only show albedo / diffuse maps but the materials include all other texture maps used.
 
-# Chapter 4: Decals
+# Chapter 5: Decals
 
 ## What Are Decals?
 
 ## How To Apply Decals To World Geometry
 
 
-# Chapter 5: Gizmos
+# Chapter 6: Gizmos
 
 Gizmos are used to control the position, orientation, rotation and size of entities inside MRVN-Radiant.  
 
@@ -474,15 +474,15 @@ Holding SHIFT and right click dragging in the 3D viewport creates a marquee sele
 
 Holding SHIFT and clicking multiple Entities creates a multi-selection.  
 
-# Chapter 6: The Brush Tool
+# Chapter 7: The Brush Tool
 
-# Chapter 7: The Terrain Tool
+# Chapter 8: The Terrain Tool
 
 The Terrain Tool uses Source Engine displacements to create terrain meshes.
 
 Displacements are a complex topic. It is recommended to read [this article from the Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Displacement) for more information on this subject.
 
-# Chapter 8: Getting Started On Your First Map
+# Chapter 9: Getting Started On Your First Map
 
 In order to be able to playtest your map and iterate on its design, you must first name and save your map.   
 
