@@ -19,6 +19,7 @@ Prerequisites:
 - Download the necessary dependencies at https://github.com/r5valkyrie/MRVN-WinDeps (latest release)
 - Make sure you have Visual Studio 2026 installed with the C++ development packages and MSVC
 
+Instructions:  
 1) Clone the R5V MRVN-Radiant Repo at https://github.com/r5valkyrie/MRVN-Radiant
 2) Extract windeps.7z in the root directory of MRVN-Radiant. Make sure the path to the dependencies is ROOT/windeps/ and not ROOT/windeps/windeps
 3) Extract install.7z (or install-debug.7z if you're running a Debug build) in ROOT/install. Make sure the path to those dependencies is ROOT/install and not ROOT/install/install.
