@@ -1,5 +1,5 @@
 # MRVN-Radiant Guide
-========================================================================
+=======================================================================
 # Table of Contents
 ## How To Compile MRVN-Radiant (Windows)
 ## Introduction
@@ -12,7 +12,7 @@
 ## Chapter 7: The Brush Tool
 ## Chapter 8: The Terrain Tool
 ## Chapter 9: Getting Started On Your First Map
-========================================================================
+=======================================================================
 
 # How To Compile MRVN-Radiant (Windows)
 
