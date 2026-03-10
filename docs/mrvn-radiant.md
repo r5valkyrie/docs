@@ -1,6 +1,7 @@
 # MRVN-Radiant Guide
 ========================================================================
 # Table of Contents
+## How To Compile MRVN-Radiant (Windows)
 ## Introduction
 ## Chapter 1: The Viewports
 ## Chapter 2: Entities
@@ -12,6 +13,22 @@
 ## Chapter 8: The Terrain Tool
 ## Chapter 9: Getting Started On Your First Map
 ========================================================================
+
+# How To Compile MRVN-Radiant (Windows)
+
+Prerequisites:
+- Download the necessary dependencies at https://github.com/r5valkyrie/MRVN-WinDeps (latest release)
+- Make sure you have Visual Studio 2026 installed with the C++ development packages and MSVC
+
+1) Clone the R5V MRVN-Radiant Repo at https://github.com/r5valkyrie/MRVN-Radiant
+2) Extract windeps.7z in the root directory of MRVN-Radiant. Make sure the path to the dependencies is ROOT/windeps/ and not ROOT/windeps/windeps
+3) Extract install.7z (or install-debug.7z if you're running a Debug build) in ROOT/install. Make sure the path to those dependencies is ROOT/install and not ROOT/install/install.
+4) Open Visual Studio 2026 and open the MRVN-Radiant Repo folder. Make sure you set the correct Build version (Release or Debug, for general use, select Release). VS 2026 will automatically generate the necessary CMake configuration (has to be done manually in older version of Visual Studio). 
+5) Go to Build -> Build All
+6) Wait for all the files to be compiled.
+7) Open your MRVN-Radiant Repo and go to the "install" folder. In there, you will find radiant.exe.
+8) Open radiant.exe and optionally pin it to your taskbar for easier access.
+9) You are now ready to use MRVN-Radiant!
 
 # Introduction
 
