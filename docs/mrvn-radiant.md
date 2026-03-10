@@ -361,6 +361,8 @@ In comparison to models, brushes are:
 
 ## Brush Entity Types
 
+Applying special Textures / Shaders to brushes will result in special functionality. This is handled in ReMap and brushes such as triggers will be functional after map compilation.
+
 ### Trigger Brush Entities
 
 These brushes are invisible in normal gameplay and fire signals / outputs or have a certain on other entities that touch them.
