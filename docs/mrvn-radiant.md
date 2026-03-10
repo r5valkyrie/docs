@@ -387,9 +387,9 @@ Materials represent packages of data that affect the look and often the sounds a
 
 ## How To Apply Materials To World Geometry
 
-In order to apply materials to world geometry, select the geo brush, browse inside your Texture 
+In order to apply materials to world geometry, select the geo brush, browse inside your Texture Inspector for the Material / Texture you want to apply (open folders and sub-folders with double left click), select the geometry brush and then double-click the Material in the Texture Inspector window. Note: the previews only show albedo / diffuse maps but the materials include all other texture maps used.
 
-# Chapter 4:  Decals
+# Chapter 4: Decals
 
 ## What Are Decals?
 
