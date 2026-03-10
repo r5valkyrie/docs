@@ -220,6 +220,13 @@ A list of Info Entities:
 - info_placement_helper
 ```
 
+### Camera Entities
+
+```
+point_viewcontrol // camera entity which controls the Player's view
+```
+
+
 ## Other Types of Entities
 
 ### Logical Entities
