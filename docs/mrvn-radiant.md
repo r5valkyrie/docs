@@ -8,9 +8,9 @@
 ## Chapter 3: Brushes
 ## Chapter 4: Gizmos 
 ## Chapter 5: Materials
-## Chapter 6: Decals
+## Chapter 6: Getting Started On Your First Map 
 ## Chapter 7 The Terrain Tool
-## Chapter 8: Getting Started On Your First Map
+## Chapter 8: Decals
 =======================================================================
 
 # How To Compile MRVN-Radiant (Windows)
@@ -467,20 +467,7 @@ Materials represent packages of data that affect the look and often the sounds a
 
 In order to apply materials to world geometry, select the geo brush, browse inside your Texture Inspector for the Material / Texture you want to apply (open folders and sub-folders with double left click), select the geometry brush and then double-click the Material in the Texture Inspector window. Note: the previews only show albedo / diffuse maps but the materials include all other texture maps used.
 
-# Chapter 6: Decals
-
-## What Are Decals?
-
-## How To Apply Decals To World Geometry
-
-
-# Chapter 7: The Terrain Tool
-
-The Terrain Tool uses Source Engine displacements to create terrain meshes.
-
-Displacements are a complex topic. It is recommended to read [this article from the Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Displacement) for more information on this subject.
-
-# Chapter 8: Getting Started On Your First Map
+# Chapter 6: Getting Started On Your First Map
 
 In order to be able to playtest your map and iterate on its design, you must first name and save your map.   
 
@@ -495,3 +482,15 @@ To create a basic map:
 - Insert an info_player_start Entity. This Point Entity dictates the starting spawn location of the Player on the map.        
 - It is now possible to Build [the map] and Launch the Game by pressing the green "Play" button in the Toolbar (Build comes from building / compiling, because the .map must be compiled into a BSP / Binary Space Partitioning file to be used by the game).
 - After you are done testing, it is possible to exit the game by typing "quit" in the Developer Console (~).       
+
+# Chapter 7: The Terrain Tool
+
+The Terrain Tool uses Source Engine displacements to create terrain meshes.
+
+Displacements are a complex topic. It is recommended to read [this article from the Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Displacement) for more information on this subject.
+
+# Chapter 8: Decals
+
+## What Are Decals?
+
+## How To Apply Decals To World Geometry
