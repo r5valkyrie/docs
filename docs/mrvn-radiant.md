@@ -6,9 +6,9 @@
 ## Chapter 1: The Viewports
 ## Chapter 2: Entities
 ## Chapter 3: Brushes
-## Chapter 4: Materials
-## Chapter 5: Decals
-## Chapter 6: Gizmos
+## Chapter 4: Gizmos 
+## Chapter 5: Materials
+## Chapter 6: Decals
 ## Chapter 7 The Terrain Tool
 ## Chapter 8: Getting Started On Your First Map
 =======================================================================
@@ -432,24 +432,7 @@ Clipbrushes are also used to smoothen map navigation, such as overlapping smooth
 
 Creature clipbrushes are also known as "Monsterclips", which is where former high-profile Respawn developer Jason McCord's name comes from.
 
-# Chapter 4: Materials
-
-## What Are Materials?
-
-Materials represent packages of data that affect the look and often the sounds and various other properties of an object. They reference various texture maps, shaders and material properties such as surface properties.
-
-## How To Apply Materials To World Geometry
-
-In order to apply materials to world geometry, select the geo brush, browse inside your Texture Inspector for the Material / Texture you want to apply (open folders and sub-folders with double left click), select the geometry brush and then double-click the Material in the Texture Inspector window. Note: the previews only show albedo / diffuse maps but the materials include all other texture maps used.
-
-# Chapter 5: Decals
-
-## What Are Decals?
-
-## How To Apply Decals To World Geometry
-
-
-# Chapter 6: Gizmos
+# Chapter 4: Gizmos
 
 Gizmos are used to control the position, orientation, rotation and size of entities inside MRVN-Radiant.  
 
@@ -473,6 +456,23 @@ The Rotate tool (default keybind: R) snaps to certain increments when holding SH
 Holding SHIFT and right click dragging in the 3D viewport creates a marquee selection (rectangular selection).  
 
 Holding SHIFT and clicking multiple Entities creates a multi-selection.  
+
+# Chapter 5: Materials
+
+## What Are Materials?
+
+Materials represent packages of data that affect the look and often the sounds and various other properties of an object. They reference various texture maps, shaders and material properties such as surface properties.
+
+## How To Apply Materials To World Geometry
+
+In order to apply materials to world geometry, select the geo brush, browse inside your Texture Inspector for the Material / Texture you want to apply (open folders and sub-folders with double left click), select the geometry brush and then double-click the Material in the Texture Inspector window. Note: the previews only show albedo / diffuse maps but the materials include all other texture maps used.
+
+# Chapter 6: Decals
+
+## What Are Decals?
+
+## How To Apply Decals To World Geometry
+
 
 # Chapter 7: The Terrain Tool
 
