@@ -18,7 +18,7 @@
 Prerequisites:
 - Download the necessary dependencies at https://github.com/r5valkyrie/MRVN-WinDeps (latest release)
 - Make sure you have Visual Studio 2026 installed with the C++ development packages and MSVC
-- MRVN-Radiant Resources (models, textures, shaders): will be uploaded to a GitHub repository in the future
+- Download the MRVN-Radiant Resources (models, textures, shaders): will be uploaded to a GitHub repository in the future
 
 Instructions:  
 1) Clone the R5V MRVN-Radiant Repo at https://github.com/r5valkyrie/MRVN-Radiant
