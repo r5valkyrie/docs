@@ -93,6 +93,7 @@ This will show the following:
 The two axes displayed on the 2D Viewport are shown in the top left corner of the 2D Viewport. These axes can be quickly changed by pressing the Change Views button (Default: CTRL+ TAB).    
 
 Basic navigation in the 2D Viewport work in the following ways:  
+- Right click to open the Entity dropdown, from which you can insert Entities    
 - Right click drag will pan the view around  
 - Scroll down will Zoom Out  
 - Scroll up will Zoom In AT THE CURSOR POSITION  
@@ -131,6 +132,8 @@ Many entities are inherited from Valve's Source Engine, as ReSource (Respawn Sou
 Entities are separated into INTERNAL Entities and NON-INTERNAL Entities. INTERNAL Entities are entities which are processed by VBSP, then deleted or merged into another entity. These entities do NOT exist at map run-time, therefore they do NOT count towards the Entity limit. Non-internal entities exist at map run-time and are standalone.
 
 Some entitities are known as "Point Entities" - these entities are distinguished by the fact that they usually do not have an associated 3D model, their position in the world affects / is relevant to their functionality and they are NOT Brush Entities.
+
+NOTE: As a reminder from the first chapter, you can right click in the 2D Viewport to open the Entity dropdown, from which you can insert Entities.
 
 ## What Types of Entities Are There?
 
