@@ -18,6 +18,7 @@
 Prerequisites:
 - Download the necessary dependencies at https://github.com/r5valkyrie/MRVN-WinDeps (latest release)
 - Make sure you have Visual Studio 2026 installed with the C++ development packages and MSVC
+- MRVN-Radiant Resources (models, textures, shaders): will be uploaded to a GitHub repository in the future
 
 Instructions:  
 1) Clone the R5V MRVN-Radiant Repo at https://github.com/r5valkyrie/MRVN-Radiant
@@ -26,9 +27,21 @@ Instructions:
 4) Open Visual Studio 2026 and open the MRVN-Radiant Repo folder. Make sure you set the correct Build version (Release or Debug; for general use, select Release). VS 2026 will automatically generate the necessary CMake configuration (has to be done manually in older version of Visual Studio). 
 5) Go to Build -> Build All
 6) Wait for all the files to be compiled.
-7) Open your MRVN-Radiant Repo and go to the "install" folder. In there, you will find radiant.exe.
-8) Open radiant.exe and optionally pin it to your taskbar for easier access.
-9) You are now ready to use MRVN-Radiant!
+7) Extract the MRVN-Radiant Resources and move them to the platform folder in your game's install directory. Relevant file paths for the resources can be found below.
+8) Open your MRVN-Radiant Repo and go to the "install" folder. In there, you will find radiant.exe.
+9) Open radiant.exe and optionally pin it to your taskbar for easier access.
+10) You are now ready to use MRVN-Radiant!
+
+Currently, the asset resource paths for MRVN-Radiant are the following:  
+```
+Engine path = the path to the directory which contains r5apex.exe
+
+Models: [engine path]/platform/models
+
+Textures: [engine path]/platform/textures
+
+Shaders: [engine path]/platform/shaders
+```
 
 # Introduction
 
@@ -52,17 +65,6 @@ Your toolkit:
 
 - Entity List: lists all entities in the map
 
-
-Currently, the asset resource paths for MRVN-Radiant are the following:  
-```
-Engine path = the path to the directory which contains r5apex.exe
-
-Models: [engine path]/platform/models
-
-Textures: [engine path]/platform/textures
-
-Shaders: [engine path]/platform/shaders
-```
 
 In order to familiarize yourself with the keybinds available at your disposal, go to View -> Shortcuts. Many, but not all, action keybinds can be remapped.  
 
