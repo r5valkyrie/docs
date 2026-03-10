@@ -52,7 +52,11 @@ For additional useful information, it is recommended to take a look at the View 
 
 CTRL + Z serves as Undo while CTRL + Y serves as Do.  
 
-The toolbar can be dragged from the dot cluster symbol to be expanded and / or docked verticallym, to the side. This will reveal many additional functionalities.  
+The toolbar can be dragged from the dot cluster symbol to be expanded and / or docked vertically, to the side. This will reveal many additional functionalities.  
+
+For more settings, go to Edit -> Preferences.    
+
+R5V can be launched directly from MRVN-Radiant; the launch settings are in Edit -> Preferences -> Settings category -> Launch.  
 
 
 # Chapter 1: Entities
