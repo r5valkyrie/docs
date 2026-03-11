@@ -114,7 +114,7 @@ Basic navigation in the 3D Viewport works in the following ways:
 - Scroll Up and Scroll Down function as Zoom In / Zoom Out and can be combined with free camera navigation  
 - Left click drag inserts a brush, by default  
 - Holding left click drag will allow resizing the brush in one plane  
-- Holding SHIFT and right click drag create a marquee selection (rectangular selection)  
+- Holding SHIFT and right click drag creates a marquee selection (rectangular selection)  
 
 
 # Chapter 2: Entities
