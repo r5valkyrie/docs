@@ -49,11 +49,13 @@ The R5V Fork of MRVN-Radiant is a fork of NetRadiant-custom, which is a fork of 
 
 Since the roots of MRVN-Radiant tie back to Quake and Apex Legends uses a heavily modified version of the Portal 2 Source Engine (whose roots can also be traced to the idTech Engine) engine branch, which stems from IdTech, there are many similarities between MRVN-Radiant and Valve's Source Engine map editor, Hammer (also known as WorldCraft / The Forge).
 
-Your toolkit in MRVN-Radiant comprises:
+Your toolkit in MRVN-Radiant is comprised of:
 
 - Gizmos: standard rotate, scale, resize, translate, transform
 
 - Brush Tool: the go-to tool for adding map geometry and brushes with special roles (i.e.: clipbrushes, etc.)
+
+- Curves: a way to insert bevels, approximate or exact cones, spheres, cylinders, one-sided brushes (known as patches), etc. 
 
 - Terrain Tool: a tool that uses Source Engine displacements to generate realistic terrain surfaces
 
