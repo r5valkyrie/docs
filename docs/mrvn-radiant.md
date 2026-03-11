@@ -506,4 +506,8 @@ Displacements are a complex topic. It is recommended to read [this article from 
 
 ## What Are Decals?
 
+Decals are materials projected onto surfaces, which serve to add detail to the 3D world or represent certain gameplay mechanics. More can be read about Decals on the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Decals).
+
 ## How To Apply Decals To World Geometry
+
+Decals can be applied in MRVN-Radiant by inserting a flat / one-faced brush (known as a patch), by going to Curve -> Simple Patch Mesh (Default: SHIFT + P), choosing the desired dimensions and then, with the patch selected, double clicking a Texture / Material to apply it to the patch.
