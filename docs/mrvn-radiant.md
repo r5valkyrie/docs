@@ -94,7 +94,7 @@ This will show the following:
 
 The two axes displayed on the 2D Viewport are shown in the top left corner of the 2D Viewport. These axes can be quickly changed by pressing the Change Views button (Default: CTRL+ TAB).    
 
-Basic navigation in the 2D Viewport work in the following ways:  
+Basic navigation in the 2D Viewport works in the following ways:  
 - Right click to open the Entity dropdown, from which you can insert Entities    
 - Right click drag will pan the view around  
 - Scroll down will Zoom Out  
@@ -107,7 +107,7 @@ Basic navigation in the 2D Viewport work in the following ways:
 - Resizing the brush can be done by activating the Resize tool (Default: Q) and dragging the red lines  
 
 
-Basic navigation in the 3D Viewport work in the following ways:  
+Basic navigation in the 3D Viewport works in the following ways:  
 - Right click unlocks the camera for free navigation in 3 dimensions (WASD + mouse movement for camera angle)  
 - Right clicking again will lock the camera  
 - Right click drag pans the camera around  
