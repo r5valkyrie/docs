@@ -78,6 +78,7 @@ $"datatable/weapon_mods_sdk.rpak"  // weapon_mods_sdk.csv or 0x62CE41C5376EA985 
 This Datatable also defines toggleMods for Mods, i.e.: "altfire_highcal" for "hopup_highcal_rounds"
 
 0xB96787430378078B ?? // TODO: clarify what this one does
+This Datatable defines toggleMods for Mods, i.e.: "altfire_highcal" for "hopup_highcal_rounds" AS WELL
 ```
 The Datatable which determines weapon compatibility with attachments / hop-ups is:  
 ```
