@@ -39,7 +39,7 @@ The entity class has many keyvalue attributes, which are accessed with entity.kv
 ```
 - prop_dynamic
 - prop_static // Environment objects on maps, once maps are compiled, they are no longer considered individual entities
-- prop_script // Scripted props (they have a script attached)
+- prop_script 
 - prop_active_gib_limit
 - prop_active_gib_max_fade_time
 - prop_break_disable_float
@@ -342,6 +342,7 @@ trigger.GetOwner()
 trigger.SetOwner( entity ownerEntity )
 trigger.GetParent()
 trigger.SetParent( entity ownerEntity )
+
 // Positioning
 trigger.SetOrigin( vector origin )
 trigger.GetOrigin()
@@ -349,22 +350,36 @@ trigger.SetAngles( vector angles )
 trigger.GetAngles()
 trigger.SetAbsOrigin( vector absOrigin )
 trigger.SetAbsAngles( vector absAngles )
+
+// Visibility
+trigger.Hide()
+trigger.Show()
+
+// State
+trigger.Solid()
+trigger.NotSolid()
+
 // Realms
 trigger.RemoveFromAllRealms()
 trigger.AddToRealm( int realm )
 trigger.AddToOtherEntitysRealms( entity ent )
-// Associated Scripts
+
+// Script Name = The name by which an entity is referenced inside scripts
 trigger.GetScriptName()
 trigger.SetScriptName( string scriptName ) // trigger.SetScriptName("WallTrigger_oob_timer")
+
 // Garbage collection
 trigger.Destroy()
+
 // Teams
 trigger.GetTeam()
 trigger.SetTeam()
+
 // Accessing or Testing for Keyvalues
 trigger.HasKey( string keyName )
 trigger.kv[ string keyName ] // trigger.kv[ "breakLinksToAttachedSpawner" ]
 trigger.GetValueForKey( string keyName ) // trigger.GetValueForKey( "maintainVelocity" )
+
 // Linked Entities
 trigger.GetLinkEntArray()
 trigger.GetLinkEnt()
@@ -375,6 +390,31 @@ trigger.UnlinkFromEnt( entity ent )
 
 
 # 3. Entity Methods & Functions
+
+## Get Functions
+```
+array< entity > function GetEntArrayByClass_Expensive( string entityClassName ) // i.e.: "weaponx"
+array< entity > function GetEntArrayByScriptName( string entScriptName ) // i.e. "_hover_tank_mover", ScriptName = name by which an entity is referenced in scripts
+entity function GetEntByScriptNameInInstance( string entScriptName, instanceName ) 
+array< entity > function GetEntArrayByScriptNameInInstance( string entScriptName, instanceName ) // i.e.: "_hove_tank_alarm"
+GetEnt( string entityName ) // i.e.: GetEnt( "worldspawn" )
+array< entity > GetEntityAndImmediateChildren( entity parentEnt )
+array< entity > GetEntityAndAllChildren( entity parentEnt )
+entity function GetEntByIndex( int index )
+entity function GetEntityFromEncodedEHandle ( var eHandle )
+entity function GetEntFromGroundLootData ( GroundLootData groundLootData ) // GroundLootData is a custom struct
+entity function GetEntityPlayerIsLookingAt( entity player, array< entity > ents, float degrees = 8 )
+
+
+entity.GetWorldSpaceCenter()
+entity function GetEntWidth( entity ent )
+entity function GetEntDepth( entity ent )
+entity function GetEntHeight( entity ent )
+var function GetEntityVar( entity ent, string entityVar )
+
+entity.GetEntIndex()
+```
+
 
 ## Visibility Methods
 
