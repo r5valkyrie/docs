@@ -54,19 +54,19 @@ The function that registers SURVIVAL Loot from the Datatables is SURVIVAL_LOOT_R
 
 Models and particle effects may need to be precached.  
 
-The Datatable which stores most information for attachments / hop-ups is:  
-
+The Datatable which stores most information for attachments / hop-ups is (are?):  
+```
 $"datatable/weapon_mods_sdk.rpak"  // weapon_mods_sdk.csv or 0x62CE41C5376EA985 (GUID)
 
 0xB96787430378078B ?? // TODO: clarify what this one does
-
+```
 The Datatable which determines weapon compatibility with attachments / hop-ups is:  
-
+```
 0x6562F1F8FA2CA288 (GUID)
-
+```
 The Datatable which stores visual compatiblity information for attachment / hop-up information is: 
-
+```
 0xE861B7C77949555A (GUID)
-
+```
 This table contains a row for each attachment and a column for each weapon. Inserting an "x" in a column conveys to 
 the UI VM scripts that a weapon supports a certain attachment / hop-up / mod.  
