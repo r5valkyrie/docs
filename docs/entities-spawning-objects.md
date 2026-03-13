@@ -204,7 +204,6 @@ The entity class has many keyvalue attributes, which are accessed with entity.kv
 
 ### Player Triggers 
 ```
-- trigger_skydive
 - trigger_weaponless
 ```
 

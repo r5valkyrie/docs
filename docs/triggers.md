@@ -263,7 +263,6 @@ trigger.UnlinkFromEnt( entity ent )
 
 ### Player Triggers 
 ```
-- trigger_skydive
 - trigger_weaponless
 ```
 
