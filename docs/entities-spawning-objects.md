@@ -321,7 +321,7 @@ trigger.SetLaunchScaleValues( float value1, float value2 )
 
 // Trigger filter keys
 ```
-trigger.kv.triggerFilterUseNew = bool
+trigger.kv.triggerFilterUseNew = bool // this overrides spawnflags (in this case ignores them) if set to 1 / true, and uses the keys listed below instead!
 trigger.kv.triggerFilterPlayer = "all" // possible values = all, none, pilot, titan
 trigger.kv.triggerFilterLifeState = "any" // possible values = any, alive, dead
 trigger.kv.triggerFilterPhaseShift = "any" // possible values = any, phaseshift, nonphaseshift
