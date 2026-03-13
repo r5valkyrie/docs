@@ -17,7 +17,6 @@ Example:
 GetDataTable( $"datatable/survival_loot.rpak" )  
 ValidateDataTable( entity player, string pathToDatatable )
 
-
 GetDataTableRowCount( var datatable )
 GetDataTableColumnByName( var datatable, string columnName )
 
