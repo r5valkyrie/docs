@@ -82,7 +82,7 @@ The Datatable which determines weapon compatibility with attachments / hop-ups i
 ```
 0x6562F1F8FA2CA288 (GUID)
 ```
-The Datatable which stores HUD visual compatiblity information for attachment / hop-up information is: 
+The Datatable which stores visual compatiblity information for attachment / hop-up information is: 
 ```
 0xE861B7C77949555A (GUID)
 ```
