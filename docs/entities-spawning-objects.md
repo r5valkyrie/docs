@@ -428,9 +428,15 @@ entity.kv.HDRColorScale
 entity.kv.impacteffectcolorid
 entity.kv.electricEffect
 ```
-## Model Keyvalues
+## Model Keyvalues (and 1 Method)
 ```
 entity.SetValueForModelKey()
+entity.model = asset model
+entity.modelHide = bool
+entity.modelOverrideAngles = <x,y,z>
+entity.modelscale
+entity.kv.modelscale
+entity.modelBlockRadiusDamage = bool
 ```
 ## Vector / Position Keyvalues
 ```
