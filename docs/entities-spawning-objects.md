@@ -322,9 +322,11 @@ trigger.SetLaunchScaleValues( float value1, float value2 )
 // Trigger filter keys
 ```
 trigger.kv.triggerFilterUseNew = bool
-trigger.kv.triggerFilterPlayer = "all" //, etc.
-trigger.kv.triggerFilterPhaseShift = "any" //, etc.
-trigger.kv.triggerFilterNpc = "none" //, etc.
+trigger.kv.triggerFilterPlayer = "all" // possible values = all, none, pilot, titan
+trigger.kv.triggerFilterLifeState = "any" // possible values = any, alive, dead
+trigger.kv.triggerFilterPhaseShift = "any" // possible values = any, phaseshift, nonphaseshift
+trigger.kv.triggerFilterNpc = "none" // possible values = all, none, soldier, titan, etc
+trigger.kv.triggerFilterNpcOwnedByPlayer = "any" // possible values = any, owned, notowned
 trigger.kv.triggerFilterNonCharacter = bool
 trigger.kv.triggerFilterTeamMilitia = bool
 trigger.kv.triggerFilterTeamIMC = bool
