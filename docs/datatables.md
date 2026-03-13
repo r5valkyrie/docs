@@ -25,8 +25,9 @@ GetDataTableAsset( var datatable, int datatableRow, int datatableColumn )
 GetDataTableBool( var datatable, int datatableRow, int datatableColumn )
 GetDataTableInt( var datatable, int datatableRow, int datatableColumn )
 GetDataTableFloat( var datatable, int datatableRow, int datatableColumn )
+GetDataTableVector( var datatable, int datatableRow, int datatableColumn )
 
-Iterating through a table:
+Iterating through a Datatable:
 
 var datatable = GetDataTable( asset datatable )
 int rowCount = GetDataTableRowCount( var datatable )
