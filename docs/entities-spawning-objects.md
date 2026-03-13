@@ -369,6 +369,7 @@ trigger.GetValueForKey( string keyName ) // trigger.GetValueForKey( "maintainVel
 trigger.GetLinkEntArray()
 trigger.GetLinkEnt()
 trigger.LinkToEnt( entity ent )
+trigger.UnlinkFromEnt( entity ent )
 
 ```
 
