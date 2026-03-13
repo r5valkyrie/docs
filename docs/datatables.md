@@ -1,13 +1,13 @@
 # Datatables
 
-Datatables are CSV (Comma Separate Values) files that store tables of information.  
-There will usually be a row dedicated to specifying which type of data is stored in each column.  
-CSV files can be opened with software such as LibreOffice Calc or Microsoft Excel.    
-Datatables can be and are loaded and parsed by the engine, to read various types of information. 
-Datatables are currently READ-ONLY. They are opened and extracted with RSX.
-Mods can override Datatables and add new ones. RPAKs containing Datatables are packed using RePak and are placed in paks/Win64 and / or paks/Win64_Server for dedicated servers.
-When getting and registering Datatables, the game looks inside datatable/ (the root is the RPAK), so your modded Datatables should be placed in that directory, inside the pack folder, when creating a new RPAK.
-Pay attention to mod load order! Datatables are loaded in the order that mods are loaded. Datatables with the same name / GUID will override each other in the order that mods are loaded.
+Datatables are CSV (Comma Separate Values) files that store tables of information.    
+There will usually be a row dedicated to specifying which type of data is stored in each column.    
+CSV files can be opened with software such as LibreOffice Calc or Microsoft Excel.      
+Datatables can be and are loaded and parsed by the engine, to read various types of information.   
+Datatables are currently READ-ONLY. They are opened and extracted with RSX.  
+Mods can override Datatables and add new ones. RPAKs containing Datatables are packed using RePak and are placed in paks/Win64 and / or paks/Win64_Server for dedicated servers.  
+When getting and registering Datatables, the game looks inside datatable/ (the root is the RPAK), so your modded Datatables should be placed in that directory, inside the pack folder, when creating a new RPAK.  
+Pay attention to mod load order! Datatables are loaded in the order that mods are loaded. Datatables with the same name / GUID will override each other in the order that mods are loaded.  
 
 ## Datatable Functions:
 
