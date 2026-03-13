@@ -27,6 +27,23 @@ GetDataTableInt( var datatable, int datatableRow, int datatableColumn )
 GetDataTableFloat( var datatable, int datatableRow, int datatableColumn )
 GetDataTableVector( var datatable, int datatableRow, int datatableColumn )
 
+
+GetDataTableRowGreaterThanOrEqualToFloatValue( var datatable, int column, float value)
+Finds and returns the first row of the datatable for which the float in the given column is greater than or equal to the given value. -1 if none
+
+GetDatatableRowLessThanOrEqualToFloatValue( var datatable, int column, float value )
+Finds and returns the first row of the datatable for which the float in the given column is less than or equal to the given value. -1 if none
+
+GetDataTableRowMatchingVectorValue( var datatable, int column, vector value)
+Finds and returns the first row of the datatable for which the vector in the given column matches the given value
+
+GetDataTableRowMatchingBoolValue( var datatable, int column, bool value)
+GetDataTableRowMatchingStringValue( var datatable, int column, string value)
+GetDataTableRowMatchingIntValue( var datatable, int column, int value)
+GetDataTableRowMatchingFloatValue( var datatable, int column, float value)
+GetDataTableRowMatchingAssetValue( var datatable, int column, asset value)
+
+
 Iterating through a Datatable:
 
 var datatable = GetDataTable( asset datatable )
