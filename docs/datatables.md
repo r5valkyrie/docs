@@ -36,7 +36,7 @@ for( int i = 0; i < rowCount; i++ )
 
     // code
     // passes through each row, i.e.: GetDataTableString( datatable, i, datatableColumn )
-    // can use an additional for-loop to iterate through rows i.e.: for( int j = 0, i < columnCount; j++ ) { }
+    // can use an additional for-loop to iterate through columns i.e.: for( int j = 0, i < columnCount; j++ ) { }
 
 }
 ```
