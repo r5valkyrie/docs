@@ -1026,8 +1026,22 @@ SpawnFromStalkerRack()
 
 ## Spawn Loot
 ```
-SpawnGenericLoot( lootRef, lootOrigin, lootAngles, 500 )
-SpawnLoot( lootref, lootOrigin, lootAngles, 500)
+SpawnGenericLoot( string lootRef, vector lootOrigin, vector lootAngles, int number )
+SpawnLoot( string lootRef, vector lootOrigin, vector lootAngles, int number)
+// Shorthand SpawnLoot()
+SpawnLoot( string lootRef, vector origin, false)
+
+The lootRefs are found in Datatables
+
+$"datatable/survival_loot_sdk.rpak" // survival_loot_sdk.csv or 0xBA8EBDBBD6713667 (GUID)
+$"datatable/titanfall_loot_sdk.rpak" // titanfall_loot_sdk.csv or 0xCADAC7D029E19EF (GUID)
+$"datatable/weapon_mods_sdk.rpak"
+
+The function that registers SURVIVAL Loot from the Datatables is SURVIVAL_LOOT_RegFromDataTable(), in sh_survival_loot_all.gnut, defined starting at line 410
+
+
+Models and particle effects may need to be precached.
+
 ```
 ## Spawn Environment Loot Givers
 ```
