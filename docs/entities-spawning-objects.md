@@ -1038,7 +1038,6 @@ $"datatable/weapon_mods_sdk.rpak"
 
 The function that registers SURVIVAL Loot from the Datatables is SURVIVAL_LOOT_RegFromDataTable(), in sh_survival_loot_all.gnut, defined starting at line 410
 
-
 Models and particle effects may need to be precached.
 
 ```
