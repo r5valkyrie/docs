@@ -428,9 +428,10 @@ entity.kv.HDRColorScale
 entity.kv.impacteffectcolorid
 entity.kv.electricEffect
 ```
-## Model Keyvalues (and 1 Method)
+## Model Keyvalues (and 2 Method)
 ```
-entity.SetValueForModelKey()
+entity.SetValueForModelKey( asset model )
+entity.SetModelScale( float scale )
 entity.model = asset model
 entity.modelHide = bool
 entity.modelOverrideAngles = <x,y,z>
