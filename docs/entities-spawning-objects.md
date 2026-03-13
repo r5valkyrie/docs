@@ -1031,8 +1031,7 @@ SpawnLoot( string lootRef, vector lootOrigin, vector lootAngles, int number)
 // Shorthand SpawnLoot()
 SpawnLoot( string lootRef, vector origin, false)
 
-The lootRefs are found in Datatables
-
+The lootRefs are found in Datatables (second column, "ref"):
 $"datatable/survival_loot_sdk.rpak" // survival_loot_sdk.csv or 0xBA8EBDBBD6713667 (GUID)
 $"datatable/titanfall_loot_sdk.rpak" // titanfall_loot_sdk.csv or 0xCADAC7D029E19EF (GUID)
 $"datatable/weapon_mods_sdk.rpak"
