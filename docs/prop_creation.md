@@ -9,7 +9,10 @@ Lots of useful Prop-related functions are located in _utility.gnut
 Props that have simulated physics, using VPhysics (which incorporates the Havok physics engine)
 Function definition starts at line 1822 of _utility.gnut
 
-entity function CreatePropPhysics( asset model, vector origin, vector angles, int spawnFlags = 0 ) //    
+entity function CreatePropPhysics( asset model, vector origin, vector angles, int spawnFlags = 0 ) 
+
+box.kv.solid = SOLID_VPHYSICS // 0 = no collision, 2 = bounding box, 6 = use vPhysics, 8 = hitboxes only
+
 ```
 
 
