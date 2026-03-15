@@ -889,20 +889,20 @@ Examples of weapon sound definitions from weapon .txt files:
 - The C.A.R. (mp_weapon_car)
 
 ```
-	"sound_dryfire"									"assault_rifle_dryfire"
-	"sound_pickup"									"wpn_pickup_SMG_1P"
-	"sound_trigger_pull"							"Weapon_Hemlok_Trigger"
-	"sound_zoom_in"									"Weapon_Car_ADS_In"
-	"sound_zoom_out"								"Weapon_Car_ADS_Out"
+	"sound_dryfire"						"assault_rifle_dryfire"
+	"sound_pickup"						"wpn_pickup_SMG_1P"
+	"sound_trigger_pull"				"Weapon_Hemlok_Trigger"
+	"sound_zoom_in"						"Weapon_Car_ADS_In"
+	"sound_zoom_out"					"Weapon_Car_ADS_Out"
 
-	"looping_sounds"								"1"
+	"looping_sounds"					"1"
 
-    "fire_sound_1_player_1p"						""
-    "fire_sound_1_player_3p"						""
-    "fire_sound_1_npc"								"Weapon_Car_SecondShot_NPC"
+    "fire_sound_1_player_1p"			""
+    "fire_sound_1_player_3p"			""
+    "fire_sound_1_npc"					"Weapon_Car_SecondShot_NPC"
 
-	"fire_sound_2_player_1p" 						"Weapon_Car_SecondShot_1P"
-	"fire_sound_2_player_3p" 						""
+	"fire_sound_2_player_1p" 			"Weapon_Car_SecondShot_1P"
+	"fire_sound_2_player_3p" 			""
 
     "burst_or_looping_fire_sound_start_1p"			"Weapon_Car_FirstShot_1P"
     "burst_or_looping_fire_sound_middle_1p"			"Weapon_Car_Loop_1P"
@@ -916,7 +916,7 @@ Examples of weapon sound definitions from weapon .txt files:
     "burst_or_looping_fire_sound_middle_npc"		"Weapon_Car_Loop_3P_NPC_A"
     "burst_or_looping_fire_sound_end_npc"			"Weapon_Car_LoopEnd_NPC"
 
-	"low_ammo_sound_name_1"							"car_LowAmmo_Shot1"
+	"low_ammo_sound_name_1"				"car_LowAmmo_Shot1"
 ```
 
 - The L-STAR
