@@ -922,10 +922,10 @@ Examples of weapon sound definitions from weapon .txt files:
 - The L-STAR
 
 ```
-	"looping_sounds"								"1"
+	"looping_sounds"					"1"
 
-	"sound_zoom_in"									"Weapon_LSTAR_ADS_In"
-	"sound_zoom_out"								"Weapon_LSTAR_ADS_Out"
+	"sound_zoom_in"						"Weapon_LSTAR_ADS_In"
+	"sound_zoom_out"					"Weapon_LSTAR_ADS_Out"
 
 	"burst_or_looping_fire_sound_start_1p"			"Weapon_LSTAR_FirstShot_1P"
 	"burst_or_looping_fire_sound_middle_1p"			"Weapon_LSTAR_Loop_1P"
@@ -941,21 +941,21 @@ Examples of weapon sound definitions from weapon .txt files:
 
 	"sound_dryfire"									"lstar_dryfire"
 	"sound_pickup"									"wpn_pickup_MG_1P"
-	"low_ammo_sound_name_1"							"LSTAR_LowAmmo_Shot1"
-	"low_ammo_sound_name_2"							"LSTAR_LowAmmo_Shot2"
-	"low_ammo_sound_name_3"							"LSTAR_LowAmmo_Shot3"
-	"low_ammo_sound_name_4"							"LSTAR_LowAmmo_Shot4"
-	"low_ammo_sound_name_5"							"LSTAR_LowAmmo_Shot5"
-	"low_ammo_sound_name_6"							"LSTAR_LowAmmo_Shot6"
-	"low_ammo_sound_name_7"							"LSTAR_LowAmmo_Shot7"
-	"low_ammo_sound_name_8"							"LSTAR_LowAmmo_Shot8"
-	"low_ammo_sound_name_9"							"LSTAR_LowAmmo_Shot9"
-	"low_ammo_sound_name_10"						"LSTAR_LowAmmo_Shot10"
-	"low_ammo_sound_name_11"						"LSTAR_LowAmmo_Shot11"
-	"low_ammo_sound_name_12"						"LSTAR_LowAmmo_Shot12"
-	"low_ammo_sound_name_13"						"LSTAR_LowAmmo_Shot13"
-	"low_ammo_sound_name_14"						"LSTAR_LowAmmo_Shot14"
-	"low_ammo_sound_name_15"						"LSTAR_LowAmmo_Shot15"    
+	"low_ammo_sound_name_1"				"LSTAR_LowAmmo_Shot1"
+	"low_ammo_sound_name_2"				"LSTAR_LowAmmo_Shot2"
+	"low_ammo_sound_name_3"				"LSTAR_LowAmmo_Shot3"
+	"low_ammo_sound_name_4"				"LSTAR_LowAmmo_Shot4"
+	"low_ammo_sound_name_5"				"LSTAR_LowAmmo_Shot5"
+	"low_ammo_sound_name_6"				"LSTAR_LowAmmo_Shot6"
+	"low_ammo_sound_name_7"				"LSTAR_LowAmmo_Shot7"
+	"low_ammo_sound_name_8"				"LSTAR_LowAmmo_Shot8"
+	"low_ammo_sound_name_9"				"LSTAR_LowAmmo_Shot9"
+	"low_ammo_sound_name_10"			"LSTAR_LowAmmo_Shot10"
+	"low_ammo_sound_name_11"			"LSTAR_LowAmmo_Shot11"
+	"low_ammo_sound_name_12"			"LSTAR_LowAmmo_Shot12"
+	"low_ammo_sound_name_13"			"LSTAR_LowAmmo_Shot13"
+	"low_ammo_sound_name_14"			"LSTAR_LowAmmo_Shot14"
+	"low_ammo_sound_name_15"			"LSTAR_LowAmmo_Shot15"    
 ```
 
 
