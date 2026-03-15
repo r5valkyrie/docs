@@ -89,7 +89,7 @@ References courtesy of Autodesk, Unity Technologies, Epic Games and Paul H. Paul
 
 # Examples
 
-An example of a .json manifest (used for packing assets into RPAKs using RePak) for a SKNP material, used by the Kraber:
+An example of a .JSON manifest (used for packing assets into RPAKs using RePak) for a SKNP material, used by the Kraber:
 
 ```
 {
@@ -138,15 +138,15 @@ An example of a .json manifest (used for packing assets into RPAKs using RePak) 
 
 "samplers": "0x1D0300",
 
-"surfaceProp": "default",
+"surfaceProp": "default", // surface properties
 
 "surfaceProp2": "",
 
-"shaderType": "sknp",
+"shaderType": "sknp", // proprietary Respawn material
 
 "shaderSet": "0x846292DC5424105A",
 
-"$textures": {
+"$textures": { 
 
    "0": "texture/art/mshop/weapons/class/sniper/kraber/base/kraber_base_main_albedoTexture.rpak",
 
@@ -178,7 +178,7 @@ An example of a .json manifest (used for packing assets into RPAKs using RePak) 
 
 },
 
-"$depthShadowMaterial": "0x2B93C99C67CC8B51",
+"$depthShadowMaterial": "0x2B93C99C67CC8B51", // depth materials
 
 "$depthPrepassMaterial": "0x1EBD063EA03180C7",
 
@@ -186,10 +186,290 @@ An example of a .json manifest (used for packing assets into RPAKs using RePak) 
 
 "$depthShadowTightMaterial": "0x227C27B608B3646B",
 
-"$colpassMaterial": "0x11A4A3CBA679E447",
+"$colpassMaterial": "0x11A4A3CBA679E447", // colpass material
 
 "$textureAnimation": "0x0"
 
 }
 
+```
+
+## Animated Materials
+
+## VMTs
+
+VMT (Valve Material File) is Valve's proprietary material file format for the Source Engine. In order for VMTs to be usable by Source, they must be packed into VPKs (Valve Packs). The Branch of Source that Respawn forked for their own use was the Portal 2 Branch, which used VMTs. Titanfall 1 (Dev Codename R1 for "Respawn 1", as in Respawn Entertainment's first title) exclusively used VMTs, alongside material proxies. Titanfall 2 (Dev Codename R2) used VMTs alongside proprietary Respawn materials (SKN, WLD, etc.) and Apex Legends (Dev Codename R5) also used VMTs alongside proprietary materials (SKNP, WLDC, etc.) for around the first 2 years of its life, until VPKs and VMTs were fully phased out.  
+
+Since R5V is based on the Season 3 build of Apex Legends, it still uses VMTs for some particles, world materials, decals and billboards, alongside VPKs, RPAKs and proprietary Respawn materials.    
+
+VMTs are also fallback materials if the engine cannot locate material dependencies in R5V.  
+
+Titanfall 2 used VMTs for everything from particle effects / systems (muzzle flashes, dirt, smoke, etc.) to sprites to cables (ziplines, tethers, grapple cables) to VGUI (Valve Graphical User Interface) materials for Titan & MRVN UI and various other UI elements.
+
+Example of a VMT from Titanfall 2:
+
+```
+// From materials/particle/electric_arc/electric_arc_trail_ob3.vmt, from Titanfall 2's englishclient_mp_common.bsp.pak00_dir.vpk
+
+"SpriteCard"
+{
+	$basetexture "particle\electric_arc\electric_arc_trail"
+
+//	$RAMPTEXTURE "particle/ramps/elec_ramp.vtf"
+//	$POWERFUNCTION "[0.8 2.5 5]"
+
+//	$texAlphafromColor 4
+	$texColorFromAlpha 1
+
+
+	$additive 	1
+
+	$translucent 	1
+	$nocull	1
+
+	$splinetype	1
+
+	$overbrightfactor 3
+
+	$vertexFogAmount 1
+
+    $disableTSAA 0
+    $tsaaFullyResponsive 1
+    $tsaaMotionAlphaThreshold 0.01
+    $tsaaMotionAlphaRamp 10
+}
+```
+
+## Material Proxies
+
+Material Proxies represent code that allows the properties of VMTs to be manipulated, hence they are used to create dynamic or animated textures.  
+For Titanfall 1, which exclusively used Valve's Source Engine tech stack, Respawn mainly used Material Proxies to create the in-world (diegetic) weapon displays (i.e.: Ammo counters, the Archer Rocket Launcher's screen, the L-STAR's heat mechanic, etc.).  
+Titanfall 2 used VMT Material Proxies alongside RUI while they were developing their own proprietary tech stack, known as RTech (Respawn Tech).  
+In Apex Legends, Material Proxies were all but phased out in favor of RUI, with the exception of Titanfall 2 remnants.  
+
+More information can be found on the Valve Developer Wiki: [Material Proxies](https://developer.valvesoftware.com/wiki/Material_proxies), [List of Material Proxies](https://developer.valvesoftware.com/wiki/List_of_material_proxies).
+
+Here are some examples of Material Proxies, beginning from the "Proxies" section:
+
+```
+// From materials/models/weapons/lstar/lstar_heat_charge.vmt, from Titanfall 2's englishclient_mp_common.bsp.pak00_dir.vpk
+
+"UnlitTwoTexture"
+{
+	"$surfaceprop"	"metal"
+
+	"$basetexture" "models\weapons\lstar\lstar_heat_charge_col"
+	"$texture2" "effects\laserplane_atmosphere"
+
+	$allowoverbright 1
+
+	$decal 1
+
+	"$translucent" 1
+
+	"$additive" 1
+
+	$layercolor1 "[2 1.38 1]"
+	$layeralpha1 "1"
+
+	$layercolor2 "[3 1 0.5]"
+	$layeralpha2 "1"
+
+	"Proxies" // Proxies start here
+	{
+
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" "-0.05"
+			"texturescrollangle" "180"
+			"texturescale"	.25
+		}
+
+		"LSTARHeatFraction"
+		{
+			"resultVar" "$alpha"
+		}
+	}
+
+}
+```
+
+```
+// From materials/models/humans/mri/mri_male_v1/mri_male_v1.vmt, from Titanfall 2's englishclient_mp_common.bsp.pak00_dir.vpk
+// This is used for Sonar scans
+
+"UnlitTwoTexture"
+{
+	"$surfaceprop" "metal"
+	//"$basetexture" "models\titans\titan_ar_marker\titan_ar_marker_col"
+	"$basetexture" "effects\white"
+	$texture2 		effects\dev_scanline_small
+
+	$alpha 1
+
+	$nodecal 1
+	$model 1
+	$ignorez 1
+	$translucent 1
+	$nofog 1
+	$no_fullbright 1
+	$allowoverbright 1
+	$translucent 1
+	$additive 1
+
+	$screenspacecoordssquare2 1
+
+	$layercolor1 "[0.1 0.0 0.0]"
+	$layeralpha1 "0.1"
+	$layercolor2 "[0.4 0.05 0.0]"
+	$layeralpha2 "1.0"
+	$addlayers 1
+
+
+	$fresnel 0
+
+	$fresnelSharpness1 1.0
+	$fresnelOuterStrength1 0.0
+	$fresnelInnerStrength1 1.0
+
+	$fresnelSharpness2 0.0
+	$fresnelOuterStrength2 1.0
+	$fresnelInnerStrength2 0.0
+
+	$t2scroll		"[0 1]"
+	$t2scale		"[3 3]"
+
+	//$matchColor		"[0.0 0.25 0.4]"
+	//$mismatchColor	"[0.4 0.05 0.0]"
+	$matchColor		"[0.0 1.5 2.4]"
+	$mismatchColor	"[20. 0.60 0.0]"
+
+	Proxies // Proxies start here
+	{
+		EntitySonarColor
+		{
+			sameTeamColorVar	$matchColor
+			otherTeamColorVar	$mismatchColor
+
+			resultvar	$layercolor2
+		}
+
+		EntitySonarColor
+		{
+			sameTeamColorVar	$matchColor
+			otherTeamColorVar	$mismatchColor
+
+			resultvar	$layercolor1
+		}
+
+		EntityScript
+		{
+			scriptFuncName	"VMTCallback_MPEntitySonarFrac" // Material Proxies can be used to add logic to trigger callbacks directly from a material
+			resultVar $alpha
+		}
+
+		TextureScroll
+		{
+			"textureScrollVar" "$t2scroll"
+			"textureScrollRate" 0.8
+			"textureScrollAngle" -90
+		}
+
+		TextureTransform
+		{
+			translateVar	$t2scroll
+			scaleVar		$t2scale
+			resultVar 		$texture2transform
+		}
+	}
+}
+```
+
+```
+// From materials/models/titans/titan_destruction/titan_destruction_c.vmt, from Titanfall 2's englishclient_mp_common.bsp.pak00_dir.vpk
+
+"UnlitTwoTexture"
+{
+	"$nodecal" "1"
+	$allowoverbright 1
+
+	"$no_fullbright" 1
+	"$model" "1"
+
+	"$basetexture" "effects\electric_anim"
+	"$Texture2" "models\titans\titan_destruction\titan_destruction_c_col"
+//	"$Texture2" "effects\white"
+
+
+//	"$color2" "[3 2 1]" //fire
+//	"$color2" "[1 2 3]" //Electricity
+
+	"$sinemin" 0
+	"$sinemax" 0
+	"$tex2scroll" 0
+
+    $matchColor		"[0.1 0.25 1.0]"
+    $mismatchColor	"[1.0 0.25 0.1]"
+	$allowDiffuseModulation "0"
+
+	"Proxies" // Proxies start here
+	{
+		EntitySonarColor
+		{
+			sameTeamColorVar	$matchColor
+			otherTeamColorVar	$mismatchColor
+
+			resultvar	$color2
+		}
+
+		//Play baseTexture frames
+		"AnimatedTexture" // Animated texture proxy examples
+		{
+			"animatedtexturevar" "$basetexture"
+			"animatedtextureframenumvar" "$frame"
+			"animatedtextureframerate" "24"
+		}
+		//Scroll Base Texture
+		"TextureScroll"
+		{
+			"texturescrollvar" "$BASETEXTURETRANSFORM"
+			"texturescrollrate" 0.2
+			"texturescrollangle" -90
+		}
+		//Tex2 Minimum Scroll Speed
+		"GaussianNoise"
+		{
+			"mean" "-2"
+			"halfWidth" -4
+			"minval" -1
+			"maxval" -2
+			"resultVar" "$sinemin"
+		}
+		//Tex2 Maximum Scroll Speed
+		"GaussianNoise"
+		{
+			"mean" "2"
+			"halfWidth" 4
+			"minval" 1
+			"maxval" 2
+			"resultVar" "$sinemax"
+		}
+		"Sine"
+		{
+			"sineperiod" ".15"
+			"sinemin" "$sinemin"
+			"sinemax" "$sinemax"
+			"resultVar" "$tex2scroll"
+		}
+		//Scroll Texture2
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" "$tex2scroll"
+			"texturescrollangle" "-90"
+		}
+
+	}
+}
 ```
