@@ -198,7 +198,7 @@ An example of a .JSON manifest (used for packing assets into RPAKs using RePak) 
 
 ## VMTs
 
-VMT (Valve Material File) is Valve's proprietary material file format for the Source Engine. In order for VMTs to be usable by Source, they must be packed into VPKs (Valve Packs). The Branch of Source that Respawn forked for their own use was the Portal 2 Branch, which used VMTs. Titanfall 1 (Dev Codename R1 for "Respawn 1", as in Respawn Entertainment's first title) exclusively used VMTs, alongside material proxies. Titanfall 2 (Dev Codename R2) used VMTs alongside proprietary Respawn materials (SKN, WLD, etc.) and Apex Legends (Dev Codename R5) also used VMTs alongside proprietary materials (SKNP, WLDC, etc.) for around the first 2 years of its life, until VPKs and VMTs were fully phased out.  
+VMT (Valve Material File) is Valve's proprietary material file format for the Source Engine. In order for VMTs to be usable by Source, they must be packed into VPKs (Valve Packs). The Branch of Source that Respawn forked for their own use was the Portal 2 Branch, which used VMTs. Titanfall 1 (Dev Codename R1 for "Respawn 1", as in Respawn Entertainment's first title) exclusively used VMTs, alongside material proxies. Titanfall 2 (Dev Codename R2) used VMTs alongside proprietary Respawn materials (SKN, WLD, etc.) and Apex Legends (Dev Codename R5) also used VMTs alongside proprietary materials (SKNP, WLDC, etc.) until season 18, when VPKs and VMTs were fully phased out.  
 
 Since R5V is based on the Season 3 build of Apex Legends, it still uses VMTs for some particles, world materials, decals and billboards, alongside VPKs, RPAKs and proprietary Respawn materials.    
 
