@@ -939,8 +939,8 @@ Examples of weapon sound definitions from weapon .txt files:
 	"burst_or_looping_fire_sound_middle_npc"		"Weapon_LSTAR_Loop_3P_npc_a"
 	"burst_or_looping_fire_sound_end_npc"			"Weapon_LSTAR_LoopEnd_3P_npc_a"
 
-	"sound_dryfire"									"lstar_dryfire"
-	"sound_pickup"									"wpn_pickup_MG_1P"
+	"sound_dryfire"						"lstar_dryfire"
+	"sound_pickup"						"wpn_pickup_MG_1P"
 	"low_ammo_sound_name_1"				"LSTAR_LowAmmo_Shot1"
 	"low_ammo_sound_name_2"				"LSTAR_LowAmmo_Shot2"
 	"low_ammo_sound_name_3"				"LSTAR_LowAmmo_Shot3"
@@ -964,16 +964,16 @@ Examples of weapon sound definitions from weapon .txt files:
 Burst fire weapons: 
 
 ```
-	"sound_dryfire"									"hemlok_dryfire"
-	"sound_pickup"									"wpn_pickup_Rifle_1P"
-	"sound_trigger_pull"							"Weapon_Hemlok_Trigger"
-	"sound_zoom_in"									"Weapon_Hemlok_ADS_In"
-	"sound_zoom_out"								"Weapon_Hemlok_ADS_Out"
+	"sound_dryfire"						"hemlok_dryfire"
+	"sound_pickup"						"wpn_pickup_Rifle_1P"
+	"sound_trigger_pull"				"Weapon_Hemlok_Trigger"
+	"sound_zoom_in"						"Weapon_Hemlok_ADS_In"
+	"sound_zoom_out"					"Weapon_Hemlok_ADS_Out"
 
 	// Sound
 
-	"fire_sound_1_player_1p"						"Weapon_bulletCasings.Bounce"
-	"fire_sound_1_player_3p"						"Weapon_bulletCasings.Bounce"
+	"fire_sound_1_player_1p"			"Weapon_bulletCasings.Bounce"
+	"fire_sound_1_player_3p				"Weapon_bulletCasings.Bounce"
 
 	"fire_sound_partial_burst_player_1p"			"Weapon_Hemlok_SingleShot_1P"
 	"fire_sound_partial_burst_player_3p"			"Weapon_Hemlok_SingleShot_3P"
@@ -990,11 +990,11 @@ Burst fire weapons:
 	"burst_or_looping_fire_sound_middle_npc"		""
 	"burst_or_looping_fire_sound_end_npc"			""
 
-	"low_ammo_sound_name_1"							"Hemlok_LowAmmo_Shot1"
-	"low_ammo_sound_name_2"							"Hemlok_LowAmmo_Shot1"
-	"low_ammo_sound_name_3"							"Hemlok_LowAmmo_Shot1"
-	"low_ammo_sound_name_4"							"Hemlok_LowAmmo_Shot2"
-	"low_ammo_sound_name_5"							"Hemlok_LowAmmo_Shot2"
+	"low_ammo_sound_name_1"				"Hemlok_LowAmmo_Shot1"
+	"low_ammo_sound_name_2"				"Hemlok_LowAmmo_Shot1"
+	"low_ammo_sound_name_3"				"Hemlok_LowAmmo_Shot1"
+	"low_ammo_sound_name_4"				"Hemlok_LowAmmo_Shot2"
+	"low_ammo_sound_name_5"				"Hemlok_LowAmmo_Shot2"
 ```
 
 ## Map Audio Entities
