@@ -777,7 +777,7 @@ All weapons have a dry fire (empty magazine) sound, which is usually a generic w
 
 All Apex Legends weapons have inspect sounds (many of them generic class based weapons or repurposed from another weapon) because the game was designed with microtransactions in mind.
 
-First person weapon and ability sounds do not need attenuation or spatialization. Do note, however, that some weapons have sounds attached to their projectiles, such as the Mastiff's pellets. Those emit sounds in-world, not just on the CLIENT VM.
+First person weapon and ability sounds do not need attenuation or spatialization. Do note, however, that some weapons have sounds attached to their projectiles, such as the Mastiff's pellets and ordnance like grenades, which play whizz by / whoosh sounds on throw. Those emit sounds in-world, not just on the CLIENT VM.
 
 IMPORTANT: Weapon Mods (such as the Turbocharger, Disruptor Rounds, Hammerpoint Rounds, Anvil Receiver, Skullpiercer Rifling, etc.) can override the base sounds of weapons and have their own sounds:
 
@@ -840,7 +840,7 @@ Automatic weapons almost always have weapon firing divided into 3 sections:
 
 Some weapons have a special charge mechanic, in which case they also have:
 
-- A Charge-Up / Wind-Up sound (sometimes it's integrated into the firing loop, like with the devotion)
+- A Charge-Up / Wind-Up sound (sometimes it's integrated into the firing loop, like with the Devotion. Sometimes it's handled from VScript callbacks, like with the 30-30 and the Precision Choke equipped Triple Take and Peacekeepr)
 - A Charge-Down / Wind-Down sound (usually handled by VScripts, through callback functions; check the weapon's .txt file for the assigned callbacks for each weapon)
 
 ```
