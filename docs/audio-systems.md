@@ -780,30 +780,30 @@ All Apex Legends weapons have inspect sounds (many of them generic class based w
 IMPORTANT: Weapon Mods (such as the Turbocharger, Disruptor Rounds, Hammerpoint Rounds, Anvil Receiver, Skullpiercer Rifling, etc.) can override the base sounds of weapons and have their own sounds:
 
 ```
-        hopup_turbocharger
-        {
-			// faster ROF spin up
-			"fire_rate"   									"6.8"  // start at higher rof
-			"fire_rate_max_time_speedup"					"0.85"  // takes less time to spin up
+   hopup_turbocharger
+      {
+		// faster ROF spin up
+		"fire_rate"   									"6.8"  // start at higher rof
+		"fire_rate_max_time_speedup"					"0.85"  // takes less time to spin up
 
-			// Audio
-			"looping_sounds"								"1"
+		// Audio
+		"looping_sounds"								"1"
 
-			"burst_or_looping_fire_sound_start_1p"			"weapon_devotion_firstshot_1p"
-			"burst_or_looping_fire_sound_middle_1p"			"Weapon_Devotion_Turbo_Loop_1P"
-			"burst_or_looping_fire_sound_end_1p"			"weapon_devotion_lastshot_1p"
+		"burst_or_looping_fire_sound_start_1p"			"weapon_devotion_firstshot_1p"
+		"burst_or_looping_fire_sound_middle_1p"			"Weapon_Devotion_Turbo_Loop_1P"
+		"burst_or_looping_fire_sound_end_1p"			"weapon_devotion_lastshot_1p"
 
-			"burst_or_looping_fire_sound_start_3p"			""
-			"burst_or_looping_fire_sound_middle_3p"			"Weapon_Devotion_Turbo_Loop_3P"
-			"burst_or_looping_fire_sound_end_3p"			""
+		"burst_or_looping_fire_sound_start_3p"			""
+		"burst_or_looping_fire_sound_middle_3p"			"Weapon_Devotion_Turbo_Loop_3P"
+		"burst_or_looping_fire_sound_end_3p"			""
 
-			"burst_or_looping_fire_sound_start_npc"			""
-			"burst_or_looping_fire_sound_middle_npc"		""
-			"burst_or_looping_fire_sound_end_npc"			""
+		"burst_or_looping_fire_sound_start_npc"			""
+		"burst_or_looping_fire_sound_middle_npc"		""
+		"burst_or_looping_fire_sound_end_npc"			""
 
-            ...
-
-        }    
+        ...
+		
+     }    
 
 ```
 
