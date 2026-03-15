@@ -777,6 +777,8 @@ All weapons have a dry fire (empty magazine) sound, which is usually a generic w
 
 All Apex Legends weapons have inspect sounds (many of them generic class based weapons or repurposed from another weapon) because the game was designed with microtransactions in mind.
 
+First person weapon and ability sounds do not need attenuation or spatialization. Do note, however, that some weapons have sounds attached to their projectiles, such as the Mastiff's pellets. Those emit sounds in-world, not just on the CLIENT VM.
+
 IMPORTANT: Weapon Mods (such as the Turbocharger, Disruptor Rounds, Hammerpoint Rounds, Anvil Receiver, Skullpiercer Rifling, etc.) can override the base sounds of weapons and have their own sounds:
 
 ```
@@ -802,7 +804,7 @@ IMPORTANT: Weapon Mods (such as the Turbocharger, Disruptor Rounds, Hammerpoint 
 		"burst_or_looping_fire_sound_end_npc"			""
 
         ...
-		
+
      }    
 
 ```
