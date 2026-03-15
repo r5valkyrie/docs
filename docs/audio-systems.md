@@ -862,28 +862,28 @@ Examples of weapon sound definitions from weapon .txt files:
 	"burst_or_looping_fire_sound_middle_npc"		""
 	"burst_or_looping_fire_sound_end_npc"			""
 
-	"sound_dryfire"									"hemlok_dryfire"
-	"sound_pickup"									"wpn_pickup_MG_1P"
-	"sound_trigger_pull"							"Weapon_LMG_Trigger"
+	"sound_dryfire"						"hemlok_dryfire"
+	"sound_pickup"						"wpn_pickup_MG_1P"
+	"sound_trigger_pull"				"Weapon_LMG_Trigger"
 
-	"looping_sounds"								"1"
+	"looping_sounds"					"1"
 
 	//Sounds
-	"sound_zoom_in"									"weapon_devotion_ads_in"
-	"sound_zoom_out"								"weapon_devotion_ads_out"
+	"sound_zoom_in"						"weapon_devotion_ads_in"
+	"sound_zoom_out"					"weapon_devotion_ads_out"
 
-	"fire_sound_1_player_1p"						"Weapon_Devotion_SecondShot_1P"
-	"fire_sound_1_player_3p"						""
-	"fire_sound_1_npc"								"Weapon_ColdWar_Fire_3P"
-	//"fire_sound_2_player_1p"						"Weapon_bulletCasings.Bounce"
-	"fire_sound_2_player_3p"						"Weapon_devotion_SecondShot_3P"
+	"fire_sound_1_player_1p"			"Weapon_Devotion_SecondShot_1P"
+	"fire_sound_1_player_3p"			""
+	"fire_sound_1_npc"					"Weapon_ColdWar_Fire_3P"
+	//"fire_sound_2_player_1p"			"Weapon_bulletCasings.Bounce"
+	"fire_sound_2_player_3p"			"Weapon_devotion_SecondShot_3P"
 
-	"low_ammo_sound_name_1"							"Devotion_LowAmmo_Shot1"
-	"low_ammo_sound_name_2"							"Devotion_LowAmmo_Shot2"
-	"low_ammo_sound_name_3"							"Devotion_LowAmmo_Shot3"
-	"low_ammo_sound_name_4"							"Devotion_LowAmmo_Shot4"
-	"low_ammo_sound_name_5"							"Devotion_LowAmmo_Shot5"
-	"low_ammo_sound_name_6"							"Devotion_LowAmmo_Shot6"
+	"low_ammo_sound_name_1"				"Devotion_LowAmmo_Shot1"
+	"low_ammo_sound_name_2"				"Devotion_LowAmmo_Shot2"
+	"low_ammo_sound_name_3"				"Devotion_LowAmmo_Shot3"
+	"low_ammo_sound_name_4"				"Devotion_LowAmmo_Shot4"
+	"low_ammo_sound_name_5"				"Devotion_LowAmmo_Shot5"
+	"low_ammo_sound_name_6"				"Devotion_LowAmmo_Shot6"
 ```
 
 - The C.A.R. (mp_weapon_car)
