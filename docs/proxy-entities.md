@@ -70,8 +70,15 @@ GetLocalViewPlayer() // gets the player entity that is currently on display on t
 
 GetLocalViewPlayer().GetCockpit().GetModelName() // used for both Titans and Pilots, as Titans in first-person are another type of player class that the player's "Soul" is transferred to. Many refenreces to "Souls" and "Titan Souls" can be found in the codebases of Titanfall 1, Titanfall 2 and Apex Legends.  
 
-
+```
 int fxHandle = StartParticleEffectOnEntity( cockpit, GetParticleSystemIndex( PHASE_TUNNEL_1P_FX ), FX_PATTACH_ABSORIGIN_FOLLOW, -1 )  
+```
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/stimeffect.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/bloodhoundeffect.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/gravlifteffect.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/blackholeeffect.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/arcstareffect.png)
 
 
 
