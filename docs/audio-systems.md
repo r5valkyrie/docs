@@ -1,4 +1,4 @@
-# Audio Systems and Audio Implementation
+# Audio Systems and Audio Implementation Overview
 
 
 
@@ -383,11 +383,9 @@ These are the settings for Wraith
 		"autoprecache_script": "",
 		"execution_anim": "",
 		"startup_sound": "",
-		"fx_jetwash_impactTable": "pilot_boost_jetwash",
-		"fx_hover_friendly": "P_team_jet_hover_HLD",
-		"fx_hover_enemy": "P_enemy_jet_hover_HLD",
-		"sharedEnergyNotUsableSound": "",
-		"sharedEnergyRegenSound": "",
+     
+		...
+
 		"classActivityModifier": "pilot_survival_closer",
 		"footstep_type": "wraith",
 
@@ -603,143 +601,9 @@ These are the settings for Wraith
 			"value": "l/humans/class/light/pilot_light_wraith.rmdl",
 			"field": "sound_jumpjet_jet_start_1p"
 		},
-		{ // originally mapped to offset 1232
-			"index": 11,
-			"type": "string",
-			"value": "rmdl",
-			"field": "sound_jumpjet_jet_start_3p"
-		},
-		{ // originally mapped to offset 1240
-			"index": 11,
-			"type": "string",
-			"value": "ons/arms/pov_pilot_light_wraith.rmdl",
-			"field": "sound_jumpjet_jet_body_1p"
-		},
-		{ // originally mapped to offset 1248
-			"index": 11,
-			"type": "string",
-			"value": "dl/weapons/arms/human_pov_cockpit.rmdl",
-			"field": "sound_jumpjet_jet_body_3p"
-		},
-		{ // originally mapped to offset 1256
-			"index": 11,
-			"type": "string",
-			"value": "man_pov_cockpit.rmdl",
-			"field": "sound_jumpjet_jet_finish_1p"
-		},
-		{ // originally mapped to offset 1264
-			"index": 11,
-			"type": "string",
-			"value": "pov_cockpit.rmdl",
-			"field": "sound_jumpjet_jet_finish_3p"
-		},
-		{ // originally mapped to offset 1272
-			"index": 11,
-			"type": "string",
-			"value": "t.rmdl",
-			"field": "sound_jumpjet_wallrun_start_1p"
-		},
-		{ // originally mapped to offset 1280
-			"index": 11,
-			"type": "string",
-			"value": "_human_female",
-			"field": "sound_jumpjet_wallrun_start_3p"
-		},
-		{ // originally mapped to offset 1288
-			"index": 11,
-			"type": "string",
-			"value": "human_female",
-			"field": "sound_jumpjet_wallrun_body_1p"
-		},
-		{ // originally mapped to offset 1296
-			"index": 11,
-			"type": "string",
-			"value": "uman_female",
-			"field": "sound_jumpjet_wallrun_body_3p"
-		},
-		{ // originally mapped to offset 1304
-			"index": 11,
-			"type": "string",
-			"value": "unitframes/pilot_banshee",
-			"field": "sound_jumpjet_wallrun_finish_1p"
-		},
-		{ // originally mapped to offset 1312
-			"index": 11,
-			"type": "string",
-			"value": "shee",
-			"field": "sound_jumpjet_wallrun_finish_3p"
-		},
-		{ // originally mapped to offset 1072
-			"index": 11,
-			"type": "string",
-			"value": "",
-			"field": "sound_wallrunFall_1p"
-		},
-		{ // originally mapped to offset 1080
-			"index": 11,
-			"type": "string",
-			"value": "sh",
-			"field": "sound_wallrunFall_3p"
-		},
-		{ // originally mapped to offset 1128
-			"index": 11,
-			"type": "string",
-			"value": "h",
-			"field": "sound_freefall_start_1p"
-		},
-		{ // originally mapped to offset 1136
-			"index": 11,
-			"type": "string",
-			"value": "team_jet_hover_HLD",
-			"field": "sound_freefall_start_3p"
-		},
-		{ // originally mapped to offset 1144
-			"index": 11,
-			"type": "string",
-			"value": "t_hover_HLD",
-			"field": "sound_freefall_body_1p"
-		},
-		{ // originally mapped to offset 1152
-			"index": 11,
-			"type": "string",
-			"value": "LD",
-			"field": "sound_freefall_body_3p"
-		},
-		{ // originally mapped to offset 1160
-			"index": 11,
-			"type": "string",
-			"value": "_jet_hover_HLD",
-			"field": "sound_freefall_finish_1p"
-		},
-		{ // originally mapped to offset 1168
-			"index": 11,
-			"type": "string",
-			"value": "HLD",
-			"field": "sound_freefall_finish_3p"
-		},
-		{ // originally mapped to offset 1176
-			"index": 11,
-			"type": "string",
-			"value": "survival_closer",
-			"field": "sound_jumpjet_jump_start_1p"
-		},
-		{ // originally mapped to offset 1184
-			"index": 11,
-			"type": "string",
-			"value": "wraith",
-			"field": "sound_jumpjet_jump_start_3p"
-		},
-		{ // originally mapped to offset 1192
-			"index": 11,
-			"type": "string",
-			"value": "ump",
-			"field": "sound_jumpjet_jump_body_1p"
-		},
-		{ // originally mapped to offset 1200
-			"index": 11,
-			"type": "string",
-			"value": "mp",
-			"field": "sound_jumpjet_jump_body_3p"
+
+		...
+
 		},
 		{ // originally mapped to offset 1208
 			"index": 11,
@@ -779,44 +643,22 @@ All Apex Legends weapons have inspect sounds (many of them generic class based w
 
 First person weapon and ability sounds do not need attenuation or spatialization. Do note, however, that some weapons have sounds attached to their projectiles, such as the Mastiff's pellets and ordnance like grenades, which play whizz by / whoosh sounds on throw. Those emit sounds in-world, not just on the CLIENT VM.
 
-IMPORTANT: Weapon Mods (such as the Turbocharger, Disruptor Rounds, Hammerpoint Rounds, Anvil Receiver, Skullpiercer Rifling, etc.) can override the base sounds of weapons and have their own sounds:
-
-```
-   hopup_turbocharger
-      {
-		// faster ROF spin up
-		"fire_rate"   									"6.8"  // start at higher rof
-		"fire_rate_max_time_speedup"					"0.85"  // takes less time to spin up
-
-		// Audio
-		"looping_sounds"								"1"
-
-		"burst_or_looping_fire_sound_start_1p"			"weapon_devotion_firstshot_1p"
-		"burst_or_looping_fire_sound_middle_1p"			"Weapon_Devotion_Turbo_Loop_1P"
-		"burst_or_looping_fire_sound_end_1p"			"weapon_devotion_lastshot_1p"
-
-		"burst_or_looping_fire_sound_start_3p"			""
-		"burst_or_looping_fire_sound_middle_3p"			"Weapon_Devotion_Turbo_Loop_3P"
-		"burst_or_looping_fire_sound_end_3p"			""
-
-		"burst_or_looping_fire_sound_start_npc"			""
-		"burst_or_looping_fire_sound_middle_npc"		""
-		"burst_or_looping_fire_sound_end_npc"			""
-
-        ...
-
-     }    
-
-```
-
 ### Semi-automatic weapons
 
 The simplest audio implementation, only uses pitch and sample randomization for each shot, coupled with a randomized selection of the weapon-specific gunshot tail and a randomized selection of an environment-specific gunshot tail.
 
-Some semi-automatic weapons have a special charge mechanic (such as the Charge Rifle, mp_weapon_defender), in which case they also have:
+Some semi-automatic weapons have a special charge mechanic, in which case they also have:
 
-- A Charge-Up / Wind-Up sound
+- A Charge-Up / Wind-Up sound 
 - A Charge-Down / Wind-Down sound
+
+Weapons belonging to this category are:
+
+- The HAVOC Rifle (on single-fire, with the Selectfire Receiver mod)
+- The Charge Rifle
+- The 30-30 Repeater
+- The Triple Take (with the Precision Choke mod)
+- The Peacekeeper (with the Precision Choke mod)
 
 ### Automatic weapons
 
@@ -840,12 +682,20 @@ Automatic weapons almost always have weapon firing divided into 3 sections:
 
 Some weapons have a special charge mechanic, in which case they also have:
 
-- A Charge-Up / Wind-Up sound (sometimes it's integrated into the firing loop, like with the Devotion. Sometimes it's handled from VScript callbacks, like with the 30-30 and the Precision Choke equipped Triple Take and Peacekeepr)
+- A Charge-Up / Wind-Up sound (sometimes it's integrated into the firing loop, like with the Devotion. Sometimes it's handled from VScript callbacks, like with the 30-30 and the Precision Choke equipped Triple Take and Peacekeeper)
 - A Charge-Down / Wind-Down sound (usually handled by VScripts, through callback functions; check the weapon's .txt file for the assigned callbacks for each weapon)
 
-```
+Weapons belonging to this category are:
 
-```
+- The HAVOC Rifle (No Turbocharger mod)
+- The Devotion
+
+Some weapons have a special Heat-up mechanic, in which case they can also have:
+- Overheat / Burn-out sounds (L-STAR)
+
+The weapon which belongs to this category is the L-STAR.
+
+VScripts will receive a deeper dive in their dedicated section.
 
 Examples of weapon sound definitions from weapon .txt files: 
 
@@ -998,6 +848,207 @@ Burst fire weapons:
 	"low_ammo_sound_name_4"				"Hemlok_LowAmmo_Shot2"
 	"low_ammo_sound_name_5"				"Hemlok_LowAmmo_Shot2"
 ```
+
+Burst fire weapons can also have a charge-up mechanic, in which case they can have:
+
+- A Charge-Up sound
+- A Charge-Down / Wind-Down sound
+
+The one weapon belonging to this category is the Burst RE-45 (mp_weapon_autopistol_fusion) from retail Apex Legends.
+
+### Weapon Mods
+
+Weapon Mods (such as the Turbocharger, Disruptor Rounds, Hammerpoint Rounds, Skullpiercer Rifling, etc.) can override the base sounds of weapons and have their own sounds:
+
+```
+   hopup_turbocharger
+      {
+		// faster ROF spin up
+		"fire_rate"   									"6.8"  // start at higher rof
+		"fire_rate_max_time_speedup"					"0.85"  // takes less time to spin up
+
+		// Audio
+		"looping_sounds"								"1"
+
+		"burst_or_looping_fire_sound_start_1p"			"weapon_devotion_firstshot_1p"
+		"burst_or_looping_fire_sound_middle_1p"			"Weapon_Devotion_Turbo_Loop_1P"
+		"burst_or_looping_fire_sound_end_1p"			"weapon_devotion_lastshot_1p"
+
+		"burst_or_looping_fire_sound_start_3p"			""
+		"burst_or_looping_fire_sound_middle_3p"			"Weapon_Devotion_Turbo_Loop_3P"
+		"burst_or_looping_fire_sound_end_3p"			""
+
+		"burst_or_looping_fire_sound_start_npc"			""
+		"burst_or_looping_fire_sound_middle_npc"		""
+		"burst_or_looping_fire_sound_end_npc"			""
+
+        ...
+
+     }   
+
+```
+
+```
+	hopup_shield_breaker
+	{
+		"damage_shield_scale"                       "1.20"
+		"projectile_trail_effect_0"                 "P_tracer_proj_smg_shield_breaker"
+		"impact_effect_table" 				        "shield_breaker_bullet"
+
+		"burst_or_looping_fire_sound_start_1p"		"Weapon_Alternator_FirstShot_1P"
+		"burst_or_looping_fire_sound_middle_1p"		"Weapon_Alternator_Loop_ShieldBreaker_1P"
+		"burst_or_looping_fire_sound_end_1p"		"Weapon_Alternator_LoopEnd_ShieldBreaker_1P"
+
+		"burst_or_looping_fire_sound_start_3p"		""
+		"burst_or_looping_fire_sound_middle_3p"		"Weapon_Alternator_Loop_ShieldBreaker_3P"
+		"burst_or_looping_fire_sound_end_3p"		"Weapon_Alternator_LoopEnd_ShieldBreaker_3P"
+
+		"burst_or_looping_fire_sound_start_npc"		""
+		"burst_or_looping_fire_sound_middle_npc"	"Weapon_Alternator_Loop_3p_NPC_a"
+		"burst_or_looping_fire_sound_end_npc"		"Weapon_Alternator_LoopEnd_NPC"
+	}
+
+```
+
+```
+    hopup_headshot_dmg
+   {
+	"damage_headshot_scale"			"2.25"
+	"projectile_trail_effect_0"     "P_tracer_proj_sniper_piercer"
+	"fire_sound_1_player_1p"		"weapon_wingman_fire_skull_1p"
+	"fire_sound_1_player_3p"		"weapon_wingman_fire_skull_3p"
+	"fire_sound_1_npc"				"weapon_wingman_fire_skull_3p"
+   }
+```
+
+```
+    hopup_unshielded_dmg
+    {
+     "damage_unshielded_scale"      					"1.5"
+
+     "projectile_trail_effect_0"     				"P_tracer_proj_smg_hammer_point"
+     "impact_effect_table" 							"hammer_point_bullet"
+
+	 "fire_sound_1"									"weapon_re45auto_shell"
+ 	 "fire_sound_2_player_1p"						"weapon_p2011_fire_unshieldeddmg_1p"
+	 "fire_sound_2_player_3p"						"weapon_p2011_fire_unshieldeddmg_3p"
+	 "fire_sound_2_npc"								"Weapon_P2011_Fire_NPC"
+    }
+
+```
+
+## VScripts and VScript Callbacks For Weapons
+
+Respawn set up Keys for weapon .txt configs to define script callbacks when certain weapon related events take place.
+
+The complete list is presented in the Weapon Functions and Commands article, but here is a refresher:
+
+```
+"OnWeaponActivate"
+"OnWeaponDeactivate"
+
+"OnWeaponRaise"
+"OnWeaponLower"
+
+"OnWeaponReload"
+"OnWeaponRegenBegin"
+"OnWeaponRegenEnd"
+
+"OnWeaponReadyToFire"
+
+"OnWeaponAttemptOffhandSwitch" // i.e.: mp_ability_mirage_ultimate
+
+"OnWeaponReadyToFire" // i.e.: mp_ability_grapple
+
+"OnWeaponTossPrep" // Used by grenades / ordnance and throwable abilities, i.e.: mp_weapon_deployable_medic
+"OnWeaponTossReleaseAnimEvent" // Used by grenades / ordnance and throwable abilities, i.e.: mp_weapon_crypto_drone
+"OnWeaponTossCancel // Used by grenades / ordnance and throwable abilities, i.e.: mp_weapon_thermite_grenade
+"OnWeaponNpcTossGrenade" // Used by grenades / ordnance and throwable abilities
+
+"OnWeaponChargeBegin" // NOTE: Abilities CAN and DO use these! i.e.: mp_weapon_phase_tunnel (Wraith's Portal!)
+"OnWeaponChargeLevelIncreased" // i.e.: mp_weapon_doubletake
+"OnWeaponChargeEnd" // i.e.: mp_weapon_energy_shotgun
+"OnWeaponSustainedDischargeBegin"
+"OnWeaponSustainedDischargeEnd"
+"OnWeaponSustainedDischargePulse"
+
+
+"OnWeaponPrimaryAttack"
+"OnWeaponNpcPrimaryAttack"
+
+"OnClientAnimEvent"
+"OnCreateClientOnlyModel" // for entities like hologram proxies, i.e.: for seeing Care Package placement location, Mobile Respawn Beacons, 
+// Evac Towers, Loba Black Market Boutiques, Rampart Amped Cover Walls, Pathfinder Ziplines, Revenant Totems, Fuse Motherlodes (the
+range projection is a model with a special shader), Horizon Black Holes, Wattson Fences, etc.
+// These "preview" models use a special shader and are only shown to the local client player
+
+"OnWeaponPrimaryAttackAnimEvent"// i.e.: mp_ability_mobile_respawn_beacon
+
+"OnWeaponCustomActivityStart" // NOTE: Inspecting is also considered a Custom Activity!
+"OnWeaponCustomActivityEnd"
+
+"OnProjectileCollision" // i.e.: mp_weapon_grenade_bangalore
+"OnWeaponBulletHit" // i.e.: mp_weapon_smart_pistol
+"OnProjectileIgnite" // i.e.: mp_weapon_grenade_bangalore	
+
+"OnWeaponRegenEnd" // i.e.: mp_weapon_bubble_bunker
+
+"OnWeaponOwnerChanged" // i.e.: mp_weapon_tesla_trap
+
+"OnWeaponStartZoomIn" // i.e.: mp_weapon_sentinel
+"OnWeaponStartZoomOut" // i.e.: mp_weapon_sentinel
+
+"OnWeaponVortexHitProjectile"
+"OnWeaponVortexHitBullet"
+
+"OnWeaponOffhandFirePressedNotReady
+
+"OnWeaponPrimaryAttackVMActivityToUse"
+
+"OnSmartAmmoEnabled"
+"OnSmartAmmoDisabled"
+"OnSmartAmmoTargetsChanged"
+"OnSmartAmmoTrackersChanged" // ( entity weapon, array< entity > oldTrackers, array< entity > newTrackers )
+
+"OnCreateChargeEffect" // ( entity weapon, entity highlightedModel, bool validHighlight )
+
+OnCreateMuzzleFlashEffect" // ( entity weapon, int effectHandle )
+
+```
+
+These are keys in the weapons' associated .txt files which tell the engine which functions to call when these certain events happen, for example:
+
+```
+"OnWeaponActivate" -> "OnWeaponActivate_weapon_3030" // this function is declared and defined in mp_weapon_3030.nut, in vscripts / weapons
+
+"OnProjectileCollision" -> "OnProjectileCollision_weapon_doubletake" // this function is declared and defined in mp_weapon_doubletake.nut, in vscripts / weapons
+
+"OnProjectileCollision" -> "OnProjectileCollision_Generic" // used by the Kraber, in mp_weapon_sniper.txt
+
+"OnProjectileCollision" -> "OnProjectileCollision_weapon_basic_bolt" // used by the R-301, in mp_weapon_rspn101.txt
+
+NOTE: It does not matter where the scripts are placed, they are linked at compile-time (depending on which VM they are intended for: SERVER, CLIENT, UI, shared). Scripts are placed in vscripts for organization purposes. It is also important to keep in mind the scope of the functions and structures.
+```
+
+NOTE: Some weapons do not have any callbacks explicitly assigned to them specifically in their .txt configs. They use generic scripts and native functions (i.e: mp_weapon_basic_bolt). Examples are the RE-45 AUTO (mp_weapon_autopistol) and the Devotion (mp_weapon_esaw).  
+
+There are only a limited amount of callbacks pre-defined by Respawn. They are named in the aforementioned list; for other purposes they have to be custom-made and called.  
+
+Abilities (passive, tactical, ultimate) are also created as weapons (they use the weapon template and are technically weapons), which have a different activation / summoning method (offhand) and different inventory slots (offhand).  
+
+Examples:  
+
+```
+mp_ability_gibraltar_shield // (Gibraltar passive)
+mp_ability_heal // (Octane passive)
+mp_ability_valk_cluster_missile // (Valkyrie tactical)
+mp_weapon_black_hole // (Horizon ultimate)
+```
+
+
+
+
+
 
 ## Map Audio Entities
 
