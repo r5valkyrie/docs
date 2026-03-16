@@ -63,6 +63,10 @@
                     "slug": "entities-spawning-objects"
                 },
                 {
+                    "title": "Trigger Entities",
+                    "slug": "triggers"
+                },
+                {
                     "title": "NPC / AI Methods, Functions, Keyvalues, Flags",
                     "slug": "ai-npc"
                 },               
