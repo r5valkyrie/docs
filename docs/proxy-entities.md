@@ -49,6 +49,15 @@ Tall character models are shrunk down in first-person so that they can properly 
 
 Hologram proxies use a special shader assigned with DeployableModelHighlight( entity proxy) which draws them with a special transparent shader with blue flashes and interlaced lines. There is also a version for displaying invalid placement positions: DeployableModelInvalidHighlight( entity proxy ); this is the same as DeployableModelHighlight() except the highlight is red.  
 
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/carepackageproxyvalid.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/carepackageproxyinvalid.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/wattsonfenceproxy.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/pathfinderziplineproxy.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/mobilerespawnbeaconproxy.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/rampartwallproxy.png)
+
+
+
 ## Rendering KeyValues
 
 Important model rendering KeyValues:  
@@ -79,6 +88,12 @@ int fxHandle = StartParticleEffectOnEntity( cockpit, GetParticleSystemIndex( PHA
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/blackholeeffect.png)
 
 Note: some screen effects are not cockpit particle effects but screen VGUI overlays, such as the Arc Star "EMP" effect.
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/arcstareffect.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/devscanline.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/empflow.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/mosaicnoise.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanempvmt.png)
 
 
 ## Visibility Flags
