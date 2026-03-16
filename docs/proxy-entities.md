@@ -22,7 +22,7 @@ It is also useful to refer to the meanings of the term "proxy":
 
 Respawn used and uses proxies in three main ways in Titanfall and Apex Legends:
 
-1) To effect changes on a client's first-person view (getting the player's "Cockpit" entity (basically the first-person camera) and rendering screen effects like Stim, Gravity Suction, Arc Star screen-tear effects, Armor Damage Effects, EVO Shield Effects)  
+1) To effect changes on a client's first-person view (getting the player's "Cockpit" entity (basically the first-person camera) and rendering screen effects like Stim, Gravity Suction, Armor Damage Effects, EVO Shield Effects)  
 2) To preview ability / gadget placements and inform the player of the validity of the placement locations (i.e.: Care Packages, Fence Nodes, Mobile Respawn Beacons, Evac Towers, Rampart Walls, The Mounted Sheila HMG, Revenant's Death Totem)  
 3) To show a flawed APPROXIMATION of what other clients see doing when spectating another player  
 
@@ -78,7 +78,6 @@ int fxHandle = StartParticleEffectOnEntity( cockpit, GetParticleSystemIndex( PHA
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/bloodhoundeffect.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/gravlifteffect.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/blackholeeffect.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/arcstareffect.png)
 
 
 
