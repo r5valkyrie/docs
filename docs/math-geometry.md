@@ -202,7 +202,7 @@ b = a constant
 
 These functions are passed the coordinates of two points A(Xa, Ya), B(Xb, Yb), in order to be able to draw the graph of the function and extract the first degree equation of the linear function (solving m, b). 
 
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/graphlerpexplanation.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/graphlerpexplanationv2.png)
 
 ```
 Graph(V,A,B,C,D) 
