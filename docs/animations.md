@@ -1463,6 +1463,8 @@ entity_Anim_PlayWithRefPoint( animation, origin, angles, blendTime ) // requires
 
 ## 14. How Animations Work With Multiple Entities
 
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/animationconcepts.png)
+
 For first person animations:
 
 Firstly, the same rig / skeleton is applied to the weapon viewmodel and the first person arms model. Where associated vertex groups are found in the model's 3D mesh (collection of triangles / polygons), the bone names must be identical to the vertex group names in order to control that part of the model. The models can't and don't need to have the same vertex groups (a first person arms model won't have a weapon model, for example) and this, by design, won't result in errors. The vertex groups that do not exist on one model are simply skipped and not animated. Different rigs are NOT compatible and CANNOT be used simultaneously.  
