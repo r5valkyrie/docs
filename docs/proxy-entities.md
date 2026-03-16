@@ -57,54 +57,54 @@ Depending on the rendermode (alpha, no alpha, etc.) rendercolor can have 3 or 4 
 
 ## Cockpits
 
-In Respawn terminology, the "Cockpit" stands for the fullscreen player view / camera entity // the term "cockpit" is a remnant from Titanfall, which had literal cockpits for Titans
+In Respawn terminology, the "Cockpit" stands for the fullscreen player view / camera entity // the term "cockpit" is a remnant from Titanfall, which had literal cockpits for Titans  
 
-GetLocalViewPlayer() // gets the player entity that is currently on display on the local client
+GetLocalViewPlayer() // gets the player entity that is currently on display on the local client  
 
-GetLocalViewPlayer().GetCockpit().GetModelName() // used for both Titans and Pilots, as Titans in first-person are another type of player class that the player's "Soul" is transferred to. Many refenreces to "Souls" and "Titan Souls" can be found in the codebases of Titanfall 1, Titanfall 2 and Apex Legends.
+GetLocalViewPlayer().GetCockpit().GetModelName() // used for both Titans and Pilots, as Titans in first-person are another type of player class that the player's "Soul" is transferred to. Many refenreces to "Souls" and "Titan Souls" can be found in the codebases of Titanfall 1, Titanfall 2 and Apex Legends.  
 
 
-int fxHandle = StartParticleEffectOnEntity( cockpit, GetParticleSystemIndex( PHASE_TUNNEL_1P_FX ), FX_PATTACH_ABSORIGIN_FOLLOW, -1 )
+int fxHandle = StartParticleEffectOnEntity( cockpit, GetParticleSystemIndex( PHASE_TUNNEL_1P_FX ), FX_PATTACH_ABSORIGIN_FOLLOW, -1 )  
 
 
 
 ## Visibility Flags
 
+```
 entity.kv.VisibilityFlags = ENTITY_VISIBLE_TO_ENEMY
 
 // for multiple flags, use bitwise operators: (ENTITY_VISIBLE_TO_FRIENDLY | ENTITY_VISIBLE_TO_ENEMY)
 
-ENTITY_VISIBLE_ONLY_PARENT_PLAYER
-ENTITY_VISIBLE_TO_OWNER
-ENTITY_VISIBLE_EXCLUDE_PARENT_PLAYER
-ENTITY_VISIBLE_TO_FRIENDLY
-ENTITY_VISIBLE_TO_ENEMY
-ENTITY_VISIBLE_TO_EVERYONE
-ENTITY_VISIBLE_TO_NOBODY
-
-visibilityflags
+ENTITY_VISIBLE_ONLY_PARENT_PLAYER  
+ENTITY_VISIBLE_TO_OWNER  
+ENTITY_VISIBLE_EXCLUDE_PARENT_PLAYER  
+ENTITY_VISIBLE_TO_FRIENDLY  
+ENTITY_VISIBLE_TO_ENEMY  
+ENTITY_VISIBLE_TO_EVERYONE  
+ENTITY_VISIBLE_TO_NOBODY  
+```
 
 
 
 ## Garbage Collection
-
+```
 entity.Destroy() // instant destruction
 entity.Dissolve() // gradual dissolution effect until it disappears
+```
 
 
 
 
 
 
+selective rendering  
 
-selective rendering
+i.e. rampart walls look different to enemies and friendlies -> render flags  
 
-i.e. rampart walls look different to enemies and friendlies -> render flags
+different models / particle effects / highlights / outlines  
 
-different models / particle effects / highlights / outlines
-
-one way walls?
+one way walls?  
 
 
-entities rendered only on the local client for the player placing stuff
+entities rendered only on the local client for the player placing stuff  
 
