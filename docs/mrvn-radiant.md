@@ -21,7 +21,7 @@ Prerequisites:
 - Download the MRVN-Radiant Resources (models, textures, shaders): will be uploaded to a GitHub repository in the future
 
 Instructions:  
-1) Clone the R5V MRVN-Radiant Repo at https://github.com/r5valkyrie/MRVN-Radiant/tree/feat_lighting
+1) Clone the R5V MRVN-Radiant Repo at https://github.com/r5valkyrie/MRVN-Radiant/
 2) Extract windeps.7z in the root directory of MRVN-Radiant. Make sure the path to the dependencies is ROOT/windeps/ and not ROOT/windeps/windeps
 3) Extract install.7z (or install-debug.7z if you're running a Debug build) in ROOT/install. Make sure the path to those dependencies is ROOT/install and not ROOT/install/install.
 4) Open Visual Studio 2026 and open the MRVN-Radiant Repo folder. Make sure you set the correct Build version (Release or Debug; for general use, select Release). VS 2026 will automatically generate the necessary CMake configuration (has to be done manually in older versions of Visual Studio). 
