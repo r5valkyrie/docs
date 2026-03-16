@@ -75,6 +75,10 @@
                     "slug": "particle-effect-functions"
                 },
                 {
+                    "title": "Particle System Functions and Commands",
+                    "slug": "particle-effect-functions"
+                },
+                {
                     "title": "Realms",
                     "slug": "realms"
                 },
@@ -130,6 +134,11 @@
                 {
                     "title": "Sound Modding",
                     "slug": "sound-modding"
+                },
+                {
+                    "title": "Audio Systems and Audio Implementation Overview",
+                    "slug": "audio-systems",
+
                 },
                 {
                     "title": "Audio Event Dictionary",
