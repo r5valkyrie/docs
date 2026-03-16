@@ -92,7 +92,11 @@ This will show the following:
 - Logs (bottom left)
 ```
 
+## The 2D Viewport
+
 The two axes displayed on the 2D Viewport are shown in the top left corner of the 2D Viewport. These axes can be quickly changed by pressing the Change Views button (Default: CTRL+ TAB).    
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/radiant2dviewportv2.png)
 
 Basic navigation in the 2D Viewport works in the following ways:  
 - Right click to open the Entity dropdown, from which you can insert Entities    
@@ -106,6 +110,9 @@ Basic navigation in the 2D Viewport works in the following ways:
 - Dragging the edges of the brush will NOT resize the brush  
 - Resizing the brush can be done by activating the Resize tool (Default: Q) and dragging the red lines  
 
+## The 3D Viewport
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/radiant3dviewport.png)
 
 Basic navigation in the 3D Viewport works in the following ways:  
 - Right click unlocks the camera for free navigation in 3 dimensions (WASD + mouse movement for camera angle)  
@@ -115,7 +122,6 @@ Basic navigation in the 3D Viewport works in the following ways:
 - Left click drag inserts a brush, by default  
 - Holding left click drag will allow resizing the brush in one plane  
 - Holding SHIFT and right click drag creates a marquee selection (rectangular selection)  
-
 
 # Chapter 2: Entities
 
@@ -368,6 +374,8 @@ Applying special Textures / Shaders to brushes will result in special functional
 ### Trigger Brush Entities
 
 These brushes are invisible in normal gameplay and fire signals / outputs or have a certain on other entities that touch them.
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/triggerexample.png)
 
 A list of Trigger brushes:
 

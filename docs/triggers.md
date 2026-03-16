@@ -8,16 +8,18 @@ Triggers are Entities that produce ("fire") an output when an entity touches the
 Triggers can take on various 3D shapes, such as cylinders and spheres. The various types of triggers available in R5V are documented belowe.  
 Triggers can be placed as Brush Entities in a map editor such as MRVN-Radiant or be created with squirrel_re scripts.   
 
-Just like other types of Entities, triggers are:
-```
-created with:
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/triggerexample.png)
 
+Just like other types of Entities, triggers are created in VScripts with:
+```
 CreateEntity( string entityType )
 
 entity trigger = CreateEntity( "trigger_cylinder" ) // for creating a reference to the Entity
+```
 
-spawned with:
+They are spawned in the 3D world with:
 
+```
 DispatchSpawn( trigger )
 ```
 
