@@ -71,8 +71,12 @@
                     "slug": "audio-commands-functions"
                 },
                 {
-                    "title": "Particle System Functions and Commands",
-                    "slug": "particle-effect-functions"
+                    "title": "Proxy Entities",
+                    "slug": "proxy-entities"
+                },
+                {
+                    "title": "Color Correction / Screen Filter Scripting",
+                    "slug": "colorcorrection"
                 },
                 {
                     "title": "Particle System Functions and Commands",
