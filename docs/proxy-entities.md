@@ -79,6 +79,7 @@ int fxHandle = StartParticleEffectOnEntity( cockpit, GetParticleSystemIndex( PHA
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/gravlifteffect.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/blackholeeffect.png)
 
+Note: some screen effects are not cockpit particle effects but screen VGUI overlays, such as the Arc Star "EMP" effect.
 
 
 ## Visibility Flags
