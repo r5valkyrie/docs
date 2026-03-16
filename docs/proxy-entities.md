@@ -4,19 +4,18 @@
 
 Proxies can be conceptualized / conceived of as indirect expressions of an entity, or client-sided entities (only the local player can see them) and ways to access those local / first person entities.  
 
-It is useful to refer to the expression "by-proxy":
+It is useful to refer to the expression "by-proxy":  
 
-```
+
 "By proxy" means doing something indirectly, where an authorized person or agent acts on your behalf rather than you doing it yourself. It indicates substitution, allowing actions—like voting, signing documents, or experiencing events—to be completed via a representative.  
-```
 
-It is also useful to refer to the meanings of the term "proxy":
 
-```
-- The authority to represent someone else, especially in voting.
+It is also useful to refer to the meanings of the term "proxy":  
 
-- A figure that can be used to represent the value of something in a calculation.
-```
+- The authority to represent someone else, especially in voting.  
+
+- A figure that can be used to represent the value of something in a calculation.  
+
 
 ## What Are Proxy Entities Used For?
 
