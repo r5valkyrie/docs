@@ -36,6 +36,12 @@ The player's first person body, weapon viewmodel and FX are rendered on top of t
 
 For other player clients looking at that player, a different, third-person character model is used. A high-contrast example would be Revenant. His third-person character model is significantly taller and wider than his first-person body model. This is evident when previewing the two-models using RSX (mdl/Humans/class/heavy/pilot_heavy_revenant.rmdl and mdl/Weapons/arms/pov_pilot_heavy_revenant.rmdl).  
 
+
+![Alt text](assetsdocs/revenant3p.png)
+
+![Alt text](assetsdocs/revenant1p.png)
+
+
 Tall character models are shrunk down in first-person so that they can properly use the already existing, common / shared weapon rigs. For an illustration of what happens when a character model is not adjusted to account for a rig, it is possible to use Revenant's Silence tactical ability with Horizon's first person body model. Horizon's left hand becomes highly twisted and deformed.  
 
 
