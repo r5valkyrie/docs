@@ -9,12 +9,13 @@ ColorCorrection_Register( string materialPath )
 After a color correction material is registered, it can be used with  
 ```
 ColorCorrection_SetWeight( material, weightFloat)
+```
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/phaseshiftcolorcorrection.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/bloodhoundultcolorcorrection.png)
 
-Function list:  
-
+Function list:    
+```
 ColorCorrection_SetWeight( ColorCorrection_Register("materials/correction/fx_phase_shift.raw_hdr"), 5.0 )
 
 // paths usually start with materials/correction and end with the _hdr suffix, from High Dynamic Range
