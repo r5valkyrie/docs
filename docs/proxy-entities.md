@@ -38,11 +38,12 @@ For other player clients looking at that player, a different, third-person chara
 
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revenant3p.png)
-
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revenant1p.png)
 
 
-Tall character models are shrunk down in first-person so that they can properly use the already existing, common / shared weapon rigs. For an illustration of what happens when a character model is not adjusted to account for a rig, it is possible to use Revenant's Silence tactical ability with Horizon's first person body model. Horizon's left hand becomes highly twisted and deformed.  
+Tall character models are shrunk down in first-person so that they can properly use the already existing, common / shared weapon rigs. For an illustration of what happens when a character model is not adjusted to account for a rig, it is possible to use Revenant's Silence tactical ability with Horizon's first person body model. Horizon's left hand becomes highly twisted and deformed. 
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/horizonwithsilence.png)
 
 
 ## Hologram Proxies
