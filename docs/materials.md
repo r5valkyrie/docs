@@ -63,7 +63,7 @@ At their core, material files are binary files which store data such as:
 
 slot0: _col  (albedo / diffuse map - [Note: these maps contain the base surface colors](https://help.autodesk.com/view/3DSMAX/2017/ENU/?guid=GUID-69603DC2-F58C-4053-A955-EA19FDB8D084))  
 slot1: _nml (normal map - [Note: these mimic light interaction with real surface geometry, to simulate depth, surface details, etc.](https://docs.unity3d.com/6000.3/Documentation/Manual/StandardShaderMaterialParameterNormalMap.html))  
-slot2: _gls/_exp (glossiness map - [Note: shockingly, controls glossiness levels](https://help.autodesk.com/view/3DSMAX/2017/ENU/?guid=GUID-76F225CD-982A-4F17-9935-A656E6878BCD))    
+slot2: _gls/_exp (glossiness map - [Note: controls glossiness levels](https://help.autodesk.com/view/3DSMAX/2017/ENU/?guid=GUID-76F225CD-982A-4F17-9935-A656E6878BCD))    
 slot3: _spc (specular map - [Note: greyscale texture map for shininess / matteness](https://help.autodesk.com/view/3DSMAX/2017/ENU/?guid=GUID-76F225CD-982A-4F17-9935-A656E6878BCD))  
 slot4: _ilm (emissive / self-illumination map - [Note: texture map for making the object appear to glow](https://help.autodesk.com/view/3DSMAX/2017/ENU/?guid=GUID-0584ED4B-FE91-4B0B-A09C-22557D5D51DD))    
 slot5: _ao (ambient occlusion map - [Note: article on ambient occlusion maps, by Paul H. Paulino](https://www.paulhpaulino.com/the-vfx-map-baking-guide-ambient-occlusion))    
