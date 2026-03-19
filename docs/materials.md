@@ -80,6 +80,8 @@ slot23: _nml (normal map - Note: light interaction with the surface, to simulate
 slot24: _gls/_exp (glossiness map)  
 slot25: _spc (specular map - Note: greyscale texture map for shininess / matteness)
 
+IMPORTANT NOTE: Different material types have different texture slots (i.e.: SKNP, PTCU, etc.)
+
 References courtesy of Autodesk, Unity Technologies, Epic Games and Paul H. Paulino
 
 ## Additional materials
