@@ -242,6 +242,167 @@ Example of a VMT from Titanfall 2:
 }
 ```
 
+## How VMTs Are Applied To Models
+
+Pre-compile, models point to the directory containing the VMTs corresponding to the model, using $cdmaterials, starting from the *game* ROOT (not system root). The engine is aware of specifically which VMT files it's supposed to load from the listed directory / directories from the model's .SMD (Studio Model Data) file(s), which contain(s) the model's / models' UV map(s). Specific VMTs are mapped to wrap around specific regions of the 3D meshes.  
+
+A concrete example is outlined below, concerning the Archer Rocket Launcher's viewmodel  
+
+From ptpov_law.qc (the QC file corresponding to the Archer Rocket Launcher's viewmodel):  
+
+```
+// obtained by decompiling with Crowbar 
+
+$modelname "weapons/shoulder_rocket_SRAM/ptpov_law.mdl"
+
+$bodygroup "ptpov_law"
+{
+	studio "v_shoulder_rocket_SRAM.smd"
+}
+
+
+// skipping
+
+$cdmaterials "models\weapons\attachments"
+$cdmaterials "models\weapons\shoulder_rocket_sram"
+$cdmaterials ""
+
+$attachment "CAMERA_BASE" "jx_c_pov" 0 0 0 rotate -90 -90 0
+
+// skipping
+$attachment "SCR_BL" "def_c_sightRear_screen" 1.72 -0.68 -0.03 rotate 0 180 -180
+$attachment "SCR_TR" "def_c_sightRear_screen" 0.29 0.34 -0.03 rotate 0 180 -180
+$attachment "muzzle_flash" "muzzle_flash" 0 0 0 rotate 0 0 0
+// , etc.
+```
+
+Looking inside Titanfall 1's "englishclient_mp_common.bsp.pak000_dir" VPK, we can see the following:  
+
+materials/models/weapons/shoulder_rocket_sram contains:  
+
+**glass.vmt**  
+**rocket_launcher.vmt**  
+**rocket_launcher_ironsights.vmt**    
+
+And the VMTs' corresponding VTF texture maps. Keep these names in mind.  
+
+materials/models/weapons/attachments contains the VMTs and VTFs for all attachments in the game.  
+
+
+From v_shoulder_rocket_SRAM.smd, used as an input for studiomdl.exe alongside ptpov_law.qc:  
+
+```
+// line 174
+triangles // defines the vertices and triangle faces for the mesh while also defining the UV map
+ammo_counter_pistol
+  73 3.277271 49.654732 6.843596 0.000000 -0.923878 -0.382687 0.531934 0.283372 1 73 1.000000
+  73 3.733402 49.654732 6.843596 0.000000 -0.923878 -0.382687 0.717284 0.283372 1 73 1.000000
+  73 3.733402 49.654732 7.379279 0.000000 -1.000000 0.000000 0.717284 0.014278 1 73 1.000000
+ammo_counter_pistol
+  73 3.277271 49.654732 6.843596 0.000000 -0.923878 -0.382687 0.531934 0.283372 1 73 1.000000
+  73 3.733402 49.654732 7.379279 0.000000 -1.000000 0.000000 0.717284 0.014278 1 73 1.000000
+  73 3.277271 49.654732 7.379279 0.000000 -1.000000 0.000000 0.531934 0.014278 1 73 1.000000
+ammo_counter_pistol
+  73 3.302308 49.731125 6.821100 0.901516 0.175039 -0.395766 0.607662 0.423167 1 73 1.000000
+  73 3.302308 50.122726 6.994298 0.901516 0.175039 -0.395766 0.607662 0.923588 1 73 1.000000
+  73 3.311612 50.105915 7.008056 0.901516 0.175039 -0.395766 0.589090 0.907973 1 73 1.000000
+ammo_counter_pistol
+  73 3.302308 49.731125 6.821100 0.901516 0.175039 -0.395766 0.607662 0.423167 1 73 1.000000
+  73 3.311612 50.105915 7.008056 0.901516 0.175039 -0.395766 0.589090 0.907973 1 73 1.000000
+  73 3.311612 49.732258 6.842794 0.901516 0.175039 -0.395766 0.589090 0.436269 1 73 1.000000
+
+// skipping ahead
+
+rocket_launcher_ironsights
+  78 3.282058 51.710392 8.568565 -0.688342 -0.161681 -0.707139 0.332505 0.251007 1 78 1.000000
+  78 3.313523 51.690903 8.542393 -0.688342 -0.161681 -0.707139 0.324821 0.243319 1 78 1.000000
+  78 3.294027 51.659439 8.568565 -0.688342 -0.161681 -0.707139 0.319771 0.251007 1 78 1.000000
+rocket_launcher_ironsights
+  78 3.516387 50.712811 8.568565 -0.688342 -0.161681 -0.707139 0.083265 0.251005 1 78 1.000000
+  78 3.547853 50.693321 8.542393 -0.688342 -0.161681 -0.707139 0.078212 0.243316 1 78 1.000000
+  78 3.528357 50.661854 8.568565 -0.688342 -0.161681 -0.707139 0.070526 0.251005 1 78 1.000000
+rocket_launcher_ironsights
+  79 4.749236 50.905853 8.217897 0.428194 0.903687 0.000000 0.802424 0.690988 1 79 1.000000
+  79 4.713510 50.922783 8.190126 0.428194 0.903687 0.000000 0.795620 0.700731 1 79 1.000000
+  79 4.713510 50.922783 8.217897 0.428194 0.903687 0.000000 0.802457 0.700717 1 79 1.000000
+
+// skipping ahead
+
+rocket_launcher
+  73 -2.955390 49.729454 4.125346 -0.711272 0.702917 -0.000014 0.508274 0.142563 1 73 1.000000
+  73 -3.161590 49.525780 3.964416 -0.711272 0.702917 -0.000014 0.516058 0.135988 1 73 1.000000
+  73 -2.936515 49.586090 14.598495 -0.711272 0.702917 -0.000014 0.511896 0.436211 1 73 1.000000
+rocket_launcher
+  73 -0.191396 44.562500 10.850089 -0.707107 0.687809 0.164069 0.074165 0.318153 1 73 1.000000
+  73 -0.191396 43.962021 11.624443 -0.721859 -0.099298 0.684879 0.084771 0.309931 1 73 1.000000
+  73 -0.191396 44.392731 11.561791 -0.517139 0.577466 0.631744 0.084329 0.316598 1 73 1.000000
+rocket_launcher
+  73 -0.191396 44.562500 10.850089 -1.000000 0.000000 0.000000 0.074165 0.318153 1 73 1.000000
+  73 -0.191396 43.397552 11.363914 -0.715385 -0.149896 0.682462 0.081205 0.302199 1 73 1.000000
+  73 -0.191396 43.962021 11.624443 -0.721859 -0.099298 0.684879 0.084771 0.309931 1 73 1.000000
+
+  // skipping ahead
+
+ammo_counter_screen_bg
+  73 3.311612 49.732258 6.842794 0.000000 0.404485 -0.914545 0.987854 0.005548 1 73 1.000000
+  73 3.311612 50.105915 7.008056 0.000000 0.404485 -0.914545 0.987854 0.990395 1 73 1.000000
+  73 3.699062 50.105915 7.008056 0.000000 0.404485 -0.914545 0.008062 0.990395 1 73 1.000000
+ammo_counter_screen_bg
+  73 3.311612 49.732258 6.842794 0.000000 0.404485 -0.914545 0.987854 0.005548 1 73 1.000000
+  73 3.699062 50.105915 7.008056 0.000000 0.404485 -0.914545 0.008062 0.990395 1 73 1.000000
+  73 3.699062 49.732258 6.842794 0.000000 0.404485 -0.914545 0.008062 0.005548 1 73 1.000000
+ammo_counter_clip_digit0
+  73 3.500935 49.826782 6.855247 0.000000 0.404485 -0.914545 0.000000 0.000000 1 73 1.000000
+  73 3.343543 49.826782 6.855247 0.000000 0.404485 -0.914545 1.000000 0.000000 1 73 1.000000
+  73 3.343543 50.093567 6.973066 0.000000 0.404485 -0.914545 1.000000 1.000000 1 73 1.000000
+ammo_counter_clip_digit0
+  73 3.500935 49.826782 6.855247 0.000000 0.404485 -0.914545 0.000000 0.000000 1 73 1.000000
+  73 3.343543 50.093567 6.973066 0.000000 0.404485 -0.914545 1.000000 1.000000 1 73 1.000000
+  73 3.500935 50.093567 6.973066 0.000000 0.404485 -0.914545 0.000000 1.000000 1 73 1.000000
+ammo_counter_clip_digit1
+  73 3.664040 49.826782 6.855247 0.000000 0.404485 -0.914545 0.000000 0.000000 1 73 1.000000
+  73 3.500935 49.826782 6.855247 0.000000 0.404485 -0.914545 1.000000 0.000000 1 73 1.000000
+  73 3.500935 50.093567 6.973066 0.000000 0.404485 -0.914545 1.000000 1.000000 1 73 1.000000
+ammo_counter_clip_digit1
+  73 3.664040 49.826782 6.855247 0.000000 0.404485 -0.914545 0.000000 0.000000 1 73 1.000000
+  73 3.500935 50.093567 6.973066 0.000000 0.404485 -0.914545 1.000000 1.000000 1 73 1.000000
+  73 3.664040 50.093567 6.973066 0.000000 0.404485 -0.914545 0.000000 1.000000 1 73 1.000000
+ammo_counter_meter
+  73 3.664040 49.760117 6.825617 0.000000 0.404485 -0.914545 0.000000 0.000000 1 73 1.000000
+  73 3.343543 49.760117 6.825617 0.000000 0.404485 -0.914545 1.000000 0.000000 1 73 1.000000
+  73 3.343543 49.826782 6.855247 0.000000 0.404485 -0.914545 1.000000 1.000000 1 73 1.000000
+ammo_counter_meter
+  73 3.664040 49.760117 6.825617 0.000000 0.404485 -0.914545 0.000000 0.000000 1 73 1.000000
+  73 3.343543 49.826782 6.855247 0.000000 0.404485 -0.914545 1.000000 1.000000 1 73 1.000000
+  73 3.664040 49.826782 6.855247 0.000000 0.404485 -0.914545 0.000000 1.000000 1 73 1.000000
+glass
+  81 5.532819 50.576344 7.877347 0.000000 -1.000000 0.000000 0.865270 0.101287 1 81 1.000000
+  81 6.957448 50.576344 7.877347 0.000000 -1.000000 0.000000 0.031864 0.100585 1 81 1.000000
+  81 6.957448 50.576344 7.894001 0.000000 -1.000000 0.000000 0.031836 0.088749 1 81 1.000000
+glass
+  81 5.532819 50.576344 7.877347 0.000000 -1.000000 0.000000 0.865270 0.101287 1 81 1.000000
+  81 6.957448 50.576344 7.894001 0.000000 -1.000000 0.000000 0.031836 0.088749 1 81 1.000000
+  81 5.532819 50.576344 7.894001 0.000000 -1.000000 0.000000 0.867270 0.088749 1 81 1.000000
+
+
+// etc.  
+
+```
+
+Hence, the model will have the following VMTs as dependencies that it will search for:  
+
+- ammo_counter_pistol.vmt  
+- rocket_launcher_ironsights.vmt  
+- rocket_launcher.vmt  
+- ammo_counter_screen_bg.vmt  
+- ammo_counter_clip_digit0.vmt  
+- ammo_counter_clip_digit1.vmt  
+- ammo_counter_meter.vmt  
+- glass.vmt  
+
+These VMTs were mapped onto the 3D model using UV Unwrapping to create a matrix for mapping 2D textures onto a 3D model. This UV Map / Matrix is stored inside the model and is not a texture map, but a 2D matrix of coordinates corresponding to points in the 3D model. UV comes from the axes oU (horizontal) and oV (vertical), because X, Y, Z and W were taken already by Quaternions which store coordinates for a position in 3D space and the rotation of an object. Both the oU and oV axes range from 0 to 1, where 1 is the max height / width, meaning that 0.5 , 0.5 is always the center of the UV Map. For more information, consult the [Valve Developer Wiki Article on UV Maps](https://developer.valvesoftware.com/wiki/UV_map).
+
+
 ## Material Proxies
 
 Material Proxies represent code that allows the properties of VMTs to be manipulated, hence they are used to create dynamic or animated textures.  
