@@ -95,103 +95,54 @@ An example of a .JSON manifest (used for packing assets into RPAKs using RePak) 
 
 ```
 {
-
 "name": "art/mshop/weapons/class/sniper/kraber/base/kraber_base_main",
-
 "width": 2048,
-
 "height": 2048,
-
 "depth": 0,
-
 "glueFlags": "0x56000020",
-
 "glueFlags2": "0x100000",
-
 "blendStates": [
-
    "0xF0000000",
-
    "0xF0000000",
-
    "0xF0000000",
-
    "0xF0000000",
-
    "0xF0000000",
-
    "0xF0000000",
-
    "0xF0000000",
-
    "0xF0000000"
-
 ],
-
 "blendStateMask": "0x4",
-
 "depthStencilFlags": "0x17",
-
 "rasterizerFlags": "0x6",
-
 "uberBufferFlags": "0x0",
-
 "features": "0x1F5A92BD",
-
 "samplers": "0x1D0300",
-
 "surfaceProp": "default", // surface properties
-
 "surfaceProp2": "",
-
 "shaderType": "sknp", // proprietary Respawn material
-
 "shaderSet": "0x846292DC5424105A",
-
 "$textures": { 
-
    "0": "texture/art/mshop/weapons/class/sniper/kraber/base/kraber_base_main_albedoTexture.rpak",
-
    "1": "texture/art/mshop/weapons/class/sniper/kraber/base/kraber_base_main_normalTexture.rpak",
-
    "2": "texture/art/mshop/weapons/class/sniper/kraber/base/kraber_base_main_glossTexture.rpak",
-
    "3": "texture/art/mshop/weapons/class/sniper/kraber/base/kraber_base_main_specTexture.rpak",
-
    "4": "texture/art/mshop/weapons/class/sniper/kraber/base/kraber_base_main_aoTexture.rpak",
-
    "5": "texture/art/mshop/weapons/class/sniper/kraber/base/kraber_base_main_cavityTexture.rpak"
-
 },
-
 "$textureTypes": {
-
    "0": "albedoTexture",
-
    "1": "normalTexture",
-
    "2": "glossTexture",
-
    "3": "specTexture",
-
    "4": "aoTexture",
-
    "5": "cavityTexture"
-
 },
-
 "$depthShadowMaterial": "0x2B93C99C67CC8B51", // depth materials
-
 "$depthPrepassMaterial": "0x1EBD063EA03180C7",
-
 "$depthVSMMaterial": "0xF95A7FA9E8DE1A0E",
-
 "$depthShadowTightMaterial": "0x227C27B608B3646B",
-
 "$colpassMaterial": "0x11A4A3CBA679E447", // colpass material
-
 "$textureAnimation": "0x0"
-
 }
 
 ```
@@ -218,25 +169,16 @@ Example of a VMT from Titanfall 2:
 "SpriteCard"
 {
 	$basetexture "particle\electric_arc\electric_arc_trail"
-
 //	$RAMPTEXTURE "particle/ramps/elec_ramp.vtf"
 //	$POWERFUNCTION "[0.8 2.5 5]"
-
 //	$texAlphafromColor 4
 	$texColorFromAlpha 1
-
-
 	$additive 	1
-
 	$translucent 	1
 	$nocull	1
-
 	$splinetype	1
-
 	$overbrightfactor 3
-
 	$vertexFogAmount 1
-
     $disableTSAA 0
     $tsaaFullyResponsive 1
     $tsaaMotionAlphaThreshold 0.01
@@ -422,21 +364,14 @@ Here are some examples of Material Proxies, beginning from the "Proxies" section
 "UnlitTwoTexture"
 {
 	"$surfaceprop"	"metal"
-
 	"$basetexture" "models\weapons\lstar\lstar_heat_charge_col"
 	"$texture2" "effects\laserplane_atmosphere"
-
 	$allowoverbright 1
-
 	$decal 1
-
 	"$translucent" 1
-
 	"$additive" 1
-
 	$layercolor1 "[2 1.38 1]"
 	$layeralpha1 "1"
-
 	$layercolor2 "[3 1 0.5]"
 	$layeralpha2 "1"
 
@@ -472,7 +407,6 @@ Here are some examples of Material Proxies, beginning from the "Proxies" section
 	$texture2 		effects\dev_scanline_small
 
 	$alpha 1
-
 	$nodecal 1
 	$model 1
 	$ignorez 1
@@ -482,16 +416,13 @@ Here are some examples of Material Proxies, beginning from the "Proxies" section
 	$allowoverbright 1
 	$translucent 1
 	$additive 1
-
 	$screenspacecoordssquare2 1
-
 	$layercolor1 "[0.1 0.0 0.0]"
 	$layeralpha1 "0.1"
 	$layercolor2 "[0.4 0.05 0.0]"
 	$layeralpha2 "1.0"
 	$addlayers 1
-
-
+	
 	$fresnel 0
 
 	$fresnelSharpness1 1.0
