@@ -21,6 +21,13 @@ A toggle-able console command exists to allow for only VGUI elements to be drawn
 
 It is possible to create entire game menus with VGUI, as illustrated in Titanfall 1, which solely uses VGUI. The menus can have animated elements and text that changes depending on certain variables. Menu elements can have callback functions attached. All menus require a layout file (.res or .menu) located in platform/resource or platform/scripts/resource.  
 
+Titanfall 1 VGUI Menu Examples:
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui2.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui3.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui4.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui5.png)
+
 # VGUI Screens
 
 VGUI supports projecting 2D screens onto 3D meshes with the vgui_screen Point Entity. An example of a projected 2D screen is the Archer Rocket Launcher's pop-out display. Every element featured on that display is VGUI. 
@@ -30,9 +37,13 @@ VGUI supports projecting 2D screens onto 3D meshes with the vgui_screen Point En
 
 VGUI Screens must be registered in platform/scripts/vgui_screens.txt. VGUI Screens also require a .res / .menu file which define their layouts, placed in either platform/resource or platform/scripts/resource.   
 
+platform/scripts/vgui_screens.txt  
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vguiscreenspng.png)
+platform/scripts/screens/vgui_pilot_launcher.res  
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vguipilotlauncher.png)
+platform/resource/ui/menus/survival_inventory.menu  
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/survivalinventory.png)
+platform/resource/ui/menus/panels/armory.res  
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/armory.png)
 
 The Valve Developer Wiki has [a guide on VGUI Screen Creation](https://developer.valvesoftware.com/wiki/VGUI_Screen_Creation).  
@@ -70,13 +81,9 @@ VGUI HUDs can be implement in one of two ways:
 1) VGUI Screens attached to the local client player proxy's Cockpit entity (all of Titanfall 1 and a few elements in Titanfall 2)  
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/r1kraber.png)
+platform/resource/ui/hudscripted_mp.txt    
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/hudscriptedmp.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/hudscriptedmp2.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui2.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui3.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui4.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui5.png)
 
 2) A static HUD - drawn at the top of the local client's screen - which is not attached to the Cockpit and does not move with it (most Titanfall 2 and all of Apex Legends)  
 
