@@ -356,6 +356,8 @@ In Apex Legends, Material Proxies were all but phased out in favor of RUI, with 
 
 More information can be found on the Valve Developer Wiki: [Material Proxies](https://developer.valvesoftware.com/wiki/Material_proxies), [List of Material Proxies](https://developer.valvesoftware.com/wiki/List_of_material_proxies).
 
+Material Proxies from Titanfall 1 and Titanfall 2 are still fully functional in Season 3 of Apex Legends, with some small exceptions.
+
 Here are some examples of Material Proxies, beginning from the "Proxies" section:
 
 ```
