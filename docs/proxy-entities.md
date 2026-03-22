@@ -49,7 +49,7 @@ Tall character models are shrunk down in first-person so that they can properly 
 
 Hologram proxies use a special shader assigned with DeployableModelHighlight( entity proxy) which draws them with a special transparent shader with blue flashes and interlaced lines. There is also a version for displaying invalid placement positions: DeployableModelInvalidHighlight( entity proxy ); this is the same as DeployableModelHighlight() except the highlight is red.  
 
-These are CLientside Dynamic Props (they are not rendered for other players).
+These are Clientside Dynamic Props (they are not rendered for other players).
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/carepackageproxyvalid.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/carepackageproxyinvalid.png)
