@@ -173,7 +173,7 @@ An example of using the Valve asset fallback system is presented below:
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vpkfallback2.png)
 
-Titanfall 2 used VMTs for everything from particle effects / systems (muzzle flashes, dirt, smoke, etc.) to sprites to cables (ziplines, tethers, grapple cables) to VGUI (Valve Graphical User Interface) materials for Titan & MRVN UI and various other UI elements.
+Titanfall 2 used VMTs for everything from particle effects / systems (muzzle flashes, dirt, smoke, etc.) to sprites, to cables (ziplines, tethers, grapple cables), to VGUI (Valve Graphical User Interface) materials for Titan & MRVN UI and various other UI elements.
 
 Example of a VMT from Titanfall 2:
 
