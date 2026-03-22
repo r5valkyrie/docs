@@ -72,11 +72,11 @@ VGUI HUDs can be implement in one of two ways:
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/r1kraber.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/hudscriptedmp.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/hudscriptedmp2.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui1.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui2.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui3.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui4.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui5.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui2.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui3.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui4.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfall1ui5.png)
 
 2) A static HUD - drawn at the top of the local client's screen - which is not attached to the Cockpit and does not move with it (most Titanfall 2 and all of Apex Legends)  
 
