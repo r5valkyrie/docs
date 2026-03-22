@@ -8,6 +8,9 @@ All VGUI Screens and Menus have .res / .menu layout dependencies which MUST be P
 ```
 void function PrecacheRes( string resFile )
 
+i.e.: PrecacheRes( "vgui_fullscreen_pilot" )
+
+
 Or
 
 cl_mapspawn.gnut line 156: void function PrecacheResFiles()
