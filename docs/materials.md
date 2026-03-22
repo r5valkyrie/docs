@@ -358,6 +358,8 @@ More information can be found on the Valve Developer Wiki: [Material Proxies](ht
 
 Material Proxies from Titanfall 1 and Titanfall 2 are still fully functional in Season 3 of Apex Legends, with some small exceptions.
 
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vmts.png)
+
 Here are some examples of Material Proxies, beginning from the "Proxies" section:
 
 ```
