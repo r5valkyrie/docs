@@ -58,8 +58,6 @@ These are Clientside Dynamic Props (they are not rendered for other players and 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/mobilerespawnbeaconproxy.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/rampartwallproxy.png)
 
-
-
 ## Rendering KeyValues
 
 Important model rendering KeyValues:  
