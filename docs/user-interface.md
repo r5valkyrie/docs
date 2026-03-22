@@ -27,11 +27,20 @@ VGUI Screens must be registered in platform/scripts/vgui_screens.txt. VGUI Scree
 
 The Valve Developer Wiki has [a guide on VGUI Screen Creation](https://developer.valvesoftware.com/wiki/VGUI_Screen_Creation).  
 
-entity function CreateClientsideVGuiScreen( string resFileName, VGUI_SCREEN_PASS_X, vector coords, vector angles, int width, int height)  
 
 The following are functions for controlling VGUI elements which exist in R5V:  
 
 ```
+entity function CreateClientsideVGuiScreen( string resFileName, VGUI_SCREEN_PASS_X, vector coords, vector angles, int width, int height)  
+
+where VGUI_SCREEN_PASS_X can be one of the following:
+
+VGUI_SCREEN_PASS_COCKPIT
+VGUI_SCREEN_PASS_HUD
+VGUI_SCREEN_PASS_VIEWMODEL
+VGUI_SCREEN_PASS_VIEWMODEL_NOZOOM
+VGUI_SCREEN_PASS_WORLD
+
 void function Create_Display( entity panel )
 
 void function VGUIUpdateSpectre( entity panel )
