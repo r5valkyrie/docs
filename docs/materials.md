@@ -159,6 +159,20 @@ Since R5V is based on the Season 3 build of Apex Legends, it still uses VMTs for
 
 VMTs are also fallback materials if the engine cannot locate material dependencies in R5V.  
 
+An example of using the Valve asset fallback system is presented below:
+
+- Using a hex editor (such as 010 Editor) and the Respawn Binary Templates written by r-exx and rika, it is possible to open Respawn assets such as RMDL's and set their material / texture GUIDs to 0 / null them, prior to packing them into RPAKs, using RePak
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vmtoverride.png)
+
+- This will cause the Valve asset fallback system to kick in
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vpkfallback1.png)
+
+- The checkerboard texture indicates a missing material and is the default VPK texture for missing textures. This means that the englishclient_common VPK can be patched to include new VMT materials or that a separate VPK can be loaded with the VMT materials
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vpkfallback2.png)
+
 Titanfall 2 used VMTs for everything from particle effects / systems (muzzle flashes, dirt, smoke, etc.) to sprites to cables (ziplines, tethers, grapple cables) to VGUI (Valve Graphical User Interface) materials for Titan & MRVN UI and various other UI elements.
 
 Example of a VMT from Titanfall 2:
