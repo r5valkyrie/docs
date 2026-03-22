@@ -372,7 +372,17 @@ More information can be found on the Valve Developer Wiki: [Material Proxies](ht
 
 Material Proxies from Titanfall 1 and Titanfall 2 are still fully functional in Season 3 of Apex Legends, with some small exceptions.
 
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vmts2.png)
+The Titanfall 1's RE-45 Auto model is illustrated below, imported into Blender, after decompiling the .MDL with Crowbar / Studiomdl  
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/blenderre45r1.png)
+
+The model's UV Map / Matrix is present in the model's .SMD  
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/re45uvunwrap.png)
+
+VMTs containing Material Proxies are applied in the marked locations  
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vmts3.png)
 
 Here are some examples of Material Proxies, beginning from the "Proxies" section:
 
