@@ -372,7 +372,7 @@ More information can be found on the Valve Developer Wiki: [Material Proxies](ht
 
 Material Proxies from Titanfall 1 and Titanfall 2 are still fully functional in Season 3 of Apex Legends, with some small exceptions.
 
-The Titanfall 1's RE-45 Auto model is illustrated below, imported into Blender, after decompiling the .MDL with Crowbar / Studiomdl  
+The Titanfall 1's RE-45 Auto model is illustrated below, imported into Blender, using the Blender Source Tools Blender plugin, after having decompiled the .MDL into a .QC and .SMDS, with Crowbar / Studiomdl  
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/blenderre45r1.png)
 
