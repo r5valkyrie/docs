@@ -64,9 +64,10 @@ function VGUIUpdateForRemoteTurret( entity panel )
 
 VGUI HUDs can be implement in one of two ways:  
 1) VGUI Screens attached to the local client player proxy's Cockpit entity (all of Titanfall 1 and a few elements in Titanfall 2)  
-2) A static HUD - drawn at the top of the local client's screen - which is not attached to the Cockpit and does not move with it (most Titanfall 2 and all of Apex Legends)  
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/r1kraber.png)
+
+2) A static HUD - drawn at the top of the local client's screen - which is not attached to the Cockpit and does not move with it (most Titanfall 2 and all of Apex Legends)  
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/smartpistollockon2.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/smartpistollockon.png)
