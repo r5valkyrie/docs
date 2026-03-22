@@ -28,8 +28,12 @@ VGUI supports projecting 2D screens onto 3D meshes with the vgui_screen Point En
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/archerscreen2.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/archerscreen.png)
 
-
 VGUI Screens must be registered in platform/scripts/vgui_screens.txt. VGUI Screens also require a .res / .menu file which define their layouts, placed in either platform/resource or platform/scripts/resource.   
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vguiscreenspng.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/vguipilotlauncher.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/survivalinventory.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/armory.png)
 
 The Valve Developer Wiki has [a guide on VGUI Screen Creation](https://developer.valvesoftware.com/wiki/VGUI_Screen_Creation).  
 
@@ -66,6 +70,13 @@ VGUI HUDs can be implement in one of two ways:
 1) VGUI Screens attached to the local client player proxy's Cockpit entity (all of Titanfall 1 and a few elements in Titanfall 2)  
 
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/r1kraber.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/hudscriptedmp.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/hudscriptedmp2.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui1.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui2.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui3.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui4.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/titanfallui5.png)
 
 2) A static HUD - drawn at the top of the local client's screen - which is not attached to the Cockpit and does not move with it (most Titanfall 2 and all of Apex Legends)  
 
