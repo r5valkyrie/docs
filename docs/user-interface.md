@@ -10,10 +10,9 @@ void function PrecacheRes( string resFile )
 
 i.e.: PrecacheRes( "vgui_fullscreen_pilot" )
 
-
 Or
 
-cl_mapspawn.gnut line 156: void function PrecacheResFiles()
+Add a line to Precache inside cl_mapspawn.gnut, line 156: void function PrecacheResFiles()
 ```
 
 A toggle-able console command exists to allow for only VGUI elements to be drawn, while hiding RUI elements: rui_drawEnable   
@@ -24,7 +23,10 @@ It is possible to create entire game menus with VGUI, as illustrated in Titanfal
 
 # VGUI Screens
 
-VGUI supports projecting 2D screens onto 3D meshes with the vgui_screen Point Entity. An example of a projected 2D screen is the Archer Rocket Launcher's pop-out display. Every element featured on that display is VGUI.  
+VGUI supports projecting 2D screens onto 3D meshes with the vgui_screen Point Entity. An example of a projected 2D screen is the Archer Rocket Launcher's pop-out display. Every element featured on that display is VGUI. 
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/archerscreen.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/archerscreen2.png)
 
 VGUI Screens must be registered in platform/scripts/vgui_screens.txt. VGUI Screens also require a .res / .menu file which define their layouts, placed in either platform/resource or platform/scripts/resource.   
 
@@ -62,6 +64,9 @@ function VGUIUpdateForRemoteTurret( entity panel )
 VGUI HUDs can be implement in one of two ways:  
 1) VGUI Screens attached to the local client player proxy's Cockpit entity (all of Titanfall 1 and a few elements in Titanfall 2)  
 2) A static HUD - drawn at the top of the local client's screen - which is not attached to the Cockpit and does not move with it (most Titanfall 2 and all of Apex Legends)  
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/smartpistollockon.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/smartpistollockon2.png)
 
 # VGUI Videos
 
