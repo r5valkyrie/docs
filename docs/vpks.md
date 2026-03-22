@@ -42,9 +42,25 @@ ReVPKEdit (basically a GUI for ReVPK, with ReVaMpT) can preview, pack, unpack an
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit1.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit2.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit3.png)
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit4.png)
 This is an example from Titanfall 2's englishclient_mp_common.bsp.vpk, to showcase the .MDL preview capabilities of ReVPKEdit.  
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit4.png)
+
+
+ReVPKEdit can patch existing VPK archives to include new files and folders by clicking on Edit -> Add Files... / Add Folder... or right clicking a folder and choosing the appropriate option.  
+
+It should be noted that patching existing archives to edit included files or to add new files is buggy and can result in corruption of the entire VPK, hence one should keep backups.
+
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit5.png)
+
+ReVPKEdit can create new VPK archives from folders.
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit6.png)
+
+ReVPKEdit can unpack entire VPK archives or extract individual assets from VPK archives by clicking on "Edit". It is possible to export and convert assets to other types directly from ReVPKEdit.
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit7.png)
+
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/revpkedit8.png)
 
 
 
