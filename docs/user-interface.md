@@ -25,8 +25,9 @@ It is possible to create entire game menus with VGUI, as illustrated in Titanfal
 
 VGUI supports projecting 2D screens onto 3D meshes with the vgui_screen Point Entity. An example of a projected 2D screen is the Archer Rocket Launcher's pop-out display. Every element featured on that display is VGUI. 
 
-![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/archerscreen.png)
 ![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/archerscreen2.png)
+![Alt text](https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/docs/archerscreen.png)
+
 
 VGUI Screens must be registered in platform/scripts/vgui_screens.txt. VGUI Screens also require a .res / .menu file which define their layouts, placed in either platform/resource or platform/scripts/resource.   
 
