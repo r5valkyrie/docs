@@ -23,5 +23,15 @@
         "name": "SAS",
         "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/sas.png",
         "description": "Graphic Artist"
-    }
+    },
+    {
+        "name": "WateryContinent02",
+        "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/watery.gif",
+        "description": "Models and Assets"
+    },
+    {
+    "name": "dilirity",
+    "avatar": "https://raw.githubusercontent.com/r5valkyrie/docs/refs/heads/main/contributors/assets/dilirity.png",
+    "description": "Bots and Scripting"
+}
 ]
